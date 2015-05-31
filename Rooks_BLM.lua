@@ -145,7 +145,7 @@ function get_sets()
 
     -- Specific spells
     sets.midcast['Sneak'] = set_combine(sets.midcast['Enhancing Magic'], {
-        legs="Skulker's Cape"
+        back="Skulker's Cape"
     })
     sets.midcast['Invisible'] = set_combine(sets.midcast['Enhancing Magic'], {
         back="Skulker's Cape"
