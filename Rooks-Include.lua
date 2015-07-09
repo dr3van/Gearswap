@@ -123,9 +123,6 @@ function init_get_sets(weapon_lock)
         disable('main','sub')
         send_command('@input /echo Weapon locked by default')
     end
-
-    -- Event binds
-    -- windower.register_event('zone change', change_zone)
 end
 
 function base_precast(spell)
@@ -328,18 +325,3 @@ function buff_change(new, bool)
         aftercast()
     end
 end
-
---[[function change_zone()
-    if(sets) then
-        if(sets.adoulin) then
-            new_zone = res.zones[windower.ffxi.get_info().zone].english
-            if new_zone == "Western Adoulin" or new_zone == "Eastern Adoulin" then
-                equip(sets.adoulin)
-            else
-                if(aftercast) then
-                    aftercast()
-                end
-            end
-        end
-    end
-end]]

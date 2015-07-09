@@ -10,7 +10,7 @@ function get_sets()
         neck="Wiglen Gorget",
         ear1="Hearty Earring",
         ear2="Ethereal Earring",
-        body="Assim. Jubbah",
+        body=gear.hagondes.body,
         hands=gear.taeon.hands.tp,
         ring1="Sheltered Ring",
         ring2="Paguroidea Ring",
@@ -46,17 +46,17 @@ function get_sets()
 
     sets.combat = {
         ammo="Honed Tathlum",
-        head="Whirlpool Mask",
+        head=gear.taeon.head.tp,
         neck="Asperity Necklace",
         ear1="Brutal Earring",
         ear2="Suppanomimi",
-        body="Espial Gambison",
+        body=gear.taeon.body.tp,
         hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
         ring2="Epona's Ring",
         back="Atheling Mantle",
-        waist="Cetl Belt",
-        legs="Espial Hose",
+        waist="Windbuffet Belt +1",
+        legs=gear.taeon.legs.tp,
         feet=gear.taeon.feet.tp
     }
     sets.combat.DPS = set_combine(sets.combat, {})
@@ -68,17 +68,17 @@ function get_sets()
 
     sets.WS = {
         ammo="Honed Tathlum",
-        head="Whirlpool Mask",
+        head=gear.taeon.head.tp,
         neck="Fotia Gorget",
         ear1="Bladeborn Earring",
         ear2="Steelflash Earring",
-        body="Weather. Robe +1",
+        body=gear.taeon.body.tp,
         hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
         ring2="Epona's Ring",
         back="Atheling Mantle",
         waist="Fotia Belt",
-        legs="Nahtirah Trousers",
+        legs=gear.taeon.legs.tp,
         feet=gear.taeon.feet.tp
     }
 
@@ -101,12 +101,21 @@ function get_sets()
         ear2="Moonshade Earring"
     })
 
+    sets.WS['Realmrazer'] = set_combine(sets.WS, {
+        ear1="Brutal Earring",
+        ear2="Moonshade Earring",
+        ring1="Aquasoul Ring",
+        legs="Nahtirah Trousers"
+    })
+
+
     -- Magic sets. Lots of them!
 
     sets.blue = {
         ammo="Mavi Tathlum",
         head="Mirage Keffiyeh",
-        body="Assim. Jubbah",
+        body="Assim. Jubbah +1",
+        back=gear.jsecapes.blu,
         legs="Mavi Tayt +2",
         feet="Mirage Charuqs +2"
     }
@@ -164,12 +173,17 @@ function get_sets()
 
 
     sets.blue.magical = set_combine(sets.blue, {
+        ammo="Dosis Tathlum",
+        head=gear.helios.head.MAcc,
         neck="Eddy Necklace",
         ear1="Novio Earring",
         ear2="Hecate's Earring",
+        body=gear.helios.body.MAB,
         hands=gear.helios.hands.MAB,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
+        waist="Wanion Belt",
+        legs=gear.helios.legs.MAB,
         feet=gear.helios.feet.MAB
     })
 
@@ -351,6 +365,7 @@ function get_sets()
         ["Mysterious Light"] = "sets.blue.magical.CHR",
         ["Regurgitation"] = "sets.blue.magical.MND",
         ["Sandspin"] = "sets.blue.magical.INT",
+        ["Subduction"] = "sets.blue.magical.INT",
         ["Thermal Pulse"] = "sets.blue.magical.VIT",
         ["Water Bomb"] = "sets.blue.magical.INTMND",
         

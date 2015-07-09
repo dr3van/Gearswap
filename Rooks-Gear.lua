@@ -42,6 +42,14 @@ function init_gear()
     gear.waist.pdt = { name="Flume Belt +1" }
 
 
+    -- JSE Capes
+    gear.jsecapes = {}
+    gear.jsecapes.blu = { name="Cornflower Cape", augments={'MP+27', 'DEX+1', 'Accuracy+5', 'Blue magic skill +10'}}
+
+    -- Skirmish pieces
+    gear.hagondes = {}
+    gear.hagondes.body = { name="Hagondes Coat +1" }
+
     -- Alluvion Skirmish pieces
     gear.yorium = {}
     gear.yorium.head = { name="Yorium Barbuta" }
@@ -66,11 +74,14 @@ function init_gear()
 
     gear.taeon = {}
     gear.taeon.head = {}
+    gear.taeon.head.tp = { name="Taeon Chapeau", augments={'Accuracy+15 Attack+15', 'Triple Atk.+2', 'Weapon skill damage +1%'}}
     gear.taeon.body = {}
+    gear.taeon.body.tp = { name="Taeon Tabard", augments={'STR+3 DEX+3', 'Accuracy+19 Attack+19', '"Dual Wield"+5'}}
     gear.taeon.hands = { name="Taeon Gloves"}
     gear.taeon.hands.tp = { name="Taeon Gloves", augments={'DEX+10', 'Accuracy+18 Attack+18', '"Dual Wield"+4'}}
     gear.taeon.legs = {}
     gear.taeon.feet = { name="Taeon Boots"}
+    gear.taeon.legs.tp = { name="Taeon Tights", augments={'Accuracy+20 Attack+20','"Triple Atk."+2','Crit. hit damage +3%' }}
     gear.taeon.feet.tp = { name="Taeon Boots", augments={'Accuracy+19 Attack+19', '"Dual Wield"+5'}}
 
     gear.helios = {}
