@@ -11,14 +11,14 @@ function get_sets()
         neck="Wiglen Gorget",
         ear1="Hearty Earring",
         ear2="Ethereal Earring",
-        body="Estq. Sayon +2",
-        hands="Espial bracers",
-        ring1="Sheltered Ring",
-        ring2="Paguroidea Ring",
+        body="Hagondes Coat +1",
+        hands=gear.taeon.hands.tp,
+        ring1=gear.ring.regen_left,
+        ring2=gear.ring.regen_right,
         back="Umbra Cape",
         waist="Flume Belt +1",
         legs="Blood Cuisses",
-        feet="Espial Socks"
+        feet=gear.taeon.feet.tp
     }
 
     sets.idle.regen = set_combine(sets.idle, {})
@@ -85,7 +85,7 @@ function get_sets()
         neck="Fotia Gorget",
         ear1="Brutal Earring",
         ear2="Moonshade Earring",
-        body="Weather. Robe +1",
+        body="Hagondes Coat +1",
         hands="Espial Bracers",
         ring1="Rajas ring",
         ring2="Pyrosoul Ring",
@@ -132,7 +132,7 @@ function get_sets()
         hands="Bokwus Gloves",
         ring1="Aquasoul Ring",
         ring2="Aquasoul Ring",
-        back="Tempered Cape",
+        back="Oretan. Cape +1",
         waist="Austerity Belt",
         legs="Atrophy Tights",
         feet="Weath. Souliers +1"
@@ -153,8 +153,8 @@ function get_sets()
         ear2="Hecate's Earring",
         body="Helios Jacket",
         hands="Helios Gloves",
-        ring1="Icesoul Ring",
-        ring2="Icesoul Ring",
+        ring1="Shiva Ring",
+        ring2="Shiva Ring",
         feet="Helios Boots"
     })
 

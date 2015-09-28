@@ -36,8 +36,9 @@ function get_sets()
 
     sets.precast.FC = {
         ear1="Loquac. Earring",
-        body="Mavi Mintan +2",
+        body="Hashishin Mintan",
         hands="Thaumas Gloves",
+        ring1=gear.ring.FC_left,
         back="Swith Cape",
         waist="Witful Belt",
         legs="Orvail Pants +1",
@@ -123,6 +124,7 @@ function get_sets()
     sets.blue.curing = set_combine(sets.blue, {
         neck="Phalaina Locket",
         hands=gear.telchine.hands.cure_potency,
+        ring1="Lebeche Ring",
         back="Oretan. Cape +1"
     })
 
@@ -174,10 +176,10 @@ function get_sets()
 
     sets.blue.magical = set_combine(sets.blue, {
         ammo="Dosis Tathlum",
-        head=gear.helios.head.MAcc,
+        head=gear.helios.head.MAB,
         neck="Eddy Necklace",
-        ear1="Novio Earring",
-        ear2="Hecate's Earring",
+        ear1=gear.ears.mab_left,
+        ear2=gear.ears.mab_right,
         body=gear.helios.body.MAB,
         hands=gear.helios.hands.MAB,
         ring1="Shiva Ring",
@@ -374,6 +376,7 @@ function get_sets()
         ["Bloodrake"] = "sets.blue.physical.STR",
         ["Gates of Hades"] = "sets.blue.magical.STRDEX",
         ["Harden Shell"] = "sets.blue.buffs",
+        ["Mighty Guard"] = "sets.blue.buffs",
         ["Pyric Bulwark"] = "sets.blue.buffs",
         ["Thunderbolt"] = "sets.blue.magical.INTMND",
         ["Tourbillion"] = "sets.blue.physical.STRMND"
@@ -386,7 +389,11 @@ end
 
 function job_midcast(spell)
     if spell.skill == 'Blue Magic' then
-        equip(set_mapping[spell_mapping[spell.name]])
+        if(spell_mapping[spell.name]) then
+            equip(set_mapping[spell_mapping[spell.name]])
+        else
+            equip(sets.blue)
+        end
     else
         base_midcast(spell)
     end

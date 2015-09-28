@@ -48,6 +48,7 @@ function get_sets()
         ear2="Loquac. Earring",
         body=gear.helios.body.MAB,
         hands="Repartie Gloves",
+        ring1=gear.ring.FC_left,
         back="Swith Cape",
         waist="Witful Belt",
         legs="Orvail Pants +1",

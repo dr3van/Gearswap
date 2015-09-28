@@ -7,33 +7,33 @@ function get_sets()
 
     sets.idle = {
         ammo="Iron Gobbet",
-        head="Whirlpool Mask",
+        head=gear.taeon.head.tp,
         neck=gear.neck.regen,
         ear1=gear.ears.idle_left,
         ear2=gear.ears.idle_right,
-        body="Shned. Tabard +1",
+        body=gear.taeon.body.tp,
         hands=gear.taeon.hands.tp,
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
         back="Shadow Mantle",
         waist=gear.waist.pdt,
-        legs="Espial Hose",
+        legs=gear.taeon.legs.tp,
         feet="Skadi's Jambeaux"
     }
 
     sets.combat = {
         ammo="Jukukik Feather",
-        head="Whirlpool Mask",
-        neck=gear.neck.tp,
-        ear1=gear.ears.dw_left,
-        ear2=gear.ears.dw_right,
-        body="Shned. Tabard +1",
+        head=gear.taeon.head.tp,
+        neck=gear.neck.ws,
+        ear1="Brutal Earring",
+        ear2=gear.ears.ws,
+        body=gear.taeon.body.tp,
         hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
         ring2="K'ayres Ring",
         back="Atheling Mantle",
-        waist="Windbuffet Belt +1",
-        legs="Espial Hose",
+        waist=gear.waist.ws,
+        legs=gear.taeon.legs.tp,
         feet=gear.taeon.feet.tp
     }
 
@@ -55,17 +55,17 @@ function get_sets()
 
     sets.WS = {
         ammo="Jukukik Feather",
-        head="Whirlpool Mask",
+        head=gear.taeon.head.tp,
         neck=gear.neck.ws,
         ear1="Brutal Earring",
         ear2=gear.ears.ws,
-        body="Shned. Tabard +1",
+        body=gear.taeon.body.tp,
         hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
-        ring2="K'ayres Ring",
+        ring2="Ifrit Ring",
         back="Atheling Mantle",
         waist=gear.waist.ws,
-        legs="Espial Hose",
+        legs=gear.taeon.legs.tp,
         feet=gear.taeon.feet.tp
     }
 

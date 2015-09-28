@@ -1,6 +1,9 @@
 function init_gear()
     gear = {}
 
+    -- You don't have to use this, but I find it super useful for
+    -- augmented gear that I use across multiple jobs.
+
     -- All jobs pieces
     gear.neck = {}
     gear.neck.cure_potency = { name="Phalaina Locket" }
@@ -23,7 +26,7 @@ function init_gear()
     gear.ears.macc_mnd = { name="Lifestorm Earring" }
     gear.ears.macc_int = { name="Psystorm Earring" }
     gear.ears.ws = { name="Moonshade Earring" }
-    gear.ears.mab_left = { name="Novio Earring" }
+    gear.ears.mab_left = { name="Friomisi Earring" }
     gear.ears.mab_right = { name="Hecate's Earring" }
 
     gear.ring = {}
@@ -33,6 +36,7 @@ function init_gear()
     gear.ring.dt_right = { name="Vocane Ring" }
     gear.ring.regen_left = { name="Sheltered Ring" }
     gear.ring.regen_right = { name="Paguroidea Ring" }
+    gear.ring.FC_left = { name="Lebeche Ring" }
 
     gear.waist = {}
     gear.waist.hp = { name="Ocean Sash" }
@@ -87,6 +91,7 @@ function init_gear()
     gear.helios = {}
     gear.helios.head = {}
     gear.helios.head.MAcc = { name="Helios Band", augments={'Mag. Acc.+25','Magic crit. hit rate +4'}}
+    gear.helios.head.MAB = { name="Helios Band", augments={'"Mag.Atk.Bns."+17'}}
     gear.helios.body = {}
     gear.helios.body.MAB = { name="Helios Jacket", augments={'Mag. Acc.+11 "Mag.Atk.Bns."+11','Magic crit. hit rate +3'}}
     gear.helios.hands = {}
