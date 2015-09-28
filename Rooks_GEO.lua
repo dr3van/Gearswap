@@ -5,10 +5,10 @@ function get_sets()
     init_get_sets(0)
 
 
-	sets.idle = {
+    sets.idle = {
         range="Dunna",
-		head="Wivre Hairpin",
-		neck="Wiglen Gorget",
+        head="Wivre Hairpin",
+        neck="Wiglen Gorget",
         ear1="Hearty Earring",
         ear2="Ethereal Earring",
         body="Geo. Tunic +1",
@@ -19,7 +19,7 @@ function get_sets()
         waist="Ocean Sash",
         legs="Nares Trews",
         feet="Geomancy Sandals"
-	}
+    }
     sets.idle.regen = set_combine(sets.idle, {})
     sets.idle.DT = set_combine(sets.idle, {})
     sets.idle.PDT = set_combine(sets.idle.DT, {})
@@ -31,8 +31,8 @@ function get_sets()
         body="Geo. Tunic +1"
     }
 
-	sets.precast = {}
-	sets.precast.FC = {
+    sets.precast = {}
+    sets.precast.FC = {
         head="Nahtirah Hat",
         ear2=gear.ears.fc_right,
         hands="Repartie Gloves",
@@ -40,7 +40,7 @@ function get_sets()
         waist=gear.waist.fc.belt,
         legs="Orvail Pants +1",
         feet="Chelona Boots +1"
-	}
+    }
 
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {
     })
@@ -56,7 +56,7 @@ function get_sets()
         hands=gear.helios.hands.MAB,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
-        back="Searing Cape",
+        back="Toro Cape",
         waist="Wanion Belt",
         legs=gear.helios.legs.MAB,
         feet=gear.helios.feet.MAB
@@ -73,7 +73,7 @@ function get_sets()
         body="Geomancy Tunic +1"
     }
 
-	sets.resting = set_combine(sets.idle, {
+    sets.resting = set_combine(sets.idle, {
         head="Wivre Hairpin",
         neck="Eidolon Pendant",
         ear1="Relaxing Earring",
@@ -119,7 +119,7 @@ function get_sets()
         waist="Fotia Belt",
         legs="Espial Hose",
         feet="Espial Socks"
-	}
+    }
 
     send_command('input /macro book 16;wait .1;input /macro set 1')
 end
