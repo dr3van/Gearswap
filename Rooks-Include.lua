@@ -138,7 +138,9 @@ function base_precast(spell)
                 equip(sets.WS[spell.name])
             end
         else
-            equip(sets.WS)
+            if sets.WS then
+                equip(sets.WS)
+            end
         end
     elseif spell.action_type == 'Magic' then
         if sets.precast[spell.name] then
@@ -149,26 +151,32 @@ function base_precast(spell)
             equip(sets.precast['CuragaSpell'])
         elseif sets.precast.FC[spell.skill] then
             equip(sets.precast.FC[spell.skill])
-        else
+        elseif sets.precast.FC then
             equip(sets.precast.FC)
         end
     elseif spell.action_type == 'Ranged Attack' then
-        equip(sets.snapshot)
+        if sets.snapshot then
+            equip(sets.snapshot)
+        end
     end
 end
 
 function base_midcast(spell)
     if spell.action_type == 'Ranged Attack' then
-        equip(sets.ranged[combat_sets[combat_index]])
+        if sets.ranged[combat_sets[combat_index]] then
+            equip(sets.ranged[combat_sets[combat_index]])
+        else
+            equip(sets.ranged)
+        end
     else
-        if sets.midcast['CureSpell'] and spells.cures:contains(spell.name) then
+        if sets.midcast[spell.name] then
+            equip(sets.midcast[spell.name])
+        elseif sets.midcast['CureSpell'] and spells.cures:contains(spell.name) then
             equip(sets.midcast['CureSpell'])
         elseif sets.midcast['CuragaSpell'] and spells.curagas:contains(spell.name) then
             equip(sets.midcast['CuragaSpell'])
         elseif sets.midcast['RegenSpell'] and spells.regens:contains(spell.name) then
              equip(sets.midcast['RegenSpell'])
-        elseif sets.midcast[spell.name] then
-            equip(sets.midcast[spell.name])
         elseif sets.midcast[spell.skill] then
             equip(sets.midcast[spell.skill])
         end
@@ -182,9 +190,17 @@ function base_aftercast(spell)
         equip(sets.idle.MDT)
     else
         if player.status =='Engaged' then
-            equip(sets.combat[combat_sets[combat_index]])
+            if(sets.combat[combat_sets[combat_index]]) then
+                equip(sets.combat[combat_sets[combat_index]])
+            else
+                equip(sets.combat)
+            end
         else
-            equip(sets.idle[idle_sets[idle_index]])
+            if(sets.idle[idle_sets[idle_index]]) then
+                equip(sets.idle[idle_sets[idle_index]])
+            else
+                equip(sets.idle)
+            end
         end
     end
 end
@@ -197,17 +213,27 @@ end
 
 
 function status_change(new,old)
-    if is_pdt == 1 then
-        equip(sets.idle.PDT)
-    elseif is_mdt == 1 then
-        equip(sets.idle.MDT)
-    else
-        if new == 'Idle' then
-            equip(sets.idle[idle_sets[idle_index]])
-        elseif new == 'Resting' then
-            equip(sets.resting)
-        elseif new == 'Engaged' then
-            equip(sets.combat[combat_sets[combat_index]])
+    if(windower.ffxi.get_info().logged_in) then
+        if is_pdt == 1 then
+            equip(sets.idle.PDT)
+        elseif is_mdt == 1 then
+            equip(sets.idle.MDT)
+        else
+            if new == 'Idle' then
+                if(sets.idle[idle_sets[idle_index]]) then
+                    equip(sets.idle[idle_sets[idle_index]])
+                else
+                    equip(sets.idle)
+                end
+            elseif new == 'Resting' then
+                equip(sets.resting)
+            elseif new == 'Engaged' then
+                if(sets.combat[combat_sets[combat_index]]) then
+                    equip(sets.combat[combat_sets[combat_index]])
+                else
+                    equip(sets.combat)
+                end
+            end
         end
     end
 end
