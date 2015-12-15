@@ -5,7 +5,7 @@ function init_get_sets(weapon_lock)
     include('organizer-lib')
     include('Rooks-Gear.lua')
 
-    send_command('bind f8 gs c toggle weaponlock')
+    send_command('bind ^f8 gs c toggle weaponlock')
     send_command('bind f9 gs c toggle pdt')
     send_command('bind f10 gs c toggle mdt')
     send_command('bind ^f9 gs c toggle combat set')

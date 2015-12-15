@@ -11,6 +11,7 @@ function init_gear()
     gear.neck.enmity = { name="Invidia Torque" }
     gear.neck.idle = { name="Wiglen Gorget" }
     gear.neck.mab = { name="Eddy Necklace" }
+    gear.neck.macc = { name="Eddy Necklace" }
     gear.neck.regen = { name="Wiglen Gorget" }
     gear.neck.tp = { name="Asperity Necklace" }
     gear.neck.ws = { name="Fotia Gorget" }
@@ -37,13 +38,20 @@ function init_gear()
     gear.ring.regen_left = { name="Sheltered Ring" }
     gear.ring.regen_right = { name="Paguroidea Ring" }
     gear.ring.FC_left = { name="Lebeche Ring" }
+    gear.ring.macc = { name="Sangoma Ring" }
 
     gear.waist = {}
     gear.waist.hp = { name="Ocean Sash" }
     gear.waist.ws = { name="Fotia Belt" }
     gear.waist.obi = { name="Hachirin-no-obi" }
     gear.waist.fc = { name="Witful Belt" }
+    gear.waist.macc = { name="Porous Rope" }
     gear.waist.pdt = { name="Flume Belt +1" }
+    gear.waist.conserve_mp = { name="Austerity Belt" }
+
+    gear.back = {}
+    gear.back.conserve_mp = { name="Solemnity Cape" }
+    gear.back.macc = { name="Refraction Cape" }
 
 
     -- JSE Capes
@@ -53,6 +61,7 @@ function init_gear()
     -- Skirmish pieces
     gear.hagondes = {}
     gear.hagondes.body = { name="Hagondes Coat +1" }
+    gear.hagondes.body.pdt = { name="Hagondes Coat +1", augments={'Phys. dmg. taken -3%'}}
 
     -- Alluvion Skirmish pieces
     gear.yorium = {}
@@ -90,14 +99,16 @@ function init_gear()
 
     gear.helios = {}
     gear.helios.head = {}
-    gear.helios.head.MAcc = { name="Helios Band", augments={'Mag. Acc.+25','Magic crit. hit rate +4'}}
+    gear.helios.head.macc = { name="Helios Band", augments={'Mag. Acc.+25','Magic crit. hit rate +4'}}
     gear.helios.head.MAB = { name="Helios Band", augments={'"Mag.Atk.Bns."+17'}}
-    gear.helios.body = {}
+    gear.helios.body = { name="Helios Jacket"}
+    gear.helios.body.macc = { name="Helios Jacket", augments={'Mag. Acc.+11 "Mag.Atk.Bns."+11','Magic crit. hit rate +3'}}
     gear.helios.body.MAB = { name="Helios Jacket", augments={'Mag. Acc.+11 "Mag.Atk.Bns."+11','Magic crit. hit rate +3'}}
     gear.helios.hands = {}
     gear.helios.hands.MAB = { name="Helios Gloves", augments={'"Mag.Atk.Bns."+24','"Drain" and "Aspir" potency +10'}}
     gear.helios.legs = {}
     gear.helios.legs.MAB = { name="Helios Spats", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','Magic crit. hit rate +5','Magic burst mdg.+6%',}}
+    gear.helios.legs.macc = { name="Helios Spats", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','Magic crit. hit rate +5','Magic burst mdg.+6%',}}
     gear.helios.feet = {}
     gear.helios.feet.MAB = { name="Helios Boots", augments={'"Mag.Atk.Bns."+24','Magic crit. hit rate +7'}}
 
@@ -110,6 +121,12 @@ function init_gear()
     gear.telchine.legs = { name="Telchine Braconi" }
     gear.telchine.feet = { name="Telchine Pigaches" }
     gear.telchine.feet.cure_cast = { name="Telchine Pigaches", augments={'"Cure" spellcasting time -6%'}}
+
+    -- Escha pieces
+
+    gear.vanya = {}
+    gear.vanya.feet = {}
+    gear.vanya.feet.D = { name="Vanya Clogs", augments={'"Cure" potency +5%', '"Cure" spellcasting time -15%', '"Conserve MP"+6'}}
 
     -- Weapons
     gear.weapons = {}

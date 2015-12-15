@@ -62,7 +62,11 @@ function get_sets()
     }
     sets.combat.DPS = set_combine(sets.combat, {})
     sets.combat.midacc = set_combine(sets.combat, {})
-    sets.combat.highacc = set_combine(sets.combat.midacc, {})
+    sets.combat.highacc = set_combine(sets.combat.midacc, {
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        back="Letalis Mantle"
+    })
     sets.combat.defensive = set_combine(sets.combat, {})
 
     -- WS sets
@@ -91,10 +95,10 @@ function get_sets()
     })
 
     sets.WS['Chant du Cygne'] = set_combine(sets.WS, {
-        ear1="Brutal Earring",
-        ear2="Moonshade Earring",
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
         back="Rancorous Mantle",
-        legs="Mavi Tayt +2"
+        legs=gear.taeon.legs.tp
     })
 
     sets.WS['Savage Blade'] = set_combine(sets.WS, {
@@ -114,7 +118,7 @@ function get_sets()
 
     sets.blue = {
         ammo="Mavi Tathlum",
-        head="Mirage Keffiyeh",
+        head="Luh. Keffiyeh +1",
         body="Assim. Jubbah +1",
         back=gear.jsecapes.blu,
         legs="Mavi Tayt +2",
@@ -125,7 +129,7 @@ function get_sets()
         neck="Phalaina Locket",
         hands=gear.telchine.hands.cure_potency,
         ring1="Lebeche Ring",
-        back="Oretan. Cape +1"
+        back="Solemnity Cape"
     })
 
     sets.blue.buffs = set_combine(sets.blue, {
@@ -249,11 +253,13 @@ function get_sets()
         ["Battery Charge"] = "sets.blue.buffs",
         ["Cocoon"] = "sets.blue.buffs",
         ["Diamondhide"] = "sets.blue.buffs",
+        ["Erratic Flutter"] = "sets.blue.buffs",
         ["Fantod"] = "sets.blue.buffs",
         ["Feather Barrier"] = "sets.blue.buffs",
         ["Magic Barrier"] = "sets.blue.buffs",
         ["Memento Mori"] = "sets.blue.buffs",
         ["Metallic Body"] = "sets.blue.buffs",
+        ["Nat. Meditation"] = "sets.blue.buffs",
         ["Occultation"] = "sets.blue.buffs",
         ["Orcish Counterstance"] = "sets.blue.buffs",
         ["Reactor Cool"] = "sets.blue.buffs",
@@ -315,6 +321,7 @@ function get_sets()
         ["Foot Kick"] = "sets.blue.physical.STRDEX",
         ["Frenetic Rip"] = "sets.blue.physical.STRDEX",
         ["Frypan"] = "sets.blue.physical.STRMND",
+        ["Glutinous Dart"] = "sets.blue.physical.STRVIT",
         ["Goblin Rush"] = "sets.blue.physical.STRDEX",
         ["Grand Slam"] = "sets.blue.physical.VIT",
         ["Head Butt"] = "sets.blue.physical.STRINT",
@@ -324,6 +331,7 @@ function get_sets()
         ["Hysteric Barrage"] = "sets.blue.physical.DEX",
         ["Jet Stream"] = "sets.blue.physical.AGI",
         ["Mandibular Bite"] = "sets.blue.physical.STRINT",
+        ["Paralyzing Triad"] = "sets.blue.physical.STRDEX",
         ["Pinecone Bomb"] = "sets.blue.physical.STRAGI",
         ["Power Attack"] = "sets.blue.physical.VIT",
         ["Quad. Continuum"] = "sets.blue.physical.STRVIT",
@@ -356,6 +364,7 @@ function get_sets()
         ["Cursed Sphere"] = "sets.blue.magical.INT",
         ["Dark Orb"] = "sets.blue.magical.INT",
         ["Death Ray"] = "sets.blue.magical.INT",
+        ["Entomb"] = "sets.blue.magical.INT",
         ["Everyone's Grudge"] = "sets.blue.magical.MND",
         ["Eyes On Me"] = "sets.blue.magical.CHR",
         ["Firespit"] = "sets.blue.magical.INT",
@@ -392,6 +401,7 @@ function job_midcast(spell)
         if(spell_mapping[spell.name]) then
             equip(set_mapping[spell_mapping[spell.name]])
         else
+            windower.add_to_chat(123, "No mapping for spell!")
             equip(sets.blue)
         end
     else
