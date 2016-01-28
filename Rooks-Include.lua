@@ -7,12 +7,16 @@ function init_get_sets(weapon_lock)
 
     send_command('bind ^f8 gs c toggle weaponlock')
     send_command('bind f9 gs c toggle pdt')
-    send_command('bind f10 gs c toggle mdt')
-    send_command('bind ^f9 gs c toggle combat set')
-    send_command('bind ^f10 gs c toggle idle set')
+    send_command('bind ^f9 gs c toggle mdt')
+    send_command('bind f10 gs c toggle combat set')
+    send_command('bind ^f10 gs c toggle magic set')
+    send_command('bind ^f11 gs c toggle idle set')
 
     combat_sets = {'DPS', 'midacc', 'highacc', 'defensive' }
     combat_index = 1
+
+    magic_sets = {'DPS', 'midacc', 'highacc', 'burst' }
+    magic_index = 1
 
     idle_sets = { 'regen', 'DT' }
     idle_index = 1
@@ -112,9 +116,10 @@ function init_get_sets(weapon_lock)
     }
 
     send_command('@input /echo F9 toggles PDT on and off')
-    send_command('@input /echo F10 toggles MDT on and off')
-    send_command('@input /echo Ctrl+F9 toggles accuracy/defensive options')
-    send_command('@input /echo Ctrl+F10 toggles idle set options')
+    send_command('@input /echo Ctrl+F9 toggles MDT on and off')
+    send_command('@input /echo F10 toggles physical damage/accuracy/defensive options')
+    send_command('@input /echo Ctrl+F10 toggles magical damage/accuracy/burst options')
+    send_command('@input /echo Ctrl+F11 toggles idle set options')
 
     if weapon_locked == 0 then
         enable('main','sub')
@@ -170,7 +175,11 @@ function base_midcast(spell)
         end
     else
         if sets.midcast[spell.name] then
-            equip(sets.midcast[spell.name])
+            if sets.midcast[spell.name][magic_sets[magic_index]] then
+                equip(sets.midcast[spell.name][magic_sets[magic_index]])
+            else
+                equip(sets.midcast[spell.name])
+            end
         elseif sets.midcast['CureSpell'] and spells.cures:contains(spell.name) then
             equip(sets.midcast['CureSpell'])
         elseif sets.midcast['CuragaSpell'] and spells.curagas:contains(spell.name) then
@@ -178,7 +187,11 @@ function base_midcast(spell)
         elseif sets.midcast['RegenSpell'] and spells.regens:contains(spell.name) then
              equip(sets.midcast['RegenSpell'])
         elseif sets.midcast[spell.skill] then
-            equip(sets.midcast[spell.skill])
+            if sets.midcast[spell.skill][magic_sets[magic_index]] then
+                equip(sets.midcast[spell.skill][magic_sets[magic_index]])
+            else
+                equip(sets.midcast[spell.skill])
+            end
         end
     end
 end
@@ -242,16 +255,30 @@ function base_self_command(command)
     if command == 'toggle combat set' then
         if combat_index == 1 then
             combat_index = 2
-            send_command('@input /echo Moderate accuracy')
+            send_command('@input /echo Moderate physical accuracy')
         elseif combat_index == 2 then
             combat_index = 3
-            send_command('@input /echo High accuracy')
+            send_command('@input /echo High physical accuracy')
         elseif combat_index == 3 then
             combat_index = 4
             send_command('@input /echo Defensive')
         elseif combat_index == 4 then
             combat_index = 1
-            send_command('@input /echo DPS')
+            send_command('@input /echo Physical DPS')
+        end
+    elseif command == 'toggle magic set' then
+        if magic_index == 1 then
+            magic_index = 2
+            send_command('@input /echo Moderate magical accuracy')
+        elseif magic_index == 2 then
+            magic_index = 3
+            send_command('@input /echo High magical accuracy')
+        elseif magic_index == 3 then
+            magic_index = 4
+            send_command('@input /echo Magic Burst')
+        elseif magic_index == 4 then
+            magic_index = 1
+            send_command('@input /echo Magical DPS')
         end
     elseif command == 'toggle idle set' then
         if idle_index == 1 then
