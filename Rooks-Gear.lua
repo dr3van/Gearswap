@@ -13,8 +13,10 @@ function init_gear()
     gear.neck.mab = { name="Eddy Necklace" }
     gear.neck.macc = { name="Eddy Necklace" }
     gear.neck.regen = { name="Wiglen Gorget" }
-    gear.neck.tp = { name="Asperity Necklace" }
+    gear.neck.tp = { name="Sanctity Necklace" }
     gear.neck.ws = { name="Fotia Gorget" }
+    gear.neck.sword = { name="Decimus Torque" }
+    gear.neck.greataxe = { name="Decimus Torque" }
 
     gear.ears = {}
     gear.ears.da_left = { name="Bladeborn Earring" }
@@ -48,15 +50,21 @@ function init_gear()
     gear.waist.macc = { name="Porous Rope" }
     gear.waist.pdt = { name="Flume Belt +1" }
     gear.waist.conserve_mp = { name="Austerity Belt" }
+    gear.waist.highacc = { name="Anguinus Belt" }
+    gear.waist.nohaste = { name="Windbuffet Belt +1" }
 
     gear.back = {}
     gear.back.conserve_mp = { name="Solemnity Cape" }
+    gear.back.cure_potency = { name="Solemnity Cape" }
+    gear.back.divine = { name="Altruistic Cape" }
+    gear.back.dt = { name="Solemnity Cape" }
     gear.back.macc = { name="Refraction Cape" }
 
 
     -- JSE Capes
     gear.jsecapes = {}
     gear.jsecapes.blu = { name="Cornflower Cape", augments={'MP+27', 'DEX+1', 'Accuracy+5', 'Blue magic skill +10'}}
+    gear.jsecapes.pld = { name="Weard Mantle", augments={'DEX+1', 'VIT+2', 'Enmity+4', '"Phalanx"+5'}}
 
     -- Skirmish pieces
     gear.hagondes = {}
@@ -128,11 +136,51 @@ function init_gear()
     gear.vanya.feet = {}
     gear.vanya.feet.D = { name="Vanya Clogs", augments={'"Cure" potency +5%', '"Cure" spellcasting time -15%', '"Conserve MP"+6'}}
 
+    -- 119 Abjuration pieces
+
+    gear.souveran = {}
+    gear.souveran.hands = { name="Souveran Handschuhs" }
+    gear.souveran.hands.A = { name="Souveran Handschuhs", augments={"Accuracy+10", "Attack+10", "Enmity+4"}}
+    gear.souveran.feet = { name="Souveran Schuhs" }
+    gear.souveran.feet.D = { name="Souveran Schuhs", augments={"HP+46", "Attack+18", "magic dmg. taken -2%"}}
+
     -- Weapons
     gear.weapons = {}
     gear.weapons.mage = {}
     gear.weapons.BLM = {}
     gear.weapons.BLM.Nuke = { name="Keraunos", augments={'"Mag.Atk.Bns."+17','"Fast Cast"+3','INT+9 MND+9'}}
     gear.weapons.mage.macc = { name="Lehbrailg +2" }
+
+    -- JSE pieces (AF/Relic/Emp)
+    -- Feels like duplication, but this is mostly just so I have one place to update
+    -- all of the reforged gear (which usually ends up filling the same roles for things
+    -- like JA augmentation, etc)
+    gear.jse = {}
+    gear.jse.artifact = {}
+    gear.jse.relic = {}
+    gear.jse.empyrean = {}
+
+    -- PLD
+    gear.jse.artifact.pld = {
+        head="Rev. Coronet +1",
+        body="Glt. Surcoat +1",
+        hands="",
+        legs="Rev. Breeches",
+        feet="Glt. Leggings +1"
+    }
+    gear.jse.relic.pld = {
+        head="Cab. Coronet",
+        body="Cab. Surcoat +1",
+        hands="Cab. Gauntlets",
+        legs="Cab. Breeches",
+        feet="Cab. Leggings"
+    }
+    gear.jse.empyrean.pld = {
+        head="Chevalier's Armet",
+        body="Creed Cuirass +2",
+        hands="Creed Guantlets +2",
+        legs="Creed Cuisses +2",
+        feet="Creed Sabatons +2"
+    }
 
 end
