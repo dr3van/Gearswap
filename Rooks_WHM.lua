@@ -14,7 +14,7 @@ function get_sets()
         ear1="Hearty Earring",
         ear2="Ethereal Earring",
         body="Piety Briault +1",
-        hands="Ebers Mitts",
+        hands=gear.telchine.hands,
         ring1="Sheltered Ring",
         ring2="Paguroidea Ring",
         back="Umbra Cape",

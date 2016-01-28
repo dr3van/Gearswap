@@ -18,21 +18,21 @@ function get_sets()
         back="Shadow Mantle",
         waist=gear.waist.pdt,
         legs=gear.taeon.legs.tp,
-        feet="Skadi's Jambeaux"
+        feet=gear.taeon.feet.tp
     }
 
     sets.combat = {
         ammo="Jukukik Feather",
         head=gear.taeon.head.tp,
-        neck=gear.neck.ws,
-        ear1="Brutal Earring",
-        ear2=gear.ears.ws,
+        neck=gear.neck.tp,
+        ear1=gear.ears.dw_left,
+        ear2=gear.ears.dw_right,
         body=gear.taeon.body.tp,
         hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
-        ring2="K'ayres Ring",
+        ring2="Epona's Ring",
         back="Atheling Mantle",
-        waist=gear.waist.ws,
+        waist=gear.waist.nohaste,
         legs=gear.taeon.legs.tp,
         feet=gear.taeon.feet.tp
     }
@@ -61,8 +61,8 @@ function get_sets()
         ear2=gear.ears.ws,
         body=gear.taeon.body.tp,
         hands=gear.taeon.hands.tp,
-        ring1="Rajas Ring",
-        ring2="Ifrit Ring",
+        ring1="Ifrit Ring",
+        ring2="Epona's Ring",        
         back="Atheling Mantle",
         waist=gear.waist.ws,
         legs=gear.taeon.legs.tp,

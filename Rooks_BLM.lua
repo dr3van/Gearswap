@@ -12,8 +12,8 @@ function get_sets()
         neck="Wiglen Gorget",
         ear1="Hearty Earring",
         ear2="Ethereal Earring",
-        body="Wicce Coat",
-        hands="Weath. Cuffs +1",
+        body="Vrikodara Jupon",
+        hands="Yaoyotl Gloves",
         ring1="Sheltered Ring",
         ring2="Paguroidea Ring",
         back="Shadow Mantle",
@@ -24,8 +24,8 @@ function get_sets()
     sets.idle.regen = set_combine(sets.idle, {})
     sets.idle.DT = set_combine(sets.idle, {
         head="Nahtirah Hat",
-        legs="Weath. Pants +1",
-        feet="Weath. Souliers +1"
+        legs=gear.helios.legs.MAB,
+        feet=gear.helios.feet.MAB
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})

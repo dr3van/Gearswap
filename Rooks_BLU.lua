@@ -4,13 +4,17 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(1)
 
+    sets.learning = {
+        hands="Assim. Bazu. +1"
+    }
+
     sets.idle = {
         ammo="Iron Gobbet",
         head="Wivre Hairpin",
         neck="Wiglen Gorget",
         ear1="Hearty Earring",
         ear2="Ethereal Earring",
-        body=gear.hagondes.body,
+        body="Vrikodara Jupon",
         hands=gear.taeon.hands.tp,
         ring1="Sheltered Ring",
         ring2="Paguroidea Ring",
@@ -48,7 +52,7 @@ function get_sets()
     sets.combat = {
         ammo="Honed Tathlum",
         head=gear.taeon.head.tp,
-        neck="Asperity Necklace",
+        neck=gear.neck.sword,
         ear1="Brutal Earring",
         ear2="Suppanomimi",
         body=gear.taeon.body.tp,
@@ -65,7 +69,8 @@ function get_sets()
     sets.combat.highacc = set_combine(sets.combat.midacc, {
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,
-        back="Letalis Mantle"
+        back="Letalis Mantle",
+        waist=gear.waist.highacc
     })
     sets.combat.defensive = set_combine(sets.combat, {})
 

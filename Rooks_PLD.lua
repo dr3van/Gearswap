@@ -13,43 +13,40 @@ function get_sets()
 
     sets.idle = {
         ammo="Angha Gem",
-        head="Rev. Coronet +1",
+        head=gear.jse.artifact.pld.head,
         neck="Creed Collar",
         ear1="Hearty Earring",
         ear2="Ethereal Earring",
-        body="Cab. Surcoat +1",
+        body=gear.jse.relic.pld.body,
         hands=gear.yorium.hands.idle,
         ring1="Sheltered Ring",
         ring2="Paguroidea Ring",
         back="Shadow Mantle",
-        waist="Flume Belt +1",
+        waist=gear.waist.pdt,
         legs="Blood Cuisses",
-        feet=gear.acro.feet.tp
+        feet=gear.souveran.feet.D
     }
     sets.idle.regen = set_combine(sets.idle, {})
     sets.idle.DT = set_combine(sets.idle, {
         neck="Twilight Torque",
         ring1=gear.ring.MDTRing,
         ring2=gear.ring.dt_right,
-        back="Mollusca Mantle",
+        back=gear.back.dt,
         waist="Nierenschutz",
-        legs="Rev. Breeches"
+        legs=gear.jse.artifact.pld.legs,
+        feet=gear.souveran.feet.D
 
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {
-        waist="Flume Belt +1"
+        waist=gear.waist.pdt
     })
     sets.idle.MDT = set_combine(sets.idle.DT, {
     })
     sets.resting = set_combine(sets.idle, {})
 
-    sets.twilight = {
-        head="Twilight Helm",
-        body="Twilight Mail"
-    }
-
     sets.precast.FC = {
-        head="Creed Armet +2",
+        ammo="Incantor Stone",
+        head=gear.jse.empyrean.pld.head,
         ear1="Loquac. Earring",
         legs="Blood Cuisses"
     }
@@ -57,11 +54,11 @@ function get_sets()
     sets.combat = {
         ammo="Jukukik Feather",
         head="Yaoyotl Helm",
-        neck="Asperity Necklace",
+        neck=gear.neck.sword,
         ear1="Steelflash Earring",
         ear2="Bladeborn Earring",
         body=gear.acro.body.tp,
-        hands=gear.acro.hands.tp,
+        hands=gear.souveran.hands.A,
         ring1="Rajas Ring",
         ring2="K'ayres Ring",
         back="Letalis Mantle",
@@ -75,9 +72,10 @@ function get_sets()
     sets.combat.defensive = set_combine(sets.combat, {
         ear1="Brutal Earring",
         ear2="Ethereal Earring",
-        body="Cab. Surcoat +1",
-        hands="Cab. Gauntlets",
-        legs="Cab. Breeches",
+        body=gear.jse.relic.pld.body,
+        hands=gear.souveran.hands.A,
+        legs=gear.jse.relic.pld.legs,
+        feet=gear.souveran.feet.D
     })
 
     -- WS sets
@@ -89,7 +87,7 @@ function get_sets()
         ear1="Brutal Earring",
         ear2="Moonshade Earring",
         body=gear.acro.body.tp,
-        hands=gear.acro.hands.tp,
+        hands=gear.souveran.hands.A,
         ring1="Rajas Ring",
         ring2="Ifrit Ring",
         back="Buquwik Cape",
@@ -105,15 +103,15 @@ function get_sets()
     })
 
     sets.WS.Requiescat = set_combine(sets.WS, {
-        body="Miki. Breastplate",
+        body=gear.acro.body.tp,
         ring1="Aquasoul Ring",
         ring2="Aquasoul Ring",
         back="Atheling Mantle"
     })
 
     sets.WS['Aeolian Edge'] = set_combine(sets.WS, {
-        ear1="Novio Earring",
-        ear2="Hecate's Earring",
+        ear1=gear.ears.mab_left,
+        ear2=gear.ears.mab_right,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
         back="Toro Cape"
@@ -123,25 +121,25 @@ function get_sets()
         ammo="Iron Gobbet",
         head="Bahamut's Mask",
         neck="Invidia Torque",
-        body="Creed Cuirass +2",
+        body=gear.jse.empyrean.pld.body,
         hands=gear.yorium.hands.idle,
         ring2="Provocare Ring",
         back="Fierabras's Mantle",
         waist="Creed Baudrier",
-        legs="Cab. Breeches",
-        feet="Creed Sabatons +2"
+        legs=gear.jse.relic.pld.legs,
+        feet=gear.jse.empyrean.pld.feet
     }
 
     sets.JA = set_combine(sets.enmity, {})
-    sets.JA['Invincible'] = set_combine(sets.enmity, { legs="Cab. Breeches" })
-    sets.JA['Holy Circle'] = set_combine(sets.enmity, { feet="Glt. Leggings +1" })
-    sets.JA['Shield Bash'] = set_combine(sets.enmity, { hands="Cab. Gauntlets" })
-    sets.JA['Sentinel'] = set_combine(sets.enmity, { feet="Cab. Leggings" })
-    sets.JA['Cover'] = set_combine(sets.enmity, { body="Cab. Surcoat +1" })
-    sets.JA['Rampart'] = set_combine(sets.enmity, { head="Valor Coronet" })
-    sets.JA['Fealty'] = set_combine(sets.enmity, { body="Cab. Surcoat +1" })
-    sets.JA['Chivalry'] = set_combine(sets.enmity, { hands="Cab. Gauntlets" })
-    sets.JA['Divine Emblem'] = set_combine(sets.enmity, { feet="Creed Sabatons +2" })
+    sets.JA['Invincible'] = set_combine(sets.enmity, { legs=gear.jse.relic.pld.legs })
+    sets.JA['Holy Circle'] = set_combine(sets.enmity, { feet=gear.jse.artifact.pld.feet })
+    sets.JA['Shield Bash'] = set_combine(sets.enmity, { hands=gear.jse.relic.pld.hands })
+    sets.JA['Sentinel'] = set_combine(sets.enmity, { feet=gear.jse.relic.pld.feet })
+    sets.JA['Cover'] = set_combine(sets.enmity, { body=gear.jse.relic.pld.body })
+    sets.JA['Rampart'] = set_combine(sets.enmity, { head=gear.jse.relic.pld.head })
+    sets.JA['Fealty'] = set_combine(sets.enmity, { body=gear.jse.relic.pld.body })
+    sets.JA['Chivalry'] = set_combine(sets.enmity, { hands=gear.jse.relic.pld.hands })
+    sets.JA['Divine Emblem'] = set_combine(sets.enmity, { feet=gear.jse.empyrean.pld.feet })
     sets.JA['Sepulcher'] = set_combine(sets.enmity, {})
     sets.JA['Palisade'] = set_combine(sets.enmity, {})
     sets.JA['Intervene'] = set_combine(sets.enmity, {})
@@ -158,26 +156,38 @@ function get_sets()
     sets.magic_recast = {}
 
     sets.midcast['Healing Magic'] = {
-        head="Valor Coronet",
+        head=gear.jse.relic.pld.head,
         neck="Phalaina Locket",
-        body="Cab. Surcoat +1",
-        hands="Cab. Gauntlets",
+        body=gear.jse.relic.pld.body,
+        hands=gear.jse.relic.pld.hands,
         ring1="K'ayres Ring",
         ring2="Meridian Ring",
         back="Fierabras's Mantle",
         waist="Ocean Sash",
-        legs="Cab. Breeches",
-        feet="Cab. Leggings"
+        legs=gear.jse.relic.pld.legs,
+        feet=gear.jse.relic.pld.feet
     }
 
     sets.midcast['Enhancing Magic'] = {
         neck="Colossus's Torque",
-        legs="Rev. Breeches"
+        legs=gear.jse.artifact.pld.legs
+    }
+
+    sets.midcast['Divine Magic'] = {
+        body=gear.jse.artifact.pld.body,
+        back=gear.back.divine
     }
 
     sets.midcast['Flash'] = set_combine(sets.enmity, {
-        body="Cab. Surcoat +1"
+        body=gear.jse.relic.pld.body
     })
+
+    sets.midcast['Phalanx'] = set_combine(sets.midcast['Enhancing Magic'], {
+        hands=gear.souveran.hands.A,
+        back=gear.jsecapes.pld,
+        feet=gear.souveran.feet.D,
+    })
+
 
     send_command('input /macro book 1;wait .1;input /macro set 1')
 end
