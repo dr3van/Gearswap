@@ -28,12 +28,12 @@ function get_sets()
     }
     sets.idle.regen = set_combine(sets.idle, {})
     sets.idle.DT = set_combine(sets.idle, {
-        neck="Twilight Torque",
-        ring1=gear.ring.MDTRing,
+        neck=gear.neck.dt,
+        ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
         back=gear.back.dt,
         waist="Nierenschutz",
-        legs=gear.jse.artifact.pld.legs,
+        legs=gear.odysseean.legs.dt,
         feet=gear.souveran.feet.D
 
     })
@@ -63,7 +63,7 @@ function get_sets()
         ring2="K'ayres Ring",
         back="Letalis Mantle",
         waist="Cetl Belt",
-        legs=gear.acro.legs.tp,
+        legs=gear.souveran.legs.D,
         feet=gear.acro.feet.tp
     }
     sets.combat.DPS = set_combine(sets.combat, {})
@@ -74,7 +74,7 @@ function get_sets()
         ear2="Ethereal Earring",
         body=gear.jse.relic.pld.body,
         hands=gear.souveran.hands.A,
-        legs=gear.jse.relic.pld.legs,
+        legs=gear.odysseean.legs.dt,
         feet=gear.souveran.feet.D
     })
 
@@ -82,7 +82,7 @@ function get_sets()
 
     sets.WS = {
         ammo="Jukukik Feather",
-        head="Yaoyotl Helm",
+        head=gear.lustratio.head.A,
         neck="Fotia Gorget",
         ear1="Brutal Earring",
         ear2="Moonshade Earring",
@@ -92,8 +92,8 @@ function get_sets()
         ring2="Ifrit Ring",
         back="Buquwik Cape",
         waist="Fotia Belt",
-        legs=gear.acro.legs.tp,
-        feet=gear.acro.feet.tp
+        legs=gear.odysseean.legs.ws,
+        feet=gear.lustratio.feet.D
     }
 
 
@@ -174,6 +174,7 @@ function get_sets()
     }
 
     sets.midcast['Divine Magic'] = {
+        head="Jumalik helm",
         body=gear.jse.artifact.pld.body,
         back=gear.back.divine
     }

@@ -7,11 +7,11 @@ function get_sets()
 
     sets.idle = {
         ammo="Angha Gem",
-        head="Twilight Helm",
+        head="Jumalik helm",
         neck="Wiglen Gorget",
         ear1="Hearty Earring",
         ear2="Ethereal Earring",
-        body="Twilight Mail",
+        body=gear.acro.body.tp,
         hands=gear.yorium.hands.idle,
         ring1="Sheltered Ring",
         ring2="Paguroidea Ring",
@@ -58,12 +58,12 @@ function get_sets()
         ear1="Bladeborn Earring",
         ear2="Steelflash Earring",
         body=gear.acro.body.tp,
-        hands=gear.acro.hands.tp,
+        hands=gear.souveran.hands.A,
         ring1="Rajas Ring",
         ring2="K'ayres Ring",
         back="Atheling Mantle",
         waist="Cetl Belt",
-        legs=gear.acro.legs.tp,
+        legs=gear.odysseean.legs.highacc,
         feet=gear.acro.feet.tp
     }
 
@@ -76,18 +76,18 @@ function get_sets()
 
     sets.WS = {
         ammo="Ravager's Orb",
-        head="Yaoyotl Helm",
+        head=gear.lustratio.head.A,
         neck="Fotia Gorget",
-        ear1="Bladeborn Earring",
-        ear2="Steelflash Earring",
+        ear1="Brutal Earring",
+        ear2="Moonshade Earring",
         body=gear.acro.body.tp,
-        hands=gear.acro.hands.tp,
+        hands=gear.souveran.hands.A,
         ring1="Rajas Ring",
-        ring2="Pyrosoul Ring",
-        back="Atheling Mantle",
+        ring2="Ifrit Ring",
+        back="Buquwik Cape",
         waist="Fotia Belt",
-        legs=gear.acro.legs.tp,
-        feet=gear.acro.feet.tp
+        legs=gear.odysseean.legs.highacc,
+        feet=gear.lustratio.feet.D
     }
 
     sets.WS.Resolution = set_combine(sets.WS, {

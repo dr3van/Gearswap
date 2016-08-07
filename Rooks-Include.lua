@@ -115,6 +115,8 @@ function init_get_sets(weapon_lock)
         feet=""
     }
 
+    organizer_items = gear.universal
+
     send_command('@input /echo F9 toggles PDT on and off')
     send_command('@input /echo Ctrl+F9 toggles MDT on and off')
     send_command('@input /echo F10 toggles physical damage/accuracy/defensive options')

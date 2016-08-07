@@ -33,8 +33,6 @@ function init_gear()
     gear.ears.mab_right = { name="Hecate's Earring" }
 
     gear.ring = {}
-    gear.ring.MDTRing = { name="Dark Ring", augments={'Magic dmg. taken -3%', 'Phys. dmg. taken -5%'}}
-    gear.ring.BDTRing = { name="Dark Ring", augments={'Phys dmg. taken -5%', 'Breath dmg. taken -3%'}}
     gear.ring.dt_left = { name="Defending Ring" }
     gear.ring.dt_right = { name="Vocane Ring" }
     gear.ring.regen_left = { name="Sheltered Ring" }
@@ -141,8 +139,28 @@ function init_gear()
     gear.souveran = {}
     gear.souveran.hands = { name="Souveran Handschuhs" }
     gear.souveran.hands.A = { name="Souveran Handschuhs", augments={"Accuracy+10", "Attack+10", "Enmity+4"}}
+    gear.souveran.legs = { name="Souveran Diechlings" }
+    gear.souveran.legs.D = { name="Souveran Diechlings", augments={'STR+8','VIT+8','Accuracy+12'}}
     gear.souveran.feet = { name="Souveran Schuhs" }
     gear.souveran.feet.D = { name="Souveran Schuhs", augments={"HP+46", "Attack+18", "magic dmg. taken -2%"}}
+
+    gear.lustratio = {}
+    gear.lustratio.head = { name="Lustratio Cap" }
+    gear.lustratio.head.A = { name="Lustratio Cap", augments={"Attack+13", "STR+3", '"Dbl.Atk.+1"'} }
+    gear.lustratio.feet = { name="Lustratio Leggings" }
+    gear.lustratio.feet.D = { name="Lustratio Leggings", augments={"HP+49", "STR+9", "DEX+9"}}
+
+    -- Reisenjima pieces
+
+    gear.odysseean = {}
+    gear.odysseean.legs = {}
+    gear.odysseean.legs.highacc = { name="Odyssean Cuisses", augments={'Accuracy+18 Attack+18','"Dbl.Atk."+1','STR+3','Accuracy+14',}}
+    gear.odysseean.legs.ws = { name="Odyssean Cuisses", augments={'Accuracy+9','STR+3','Weapon skill damage +6%',}}
+    gear.odysseean.legs.dt = { name="Odyssean Cuisses", augments={'Accuracy+1','"Resist Silence"+7','Damage taken-5%','Accuracy+10 Attack+10','Mag. Acc.+16 "Mag.Atk.Bns."+16',}}
+
+    gear.herculean = {}
+    gear.herculean.feet = {}
+    gear.herculean.feet.tp = { name="Herculean Boots", augments={'Accuracy+16 Attack+16','"Triple Atk."+3','Accuracy+14',}}
 
     -- Weapons
     gear.weapons = {}
@@ -150,6 +168,14 @@ function init_gear()
     gear.weapons.BLM = {}
     gear.weapons.BLM.Nuke = { name="Keraunos", augments={'"Mag.Atk.Bns."+17','"Fast Cast"+3','INT+9 MND+9'}}
     gear.weapons.mage.macc = { name="Lehbrailg +2" }
+    gear.weapons.mage.refresh = { name="Contemplator" }
+
+    gear.weapons.BLU = {
+        sword_right= { name="Claidheamh Soluis", augments={'Accuracy+9','"Dbl.Atk."+2','STR+15 DEX+15'} },
+        sword_left = { name="Claidheamh Soluis", augments={'Accuracy+10','"Store TP"+5','STR+14 DEX+14'} },
+        club_right = { name="Gabaxorea", augments={'MP+26','"Mag.Atk.Bns."+9','INT+6'} },
+        club_left = { name="Gabaxorea", augments={'MP+22','"Mag.Atk.Bns."+8','INT+5'} }
+    }
 
     -- JSE pieces (AF/Relic/Emp)
     -- Feels like duplication, but this is mostly just so I have one place to update
@@ -172,15 +198,36 @@ function init_gear()
         head="Cab. Coronet",
         body="Cab. Surcoat +1",
         hands="Cab. Gauntlets",
-        legs="Cab. Breeches",
+        legs="Cab. Breeches +1",
         feet="Cab. Leggings"
     }
     gear.jse.empyrean.pld = {
         head="Chevalier's Armet",
-        body="Creed Cuirass +2",
-        hands="Creed Guantlets +2",
-        legs="Creed Cuisses +2",
-        feet="Creed Sabatons +2"
+        body="Chev. Cuirass",
+        hands="Chev. Guantlets",
+        legs="Chev. Cuisses",
+        feet="Chev. Sabatons"
     }
+
+
+    -- Things I always have on me, no matter what
+    gear.universal = {
+        warp_ring="Warp Ring",
+        defending_ring=gear.ring.dt_left,
+        vocane_ring=gear.ring.dt_right,
+        sheltered_ring=gear.ring.regen_left,
+        paguroidea_ring=gear.ring.regen_right,
+        nexus_cape="Nexus Cape",
+        adoulin_refuge="Adoulin's Refuge +1",
+        cp_mantle="Aptitude Mantle +1",
+        craftkeeper_ring="Craftkeeper's Ring",
+        craftmaster_ring="Craftmaster's Ring",
+        artificers_ring="Artificer's Ring",
+        echad_ring="Echad Ring",
+        trizek_ring="Trizek Ring"
+    }
+
+
+
 
 end

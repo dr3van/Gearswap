@@ -18,29 +18,43 @@ function get_sets()
         back="Shadow Mantle",
         waist=gear.waist.pdt,
         legs=gear.taeon.legs.tp,
-        feet="Nin. Kyahan +1"
+        feet="Hachi. Kyahan +1"
     }
+
+    sets.idle.DT = set_combine(sets.idle, {
+        neck=gear.neck.dt,
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
+        back=gear.back.dt,
+    })
+    sets.idle.PDT = set_combine(sets.idle.DT, {})
+    sets.idle.MDT = set_combine(sets.idle.DT, {})
 
     sets.combat = {
         ammo="Jukukik Feather",
         head=gear.taeon.head.tp,
         neck=gear.neck.ws,
         ear1="Brutal Earring",
-        ear2=gear.ears.ws,
+        ear2="Suppanomimi",
         body=gear.taeon.body.tp,
         hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
         ring2="K'ayres Ring",
         back="Atheling Mantle",
-        waist=gear.waist.ws,
+        waist=gear.waist.nohaste,
         legs=gear.taeon.legs.tp,
-        feet=gear.taeon.feet.tp
+        feet=gear.herculean.feet.tp
     }
 
     sets.combat.DPS = set_combine(sets.combat, {})
     sets.combat.midacc = set_combine(sets.combat, {})
     sets.combat.highacc = set_combine(sets.combat.midacc, {})
-    sets.combat.defensive = set_combine(sets.combat, {})
+    sets.combat.defensive = set_combine(sets.combat, {
+        neck=gear.neck.dt,
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
+        back=gear.back.dt,
+    })
 
     sets.JA = {}
 
@@ -59,7 +73,7 @@ function get_sets()
         back="Atheling Mantle",
         waist=gear.waist.ws,
         legs=gear.taeon.legs.tp,
-        feet=gear.taeon.feet.tp
+        feet=gear.herculean.feet.tp
     }
 
     send_command('input /macro book 7;wait .1;input /macro set 1')

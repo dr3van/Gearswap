@@ -6,7 +6,7 @@ function get_sets()
     init_get_sets(0)
 
     sets.idle = {
-        main="Ababinili +1",
+        main=gear.weapons.mage.refresh,
         sub="Bugard strap +1",
         ammo="Iron Gobbet",
         head="Wivre Hairpin",
@@ -26,14 +26,16 @@ function get_sets()
     sets.idle.DT = set_combine(sets.idle, {
         head=gear.telchine.head,
         hands=gear.telchine.hands,
+        ring1=gear.ring.MDTRing,
+        ring2=gear.ring.dt_right,
         legs=gear.telchine.legs,
         feet=gear.telchine.feet
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = set_combine(sets.idle, {
-        main="Rsv.Cpt. Mace",
-        sub="Legion Scutum",
+        main=gear.weapons.mage.refresh,
+        sub="Bugard strap +1",
         head="Wivre Hairpin",
         neck="Eidolon Pendant",
         ear1="Relaxing Earring",
@@ -137,6 +139,22 @@ function get_sets()
         legs="Ebers Pantaloons",
         feet="Ebers Duckbills"
     }
+
+    sets.midcast.BarSpell = {
+        main="Beneficus",
+        head="Ebers Cap",
+        body="Ebers Bliaud",
+        hands="Ebers Mitts",
+        legs="Clr. Pantaln. +2",
+        feet="Ebers Duckbills",
+    }
+
+    sets.midcast['Barfira'] = sets.midcast.BarSpell
+    sets.midcast['Barblizzara'] = sets.midcast.BarSpell
+    sets.midcast['Baraera'] = sets.midcast.BarSpell
+    sets.midcast['Barstonra'] = sets.midcast.BarSpell
+    sets.midcast['Barthundra'] = sets.midcast.BarSpell
+    sets.midcast['Barwatera'] = sets.midcast.BarSpell
 
     sets.macc = {
         main=gear.weapons.mage.macc,

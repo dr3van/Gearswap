@@ -1,3 +1,4 @@
+-- BLU
 -- Sets
 function get_sets()
 
@@ -6,6 +7,20 @@ function get_sets()
 
     sets.learning = {
         hands="Assim. Bazu. +1"
+    }
+
+    sets.weapons = {}
+    sets.weapons.sword_right = { main=gear.weapons.BLU.sword_right }
+    sets.weapons.sword_left = { main=gear.weapons.BLU.sword_left }
+    sets.weapons.club_right = { main=gear.weapons.BLU.club_right }
+    sets.weapons.club_left = { main=gear.weapons.BLU.club_left }
+
+    sets.telchine = {
+        head=gear.telchine.head,
+        body=gear.telchine.body.cure_cast,
+        hands=gear.telchine.hands.cure_potency,
+        legs=gear.telchine.legs,
+        feet=gear.telchine.feet.cure_cast
     }
 
     sets.idle = {
@@ -21,11 +36,18 @@ function get_sets()
         back="Umbra Cape",
         waist="Flume Belt +1",
         legs="Blood Cuisses",
-        feet=gear.taeon.feet.tp
+        feet=gear.herculean.feet.tp
     }
     sets.idle.regen = set_combine(sets.idle, {})
-    sets.idle.DT = set_combine(sets.idle, {})
-    sets.idle.PDT = set_combine(sets.idle.DT, {})
+    sets.idle.DT = set_combine(sets.idle, {
+        neck=gear.neck.dt,
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
+        back=gear.back.dt,
+    })
+    sets.idle.PDT = set_combine(sets.idle.DT, {
+        back="Umbra Cape",
+    })
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = {
         head="Wivre Hairpin",
@@ -62,7 +84,7 @@ function get_sets()
         back="Atheling Mantle",
         waist="Windbuffet Belt +1",
         legs=gear.taeon.legs.tp,
-        feet=gear.taeon.feet.tp
+        feet=gear.herculean.feet.tp
     }
     sets.combat.DPS = set_combine(sets.combat, {})
     sets.combat.midacc = set_combine(sets.combat, {})
@@ -72,7 +94,9 @@ function get_sets()
         back="Letalis Mantle",
         waist=gear.waist.highacc
     })
-    sets.combat.defensive = set_combine(sets.combat, {})
+    sets.combat.defensive = set_combine(sets.combat, {
+
+    })
 
     -- WS sets
 
@@ -89,7 +113,7 @@ function get_sets()
         back="Atheling Mantle",
         waist="Fotia Belt",
         legs=gear.taeon.legs.tp,
-        feet=gear.taeon.feet.tp
+        feet=gear.herculean.feet.tp
     }
 
     sets.WS.Requiescat = set_combine(sets.WS, {
