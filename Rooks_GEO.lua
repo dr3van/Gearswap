@@ -2,10 +2,11 @@
 function get_sets()
 
     include('Rooks-Include.lua')
-    init_get_sets(0)
-
+    init_get_sets(0, 1)
 
     sets.idle = {
+        main=gear.weapons.mage.refresh,
+        sub="Bugard strap +1",
         range="Dunna",
         head="Wivre Hairpin",
         neck="Wiglen Gorget",
@@ -16,12 +17,18 @@ function get_sets()
         ring1="Sheltered Ring",
         ring2="Paguroidea Ring",
         back="Umbra Cape",
-        waist="Ocean Sash",
+        waist="Porous Rope",
         legs="Nares Trews",
         feet="Geomancy Sandals"
     }
     sets.idle.regen = set_combine(sets.idle, {})
-    sets.idle.DT = set_combine(sets.idle, {})
+    sets.idle.DT = set_combine(sets.idle, {
+        head=gear.ambuscade.morrigan.head,
+        hands=gear.ambuscade.morrigan.hands,
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
+        legs=gear.merlinic.legs.MB
+    })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = set_combine(sets.idle, {})
@@ -48,7 +55,7 @@ function get_sets()
     })
 
     sets.midcast['Elemental Magic'] = {
-        head=gear.helios.head.MAcc,
+        head=gear.merlinic.head.MAB,
         neck=gear.neck.mab,
         ear1=gear.ears.mab_left,
         ear2=gear.ears.mab_right,
@@ -58,9 +65,10 @@ function get_sets()
         ring2="Shiva Ring",
         back="Toro Cape",
         waist="Wanion Belt",
-        legs=gear.helios.legs.MAB,
-        feet=gear.helios.feet.MAB
+        legs=gear.merlinic.legs.MAB,
+        feet=gear.merlinic.feet.MAB
     }
+
 
     sets.midcast['Geomancy'] = {
         body="Bagua Tunic",
@@ -69,9 +77,20 @@ function get_sets()
         waist="Austerity Belt"
     }
 
-    sets.midcast['Dark Magic'] = {
+    sets.midcast['Dark Magic'] = set_combine(sets.midcast['Elemental Magic'], {
         body="Geomancy Tunic +1"
-    }
+    })
+
+    sets.midcast['Stun'] = set_combine(sets.midcast['Dark Magic'], {
+        head=gear.ambuscade.morrigan.head,
+        neck=gear.neck.macc,
+        ear1=gear.ears.macc_mnd,
+        ear2=gear.ears.macc_int,
+        hands=gear.ambuscade.morrigan.hands,
+        back=gear.back.macc,
+        waist=gear.waist.macc
+    })
+
 
     sets.resting = set_combine(sets.idle, {
         head="Wivre Hairpin",

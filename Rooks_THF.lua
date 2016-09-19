@@ -3,7 +3,7 @@
 function get_sets()
 
     include('Rooks-Include.lua')
-    init_get_sets(1)
+    init_get_sets(1, 1)
 
     sets.idle = {
         ammo="Iron Gobbet",
@@ -18,7 +18,7 @@ function get_sets()
         back="Shadow Mantle",
         waist=gear.waist.pdt,
         legs=gear.taeon.legs.tp,
-        feet=gear.taeon.feet.tp
+        feet="Jute Boots +1"
     }
 
     sets.combat = {

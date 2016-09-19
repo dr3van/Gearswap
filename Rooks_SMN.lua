@@ -2,7 +2,7 @@
 -- Sets
 function get_sets()
     include('Rooks-Include.lua')
-    init_get_sets(1)
+    init_get_sets(1, 1)
 end
 
 function job_precast(spell)

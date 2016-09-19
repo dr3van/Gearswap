@@ -1,9 +1,11 @@
 res = require('resources')
 
-function init_get_sets(weapon_lock)
+function init_get_sets(weapon_lock, gear_file)
 
     include('organizer-lib')
-    include('Rooks-Gear.lua')
+    if gear_file then
+        include('Rooks-Gear.lua')
+    end
 
     send_command('bind ^f8 gs c toggle weaponlock')
     send_command('bind f9 gs c toggle pdt')
@@ -18,7 +20,7 @@ function init_get_sets(weapon_lock)
     magic_sets = {'DPS', 'midacc', 'highacc', 'burst' }
     magic_index = 1
 
-    idle_sets = { 'regen', 'DT' }
+    idle_sets = { 'base', 'regen', 'DT' }
     idle_index = 1
 
     is_pdt = 0
@@ -54,6 +56,7 @@ function init_get_sets(weapon_lock)
         feet=""
     }
 
+    sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {})
     sets.idle.DT = set_combine(sets.idle, {})
     sets.idle.PDT = set_combine(sets.idle.DT, {})

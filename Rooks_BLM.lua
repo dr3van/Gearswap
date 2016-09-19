@@ -2,7 +2,7 @@
 function get_sets()
 
     include('Rooks-Include.lua')
-    init_get_sets(0)
+    init_get_sets(0, 1)
 
     sets.idle = {
         main=gear.weapons.BLM.Nuke,
@@ -135,7 +135,7 @@ function get_sets()
         ring2="Shiva Ring",
         back="Toro Cape",
         waist="Wanion Belt",
-        legs=gear.helios.legs.MAB,
+        legs=gear.merlinic.legs.MAB,
         feet=gear.helios.feet.MAB
     })
 

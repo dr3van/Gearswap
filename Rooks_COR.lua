@@ -3,7 +3,7 @@
 function get_sets()
 
     include('Rooks-Include.lua')
-    init_get_sets(0)
+    init_get_sets(1, 1)
 
     send_command('bind f8 gs c toggle luzaf')
     luzaf_mode = 0

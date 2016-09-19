@@ -3,7 +3,7 @@
 function get_sets()
 
     include('Rooks-Include.lua')
-    init_get_sets(0)
+    init_get_sets(1, 1)
 
     sets.idle = {
         ammo="Iron Gobbet",

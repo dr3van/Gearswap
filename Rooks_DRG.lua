@@ -3,25 +3,28 @@
 function get_sets()
 
     include('Rooks-Include.lua')
-    init_get_sets(1)
+    init_get_sets(1, 1)
 
 	sets.idle = {
         ammo="Iron Gobbet",
-		head="Twilight Helm",
+		head=gear.ambuscade.ares.head,
 		neck="Wiglen Gorget",
         ear1="Hearty Earring",
         ear2="Ethereal Earring",
-        body="Twilight Mail",
-        hands="Acro Gauntlets",
+        body=gear.acro.body.tp,
+        hands=gear.ambuscade.ares.hands,
         ring1="Sheltered Ring",
         ring2="Paguroidea Ring",
         back="Shadow Mantle",
         waist="Flume Belt +1",
         legs="Blood Cuisses",
-        feet=gear.acro.legs.tp
+        feet=gear.ambuscade.ares.feet
 	}
     sets.idle.regen = set_combine(sets.idle, {})
-    sets.idle.DT = set_combine(sets.idle, {})
+    sets.idle.DT = set_combine(sets.idle, {
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right
+    })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = set_combine(sets.idle, {})
@@ -29,7 +32,7 @@ function get_sets()
     sets.combat = {
         ammo="Thew Bomblet",
         head="Yaoyotl Helm",
-        neck="Portus Collar",
+        neck=gear.neck.tp,
         ear1="Bladeborn Earring",
         ear2="Steelflash Earring",
         body=gear.acro.body.tp,
@@ -38,8 +41,8 @@ function get_sets()
         ring2="K'ayres Ring",
         back="Atheling Mantle",
         waist="Cetl Belt",
-        legs=gear.acro.legs.tp,
-        feet="Whirlpool Greaves"
+        legs=gear.taeon.legs.tp,
+        feet=gear.acro.feet.tp
     }
 
 	sets.combat.DPS = set_combine(sets.combat, {})
@@ -62,7 +65,7 @@ function get_sets()
         ring2="Pyrosoul Ring",
         back="Atheling Mantle",
         waist="Fotia Belt",
-        legs=gear.acro.legs.tp,
+        legs=gear.taeon.legs.tp,
         feet="Whirlpool Greaves"
 	}
 
@@ -78,7 +81,7 @@ function get_sets()
         ring2="Ifrit Ring",
         back="Atheling Mantle",
         waist="Wanion Belt",
-        legs=gear.acro.legs.tp,
+        legs=gear.taeon.legs.tp,
         feet="Whirlpool Greaves"
     }
 

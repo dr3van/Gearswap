@@ -3,7 +3,7 @@
 function get_sets()
 
     include('Rooks-Include.lua')
-    init_get_sets(0)
+    init_get_sets(0, 1)
 
     sets.idle = {
         main=gear.weapons.mage.refresh,
@@ -26,7 +26,7 @@ function get_sets()
     sets.idle.DT = set_combine(sets.idle, {
         head=gear.telchine.head,
         hands=gear.telchine.hands,
-        ring1=gear.ring.MDTRing,
+        ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
         legs=gear.telchine.legs,
         feet=gear.telchine.feet

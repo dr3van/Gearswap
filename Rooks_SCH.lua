@@ -4,7 +4,7 @@
 function get_sets()
 
     include('Rooks-Include.lua')
-    init_get_sets(0)
+    init_get_sets(0, 1)
 
     sets.idle = {
         main=gear.weapons.mage.macc,
@@ -129,7 +129,7 @@ function get_sets()
         main=gear.weapons.mage.macc,
         sub="Bugard strap +1",
         ammo="Aqua Sachet",
-        head=gear.helios.head.macc,
+        head=gear.merlinic.head.MAcc,
         neck=gear.neck.macc,
         ear1=gear.ears.macc_mnd,
         ear2=gear.ears.macc_int,
@@ -166,10 +166,10 @@ function get_sets()
     }
 
     sets.midcast['Elemental Magic'] = {
-        main=gear.weapons.BLM.Nuke,
+        main=gear.weapons.SCH.Nuke,
         sub="Zuuxowu Grip",
         ammo="Dosis Tathlum",
-        head="Kaabnax Hat",
+        head=gear.merlinic.head.MAB,
         neck="Eddy Necklace",
         ear1="Novio Earring",
         ear2="Hecate's Earring",
@@ -179,8 +179,8 @@ function get_sets()
         ring2="Shiva Ring",
         back="Toro Cape",
         waist=gear.waist.macc,
-        legs=gear.helios.legs.MAB,
-        feet=gear.helios.feet.MAB
+        legs=gear.merlinic.legs.MAB,
+        feet=gear.merlinic.feet.MAB
     }
 
     send_command('input /macro book 20;wait .1;input /macro set 1')

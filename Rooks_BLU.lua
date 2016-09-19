@@ -3,7 +3,7 @@
 function get_sets()
 
     include('Rooks-Include.lua')
-    init_get_sets(1)
+    init_get_sets(1, 1)
 
     sets.learning = {
         hands="Assim. Bazu. +1"
@@ -73,7 +73,7 @@ function get_sets()
 
     sets.combat = {
         ammo="Honed Tathlum",
-        head=gear.taeon.head.tp,
+        head=gear.herculean.head.tp,
         neck=gear.neck.sword,
         ear1="Brutal Earring",
         ear2="Suppanomimi",
@@ -81,9 +81,9 @@ function get_sets()
         hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
         ring2="Epona's Ring",
-        back="Atheling Mantle",
+        back=gear.jsecapes.amb.blu,
         waist="Windbuffet Belt +1",
-        legs=gear.taeon.legs.tp,
+        legs=gear.herculean.legs.tp,
         feet=gear.herculean.feet.tp
     }
     sets.combat.DPS = set_combine(sets.combat, {})
@@ -91,7 +91,6 @@ function get_sets()
     sets.combat.highacc = set_combine(sets.combat.midacc, {
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,
-        back="Letalis Mantle",
         waist=gear.waist.highacc
     })
     sets.combat.defensive = set_combine(sets.combat, {
@@ -102,7 +101,7 @@ function get_sets()
 
     sets.WS = {
         ammo="Honed Tathlum",
-        head=gear.taeon.head.tp,
+        head=gear.herculean.head.tp,
         neck="Fotia Gorget",
         ear1="Bladeborn Earring",
         ear2="Steelflash Earring",
@@ -110,9 +109,9 @@ function get_sets()
         hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
         ring2="Epona's Ring",
-        back="Atheling Mantle",
+        back=gear.jsecapes.amb.blu,
         waist="Fotia Belt",
-        legs=gear.taeon.legs.tp,
+        legs=gear.herculean.legs.tp,
         feet=gear.herculean.feet.tp
     }
 
@@ -165,6 +164,13 @@ function get_sets()
     })
 
     sets.blue.debuffs = set_combine(sets.blue, {
+        neck=gear.neck.macc,
+        ear1=gear.ears.macc_mnd,
+        ear2=gear.ears.macc_int,
+        hands=gear.ambuscade.morrigan.hands,
+        waist=gear.waist.macc,
+        legs=gear.ambuscade.morrigan.legs,
+        feet=gear.ambuscade.morrigan.feet
     })
 
     sets.blue.breath = set_combine(sets.blue, {
@@ -173,8 +179,8 @@ function get_sets()
     sets.blue.physical = set_combine(sets.blue, {
         head="Whirlpool Mask",
         neck="Eddy Necklace",
-        ear1="Lifestorm Earring",
-        ear2="Psystorm Earring",
+        ear1=gear.ears.macc_mnd,
+        ear2=gear.ears.macc_int,
         hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
         ring2="Ifrit Ring",

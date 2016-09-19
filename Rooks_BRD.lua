@@ -3,7 +3,7 @@
 function get_sets()
 
     include('Rooks-Include.lua')
-    init_get_sets(1)
+    init_get_sets(0, 1)
 
 	sets.idle = {
         main=gear.weapons.mage.macc,

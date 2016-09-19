@@ -3,7 +3,7 @@
 function get_sets()
 
     include('Rooks-Include.lua')
-    init_get_sets()
+    init_get_sets(0, 1)
 
     sets.idle = {
         ammo="Angha Gem",

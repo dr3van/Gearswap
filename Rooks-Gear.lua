@@ -5,13 +5,16 @@ function init_gear()
     -- augmented gear that I use across multiple jobs.
 
     -- All jobs pieces
+    gear.ammo = {}
+    gear.ammo.dt = { name="Staunch Tathlum" }
+
     gear.neck = {}
     gear.neck.cure_potency = { name="Phalaina Locket" }
     gear.neck.dt = { name="Twilight Torque" }
     gear.neck.enmity = { name="Invidia Torque" }
     gear.neck.idle = { name="Wiglen Gorget" }
     gear.neck.mab = { name="Eddy Necklace" }
-    gear.neck.macc = { name="Eddy Necklace" }
+    gear.neck.macc = { name="Sanctity Necklace" }
     gear.neck.regen = { name="Wiglen Gorget" }
     gear.neck.tp = { name="Sanctity Necklace" }
     gear.neck.ws = { name="Fotia Gorget" }
@@ -50,6 +53,7 @@ function init_gear()
     gear.waist.conserve_mp = { name="Austerity Belt" }
     gear.waist.highacc = { name="Anguinus Belt" }
     gear.waist.nohaste = { name="Windbuffet Belt +1" }
+    gear.waist.highhaste = { name="Pya'ekue Belt +1" }
 
     gear.back = {}
     gear.back.conserve_mp = { name="Solemnity Cape" }
@@ -63,6 +67,13 @@ function init_gear()
     gear.jsecapes = {}
     gear.jsecapes.blu = { name="Cornflower Cape", augments={'MP+27', 'DEX+1', 'Accuracy+5', 'Blue magic skill +10'}}
     gear.jsecapes.pld = { name="Weard Mantle", augments={'DEX+1', 'VIT+2', 'Enmity+4', '"Phalanx"+5'}}
+    gear.jsecapes.amb = {}
+    gear.jsecapes.amb.blu = { name="Rosmerta's Cape"}
+    gear.jsecapes.amb.pld = { name="Rudianos's Mantle"}
+    gear.jsecapes.amb.pld.def = { name="Rudianos's Mantle"}
+    gear.jsecapes.amb.pld.tp = { name="Rudianos's Mantle"}
+    gear.jsecapes.amb.pld.ws = { name="Rudianos's Mantle"}
+
 
     -- Skirmish pieces
     gear.hagondes = {}
@@ -137,12 +148,18 @@ function init_gear()
     -- 119 Abjuration pieces
 
     gear.souveran = {}
+    gear.souveran.body = { name="Souveran Cuirass" }
+    gear.souveran.body.A = { name="Souveran Cuirass", augments={"Accuracy+10", "Attack+9", "Enmity+3"}}
     gear.souveran.hands = { name="Souveran Handschuhs" }
     gear.souveran.hands.A = { name="Souveran Handschuhs", augments={"Accuracy+10", "Attack+10", "Enmity+4"}}
     gear.souveran.legs = { name="Souveran Diechlings" }
     gear.souveran.legs.D = { name="Souveran Diechlings", augments={'STR+8','VIT+8','Accuracy+12'}}
     gear.souveran.feet = { name="Souveran Schuhs" }
     gear.souveran.feet.D = { name="Souveran Schuhs", augments={"HP+46", "Attack+18", "magic dmg. taken -2%"}}
+
+    gear.carmine = {}
+    gear.carmine.legs = { name="Carmine Cuisses +1"}
+    gear.carmine.legs.D = { name="Carmine Cuisses +1", augments={ 'Accuracy+20', 'Attack+12', '"Dual Wield"+6'}}
 
     gear.lustratio = {}
     gear.lustratio.head = { name="Lustratio Cap" }
@@ -152,21 +169,48 @@ function init_gear()
 
     -- Reisenjima pieces
 
-    gear.odysseean = {}
-    gear.odysseean.legs = {}
-    gear.odysseean.legs.highacc = { name="Odyssean Cuisses", augments={'Accuracy+18 Attack+18','"Dbl.Atk."+1','STR+3','Accuracy+14',}}
-    gear.odysseean.legs.ws = { name="Odyssean Cuisses", augments={'Accuracy+9','STR+3','Weapon skill damage +6%',}}
-    gear.odysseean.legs.dt = { name="Odyssean Cuisses", augments={'Accuracy+1','"Resist Silence"+7','Damage taken-5%','Accuracy+10 Attack+10','Mag. Acc.+16 "Mag.Atk.Bns."+16',}}
+    gear.odyssean = {}
+    gear.odyssean.hands = { name="Odyssean Gauntlets" }
+    gear.odyssean.hands.idle = { name="Odyssean Gauntlets", augments={'Accuracy+13 Attack+13','Phys. dmg. taken -4%','DEX+10','Attack+3'} }
+    gear.odyssean.hands.ws = { name="Odyssean Gauntlets", augments={'Accuracy+13 Attack+13','Phys. dmg. taken -4%','DEX+10','Attack+3'} }
+    gear.odyssean.legs = { name="Odyssean Cuisses" }
+    gear.odyssean.legs.highacc = { name="Odyssean Cuisses", augments={'Accuracy+18 Attack+18','"Dbl.Atk."+1','STR+3','Accuracy+14',}}
+    gear.odyssean.legs.ws = { name="Odyssean Cuisses", augments={'Weapon skill damage +4%','Pet: STR+3','Chance of successful block +2','Accuracy+19 Attack+19',}}
+    gear.odyssean.legs.dt = { name="Odyssean Cuisses", augments={'Accuracy+1','"Resist Silence"+7','Damage taken-5%','Accuracy+10 Attack+10','Mag. Acc.+16 "Mag.Atk.Bns."+16',}}
 
     gear.herculean = {}
-    gear.herculean.feet = {}
+    gear.herculean.head = { name="Herculean Helm" }
+    gear.herculean.head.tp = { name="Herculean Helm", augments={'Accuracy+28','"Triple Atk."+2','AGI+2','Attack+5',}}
+    gear.herculean.legs = { name="Herculean Trousers" }
+    gear.herculean.legs.tp = { name="Herculean Trousers", augments={'Accuracy+20','"Triple Atk."+3','Attack+4',}}
+    gear.herculean.feet = { name="Herculean Boots" }
     gear.herculean.feet.tp = { name="Herculean Boots", augments={'Accuracy+16 Attack+16','"Triple Atk."+3','Accuracy+14',}}
+
+    gear.merlinic = {}
+    gear.merlinic.head = { name="Merlinic Hood"}
+    gear.merlinic.head.MAB = { name="Merlinic Hood", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','"Fast Cast"+4','CHR+1','Mag. Acc.+11','"Mag.Atk.Bns."+12'}}
+    gear.merlinic.head.MAcc = { name="Merlinic Hood", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','"Fast Cast"+4','CHR+1','Mag. Acc.+11','"Mag.Atk.Bns."+12'}}
+    gear.merlinic.legs = { name="Merlinic Shalwar"}
+    gear.merlinic.legs.MAB = { name="Merlinic Shalwar", augments={'Mag. Acc.+10','Magic Damage +15','INT+9','"Mag.Atk.Bns."+13',}}
+    gear.merlinic.legs.MAcc = { name="Merlinic Shalwar", augments={'Mag. Acc.+10','Magic Damage +15','INT+9','"Mag.Atk.Bns."+13',}}
+    gear.merlinic.legs.MB = { name="Merlinic Shalwar", augments={'Mag. Acc.+10','Magic Damage +15','INT+9','"Mag.Atk.Bns."+13',}}
+    gear.merlinic.legs.MDmg = { name="Merlinic Shalwar", augments={'Mag. Acc.+10','Magic Damage +15','INT+9','"Mag.Atk.Bns."+13',}}
+    gear.merlinic.feet = { name="Merlinic Crackows" }
+    gear.merlinic.feet.MAB = { name="Merlinic Crackows", augments={'Mag. Acc.+15','"Fast Cast"+6','"Mag.Atk.Bns."+13'}}
+
+    -- SR
+
+    gear.founder = {}
+    gear.founder.body = { name="Founder's Breastplate" }
+    gear.founder.hands = { name="Founder's Gauntlets" }
 
     -- Weapons
     gear.weapons = {}
     gear.weapons.mage = {}
     gear.weapons.BLM = {}
+    gear.weapons.SCH = {}
     gear.weapons.BLM.Nuke = { name="Keraunos", augments={'"Mag.Atk.Bns."+17','"Fast Cast"+3','INT+9 MND+9'}}
+    gear.weapons.SCH.Nuke = { name="Keraunos", augments={'"Mag.Atk.Bns."+17','"Fast Cast"+3','INT+9 MND+9'}}
     gear.weapons.mage.macc = { name="Lehbrailg +2" }
     gear.weapons.mage.refresh = { name="Contemplator" }
 
@@ -189,15 +233,15 @@ function init_gear()
     -- PLD
     gear.jse.artifact.pld = {
         head="Rev. Coronet +1",
-        body="Glt. Surcoat +1",
-        hands="",
-        legs="Rev. Breeches",
-        feet="Glt. Leggings +1"
+        body="Rev. Surcoat +1",
+        hands="Rev. Gauntlets +1",
+        legs="Rev. Breeches +1",
+        feet="Rev. Leggings +1"
     }
     gear.jse.relic.pld = {
         head="Cab. Coronet",
         body="Cab. Surcoat +1",
-        hands="Cab. Gauntlets",
+        hands="Cab. Gauntlets +1",
         legs="Cab. Breeches +1",
         feet="Cab. Leggings"
     }
@@ -209,6 +253,49 @@ function init_gear()
         feet="Chev. Sabatons"
     }
 
+    -- Ambuscade gear
+    -- Slotted this way so after my lazy ass gets the +1 I don't have to change things
+    -- Named after the salvage pieces because it's the only way I can remember it
+    gear.ambuscade = {}
+    gear.ambuscade.ares = {
+        head="Sulevia's Mask +1",
+        body="",
+        hands="Sulevia's Gauntlets +1",
+        legs="",
+        feet="Sulevia's Leggings +1",
+    }
+
+    gear.ambuscade.skadi = {
+        head="Meghanada Visor",
+        body="Meghanada Cuirie",
+        hands="Meghanada Gloves",
+        legs="Meghanada Chausses",
+        feet="Meghanada Jambeaux",
+    }
+
+    gear.ambuscade.usukane = {
+        head="",
+        body="",
+        hands="",
+        legs="",
+        feet="",
+    }
+
+    gear.ambuscade.marduk = {
+        head="",
+        body="",
+        hands="",
+        legs="",
+        feet="",
+    }
+
+    gear.ambuscade.morrigan = {
+        head="Jhakri Coronal",
+        body="Jhakri Robe",
+        hands="Jhakri Cuffs",
+        legs="Jhakri Slops",
+        feet="Jhakri Pigaches",
+    }
 
     -- Things I always have on me, no matter what
     gear.universal = {
