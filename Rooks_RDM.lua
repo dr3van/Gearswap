@@ -6,30 +6,36 @@ function get_sets()
     init_get_sets(0, 1)
 
     sets.idle = {
-        ammo="Iron Gobbet",
-        head="Dls. Chapeau +2",
-        neck="Wiglen Gorget",
+        ammo=gear.ammo.dt,
+        head=gear.jse.relic.rdm.head,
+        neck=gear.neck.dt,
         ear1="Hearty Earring",
         ear2="Ethereal Earring",
-        body="Hagondes Coat +1",
-        hands=gear.taeon.hands.tp,
-        ring1=gear.ring.regen_left,
-        ring2=gear.ring.regen_right,
-        back="Umbra Cape",
-        waist="Flume Belt +1",
-        legs="Blood Cuisses",
+        body=gear.body.mage_idle,
+        hands="Leyline Gloves",
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
+        back=gear.back.mage_idle,
+        waist=gear.waist.pdt,
+        legs=gear.carmine.legs.D,
         feet=gear.taeon.feet.tp
     }
 
-    sets.idle.regen = set_combine(sets.idle, {})
-    sets.idle.DT = set_combine(sets.idle, {})
+    sets.idle.base = set_combine(sets.idle, {})
+    sets.idle.regen = set_combine(sets.idle, {
+        ring1=gear.ring.regen_left,
+        ring2=gear.ring.regen_right
+    })
+    sets.idle.DT = set_combine(sets.idle, {
+        head=gear.gendewitha.head.pdt
+    })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = set_combine(sets.idle, {
-        head="Dls. Chapeau +2",
+        head=gear.jse.relic.rdm.head,
         neck="Eidolon Pendant",
         ear1="Relaxing Earring",
-        body="Estq. Sayon +2",
+        body=gear.body.mage_idle,
         back="Vita Cape",
         waist="Austerity Belt",
         legs="Nisse Slacks",
@@ -37,36 +43,37 @@ function get_sets()
     })
 
     sets.precast.FC = {
-        head="Atrophy Chapeau",
+        head=gear.jse.artifact.rdm.head,
         ear1="Loquac. Earring",
         ear2="Estq. Earring",
-        body="Dls. Tabard +2",
-        hands="Repartie Gloves",
-        back="Swith Cape",
-        waist="Witful Belt",
+        body=gear.jse.relic.rdm.body,
+        hands=gear.hands.melee_fc,
+        ring1=gear.ring.FC_left,
+        back=gear.back.fc,
+        waist=gear.back.fc,
         legs="Orvail Pants +1",
-        feet="Chelona Boots +1"
+        feet=gear.merlinic.feet.FC
     }
 
     sets.combat = {
         ammo="Jukukik Feather",
-        head="Weath. Corona +1",
-        neck="Asperity Necklace",
-        ear1="Bladeborn Earring",
-        ear2="Steelflash Earring",
-        body="Weather. Robe +1",
-        hands="Weath. Cuffs +1",
+        head=gear.taeon.head.tp,
+        neck=gear.neck.sword,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        body=gear.taeon.body.tp,
+        hands=gear.taeon.hands.tp,
         ring1="Rajas ring",
         ring2="K'ayres Ring",
         back="Atheling Mantle",
         waist="Cetl Belt",
-        legs="Weath. Pants +1",
-        feet="Weath. Souliers +1"
+        legs=gear.taeon.legs.tp,
+        feet=gear.taeon.feet.tp
     }
 
     sets.combat.DPS = set_combine(sets.combat, {})
     sets.combat.midacc = set_combine(sets.combat, {
-        neck="Portus Collar",
+        neck=gear.neck.sword,
         back="Letalis Mantle"
     })
     sets.combat.highacc = set_combine(sets.combat.midacc, {})
@@ -74,42 +81,44 @@ function get_sets()
 
 
     sets.JA = {}
-    sets.JA["Chainspell"] = { body="Dls. Tabard +2" }
-    sets.JA["Saboteur"] = { feet="Estq. Ganthrt. +2" }
+    sets.JA["Chainspell"] = { body=gear.jse.relic.rdm.body }
+    sets.JA["Saboteur"] = { feet=gear.jse.empyrean.rdm.feet }
 
     -- WS sets
 
     sets.WS = {
         ammo="Jukukik Feather",
-        head="Nahtirah Hat",
+        head=gear.taeon.head.tp,
         neck="Fotia Gorget",
         ear1="Brutal Earring",
         ear2="Moonshade Earring",
-        body="Hagondes Coat +1",
-        hands="Espial Bracers",
+        body=gear.taeon.body.tp,
+        hands=gear.taeon.hands.tp,
         ring1="Rajas ring",
-        ring2="Pyrosoul Ring",
+        ring2="K'ayres Ring",
         back="Atheling Mantle",
         waist="Fotia Belt",
-        legs="Espial Hose",
-        feet="Espial Socks"
+        legs=gear.taeon.legs.tp,
+        feet=gear.taeon.feet.tp
     }
+
+-- START HERE
 
     -- Magic sets
     sets.magic_recast = {}
     sets.magic_accuracy = {
-        head="Weath. Corona +1",
-        neck="Eddy Necklace",
-        ear1="Lifestorm Earring",
-        ear2="Psystorm Earring",
-        body="Weather. Robe +1",
-        hands="Yaoyotl Gloves",
-        ring1="Sangoma Ring",
+        head=gear.merlinic.head.MAcc,
+        neck=gear.neck.macc,
+        ear1=gear.ears.macc_mnd,
+        ear2=gear.ears.macc_int,
+        body=gear.vanya.body.C,
+        hands="Leyline Gloves",
+        ring1=gear.ring.macc,
         ring2="Shiva Ring",
-        back="Refraction Cape",
-        waist="Witch Sash",
-        legs="Weath. Pants +1",
-        feet="Vitivation Boots"
+        back=gear.back.macc,
+        waist=gear.waist.macc,
+        legs=gear.merlinic.legs.MAcc,
+        feet=gear.merlinic.feet.MAcc
     }
 
     sets.midcast['Enfeebling Magic'] = set_combine(sets.magic_accuracy, {
@@ -123,39 +132,50 @@ function get_sets()
     sets.midcast['Enfeebling Magic']['Black Magic'] = set_combine(sets.midcast['Enfeebling Magic'], {
     })
 
-    sets.midcast['Healing Magic'] = {
-        head="Weath. Corona +1",
-        neck="Phalaina Locket",
-        ear1="Lifestorm Earring",
-        ear2="Roundel Earring",
-        body="Weather. Robe +1",
-        hands="Bokwus Gloves",
-        ring1="Aquasoul Ring",
-        ring2="Aquasoul Ring",
-        back="Oretan. Cape +1",
-        waist="Austerity Belt",
-        legs="Atrophy Tights",
-        feet="Weath. Souliers +1"
+    sets.precast.CureSpell = set_combine(sets.precast.FC, {
+        body=gear.telchine.body.cure_cast,
+        feet=gear.vanya.feet.D
+    })
+    sets.precast.CuragaSpell = set_combine(sets.precast.CureSpell, {})
+
+    sets.midcast.CureSpell = {
+        head=gear.gendewitha.head.pdt,
+        neck=gear.neck.cure_potency,
+        ear1="Roundel Earring",
+        ear2="Lifestorm Earring",
+        body=gear.jse.relic.rdm.body,
+        hands=gear.telchine.hands.cure_potency,
+        ring1=gear.ring.healing_left,
+        ring2=gear.ring.cure_potency,
+        back=gear.back.cure_potency,
+        waist=gear.waist.conserve_mp,
+        legs=gear.jse.artifact.rdm.legs,
+        feet=gear.vanya.feet.D
+    }
+    sets.midcast.CuragaSpell = set_combine(sets.midcast.CureSpell, {})
+    sets.midcast.RegenSpell = {
+        body=gear.telchine.body.cure_cast
     }
 
     sets.midcast['Enhancing Magic'] = set_combine(sets.magic_recast, {
-        body="Dls. Tabard +2",
-        hands="Vitivation Gloves",
+        body=gear.jse.relic.rdm.head,
+        hands=gear.jse.relic.rdm.hands,
         back="Estoqueur's Cape",
         waist="Austerity Belt",
-        legs="Atrophy Tights",
-        feet="Estq. Houseaux +2"
+        legs=gear.jse.artifact.rdm.legs,
+        feet=gear.jse.empyrean.rdm.feet
     })
 
     sets.midcast['Elemental Magic'] = set_combine(sets.magic_accuracy, {
-        head="Atrophy Chapeau",
-        ear1="Novio Earring",
-        ear2="Hecate's Earring",
+        head=gear.merlinic.head.MAB,
+        ear1=gear.ears.mab_left,
+        ear2=gear.ears.mab_right,
         body="Helios Jacket",
         hands="Helios Gloves",
         ring1="Shiva Ring",
         ring2="Shiva Ring",
-        feet="Helios Boots"
+        legs=gear.merlinic.legs.MAB,
+        feet=gear.merlinic.feet.MAB
     })
 
     sets.midcast['Dark Magic'] = set_combine(sets.magic_accuracy, {
@@ -163,10 +183,13 @@ function get_sets()
 
     -- Specific spells
     sets.midcast['Refresh'] = set_combine(sets.midcast['Enhancing Magic'], {
-        legs="Estqr. Fuseau +2"
+        legs=gear.jse.empyrean.rdm.legs
     })
     sets.midcast['Refresh II'] = set_combine(sets.midcast['Enhancing Magic'], {
-        legs="Estqr. Fuseau +2"
+        legs=gear.jse.empyrean.rdm.legs
+    })
+    sets.midcast['Phalanx II'] = set_combine(sets.midcast['Enhancing Magic'], {
+        hands=gear.jse.relic.rdm.hands
     })
     sets.midcast['Sneak'] = set_combine(sets.midcast['Enhancing Magic'], {
         back="Skulker's Cape"
@@ -175,15 +198,20 @@ function get_sets()
         back="Skulker's Cape"
     })
     sets.midcast['Paralyze II'] = set_combine(sets.midcast['Enfeebling Magic']['White Magic'], {
-        feet="Vitivation Boots"
+        feet=gear.jse.relic.rdm.boots
     })
     sets.midcast['Slow II'] = set_combine(sets.midcast['Enfeebling Magic']['White Magic'], {
-        head="Dls. Chapeau +2"
+        head=gear.jse.relic.rdm.head
     })
     sets.midcast['Dia III'] = set_combine(sets.midcast['Enfeebling Magic']['White Magic'], {
-        head="Dls. Chapeau +2"
+        head=gear.jse.relic.rdm.head
     })
-
+    sets.midcast['Blind II'] = set_combine(sets.midcast['Enfeebling Magic']['Black Magic'], {
+        legs=gear.jse.relic.rdm.legs
+    })
+    sets.midcast['Bio III'] = set_combine(sets.midcast['Enfeebling Magic']['Black Magic'], {
+        legs=gear.jse.relic.rdm.legs
+    })
     send_command('input /macro book 2;wait .1;input /macro set 1')
 end
 

@@ -288,10 +288,13 @@ function base_self_command(command)
     elseif command == 'toggle idle set' then
         if idle_index == 1 then
             idle_index = 2
-            send_command('@input /echo Idle DT')
-        elseif idle_index == 2 then
-            idle_index = 1
             send_command('@input /echo Idle regen')
+        elseif idle_index == 2 then
+            idle_index = 3
+            send_command('@input /echo Idle DT')
+        elseif idle_index == 3 then
+            idle_index = 1
+            send_command('@input /echo Idle base')
         end
     elseif command == 'toggle pdt' then
         if is_pdt == 1 then

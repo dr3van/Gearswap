@@ -36,12 +36,16 @@ function init_gear()
     gear.ears.mab_right = { name="Hecate's Earring" }
 
     gear.ring = {}
+    gear.ring.cure_potency = { name="Lebeche Ring" }
     gear.ring.dt_left = { name="Defending Ring" }
     gear.ring.dt_right = { name="Vocane Ring" }
     gear.ring.regen_left = { name="Sheltered Ring" }
     gear.ring.regen_right = { name="Paguroidea Ring" }
-    gear.ring.FC_left = { name="Lebeche Ring" }
+    gear.ring.fc_left = { name="Lebeche Ring" }
+    gear.ring.fc_right = { name="Veneficium Ring" }
     gear.ring.macc = { name="Sangoma Ring" }
+    gear.ring.healing_left = { name="Sirona's Ring" }
+    gear.ring.healing_right = { name="Ephedra Ring" }
 
     gear.waist = {}
     gear.waist.hp = { name="Ocean Sash" }
@@ -60,7 +64,21 @@ function init_gear()
     gear.back.cure_potency = { name="Solemnity Cape" }
     gear.back.divine = { name="Altruistic Cape" }
     gear.back.dt = { name="Solemnity Cape" }
+    gear.back.mage_idle = { name="Umbra Cape" }
     gear.back.macc = { name="Refraction Cape" }
+    gear.back.fc = { name="Swith Cape" }
+
+
+    -- Random all jobs visible pieces
+    gear.head = {}
+    gear.body = {}
+    gear.body.mage_cure_potency = { name="Vrikodara Jupon" }
+    gear.body.mage_idle = { name="Vrikodara Jupon" }
+    gear.hands = {}
+    gear.hands.melee_fc = { name="Leyline Gloves" }
+    gear.legs = {}
+    gear.feet = {}
+
 
 
     -- JSE Capes
@@ -79,6 +97,10 @@ function init_gear()
     gear.hagondes = {}
     gear.hagondes.body = { name="Hagondes Coat +1" }
     gear.hagondes.body.pdt = { name="Hagondes Coat +1", augments={'Phys. dmg. taken -3%'}}
+
+    gear.gendewitha = {}
+    gear.gendewitha.head = { name="Gende. Caubeen +1" }
+    gear.gendewitha.head.pdt = { name="Gende. Caubeen +1", augments={'Phys. dmg. taken -4%', '"Cure" spellcasting time -1%'} }
 
     -- Alluvion Skirmish pieces
     gear.yorium = {}
@@ -142,6 +164,8 @@ function init_gear()
     -- Escha pieces
 
     gear.vanya = {}
+    gear.vanya.body = { name="Vanya Robe" }
+    gear.vanya.body.C = { name="Vanya Robe", augments={ 'MND+10', 'Spell interruption rate down 15%', '"Conserve MP"+6' }}
     gear.vanya.feet = {}
     gear.vanya.feet.D = { name="Vanya Clogs", augments={'"Cure" potency +5%', '"Cure" spellcasting time -15%', '"Conserve MP"+6'}}
 
@@ -149,13 +173,13 @@ function init_gear()
 
     gear.souveran = {}
     gear.souveran.body = { name="Souveran Cuirass" }
-    gear.souveran.body.A = { name="Souveran Cuirass", augments={"Accuracy+10", "Attack+9", "Enmity+3"}}
+    gear.souveran.body.A = { name="Souveran Cuirass", augments={"Accuracy+10", "Attack+10", "Enmity+4"}}
     gear.souveran.hands = { name="Souveran Handschuhs" }
     gear.souveran.hands.A = { name="Souveran Handschuhs", augments={"Accuracy+10", "Attack+10", "Enmity+4"}}
     gear.souveran.legs = { name="Souveran Diechlings" }
-    gear.souveran.legs.D = { name="Souveran Diechlings", augments={'STR+8','VIT+8','Accuracy+12'}}
+    gear.souveran.legs.D = { name="Souveran Diechlings", augments={'STR+10','VIT+10','Accuracy+15'}}
     gear.souveran.feet = { name="Souveran Schuhs" }
-    gear.souveran.feet.D = { name="Souveran Schuhs", augments={"HP+46", "Attack+18", "magic dmg. taken -2%"}}
+    gear.souveran.feet.D = { name="Souveran Schuhs", augments={"HP+50", "Attack+20", "magic dmg. taken -3%"}}
 
     gear.carmine = {}
     gear.carmine.legs = { name="Carmine Cuisses +1"}
@@ -163,9 +187,9 @@ function init_gear()
 
     gear.lustratio = {}
     gear.lustratio.head = { name="Lustratio Cap" }
-    gear.lustratio.head.A = { name="Lustratio Cap", augments={"Attack+13", "STR+3", '"Dbl.Atk.+1"'} }
+    gear.lustratio.head.A = { name="Lustratio Cap", augments={"Attack+15", "STR+5", '"Dbl.Atk.+2"'} }
     gear.lustratio.feet = { name="Lustratio Leggings" }
-    gear.lustratio.feet.D = { name="Lustratio Leggings", augments={"HP+49", "STR+9", "DEX+9"}}
+    gear.lustratio.feet.D = { name="Lustratio Leggings", augments={"HP+50", "STR+10", "DEX+10"}}
 
     -- Reisenjima pieces
 
@@ -196,7 +220,9 @@ function init_gear()
     gear.merlinic.legs.MB = { name="Merlinic Shalwar", augments={'Mag. Acc.+10','Magic Damage +15','INT+9','"Mag.Atk.Bns."+13',}}
     gear.merlinic.legs.MDmg = { name="Merlinic Shalwar", augments={'Mag. Acc.+10','Magic Damage +15','INT+9','"Mag.Atk.Bns."+13',}}
     gear.merlinic.feet = { name="Merlinic Crackows" }
+    gear.merlinic.feet.FC = { name="Merlinic Crackows", augments={'Mag. Acc.+15','"Fast Cast"+6','"Mag.Atk.Bns."+13'}}
     gear.merlinic.feet.MAB = { name="Merlinic Crackows", augments={'Mag. Acc.+15','"Fast Cast"+6','"Mag.Atk.Bns."+13'}}
+    gear.merlinic.feet.MAcc = { name="Merlinic Crackows", augments={'Mag. Acc.+15','"Fast Cast"+6','"Mag.Atk.Bns."+13'}}
 
     -- SR
 
@@ -252,6 +278,30 @@ function init_gear()
         legs="Chev. Cuisses",
         feet="Chev. Sabatons"
     }
+
+    -- RDM
+    gear.jse.artifact.rdm = {
+        head="Atrophy Chapeau +1",
+        body="Wlk. Tabard +1",
+        hands="Wlk. Gloves +1",
+        legs="Atrophy Tights",
+        feet="Wlk. Boots +1"
+    }
+    gear.jse.relic.rdm = {
+        head="Vitivation Chapeau",
+        body="Vitivation Tabard",
+        hands="Vitivation Gloves",
+        legs="Vitivation Tights",
+        feet="Vitivation Boots"
+    }
+    gear.jse.empyrean.rdm = {
+        head="Estq. Chappel +2",
+        body="Estq. Sayon +2",
+        hands="Estq. Ganthrt. +2",
+        legs="Estqr. Fuseau +2",
+        feet="Estq. Houseaux +2"
+    }
+
 
     -- Ambuscade gear
     -- Slotted this way so after my lazy ass gets the +1 I don't have to change things
