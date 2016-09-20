@@ -12,7 +12,7 @@ function get_sets()
         ear2="Ethereal Earring",
         body="",
         hands="",
-        ring1="Sheltered Ring",
+        ring1="Defending Ring",
         ring2="Paguroidea Ring",
         back="Shadow Mantle",
         waist="",
