@@ -6,22 +6,27 @@ function get_sets()
 
     sets.idle = {
         main=gear.weapons.mage.refresh,
-        sub="Bugard strap +1",
+        sub=gear.weapons.mage.dt_grip,
         range="Dunna",
-        head="Wivre Hairpin",
-        neck="Wiglen Gorget",
-        ear1="Hearty Earring",
-        ear2="Ethereal Earring",
-        body="Geo. Tunic +1",
+        head=gear.head.mage_refresh,
+        neck=gear.neck.dt,
+        ear1=gear.ears.idle_left,
+        ear2=gear.ears.idle_right,
+        body=gear.body.mage_idle,
         hands="Bagua Mitaines",
-        ring1="Sheltered Ring",
-        ring2="Paguroidea Ring",
-        back="Umbra Cape",
-        waist="Porous Rope",
-        legs="Nares Trews",
-        feet="Geomancy Sandals"
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
+        back=gear.back.mage_idle,
+        waist=gear.waist.mage_idle,
+        legs=gear.legs.mage_pdt,
+        feet=gear.jse.artifact.geo.feet
     }
-    sets.idle.regen = set_combine(sets.idle, {})
+
+    sets.idle.base = set_combine(sets.idle, {})
+    sets.idle.regen = set_combine(sets.idle, {
+        ring1=gear.ring.regen_left,
+        ring2=gear.ring.regen_right
+    })
     sets.idle.DT = set_combine(sets.idle, {
         head=gear.ambuscade.morrigan.head,
         hands=gear.ambuscade.morrigan.hands,
@@ -35,16 +40,19 @@ function get_sets()
 
     sets.JA = {}
     sets.JA['Life Cycle'] = {
-        body="Geo. Tunic +1"
+        body=gear.jse.artifact.geo.body
     }
 
     sets.precast = {}
     sets.precast.FC = {
-        head="Nahtirah Hat",
+        head=gear.merlinic.head.fc,
         ear2=gear.ears.fc_right,
-        hands="Repartie Gloves",
-        back="Swith Cape",
-        waist=gear.waist.fc.belt,
+        body=gear.body.mage_fc,
+        hands=gear.hands.mage_fc,
+        ring1=gear.ring.fc_left,
+        ring2=gear.ring.fc_right,
+        back=gear.back.fc,
+        waist=gear.waist.fc,
         legs="Orvail Pants +1",
         feet="Chelona Boots +1"
     }
@@ -71,9 +79,10 @@ function get_sets()
 
 
     sets.midcast['Geomancy'] = {
+        head="Hike Khat",
         body="Bagua Tunic",
         hands="Geomancy Mitaines",
-        back="Vita Cape",
+        back="Lifestream Cape",
         waist="Austerity Belt"
     }
 
@@ -82,11 +91,10 @@ function get_sets()
     })
 
     sets.midcast['Stun'] = set_combine(sets.midcast['Dark Magic'], {
-        head=gear.ambuscade.morrigan.head,
+        head=gear.merlinic.head.Macc,
         neck=gear.neck.macc,
         ear1=gear.ears.macc_mnd,
         ear2=gear.ears.macc_int,
-        hands=gear.ambuscade.morrigan.hands,
         back=gear.back.macc,
         waist=gear.waist.macc
     })
@@ -104,18 +112,18 @@ function get_sets()
     })
 
     sets.combat = {
-        head="Nahtirah Hat",
-        neck="Asperity Necklace",
-        ear1="Bladeborn Earring",
-        ear2="Steelflash Earring",
-        body="Espial Gambison",
-        hands="Espial Bracers",
+        head=gear.ambuscade.morrigan.head,
+        neck=gear.neck.tp,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        body=gear.ambuscade.morrigan.body,
+        hands=gear.ambuscade.morrigan.hands,
         ring1="Rajas Ring",
         ring2="K'ayres Ring",
         back="Rancorous Mantle",
         waist="Cetl Belt",
-        legs="Espial Hose",
-        feet="Espial Socks"
+        legs=gear.ambuscade.morrigan.legs,
+        feet=gear.ambuscade.morrigan.feet
     }
 
     sets.combat.DPS = set_combine(sets.combat, {})
@@ -126,18 +134,18 @@ function get_sets()
     -- WS sets
 
     sets.WS = {
-        head="Nahtirah Hat",
-        neck="Fotia Gorget",
-        ear1="Brutal Earring",
-        ear2="Moonshade Earring",
-        body="Weather. Robe +1",
-        hands="Espial Bracers",
-        ring1="Rajas ring",
-        ring2="Pyrosoul Ring",
+        head=gear.ambuscade.morrigan.head,
+        neck=gear.neck.ws,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        body=gear.ambuscade.morrigan.body,
+        hands=gear.ambuscade.morrigan.hands,
+        ring1="Rajas Ring",
+        ring2="K'ayres Ring",
         back="Rancorous Mantle",
-        waist="Fotia Belt",
-        legs="Espial Hose",
-        feet="Espial Socks"
+        waist=gear.waist.ws,
+        legs=gear.ambuscade.morrigan.legs,
+        feet=gear.ambuscade.morrigan.feet
     }
 
     send_command('input /macro book 16;wait .1;input /macro set 1')

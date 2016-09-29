@@ -1,3 +1,4 @@
+-- BLM
 -- Sets
 function get_sets()
 
@@ -5,27 +6,35 @@ function get_sets()
     init_get_sets(0, 1)
 
     sets.idle = {
-        main=gear.weapons.BLM.Nuke,
-        sub="Zuuxowu Grip",
-        ammo="Iron Gobbet",
-        head="Wivre Hairpin",
-        neck="Wiglen Gorget",
-        ear1="Hearty Earring",
-        ear2="Ethereal Earring",
-        body="Vrikodara Jupon",
-        hands="Yaoyotl Gloves",
-        ring1="Sheltered Ring",
-        ring2="Paguroidea Ring",
-        back="Shadow Mantle",
-        waist="Ocean Sash",
-        legs="Nares Trews",
+        main=gear.weapons.mage.refresh,
+        sub=gear.weapons.mage.nuke_grip,
+        ammo=gear.ammo.dt,
+        head=gear.head.mage_refresh,
+        neck=gear.neck.dt,
+        ear1=gear.ears.idle_left,
+        ear2=gear.ears.idle_right,
+        body=gear.body.mage_idle,
+        hands=gear.ambuscade.morrigan.hands,
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
+        back=gear.back.mage_idle,
+        waist=gear.waist.mage_idle,
+        legs=gear.merlinic.legs.dt,
         feet="Herald's Gaiters"
     }
-    sets.idle.regen = set_combine(sets.idle, {})
+    sets.idle.base = set_combine(sets.idle, {})
+    sets.idle.regen = set_combine(sets.idle, {
+        neck=gear.neck.regen,
+        ring1=gear.ring.regen_left,
+        ring2=gear.ring.regen_right,
+        legs="Nares Trews"
+    })
     sets.idle.DT = set_combine(sets.idle, {
         head="Nahtirah Hat",
-        legs=gear.helios.legs.MAB,
-        feet=gear.helios.feet.MAB
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
+        legs=gear.merlinic.legs.MAB,
+        feet=gear.merlinic.feet.MAB
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
@@ -44,13 +53,14 @@ function get_sets()
     sets.JA = {}
 
     sets.precast.FC = {
-        head="Nahtirah Hat",
-        ear2="Loquac. Earring",
-        body=gear.helios.body.MAB,
-        hands="Repartie Gloves",
-        ring1=gear.ring.FC_left,
-        back="Swith Cape",
-        waist="Witful Belt",
+        head=gear.merlinic.head.fc,
+        ear2=gear.ears.fc_right,
+        body=gear.body.mage_fc,
+        hands=gear.hands.mage_fc,
+        ring1=gear.ring.fc_left,
+        ring2=gear.ring.fc_right,
+        back=gear.back.fc,
+        waist=gear.waist.fc,
         legs="Orvail Pants +1",
         feet="Chelona Boots +1"
     }

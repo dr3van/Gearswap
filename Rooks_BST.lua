@@ -6,20 +6,21 @@ function get_sets()
     init_get_sets(1, 1)
 
 	sets.idle = {
-        ammo="Iron Gobbet",
-		head="Yaoyotl Helm",
-		neck="Wiglen Gorget",
-        ear1="Hearty Earring",
-        ear2="Ethereal Earring",
-        body=gear.acro.body.tp,
-        hands=gear.acro.hands.tp,
-        ring1="Sheltered Ring",
-        ring2="Paguroidea Ring",
+        ammo=gear.ammo.dt,
+        head=gear.ambuscade.skadi.head,
+        neck=gear.neck.dt,
+        ear1=gear.ears.idle_left,
+        ear2=gear.ears.idle_right,
+        body=gear.ambuscade.skadi.body,
+        hands=gear.ambuscade.skadi.hands,
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
         back="Shadow Mantle",
-        waist="Flume Belt +1",
-        legs=gear.acro.legs.tp,
-        feet="Skadi's Jambeaux"
+        waist=gear.waist.pdt,
+        legs=gear.ambuscade.skadi.legs,
+        feet=gear.ambuscade.skadi.feet
 	}
+    sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {})
     sets.idle.DT = set_combine(sets.idle, {})
     sets.idle.PDT = set_combine(sets.idle.DT, {})

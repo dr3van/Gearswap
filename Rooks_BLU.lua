@@ -15,30 +15,26 @@ function get_sets()
     sets.weapons.club_right = { main=gear.weapons.BLU.club_right }
     sets.weapons.club_left = { main=gear.weapons.BLU.club_left }
 
-    sets.telchine = {
-        head=gear.telchine.head,
-        body=gear.telchine.body.cure_cast,
-        hands=gear.telchine.hands.cure_potency,
-        legs=gear.telchine.legs,
-        feet=gear.telchine.feet.cure_cast
-    }
-
     sets.idle = {
-        ammo="Iron Gobbet",
+        ammo=gear.ammo.dt,
         head="Wivre Hairpin",
-        neck="Wiglen Gorget",
-        ear1="Hearty Earring",
-        ear2="Ethereal Earring",
-        body="Vrikodara Jupon",
+        neck=gear.neck.dt,
+        ear1=gear.ears.idle_left,
+        ear2=gear.ears.idle_right,
+        body=gear.body.mage_idle,
         hands=gear.taeon.hands.tp,
-        ring1="Sheltered Ring",
-        ring2="Paguroidea Ring",
-        back="Umbra Cape",
-        waist="Flume Belt +1",
-        legs="Blood Cuisses",
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
+        back=gear.back.mage_idle,
+        waist=gear.waist.pdt,
+        legs=gear.carmine.legs.D,
         feet=gear.herculean.feet.tp
     }
-    sets.idle.regen = set_combine(sets.idle, {})
+    sets.idle.base = set_combine(sets.idle, {})
+    sets.idle.regen = set_combine(sets.idle, {
+        ring1=gear.ring.regen_left,
+        ring2=gear.ring.regen_right
+    })
     sets.idle.DT = set_combine(sets.idle, {
         neck=gear.neck.dt,
         ring1=gear.ring.dt_left,
@@ -46,7 +42,7 @@ function get_sets()
         back=gear.back.dt,
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {
-        back="Umbra Cape",
+        back=gear.back.mage_idle,
     })
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = {
@@ -82,7 +78,7 @@ function get_sets()
         ring1="Rajas Ring",
         ring2="Epona's Ring",
         back=gear.jsecapes.amb.blu,
-        waist="Windbuffet Belt +1",
+        waist=gear.waist.nohaste,
         legs=gear.herculean.legs.tp,
         feet=gear.herculean.feet.tp
     }
@@ -102,15 +98,15 @@ function get_sets()
     sets.WS = {
         ammo="Honed Tathlum",
         head=gear.herculean.head.tp,
-        neck="Fotia Gorget",
-        ear1="Bladeborn Earring",
-        ear2="Steelflash Earring",
+        neck=gear.neck.ws,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
         body=gear.taeon.body.tp,
         hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
         ring2="Epona's Ring",
         back=gear.jsecapes.amb.blu,
-        waist="Fotia Belt",
+        waist=gear.waist.ws,
         legs=gear.herculean.legs.tp,
         feet=gear.herculean.feet.tp
     }

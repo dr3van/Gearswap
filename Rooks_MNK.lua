@@ -6,7 +6,7 @@ function get_sets()
     init_get_sets(1, 1)
 
     sets.idle = {
-        ammo="Iron Gobbet",
+        ammo=gear.ammo.dt,
         head="Whirlpool Mask",
         neck="Wiglen Gorget",
         ear1="Hearty Earring",
@@ -20,6 +20,7 @@ function get_sets()
         legs="Shned. Tights +1",
         feet="Herald's Gaiters"
     }
+    sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {})
     sets.idle.DT = set_combine(sets.idle, {})
     sets.idle.PDT = set_combine(sets.idle.DT, {})

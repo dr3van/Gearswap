@@ -10,19 +10,24 @@ function get_sets()
         sub="Bugard Strap +1",
         range="Gjallarhorn",
 		head=gear.telchine.head,
-		neck=gear.neck.idle,
+		neck=gear.neck.dt,
         ear1=gear.ears.idle_left,
         ear2=gear.ears.idle_right,
-        body=gear.telchine.body,
+        body=gear.body.mage_idle,
         hands="Espial Bracers",
-        ring1="Sheltered Ring",
-        ring2="Paguroidea Ring",
-        back="Umbra Cape",
-        waist="Flume Belt +1",
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
+        back=gear.waist.mage_idle,
+        waist=gear.waist.pdt,
         legs=gear.telchine.legs,
         feet="Aoidos' Cothrn. +2"
 	}
-    sets.idle.regen = set_combine(sets.idle, {})
+    sets.idle.base = set_combine(sets.idle, {})
+    sets.idle.regen = set_combine(sets.idle, {
+        neck=gear.neck.regen,
+        ring1=gear.ring.regen_left,
+        ring2=gear.ring.regen_right,
+    })
     sets.idle.DT = set_combine(sets.idle, {})
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})

@@ -5,23 +5,33 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(1, 1)
 
+    -- 24% DT
+    -- 20% PDT
     sets.idle = {
-        ammo="Iron Gobbet",
-        head="Whirlpool Mask",
-        neck=gear.neck.regen,
+        ammo=gear.ammo.dt,
+        head=gear.ambuscade.skadi.head,
+        neck=gear.neck.dt,
         ear1=gear.ears.idle_left,
         ear2=gear.ears.idle_right,
-        body="Shned. Tabard +1",
-        hands=gear.taeon.hands.tp,
-        ring1=gear.ring.regen_left,
-        ring2=gear.ring.regen_right,
+        body=gear.ambuscade.skadi.body,
+        hands=gear.ambuscade.skadi.hands,
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
         back="Shadow Mantle",
         waist=gear.waist.pdt,
-        legs="Espial Hose",
-        feet=gear.taeon.feet.tp
+        legs=gear.ambuscade.skadi.legs,
+        feet=gear.ambuscade.skadi.feet
     }
-    sets.idle.regen = set_combine(sets.idle, {})
-    sets.idle.DT = set_combine(sets.idle, {})
+    sets.idle.base = set_combine(sets.idle, {})
+    sets.idle.regen = set_combine(sets.idle, {
+        neck=gear.neck.regen,
+        ring1=gear.ring.regen_left,
+        ring2=gear.ring.regen_right,
+    })
+    sets.idle.DT = set_combine(sets.idle, {
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
+    })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = set_combine(sets.idle, {})
@@ -35,18 +45,18 @@ function get_sets()
 
     sets.combat = {
         ammo="Honed Tathlum",
-        head="Whirlpool Mask",
+        head=gear.herculean.head.tp,
         neck=gear.neck.tp,
         ear1=gear.ears.dw_left,
         ear2=gear.ears.dw_right,
-        body="Shned. Tabard +1",
+        body=gear.taeon.body.tp,
         hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
         ring2="K'ayres Ring",
         back="Atheling Mantle",
-        waist="Windbuffet Belt +1",
-        legs="Espial Hose",
-        feet=gear.taeon.feet.tp
+        waist=gear.waist.nohaste,
+        legs=gear.herculean.legs.tp,
+        feet=gear.herculean.feet.tp
     }
 
     sets.combat.DPS = set_combine(sets.combat, {})
@@ -57,18 +67,18 @@ function get_sets()
     -- WS sets
     sets.WS = {
         ammo="Honed Tathlum",
-        head="Whirlpool Mask",
+        head=gear.herculean.head.ws,
         neck=gear.neck.ws,
         ear1="Brutal Earring",
         ear2=gear.ears.ws,
-        body="Shned. Tabard +1",
-        hands=gear.taeon.hands.tp,
+        body=gear.taeon.body.ws,
+        hands=gear.taeon.hands.ws,
         ring1="Rajas Ring",
         ring2="K'ayres Ring",
         back="Atheling Mantle",
         waist=gear.waist.ws,
-        legs="Espial Hose",
-        feet=gear.taeon.feet.tp
+        legs=gear.herculean.legs.ws,
+        feet=gear.herculean.feet.ws
     }
 
     send_command('input /macro book 1;wait .1;input /macro set 1')

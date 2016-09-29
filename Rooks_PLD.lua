@@ -15,8 +15,8 @@ function get_sets()
         ammo=gear.ammo.dt,
         head=gear.jse.artifact.pld.head,
         neck="Creed Collar",
-        ear1="Hearty Earring",
-        ear2="Ethereal Earring",
+        ear1=gear.ears.idle_left,
+        ear2=gear.ears.idle_right,
         body=gear.jse.relic.pld.body,
         hands=gear.odyssean.hands.idle,
         ring1=gear.ring.dt_left,
@@ -53,7 +53,7 @@ function get_sets()
         ammo="Incantor Stone",
         head=gear.jse.empyrean.pld.head,
         ear1="Loquac. Earring",
-        hands="Leyline Gloves",
+        hands=gear.hands.melee_fc,
         legs="Blood Cuisses"
     }
 
@@ -61,8 +61,8 @@ function get_sets()
         ammo="Jukukik Feather",
         head=gear.ambuscade.ares.head,
         neck=gear.neck.sword,
-        ear1="Steelflash Earring",
-        ear2="Bladeborn Earring",
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
         body=gear.souveran.body.A,
         hands=gear.souveran.hands.A,
         ring1="Rajas Ring",
@@ -91,7 +91,7 @@ function get_sets()
     sets.WS = {
         ammo="Jukukik Feather",
         head=gear.lustratio.head.A,
-        neck="Fotia Gorget",
+        neck=gear.neck.ws,
         ear1="Brutal Earring",
         ear2="Moonshade Earring",
         body=gear.acro.body.tp,
@@ -99,7 +99,7 @@ function get_sets()
         ring1="Rajas Ring",
         ring2="Ifrit Ring",
         back=gear.jsecapes.amb.pld.ws,
-        waist="Fotia Belt",
+        waist=gear.waist.ws,
         legs=gear.odyssean.legs.ws,
         feet=gear.ambuscade.ares.feet
     }
@@ -107,15 +107,14 @@ function get_sets()
 
     sets.WS['Knights of Round'] = set_combine(sets.WS, {
         ear1=gear.ears.da_left,
-        ear2=gear.ears.da_right,
+        ear2=gear.ears.da_right
     })
 
     sets.WS.Requiescat = set_combine(sets.WS, {
         body=gear.acro.body.tp,
         hands=gear.souveran.hands.A,
         ring1="Aquasoul Ring",
-        ring2="Aquasoul Ring",
-        back="Atheling Mantle"
+        ring2="Aquasoul Ring"
     })
 
     sets.WS['Aeolian Edge'] = set_combine(sets.WS, {
@@ -205,9 +204,8 @@ function get_sets()
     sets.midcast['Phalanx'] = set_combine(sets.midcast['Enhancing Magic'], {
         hands=gear.souveran.hands.A,
         back=gear.jsecapes.pld,
-        feet=gear.souveran.feet.D,
+        feet=gear.souveran.feet.D
     })
-
 
     send_command('input /macro book 1;wait .1;input /macro set 1')
 end

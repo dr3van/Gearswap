@@ -6,65 +6,70 @@ function get_sets()
     init_get_sets(0, 1)
 
     sets.idle = {
-        ammo="Angha Gem",
-        head="Jumalik helm",
-        neck="Wiglen Gorget",
+        ammo=gear.ammo.dt,
+        head=gear.ambuscade.ares.head,
+        neck=gear.neck.dt,
         ear1="Hearty Earring",
         ear2="Ethereal Earring",
-        body=gear.acro.body.tp,
-        hands=gear.yorium.hands.idle,
-        ring1="Sheltered Ring",
-        ring2="Paguroidea Ring",
+        body=gear.souveran.body.A,
+        hands=gear.ambuscade.ares.hands,
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
         back="Shadow Mantle",
-        waist="Flume Belt +1",
-        legs=gear.yorium.legs.idle,
+        waist=gear.waist.pdt,
+        legs=gear.odyssean.legs.dt,
         feet="Hermes' Sandals"
     }
 
-    sets.idle.regen = set_combine(sets.idle, {})
-    sets.idle.DT = set_combine(sets.idle, {})
+    sets.idle.base = set_combine(sets.idle, {})
+    sets.idle.regen = set_combine(sets.idle, {
+        ring1=gear.ring.regen_left,
+        ring2=gear.ring.regen_right
+    })
+    sets.idle.DT = set_combine(sets.idle, {
+        feet=gear.ambuscade.ares.feet
+    })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = set_combine(sets.idle, {})
 
     sets.JA = {}
-    sets.JA["Mighty Strikes"] = { hands="War. Mufflers +2" }
+    sets.JA["Mighty Strikes"] = { hands=gear.jse.relic.war.hands }
     sets.JA["Brazen Rush"] = {}
-
---    sets.JA["Aggressor"] = {
---        head="Pummeler's Mask",
---        body="Agoge Lorica"
---    }
---    sets.JA["Berserk"] = {
---        body="Pummeler's Lorica",
---        feet="War. Calligae +2"
---    }
-    sets.JA["Blood Rage"] = { body="Rvg. Lorica +2" }
+    sets.JA["Aggressor"] = {
+        head=gear.jse.artifact.war.head,
+        body=gear.jse.relic.war.body
+    }
+    sets.JA["Berserk"] = {
+        body=gear.jse.artifact.war.body,
+        feet=gear.jse.relic.war.feet
+    }
+    sets.JA["Blood Rage"] = { body=gear.jse.empyrean.war.body }
     sets.JA["Defender"] = {}
     sets.JA["Provoke"] = {}
-    sets.JA["Restraint"] = { hands="Rvg. Mufflers +2" }
---    sets.JA["Retaliation"] = {
---        hands="Pummeler's Mufflers",
---        feet="Rvg. Calligae +2"
---    }
-    sets.JA["Tomahawk"] = { feet="War. Calligae +2" }
-    sets.JA["Warcry"] = { head="War. Mask +2" }
-    sets.JA["Warrior's Charge"] = { legs="Warrior's Cuisses +2" }
+    sets.JA["Restraint"] = { hands=gear.jse.empyrean.war.hands }
+    sets.JA["Retaliation"] = {
+        hands=gear.jse.artifact.war.hands,
+        feet=gear.jse.empyrean.war.feet
+    }
+    sets.JA["Tomahawk"] = { feet=gear.jse.relic.war.feet }
+    sets.JA["Warcry"] = { head=gear.jse.relic.war.head }
+    sets.JA["Warrior's Charge"] = { legs=gear.jse.relic.war.legs }
 
     sets.combat = {
         ammo="Ravager's Orb",
-        head="Yaoyotl Helm",
-        neck="Portus Collar",
-        ear1="Bladeborn Earring",
-        ear2="Steelflash Earring",
-        body=gear.acro.body.tp,
+        head=gear.ambuscade.ares.head,
+        neck=gear.neck.acc,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        body=gear.souveran.body.A,
         hands=gear.souveran.hands.A,
         ring1="Rajas Ring",
         ring2="K'ayres Ring",
-        back="Atheling Mantle",
-        waist="Cetl Belt",
-        legs=gear.odysseean.legs.highacc,
-        feet=gear.acro.feet.tp
+        back=gear.jsecapes.amb.pld.tp,
+        waist=gear.waist.highhaste,
+        legs=gear.souveran.legs.D,
+        feet=gear.ambuscade.ares.feet
     }
 
     sets.combat.DPS = set_combine(sets.combat, {})
@@ -76,18 +81,18 @@ function get_sets()
 
     sets.WS = {
         ammo="Ravager's Orb",
-        head=gear.lustratio.head.A,
+        head=gear.argosy.head.A,
         neck="Fotia Gorget",
         ear1="Brutal Earring",
         ear2="Moonshade Earring",
-        body=gear.acro.body.tp,
-        hands=gear.souveran.hands.A,
+        body=gear.argosy.body.A,
+        hands=gear.argosy.hands.A,
         ring1="Rajas Ring",
         ring2="Ifrit Ring",
-        back="Buquwik Cape",
+        back="Atheling Mantle",
         waist="Fotia Belt",
-        legs=gear.odysseean.legs.highacc,
-        feet=gear.lustratio.feet.D
+        legs=gear.odyssean.legs.ws,
+        feet=gear.argosy.feet.A
     }
 
     sets.WS.Resolution = set_combine(sets.WS, {

@@ -34,7 +34,9 @@ function init_get_sets(weapon_lock, gear_file)
     spells.regens = S{ "Regen", "Regen II", "Regen III", "Regen IV", "Regen V" }
 
     -- Grab the gear
-    init_gear()
+    if gear_file then
+        init_gear()
+    end
 
     -- ALL JOBS, ALL CHARACTERS
     sets.reive = { neck="Adoulin's Refuge +1" }
@@ -118,7 +120,9 @@ function init_get_sets(weapon_lock, gear_file)
         feet=""
     }
 
-    organizer_items = gear.universal
+    if gear_file then
+        organizer_items = gear.universal
+    end
 
     send_command('@input /echo F9 toggles PDT on and off')
     send_command('@input /echo Ctrl+F9 toggles MDT on and off')

@@ -6,22 +6,26 @@ function get_sets()
     init_get_sets(1, 1)
 
     sets.idle = {
-        ammo="Iron Gobbet",
-        head="Whirlpool Mask",
-        neck="Wiglen Gorget",
-        ear1="Hearty Earring",
-        ear2="Ethereal Earring",
-        body="Espial Gambison",
-        hands=gear.taeon.hands.tp,
-        ring1="Sheltered Ring",
-        ring2="Paguroidea Ring",
+        ammo=gear.ammo.dt,
+        head=gear.ambuscade.skadi.head,
+        neck=gear.neck.dt,
+        ear1=gear.ears.idle_left,
+        ear2=gear.ears.idle_right,
+        body=gear.ambuscade.skadi.body,
+        hands=gear.ambuscade.skadi.hands,
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
         back="Shadow Mantle",
-        waist="Flume Belt +1",
-        legs="Blood Cuisses",
-        feet=gear.taeon.feet.tp
+        waist=gear.waist.pdt,
+        legs=gear.carmine.legs.D,
+        feet=gear.ambuscade.skadi.feet
     }
-
-    sets.idle.regen = set_combine(sets.idle, {})
+    sets.idle.base = set_combine(sets.idle, {})
+    sets.idle.regen = set_combine(sets.idle, {
+        neck=gear.neck.regen,
+        ring1=gear.ring.regen_left,
+        ring2=gear.ring.regen_right,
+    })
     sets.idle.DT = set_combine(sets.idle, {})
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
@@ -51,18 +55,18 @@ function get_sets()
 
     sets.combat = {
         ammo="Honed Tathlum",
-        head="Whirlpool Mask",
-        neck="Portus Collar",
-        ear1="Bladeborn Earring",
-        ear2="Steelflash Earring",
-        body="Espial Gambison",
-        hands="Espial Bracers",
+        head=gear.herculean.head.tp,
+        neck=gear.neck.tp,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        body=gear.taeon.body.tp,
+        hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
         ring2="Epona's Ring",
         back="Atheling Mantle",
-        waist="Cetl Belt",
-        legs="Espial Hose",
-        feet="Espial Socks"
+        waist=gear.waist.nohaste,
+        legs=gear.herculean.legs.tp,
+        feet=gear.herculean.feet.tp
     }
 
     sets.combat.DPS = set_combine(sets.combat, {})
@@ -77,18 +81,18 @@ function get_sets()
 
     sets.WS = {
         ammo="Honed Tathlum",
-        head="Whirlpool Mask",
-        neck="Fotia Gorget",
+        head=gear.herculean.head.ws,
+        neck=gear.neck.ws,
         ear1="Brutal Earring",
-        ear2="Moonshade Earring",
-        body="Espial Gambison",
-        hands="Espial Bracers",
+        ear2=gear.ears.ws,
+        body=gear.taeon.body.ws,
+        hands=gear.taeon.hands.ws,
         ring1="Rajas Ring",
-        ring2="Epona's Ring",
+        ring2="K'ayres Ring",
         back="Atheling Mantle",
-        waist="Fotia Belt",
-        legs="Nahtirah Trousers",
-        feet="Espial Socks"
+        waist=gear.waist.ws,
+        legs=gear.herculean.legs.ws,
+        feet=gear.herculean.feet.ws
     }
 
     send_command('input /macro book 12;wait .1;input /macro set 1')

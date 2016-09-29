@@ -7,36 +7,37 @@ function get_sets()
 
     sets.idle = {
         main=gear.weapons.mage.refresh,
-        sub="Bugard strap +1",
-        ammo="Iron Gobbet",
-        head="Wivre Hairpin",
-        neck="Wiglen Gorget",
-        ear1="Hearty Earring",
-        ear2="Ethereal Earring",
-        body="Piety Briault +1",
-        hands=gear.telchine.hands,
-        ring1="Sheltered Ring",
-        ring2="Paguroidea Ring",
-        back="Umbra Cape",
-        waist=gear.waist.macc,
-        legs="Nares Trews",
-        feet="Herald's Gaiters"
-    }
-    sets.idle.regen = set_combine(sets.idle, {})
-    sets.idle.DT = set_combine(sets.idle, {
-        head=gear.telchine.head,
+        sub=gear.weapons.mage.dt_grip,
+        ammo=gear.ammo.dt,
+        head=gear.head.mage_refresh,
+        neck=gear.neck.dt,
+        ear1=gear.ears.idle_left,
+        ear2=gear.ears.idle_right,
+        body=gear.body.mage_idle,
         hands=gear.telchine.hands,
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
-        legs=gear.telchine.legs,
+        back=gear.back.mage_idle,
+        waist=gear.waist.mage_idle,
+        legs=gear.merlinic.legs.dt,
+        feet="Herald's Gaiters"
+    }
+    sets.idle.base = set_combine(sets.idle, {})
+    sets.idle.regen = set_combine(sets.idle, {
+        ring1=gear.ring.regen_left,
+        ring2=gear.ring.regen_right
+    })
+    sets.idle.DT = set_combine(sets.idle, {
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
         feet=gear.telchine.feet
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = set_combine(sets.idle, {
         main=gear.weapons.mage.refresh,
-        sub="Bugard strap +1",
-        head="Wivre Hairpin",
+        sub=gear.weapons.mage.dt_grip,
+        head=gear.head.mage_refresh,
         neck="Eidolon Pendant",
         ear1="Relaxing Earring",
         body="Chelona Blazer",
@@ -54,9 +55,11 @@ function get_sets()
         ammo="Incantor Stone",
         head="Nahtirah Hat",
         ear2=gear.ears.fc_right,
-        hands="Repartie Gloves",
-        ring1=gear.ring.FC_left,
-        back="Swith Cape",
+        body=gear.body.mage_fc,
+        hands=gear.hands.mage_fc,
+        ring1=gear.ring.fc_left,
+        ring2=gear.ring.fc_right,
+        back=gear.back.fc,
         waist=gear.waist.fc,
         legs="Orvail Pants +1",
         feet="Chelona Boots +1"
@@ -69,8 +72,8 @@ function get_sets()
     sets.combat = {
         ammo="Jukukik Feather",
         neck="Asperity Necklace",
-        ear1="Bladeborn Earring",
-        ear2="Steelflash Earring",
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
         ring1="Rajas ring",
         ring2="K'ayres Ring",
         back="Rancorous Mantle",
@@ -86,13 +89,13 @@ function get_sets()
 
     sets.WS = set_combine(sets.combat, {
         ammo="Jukukik Feather",
-        neck="Fotia Gorget",
-        ear1="Bladeborn Earring",
-        ear2="Steelflash Earring",
+        neck=gear.neck.ws,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
         ring1="Rajas ring",
         ring2="K'ayres Ring",
         back="Rancorous Mantle",
-        waist="Fotia Belt"
+        waist=gear.waist.ws
     })
 
     -- Magic sets
@@ -115,8 +118,8 @@ function get_sets()
         ear2="Lifestorm Earring",
         body="Ebers Bliaud",
         hands="Theophany Mitts +1",
-        ring1="Sirona's Ring",
-        ring2="Ephedra Ring",
+        ring1=gear.ring.healing_left,
+        ring2=gear.ring.healing_right,
         back="Oretania's Cape +1",
         waist=gear.waist.conserve_mp,
         legs="Ebers Pantaloons",
