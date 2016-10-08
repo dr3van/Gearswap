@@ -8,6 +8,7 @@ function init_gear()
     gear.ammo = {}
     gear.ammo.dt = { name="Staunch Tathlum" }
     gear.ammo.enmity = { name="Iron Gobbet" }
+    gear.ammo.haste = { name="Hasty Pinion +1" }
 
     gear.neck = {}
     gear.neck.cure_potency = { name="Phalaina Locket" }

@@ -163,18 +163,18 @@ function get_sets()
         main=gear.weapons.mage.macc,
         sub="Bugard strap +1",
         ammo="Aqua Sachet",
-        head=gear.helios.head.macc,
+        head="Befouled Crown",
         neck=gear.neck.macc,
         ear1=gear.ears.macc_mnd,
         ear2=gear.ears.macc_int,
-        body=gear.helios.body.macc,
+        body=gear.vanya.body.C,
         hands=gear.telchine.hands,
         ring1=gear.ring.macc,
         ring2="Aquasoul Ring",
         back=gear.back.macc,
         waist=gear.waist.macc,
-        legs=gear.helios.legs.macc,
-        feet=gear.vanya.feet.D
+        legs="Miasmic Pants",
+        feet="Medium's Sabots"
     }
     sets.midcast['Divine Magic'] = set_combine(sets.macc, {})
     sets.midcast['Enfeebling Magic'] = set_combine(sets.macc, {})

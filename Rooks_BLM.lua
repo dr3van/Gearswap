@@ -107,14 +107,14 @@ function get_sets()
         neck=gear.neck.macc,
         ear1=gear.ears.macc_mnd,
         ear2=gear.ears.macc_int,
-        body=gear.helios.body.macc,
+        body=gear.ambuscade.morrigan.body,
         hands=gear.merlinic.hands.MAcc,
         ring1=gear.ring.macc,
         ring2="Aquasoul Ring",
         back=gear.back.macc,
         waist=gear.waist.macc,
-        legs=gear.helios.legs.macc,
-        feet=gear.vanya.feet.D
+        legs=gear.merlinic.legs.MAcc,
+        feet=gear.merlinic.feet.MAcc
     }
 
 
@@ -132,7 +132,7 @@ function get_sets()
         neck=gear.neck.macc,
         ear1=gear.ears.mab_left,
         ear2=gear.ears.mab_right,
-        body=gear.helios.body.MAB,
+        body=gear.ambuscade.morrigan.body,
         hands=gear.ambuscade.morrigan.hands,
         ring1="Shiva Ring",
         ring2="Shiva Ring",

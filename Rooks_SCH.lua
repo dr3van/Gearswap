@@ -69,32 +69,41 @@ function get_sets()
     }
 
     sets.combat = {
-        ammo="Jukukik Feather",
-        neck="Asperity Necklace",
-        ear1="Bladeborn Earring",
-        ear2="Steelflash Earring",
+        ammo=gear.ammo.haste,
+        head=gear.ambuscade.morrigan.head,
+        neck=gear.neck.acc,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        body=gear.ambuscade.morrigan.body,
+        hands=gear.ambuscade.morrigan.hands,
         ring1="Rajas ring",
         ring2="K'ayres Ring",
         back="Rancorous Mantle",
-        waist="Cetl Belt"
+        waist="Cetl Belt",
+        legs=gear.ambuscade.morrigan.legs,
+        feet=gear.ambuscade.morrigan.feet
     }
     sets.combat.DPS = set_combine(sets.combat, {})
     sets.combat.midacc = set_combine(sets.combat, {})
     sets.combat.highacc = set_combine(sets.combat, {})
     sets.combat.defensive = set_combine(sets.combat, {})
 
-
     -- WS sets
 
     sets.WS = set_combine(sets.combat, {
-        ammo="Jukukik Feather",
-        neck="Fotia Gorget",
-        ear1="Bladeborn Earring",
-        ear2="Steelflash Earring",
+        ammo=gear.ammo.haste,
+        head=gear.ambuscade.morrigan.head,
+        neck=gear.neck.ws,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        body=gear.ambuscade.morrigan.body,
+        hands=gear.ambuscade.morrigan.hands,
         ring1="Rajas ring",
         ring2="K'ayres Ring",
         back="Rancorous Mantle",
-        waist="Fotia Belt"
+        waist=gear.waist.ws,
+        legs=gear.ambuscade.morrigan.legs,
+        feet=gear.ambuscade.morrigan.feet
     })
 
     -- Magic sets
@@ -109,7 +118,6 @@ function get_sets()
     sets.midcast.CureSpell = {
 --        main="Tamaxchi",
 --        sub="Genbu's Shield",
-        ammo="Aqua Sachet",
         head="Telchine Cap",
         neck=gear.neck.cure_potency,
         ear2="Lifestorm Earring",
@@ -134,12 +142,11 @@ function get_sets()
     sets.macc = {
         main=gear.weapons.mage.macc,
         sub="Bugard strap +1",
-        ammo="Aqua Sachet",
         head=gear.merlinic.head.MAcc,
         neck=gear.neck.macc,
         ear1=gear.ears.macc_mnd,
         ear2=gear.ears.macc_int,
-        body=gear.helios.body.macc,
+        body=gear.ambuscade.morrigan.body,
         hands=gear.merlinic.hands.MAcc,
         ring1=gear.ring.macc,
         ring2="Aquasoul Ring",
@@ -160,7 +167,6 @@ function get_sets()
     })
 
     sets.midcast['Cursna'] = {
-        ammo="Aqua Sachet",
         head="Telchine Cap",
         neck="Colossus's torque",
         ear2="Lifestorm Earring",
@@ -179,7 +185,7 @@ function get_sets()
         neck=gear.neck.macc,
         ear1=gear.ears.mab_left,
         ear2=gear.ears.mab_right,
-        body=gear.helios.body.MAB,
+        body=gear.ambuscade.morrigan.body,
         hands=gear.merlinic.hands.MAB,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
