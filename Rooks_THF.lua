@@ -52,7 +52,7 @@ function get_sets()
         body=gear.taeon.body.tp,
         hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
-        ring2="K'ayres Ring",
+        ring2="Epona's Ring",
         back="Atheling Mantle",
         waist="Windbuffet Belt +1",
         legs=gear.herculean.legs.tp,
@@ -77,18 +77,18 @@ function get_sets()
 
     sets.WS = {
         ammo="Honed Tathlum",
-        head=gear.herculean.head.ws,
+        head=gear.lustratio.head.A,
         neck=gear.neck.ws,
         ear1="Brutal Earring",
         ear2=gear.ears.ws,
         body=gear.taeon.body.ws,
-        hands=gear.taeon.hands.ws,
+        hands=gear.lustratio.hands.A,
         ring1="Rajas Ring",
         ring2="K'ayres Ring",
         back="Atheling Mantle",
         waist=gear.waist.ws,
         legs=gear.herculean.legs.ws,
-        feet=gear.herculean.feet.ws
+        feet=gear.lustratio.feet.A
     }
 
     send_command('input /macro book 6;wait .1;input /macro set 3')

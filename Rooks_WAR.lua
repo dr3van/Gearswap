@@ -57,32 +57,36 @@ function get_sets()
     sets.JA["Warrior's Charge"] = { legs=gear.jse.relic.war.legs }
 
     sets.combat = {
-        ammo="Ravager's Orb",
-        head=gear.ambuscade.ares.head,
-        neck=gear.neck.acc,
+        ammo="Hasty Pinion +1",
+        head=gear.odyssean.head.tp,
+        neck=gear.neck.sword,
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,
-        body=gear.souveran.body.A,
-        hands=gear.souveran.hands.A,
+        body=gear.ambuscade.ares.body,
+        hands=gear.ambuscade.ares.hands,
         ring1="Rajas Ring",
         ring2="K'ayres Ring",
-        back=gear.jsecapes.amb.pld.tp,
+        back="Atheling Mantle",
         waist=gear.waist.highhaste,
-        legs=gear.souveran.legs.D,
+        legs=gear.ambuscade.ares.legs,
         feet=gear.ambuscade.ares.feet
     }
 
     sets.combat.DPS = set_combine(sets.combat, {})
-    sets.combat.midacc = set_combine(sets.combat, {})
-    sets.combat.highacc = set_combine(sets.combat, {})
+    sets.combat.midacc = set_combine(sets.combat, {
+        back="Letalis Mantle",
+    })
+    sets.combat.highacc = set_combine(sets.combat.midacc, {
+        back="Letalis Mantle"
+    })
     sets.combat.defensive = set_combine(sets.combat, {})
 
     -- WS sets
 
     sets.WS = {
-        ammo="Ravager's Orb",
+        ammo="Seething Bomblet +1",
         head=gear.argosy.head.A,
-        neck="Fotia Gorget",
+        neck=gear.neck.ws,
         ear1="Brutal Earring",
         ear2="Moonshade Earring",
         body=gear.argosy.body.A,
@@ -90,7 +94,7 @@ function get_sets()
         ring1="Rajas Ring",
         ring2="Ifrit Ring",
         back="Atheling Mantle",
-        waist="Fotia Belt",
+        waist=gear.waist.ws,
         legs=gear.odyssean.legs.ws,
         feet=gear.argosy.feet.A
     }

@@ -14,7 +14,7 @@ function get_sets()
         ear1=gear.ears.idle_left,
         ear2=gear.ears.idle_right,
         body=gear.body.mage_idle,
-        hands=gear.ambuscade.morrigan.hands,
+        hands=gear.merlinic.hands.dt,
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
         back=gear.back.mage_idle,
@@ -72,18 +72,13 @@ function get_sets()
 
     sets.combat = {
         ammo="Jukukik Feather",
-        head="Weath. Corona +1",
         neck="Asperity Necklace",
         ear1="Bladeborn Earring",
         ear2="Steelflash Earring",
-        body="Weather. Robe +1",
-        hands="Weath. Cuffs +1",
         ring1="Rajas ring",
         ring2="K'ayres Ring",
         back="Rancorous Mantle",
-        waist="Cetl Belt",
-        legs="Weath. Pants +1",
-        feet="Weath. Souliers +1"
+        waist="Cetl Belt"
     }
 
     sets.combat.DPS = set_combine(sets.combat, {})
@@ -95,33 +90,31 @@ function get_sets()
 
     sets.WS = {
         ammo="Jukukik Feather",
-        head="Weath. Corona +1",
         neck="Fotia Gorget",
         ear1="Bladeborn Earring",
         ear2="Steelflash Earring",
-        body="Weather. Robe +1",
-        hands="Weath. Cuffs +1",
         ring1="Rajas ring",
         ring2="K'ayres Ring",
         back="Rancorous Mantle",
-        waist="Fotia Belt",
-        legs="Weath. Pants +1",
-        feet="Weath. Souliers +1"
+        waist="Fotia Belt"
     }
 
     sets.magic_accuracy = {
-        head="Weath. Corona +1",
-        neck="Eddy Necklace",
-        ear1="Lifestorm Earring",
-        ear2="Psystorm Earring",
-        body="Weather. Robe +1",
-        hands="Yaoyotl Gloves",
-        ring1="Sangoma Ring",
-        ring2="Shiva Ring",
-        back="Refraction Cape",
-        waist="Witch Sash",
-        legs="Weath. Pants +1",
-        feet="Weath. Souliers +1"
+        main=gear.weapons.mage.macc,
+        sub="Bugard strap +1",
+        ammo="Aqua Sachet",
+        head=gear.merlinic.head.MAcc,
+        neck=gear.neck.macc,
+        ear1=gear.ears.macc_mnd,
+        ear2=gear.ears.macc_int,
+        body=gear.helios.body.macc,
+        hands=gear.merlinic.hands.MAcc,
+        ring1=gear.ring.macc,
+        ring2="Aquasoul Ring",
+        back=gear.back.macc,
+        waist=gear.waist.macc,
+        legs=gear.helios.legs.macc,
+        feet=gear.vanya.feet.D
     }
 
 
@@ -135,18 +128,18 @@ function get_sets()
         main=gear.weapons.BLM.Nuke,
         sub="Zuuxowu Grip",
         ammo="Dosis Tathlum",
-        head="Kaabnax Hat",
-        neck="Eddy Necklace",
-        ear1="Novio Earring",
-        ear2="Hecate's Earring",
+        head=gear.merlinic.head.MAB,
+        neck=gear.neck.macc,
+        ear1=gear.ears.mab_left,
+        ear2=gear.ears.mab_right,
         body=gear.helios.body.MAB,
-        hands=gear.helios.hands.MAB,
+        hands=gear.ambuscade.morrigan.hands,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
         back="Toro Cape",
-        waist="Wanion Belt",
+        waist=gear.waist.macc,
         legs=gear.merlinic.legs.MAB,
-        feet=gear.helios.feet.MAB
+        feet=gear.merlinic.feet.MAB
     })
 
     sets.MPReturn = { body="Spaekona's Coat" }

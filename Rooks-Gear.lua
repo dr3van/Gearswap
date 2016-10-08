@@ -7,6 +7,7 @@ function init_gear()
     -- All jobs pieces
     gear.ammo = {}
     gear.ammo.dt = { name="Staunch Tathlum" }
+    gear.ammo.enmity = { name="Iron Gobbet" }
 
     gear.neck = {}
     gear.neck.cure_potency = { name="Phalaina Locket" }
@@ -36,6 +37,8 @@ function init_gear()
     gear.ears.ws = { name="Moonshade Earring" }
     gear.ears.mab_left = { name="Friomisi Earring" }
     gear.ears.mab_right = { name="Hecate's Earring" }
+    gear.ears.enmity_right = { name="Friomisi Earring" }
+    gear.ears.conserve_mp = { mame="Calamitous Earring" }
 
     gear.ring = {}
     gear.ring.cure_potency = { name="Lebeche Ring" }
@@ -48,6 +51,7 @@ function init_gear()
     gear.ring.macc = { name="Sangoma Ring" }
     gear.ring.healing_left = { name="Sirona's Ring" }
     gear.ring.healing_right = { name="Ephedra Ring" }
+    gear.ring.enmity_right = { name="Provocare Ring" }
 
     gear.waist = {}
     gear.waist.hp = { name="Ocean Sash" }
@@ -188,6 +192,12 @@ function init_gear()
     gear.vanya.feet = {}
     gear.vanya.feet.D = { name="Vanya Clogs", augments={'"Cure" potency +5%', '"Cure" spellcasting time -15%', '"Conserve MP"+6'}}
 
+    gear.eschite = {}
+    gear.eschite.head = { name="Eschite Helm" }
+    gear.eschite.head.D = { name="Eschite Helm", augments={'STR+10','VIT+7','"Cure" potency +7%'} }
+    gear.eschite.legs = { name="Eschite Cuisses" }
+    gear.eschite.legs.D = { name="Eschite Cuisses", augments={'"Mag.Atk.Bns."+25','"Conserve MP"+6','"Fast Cast"+5'} }
+
     -- 119 Abjuration pieces
 
     gear.souveran = {}
@@ -227,6 +237,10 @@ function init_gear()
     -- Reisenjima pieces
 
     gear.odyssean = {}
+    gear.odyssean.head = { name="Odyssean Helm" }
+    gear.odyssean.head.acc = { name="Odyssean Helm", augments={'Accuracy+20 Attack+20','Weapon Skill Acc.+15','Accuracy+10'} }
+    gear.odyssean.head.tp = { name="Odyssean Helm", augments={'Accuracy+20 Attack+20','Weapon Skill Acc.+15','Accuracy+10'} }
+    gear.odyssean.head.ws = { name="Odyssean Helm", augments={'Accuracy+30','Weapon skill damage +4%','MND+10','Attack+14'} }
     gear.odyssean.hands = { name="Odyssean Gauntlets" }
     gear.odyssean.hands.idle = { name="Odyssean Gauntlets", augments={'Accuracy+13 Attack+13','Phys. dmg. taken -4%','DEX+10','Attack+3'} }
     gear.odyssean.hands.tp = { name="Odyssean Gauntlets", augments={'Accuracy+13 Attack+13','Phys. dmg. taken -4%','DEX+10','Attack+3'} }
@@ -241,6 +255,7 @@ function init_gear()
     gear.herculean.head = { name="Herculean Helm" }
     gear.herculean.head.tp = { name="Herculean Helm", augments={'Accuracy+28','"Triple Atk."+2','AGI+2','Attack+5',}}
     gear.herculean.head.ws = { name="Herculean Helm", augments={'Accuracy+28','"Triple Atk."+2','AGI+2','Attack+5',}}
+    gear.herculean.head.fc = { name="Herculean Helm", augments={'Accuracy+28','"Triple Atk."+2','AGI+2','Attack+5',}}
     gear.herculean.legs = { name="Herculean Trousers" }
     gear.herculean.legs.tp = { name="Herculean Trousers", augments={'Accuracy+20','"Triple Atk."+3','Attack+4',}}
     gear.herculean.legs.ws = { name="Herculean Trousers", augments={'Accuracy+20','"Triple Atk."+3','Attack+4',}}
@@ -254,6 +269,10 @@ function init_gear()
     gear.merlinic.head.MAcc = { name="Merlinic Hood", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','"Fast Cast"+4','CHR+1','Mag. Acc.+11','"Mag.Atk.Bns."+12'}}
     gear.merlinic.head.dt = { name="Merlinic Hood", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','"Fast Cast"+4','CHR+1','Mag. Acc.+11','"Mag.Atk.Bns."+12'}}
     gear.merlinic.head.fc = { name="Merlinic Hood", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','"Fast Cast"+4','CHR+1','Mag. Acc.+11','"Mag.Atk.Bns."+12'}}
+    gear.merlinic.hands = { name="Merlinic Dastanas" }
+    gear.merlinic.hands.MAB = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst mdg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
+    gear.merlinic.hands.MAcc = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst mdg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
+    gear.merlinic.hands.dt = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst mdg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
     gear.merlinic.legs = { name="Merlinic Shalwar"}
     gear.merlinic.legs.MAB = { name="Merlinic Shalwar", augments={'Mag. Acc.+10','Magic Damage +15','INT+9','"Mag.Atk.Bns."+13',}}
     gear.merlinic.legs.MAcc = { name="Merlinic Shalwar", augments={'Mag. Acc.+10','Magic Damage +15','INT+9','"Mag.Atk.Bns."+13',}}
@@ -261,10 +280,9 @@ function init_gear()
     gear.merlinic.legs.MDmg = { name="Merlinic Shalwar", augments={'Mag. Acc.+10','Magic Damage +15','INT+9','"Mag.Atk.Bns."+13',}}
     gear.merlinic.legs.dt = { name="Merlinic Shalwar", augments={'Mag. Acc.+10','Magic Damage +15','INT+9','"Mag.Atk.Bns."+13',}}
     gear.merlinic.feet = { name="Merlinic Crackows" }
-    gear.merlinic.feet.FC = { name="Merlinic Crackows", augments={'Mag. Acc.+15','"Fast Cast"+6','"Mag.Atk.Bns."+13'}}
-    gear.merlinic.feet.MAB = { name="Merlinic Crackows", augments={'Mag. Acc.+15','"Fast Cast"+6','"Mag.Atk.Bns."+13'}}
-    gear.merlinic.feet.MAcc = { name="Merlinic Crackows", augments={'Mag. Acc.+15','"Fast Cast"+6','"Mag.Atk.Bns."+13'}}
-    gear.merlinic.feet.dt = { name="Merlinic Crackows", augments={'Mag. Acc.+15','"Fast Cast"+6','"Mag.Atk.Bns."+13'}}
+    gear.merlinic.feet.MAB = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+29','INT+8','Mag. Acc.+15'}}
+    gear.merlinic.feet.MAcc = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+29','INT+8','Mag. Acc.+15'}}
+    gear.merlinic.feet.dt = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+29','INT+8','Mag. Acc.+15'}}
 
     -- SR
 
@@ -363,7 +381,7 @@ function init_gear()
     }
     gear.jse.empyrean.pld = {
         head="Chevalier's Armet",
-        body="Chev. Cuirass",
+        body="Chev. Cuirass +1",
         hands="Chev. Guantlets",
         legs="Chev. Cuisses",
         feet="Chev. Sabatons +1"

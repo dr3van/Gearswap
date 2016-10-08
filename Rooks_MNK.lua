@@ -7,22 +7,29 @@ function get_sets()
 
     sets.idle = {
         ammo=gear.ammo.dt,
-        head="Whirlpool Mask",
-        neck="Wiglen Gorget",
-        ear1="Hearty Earring",
-        ear2="Ethereal Earring",
-        body="Shned. Tabard +1",
+        head=gear.herculean.head.tp,
+        neck=gear.neck.dt,
+        ear1=gear.ears.idle_left,
+        ear2=gear.ears.idle_right,
+        body=gear.taeon.body.tp,
         hands=gear.taeon.hands.tp,
-        ring1="Sheltered Ring",
-        ring2="Paguroidea Ring",
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
         back="Shadow Mantle",
         waist="Black Belt",
-        legs="Shned. Tights +1",
+        legs=gear.herculean.legs.tp,
         feet="Herald's Gaiters"
     }
     sets.idle.base = set_combine(sets.idle, {})
-    sets.idle.regen = set_combine(sets.idle, {})
-    sets.idle.DT = set_combine(sets.idle, {})
+    sets.idle.regen = set_combine(sets.idle, {
+        neck=gear.neck.regen,
+        ring1=gear.ring.regen_left,
+        ring2=gear.ring.regen_right,
+    })
+    sets.idle.DT = set_combine(sets.idle, {
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
+    })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = set_combine(sets.idle, {})
@@ -36,23 +43,23 @@ function get_sets()
     sets.JA["Focus"] = { head="Tpl. Crown +1" }
     sets.JA["Chakra"] = {
         ammo="Iron Gobbet",
-        head="Whirlpool Mask",
+        head=gear.odyssean.head.tp,
         body="Tpl. Cyclas +1",
         hands="Mel. Gloves +2",
         back="Melee Cape",
-        legs="Nahtirah Trousers",
-        feet=gear.taeon.feet.tp
+        legs=gear.herculean.legs.tp,
+        feet=gear.herculean.feet.tp
     }
     sets.JA["Chi Blast"] = {
-        head="Whirlpool Mask",
+        head=gear.herculean.head.tp,
         ear1="Lifestorm Earring",
-        body="Espial Gambison",
+        body=gear.taeon.body.tp,
         hands=gear.taeon.hands.tp,
         ring1="Aquasoul Ring",
         ring2="Aquasoul Ring",
         back="Melee Cape",
-        legs="Espial Hose",
-        feet=gear.taeon.feet.tp
+        legs=gear.herculean.legs.tp,
+        feet=gear.herculean.feet.tp
     }
     sets.JA["Counterstance"] = { feet="Mel. Gaiters +2" }
     sets.JA["Footwork"] = { feet="Tantra Gaiters +2" }
@@ -64,18 +71,18 @@ function get_sets()
 
     sets.combat = {
         ammo="Hagneia Stone",
-        head="Whirlpool Mask",
-        neck="Asperity Necklace",
-        ear1="Bladeborn Earring",
-        ear2="Steelflash Earring",
-        body="Shned. Tabard +1",
+        head=gear.herculean.head.tp,
+        neck=gear.neck.acc,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        body=gear.taeon.body.tp,
         hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
         ring2="Epona's Ring",
         back="Atheling Mantle",
         waist="Windbuffet Belt +1",
-        legs="Espial Hose",
-        feet=gear.taeon.feet.tp
+        legs=gear.herculean.legs.tp,
+        feet=gear.herculean.feet.tp
     }
     sets.combat.DPS = set_combine(sets.combat, {})
     sets.combat.midacc = set_combine(sets.combat, {})
@@ -86,18 +93,18 @@ function get_sets()
 
     sets.WS = {
         ammo="Thew Bomblet",
-        head="Whirlpool Mask",
-        neck="Fotia Gorget",
+        head=gear.herculean.head.ws,
+        neck=gear.neck.ws,
         ear1="Brutal Earring",
         ear2="Moonshade Earring",
-        body="Shned. Tabard +1",
-        hands=gear.taeon.hands.tp,
+        body=gear.taeon.body.ws,
+        hands=gear.taeon.hands.ws,
         ring1="Rajas Ring",
         ring2="Epona's Ring",
         back="Atheling Mantle",
-        waist="Fotia Belt",
-        legs="Nahtirah Trousers",
-        feet=gear.taeon.feet.tp
+        waist=gear.waist.ws,
+        legs=gear.herculean.legs.ws,
+        feet=gear.herculean.feet.ws
     }
     sets.WS['Victory Smite'] = set_combine(sets.WS, {
         back="Rancorous Mantle"

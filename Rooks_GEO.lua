@@ -68,11 +68,11 @@ function get_sets()
         ear1=gear.ears.mab_left,
         ear2=gear.ears.mab_right,
         body=gear.helios.body.MAB,
-        hands=gear.helios.hands.MAB,
+        hands=gear.merlinic.hands.MAB,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
         back="Toro Cape",
-        waist="Wanion Belt",
+        waist=gear.waist.macc,
         legs=gear.merlinic.legs.MAB,
         feet=gear.merlinic.feet.MAB
     }

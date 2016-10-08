@@ -57,12 +57,14 @@ function get_sets()
     }
 
     sets.precast.FC = {
-        ear1="Loquac. Earring",
+        head=gear.herculean.head.fc,
+        ear2=gear.ears.fc_right,
         body="Hashishin Mintan",
-        hands="Thaumas Gloves",
+        hands=gear.hands.melee_fc,
         ring1=gear.ring.FC_left,
-        back="Swith Cape",
-        waist="Witful Belt",
+        ring2=gear.ring.FC_right,
+        back=gear.back.fc,
+        waist=gear.waist.fc,
         legs="Orvail Pants +1",
         feet="Chelona Boots +1"
     }
@@ -173,16 +175,16 @@ function get_sets()
     })
 
     sets.blue.physical = set_combine(sets.blue, {
-        head="Whirlpool Mask",
-        neck="Eddy Necklace",
+        head=gear.herculean.head.fc,
+        neck=gear.neck.macc,
         ear1=gear.ears.macc_mnd,
         ear2=gear.ears.macc_int,
         hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
         ring2="Ifrit Ring",
         back="Buquwik Cape",
-        waist="Wanion Belt",
-        feet=gear.taeon.feet.tp
+        waist="Dynamic Belt +1",
+        feet=gear.herculean.feet.tp
     })
 
     sets.blue.physical.STR = set_combine(sets.blue.physical, {
@@ -211,17 +213,17 @@ function get_sets()
 
     sets.blue.magical = set_combine(sets.blue, {
         ammo="Dosis Tathlum",
-        head=gear.helios.head.MAB,
-        neck="Eddy Necklace",
+        head=gear.ambuscade.morrigan.head,
+        neck=gear.neck.macc,
         ear1=gear.ears.mab_left,
         ear2=gear.ears.mab_right,
-        body=gear.helios.body.MAB,
-        hands=gear.helios.hands.MAB,
+        body=gear.ambuscade.morrigan.body,
+        hands=gear.ambuscade.morrigan.hands,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
-        waist="Wanion Belt",
-        legs=gear.helios.legs.MAB,
-        feet=gear.helios.feet.MAB
+        waist=gear.waist.macc,
+        legs=gear.ambuscade.morrigan.legs,
+        feet=gear.ambuscade.morrigan.feet
     })
 
     sets.blue.magical.STR = set_combine(sets.blue.magical, {

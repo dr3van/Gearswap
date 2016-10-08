@@ -19,7 +19,7 @@ function get_sets()
         ring2=gear.ring.dt_right,
         back=gear.back.mage_idle,
         waist=gear.waist.mage_idle,
-        legs=gear.merlinic.legs.dt,
+        legs=gear.legs.mage_pdt,
         feet="Herald's Gaiters"
     }
     sets.idle.base = set_combine(sets.idle, {})

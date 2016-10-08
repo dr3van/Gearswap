@@ -12,7 +12,7 @@ function get_sets()
         ear1=gear.ears.idle_left,
         ear2=gear.ears.idle_right,
         body=gear.ambuscade.ares.body,
-        hands=gear.odyssean.hands.idle,
+        hands=gear.ambuscade.ares.hands,
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
         back="Shadow Mantle",
@@ -44,43 +44,47 @@ function get_sets()
 
 
     sets.combat = {
-        ammo="Hagneia Stone",
-        head=gear.ambuscade.ares.head,
-        neck=gear.neck.acc,
+        ammo="Hasty Pinion +1",
+        head=gear.odyssean.head.tp,
+        neck=gear.neck.sword,
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,
-        body=gear.acro.body.tp,
-        hands=gear.odyssean.hands.tp,
+        body=gear.ambuscade.ares.body,
+        hands=gear.ambuscade.ares.hands,
         ring1="Rajas Ring",
         ring2="K'ayres Ring",
         back="Atheling Mantle",
         waist=gear.waist.highhaste,
-        legs=gear.odyssean.legs.tp,
+        legs=gear.ambuscade.ares.legs,
         feet=gear.ambuscade.ares.feet
     }
 
-	sets.combat.DPS = set_combine(sets.combat, {})
-    sets.combat.midacc = set_combine(sets.combat, {})
-    sets.combat.highacc = set_combine(sets.combat, {})
+    sets.combat.DPS = set_combine(sets.combat, {})
+    sets.combat.midacc = set_combine(sets.combat, {
+        back="Letalis Mantle",
+    })
+    sets.combat.highacc = set_combine(sets.combat.midacc, {
+        back="Letalis Mantle"
+    })
     sets.combat.defensive = set_combine(sets.combat, {})
 
     -- WS sets
 
     sets.WS = {
-        ammo="Fracas Grenade",
-        head=gear.ambuscade.ares.head,
+        ammo="Seething Bomblet +1",
+        head=gear.argosy.head.A,
         neck=gear.neck.ws,
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,
-        body=gear.acro.body.tp,
-        hands=gear.ambuscade.ares.hands,
+        body=gear.argosy.body.A,
+        hands=gear.argosy.hands.A,
         ring1="Rajas Ring",
-        ring2="K'ayres Ring",
+        ring2="Ifrit Ring",
         back="Atheling Mantle",
         waist=gear.waist.ws,
         legs=gear.odyssean.legs.ws,
-        feet=gear.ambuscade.ares.feet
+        feet=gear.argosy.feet.A
 	}
 
-    send_command('input /macro book 1;wait .1;input /macro set 1')
+    send_command('input /macro book 10;wait .1;input /macro set 10')
 end

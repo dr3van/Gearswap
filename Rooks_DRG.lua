@@ -18,7 +18,7 @@ function get_sets()
         back="Shadow Mantle",
         waist=gear.waist.pdt,
         legs=gear.carmine.legs.D,
-        feet=gear.souveran.feet.D
+        feet=gear.ambuscade.ares.feet
     }
     sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {

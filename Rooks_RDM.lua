@@ -52,7 +52,7 @@ function get_sets()
         back=gear.back.fc,
         waist=gear.back.fc,
         legs="Orvail Pants +1",
-        feet=gear.merlinic.feet.FC
+        feet="Chelona Boots +1"
     }
 
     sets.combat = {
@@ -171,7 +171,7 @@ function get_sets()
         ear1=gear.ears.mab_left,
         ear2=gear.ears.mab_right,
         body="Helios Jacket",
-        hands="Helios Gloves",
+        hands=gear.merlinic.hands.MAB,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
         legs=gear.merlinic.legs.MAB,

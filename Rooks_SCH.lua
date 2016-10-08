@@ -7,30 +7,35 @@ function get_sets()
     init_get_sets(0, 1)
 
     sets.idle = {
-        main=gear.weapons.mage.macc,
-        sub="Bugard strap +1",
-        ammo="Iron Gobbet",
-        head="Wivre Hairpin",
-        neck="Wiglen Gorget",
-        ear1="Hearty Earring",
-        ear2="Ethereal Earring",
-        body=gear.hagondes.body.pdt,
-        hands="Orison Mitts +2",
-        ring1="Sheltered Ring",
-        ring2="Paguroidea Ring",
-        back="Umbra Cape",
-        waist="Ocean Sash",
-        legs="Nares Trews",
+        main=gear.weapons.mage.refresh,
+        sub=gear.weapons.mage.nuke_grip,
+        ammo=gear.ammo.dt,
+        head=gear.head.mage_refresh,
+        neck=gear.neck.dt,
+        ear1=gear.ears.idle_left,
+        ear2=gear.ears.idle_right,
+        body=gear.body.mage_idle,
+        hands=gear.ambuscade.morrigan.hands,
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
+        back=gear.back.mage_idle,
+        waist=gear.waist.mage_idle,
+        legs=gear.merlinic.legs.dt,
         feet="Herald's Gaiters"
     }
-    sets.idle.regen = set_combine(sets.idle, {})
+    sets.idle.base = set_combine(sets.idle, {})
+    sets.idle.regen = set_combine(sets.idle, {
+        neck=gear.neck.regen,
+        ring1=gear.ring.regen_left,
+        ring2=gear.ring.regen_right,
+        legs="Nares Trews"
+    })
     sets.idle.DT = set_combine(sets.idle, {
-        head=gear.telchine.head,
-        body=gear.hagondes.body.pdt,
-        hands=gear.telchine.hands,
+        head="Nahtirah Hat",
+        ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
-        legs=gear.telchine.legs,
-        feet=gear.telchine.feet
+        legs=gear.merlinic.legs.MAB,
+        feet=gear.merlinic.feet.MAB
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
@@ -51,12 +56,13 @@ function get_sets()
     sets.precast = {}
     sets.precast.FC = {
         ammo="Incantor Stone",
-        head="Nahtirah Hat",
+        head=gear.merlinic.head.fc,
         ear2=gear.ears.fc_right,
-        body=gear.helios.body.mab,
-        hands="Repartie Gloves",
-        ring1=gear.ring.FC_left,
-        back="Swith Cape",
+        body=gear.body.mage_fc,
+        hands=gear.hands.mage_fc,
+        ring1=gear.ring.fc_left,
+        ring2=gear.ring.fc_right,
+        back=gear.back.fc,
         waist=gear.waist.fc,
         legs="Orvail Pants +1",
         feet="Chelona Boots +1"
@@ -101,8 +107,8 @@ function get_sets()
 
     sets.midcast = {}
     sets.midcast.CureSpell = {
-        main="Tamaxchi",
-        sub="Genbu's Shield",
+--        main="Tamaxchi",
+--        sub="Genbu's Shield",
         ammo="Aqua Sachet",
         head="Telchine Cap",
         neck=gear.neck.cure_potency,
@@ -134,13 +140,13 @@ function get_sets()
         ear1=gear.ears.macc_mnd,
         ear2=gear.ears.macc_int,
         body=gear.helios.body.macc,
-        hands=gear.telchine.hands,
+        hands=gear.merlinic.hands.MAcc,
         ring1=gear.ring.macc,
         ring2="Aquasoul Ring",
         back=gear.back.macc,
         waist=gear.waist.macc,
-        legs=gear.helios.legs.macc,
-        feet=gear.vanya.feet.D
+        legs=gear.merlinic.legs.MAcc,
+        feet=gear.merlinic.feet.MAcc
     }
     sets.midcast['Divine Magic'] = set_combine(sets.macc, {})
     sets.midcast['Enfeebling Magic'] = set_combine(sets.macc, {})
@@ -170,11 +176,11 @@ function get_sets()
         sub="Zuuxowu Grip",
         ammo="Dosis Tathlum",
         head=gear.merlinic.head.MAB,
-        neck="Eddy Necklace",
-        ear1="Novio Earring",
-        ear2="Hecate's Earring",
+        neck=gear.neck.macc,
+        ear1=gear.ears.mab_left,
+        ear2=gear.ears.mab_right,
         body=gear.helios.body.MAB,
-        hands=gear.helios.hands.MAB,
+        hands=gear.merlinic.hands.MAB,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
         back="Toro Cape",
