@@ -59,7 +59,7 @@ function get_sets()
     sets.combat = {
         ammo="Hasty Pinion +1",
         head=gear.odyssean.head.tp,
-        neck=gear.neck.sword,
+        neck=gear.neck.acc,
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,
         body=gear.ambuscade.ares.body,
@@ -99,14 +99,30 @@ function get_sets()
         feet=gear.argosy.feet.A
     }
 
-    sets.WS.Resolution = set_combine(sets.WS, {
+    sets.WS.singlehit = set_combine(sets.WS, {
+        ammo="Seething Bomblet +1",
+        head=gear.odyssean.head.ws,
+        neck=gear.neck.ws,
+        ear1="Brutal Earring",
+        ear2=gear.ears.ws,
+        body=gear.ambuscade.ares.body,
+        hands=gear.ambuscade.ares.hands,
+        ring1="Rajas Ring",
+        ring2="Ifrit Ring",
+        back="Atheling Mantle",
+        waist=gear.waist.ws,
+        legs=gear.odyssean.legs.ws,
+        feet=gear.ambuscade.ares.feet
+    })
+
+    sets.WS['Resolution'] = set_combine(sets.WS, {
         ear1="Brutal Earring",
         ear2="Moonshade Earring"
     })
 
-    sets.WS.Resolution.MightyStrikes = set_combine(sets.WS.Resolution, {
-        feet="Rvg. Calligae +2"
-    })
+--    sets.WS.Resolution.MightyStrikes = set_combine(sets.WS.Resolution, {
+--        feet="Rvg. Calligae +2"
+--    })
 
     send_command('input /macro book 5;wait .1;input /macro set 1')
 end

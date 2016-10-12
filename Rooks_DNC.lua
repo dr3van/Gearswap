@@ -67,18 +67,18 @@ function get_sets()
     -- WS sets
     sets.WS = {
         ammo="Honed Tathlum",
-        head=gear.herculean.head.ws,
+        head=gear.lustratio.head.A,
         neck=gear.neck.ws,
         ear1="Brutal Earring",
         ear2=gear.ears.ws,
         body=gear.taeon.body.ws,
-        hands=gear.taeon.hands.ws,
+        hands=gear.lustratio.hands.A,
         ring1="Rajas Ring",
         ring2="K'ayres Ring",
         back="Atheling Mantle",
         waist=gear.waist.ws,
         legs=gear.herculean.legs.ws,
-        feet=gear.herculean.feet.ws
+        feet=gear.lustratio.feet.A
     }
 
     send_command('input /macro book 1;wait .1;input /macro set 1')

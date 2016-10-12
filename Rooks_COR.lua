@@ -57,7 +57,6 @@ function get_sets()
     }
 
     sets.combat = {
-        ammo="Honed Tathlum",
         head=gear.herculean.head.tp,
         neck=gear.neck.tp,
         ear1=gear.ears.da_left,
@@ -91,35 +90,35 @@ function get_sets()
 
     -- Quickdraw!
     sets.JA['Quick Draw'] = {
-        head="Thaumas Hat",
-        neck="Fotia Gorget",
-        ear1="Novio Earring",
-        ear2="Hecate's Earring",
-        body="Espial Gambison",
-        hands="Espial Bracers",
-        ring1="Strendu Ring",
+        head=gear.ambuscade.skadi.head,
+        neck=gear.neck.macc,
+        ear1=gear.ears.mab_left,
+        ear2=gear.ears.mab_right,
+        body=gear.ambuscade.skadi.body,
+        hands=gear.hands.melee_MAB,
+        ring1="Stormsoul Ring",
         ring2="Stormsoul Ring",
-        back="Atheling Mantle",
-        waist="Fotia Belt",
-        legs="Nahtirah Trousers",
-        feet="Espial Socks"
+        back="Toro Cape",
+        waist="Elanid Belt",
+        legs=gear.ambuscade.skadi.legs,
+        feet=gear.ambuscade.skadi.feet
     }
 
     -- WS sets
 
     sets.WS = {
-        head="Whirlpool Mask",
-        neck="Fotia Gorget",
-        ear1="Brutal Earring",
-        ear2="Moonshade Earring",
-        body="Espial Gambison",
-        hands="Espial Bracers",
+        head=gear.herculean.head.tp,
+        neck=gear.neck.ws,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        body=gear.taeon.body.tp,
+        hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
         ring2="Epona's Ring",
         back="Atheling Mantle",
-        waist="Fotia Belt",
-        legs="Nahtirah Trousers",
-        feet="Espial Socks"
+        waist=gear.waist.ws,
+        legs=gear.herculean.legs.tp,
+        feet=gear.herculean.feet.tp
     }
 
     -- Roll info

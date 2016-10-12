@@ -46,14 +46,14 @@ function get_sets()
     sets.combat = {
         ammo="Hasty Pinion +1",
         head=gear.odyssean.head.tp,
-        neck=gear.neck.sword,
+        neck=gear.neck.acc,
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,
         body=gear.ambuscade.ares.body,
         hands=gear.ambuscade.ares.hands,
         ring1="Rajas Ring",
         ring2="K'ayres Ring",
-        back="Atheling Mantle",
+        back=gear.jsecapes.drk,
         waist=gear.waist.highhaste,
         legs=gear.ambuscade.ares.legs,
         feet=gear.ambuscade.ares.feet
@@ -68,6 +68,14 @@ function get_sets()
     })
     sets.combat.defensive = set_combine(sets.combat, {})
 
+    sets.precast.FC = {
+        ear1="Loquac. Earring",
+        hands=gear.hands.melee_fc,
+        ring1=gear.ring.fc_left,
+        ring2=gear.ring.fc_right,
+        legs=gear.eschite.legs.D
+    }
+
     -- WS sets
 
     sets.WS = {
@@ -80,11 +88,56 @@ function get_sets()
         hands=gear.argosy.hands.A,
         ring1="Rajas Ring",
         ring2="Ifrit Ring",
-        back="Atheling Mantle",
+        back=gear.jsecapes.drk,
         waist=gear.waist.ws,
         legs=gear.odyssean.legs.ws,
         feet=gear.argosy.feet.A
 	}
 
-    send_command('input /macro book 10;wait .1;input /macro set 10')
+    sets.WS['Torcleaver'] = {
+        ammo="Seething Bomblet +1",
+        head=gear.odyssean.head.ws,
+        neck=gear.neck.ws,
+        ear1="Brutal Earring",
+        ear2=gear.ears.ws,
+        body=gear.ambuscade.ares.body,
+        hands=gear.ambuscade.ares.hands,
+        ring1="Rajas Ring",
+        ring2="Ifrit Ring",
+        back=gear.jsecapes.drk,
+        waist=gear.waist.ws,
+        legs=gear.odyssean.legs.ws,
+        feet=gear.ambuscade.ares.feet
+    }
+
+    sets.magic_accuracy = {
+        head="Befouled Crown",
+        neck=gear.neck.macc,
+        ear1=gear.ears.macc_mnd,
+        ear2=gear.ears.macc_int,
+        body=gear.founder.body,
+        hands=gear.hands.melee_macc,
+        ring1="Shiva Ring",
+        ring2="Shiva Ring",
+        back="Toro Cape",
+        legs=gear.eschite.legs.D,
+        feet=gear.yorium.feet
+    }
+
+    sets.midcast['Enfeebling Magic'] = set_combine(sets.magic_accuracy, {})
+    sets.midcast['Elemental Magic'] = set_combine(sets.magic_accuracy, {})
+    sets.midcast['Dark Magic'] = set_combine(sets.magic_accuracy, {
+        back=gear.jsecapes.drk,
+        legs=gear.eschite.legs.D
+    })
+
+    sets.midcast.DrainAspir = set_combine(sets.midcast['Dark Magic'], {
+    })
+    sets.midcast['Drain'] = set_combine(sets.midcast.DrainAspir, {})
+    sets.midcast['Drain II'] = set_combine(sets.midcast.DrainAspir, {})
+    sets.midcast['Drain III'] = set_combine(sets.midcast.DrainAspir, {})
+    sets.midcast['Aspir'] = set_combine(sets.midcast.DrainAspir, {})
+    sets.midcast['Aspir II'] = set_combine(sets.midcast.DrainAspir, {})
+
+    send_command('input /macro book 10;wait .1;input /macro set 1')
 end

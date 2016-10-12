@@ -87,6 +87,7 @@ function init_gear()
     gear.hands = {}
     gear.hands.mage_fc = { name="Repartie Gloves" }
     gear.hands.melee_fc = { name="Leyline Gloves", augments={'Accuracy+12', 'Mag. Acc.+14', '"Mag. Atk. Bns."+15', '"Fast Cast"+2'} }
+    gear.hands.melee_macc = { name="Leyline Gloves", augments={'Accuracy+12', 'Mag. Acc.+14', '"Mag. Atk. Bns."+15', '"Fast Cast"+2'} }
     gear.legs = {}
     gear.legs.mage_pdt = { name="Miasmic Pants" }
     gear.feet = {}
@@ -97,6 +98,8 @@ function init_gear()
     gear.jsecapes = {}
     gear.jsecapes.blu = { name="Cornflower Cape", augments={'MP+27', 'DEX+1', 'Accuracy+5', 'Blue magic skill +10'}}
     gear.jsecapes.pld = { name="Weard Mantle", augments={'DEX+1', 'VIT+2', 'Enmity+4', '"Phalanx"+5'}}
+    gear.jsecapes.drk = { name="Niht Mantle", augments={'Attack+13','Dark magic skill +10','"Drain" and "Aspir" potency +25','Weapon skill damage +4%'}}
+
     gear.jsecapes.amb = {}
     gear.jsecapes.amb.blu = { name="Rosmerta's Cape"}
     gear.jsecapes.amb.blu.idle = { name="Rosmerta's Cape"}
@@ -110,6 +113,10 @@ function init_gear()
     gear.jsecapes.amb.war.idle = { name="Cichol's Mantle"}
     gear.jsecapes.amb.war.tp = { name="Cichol's Mantle"}
     gear.jsecapes.amb.war.ws = { name="Cichol's Mantle"}
+    gear.jsecapes.amb.drk = { name="Ankou's Mantle"}
+    gear.jsecapes.amb.drk.idle = { name="Ankou's Mantle"}
+    gear.jsecapes.amb.drk.tp = { name="Ankou's Mantle"}
+    gear.jsecapes.amb.drk.ws = { name="Ankou's Mantle"}
 
 
     -- Skirmish pieces
@@ -129,7 +136,7 @@ function init_gear()
     gear.yorium.hands.idle = { name="Yorium Gauntlets", augments={'Enmity+3', 'Phys. dmg. taken -2%'}}
     gear.yorium.legs = { name="Yorium Cuisses"}
     gear.yorium.legs.idle = { name="Yorium Cuisses"}
-    gear.yorium.feet = {}
+    gear.yorium.feet = { name="Yorium Sabatons" }
 
     gear.acro = {}
     gear.acro.head = { name="Acro Helm" }
@@ -437,7 +444,7 @@ function init_gear()
         head="Jhakri Coronal",
         body="Jhakri Robe",
         hands="Jhakri Cuffs",
-        legs="Jhakri Slops",
+        legs="Jhakri Slops +1",
         feet="Jhakri Pigaches",
     }
 

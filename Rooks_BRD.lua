@@ -14,7 +14,7 @@ function get_sets()
         ear1=gear.ears.idle_left,
         ear2=gear.ears.idle_right,
         body=gear.body.mage_idle,
-        hands="Espial Bracers",
+        hands=gear.lustratio.hands.A,
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
         back=gear.waist.mage_idle,
