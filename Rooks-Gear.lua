@@ -87,6 +87,7 @@ function init_gear()
     gear.hands = {}
     gear.hands.mage_fc = { name="Repartie Gloves" }
     gear.hands.melee_fc = { name="Leyline Gloves", augments={'Accuracy+12', 'Mag. Acc.+14', '"Mag. Atk. Bns."+15', '"Fast Cast"+2'} }
+    gear.hands.melee_MAB = { name="Leyline Gloves", augments={'Accuracy+12', 'Mag. Acc.+14', '"Mag. Atk. Bns."+15', '"Fast Cast"+2'} }
     gear.hands.melee_macc = { name="Leyline Gloves", augments={'Accuracy+12', 'Mag. Acc.+14', '"Mag. Atk. Bns."+15', '"Fast Cast"+2'} }
     gear.legs = {}
     gear.legs.mage_pdt = { name="Miasmic Pants" }
@@ -99,6 +100,7 @@ function init_gear()
     gear.jsecapes.blu = { name="Cornflower Cape", augments={'MP+27', 'DEX+1', 'Accuracy+5', 'Blue magic skill +10'}}
     gear.jsecapes.pld = { name="Weard Mantle", augments={'DEX+1', 'VIT+2', 'Enmity+4', '"Phalanx"+5'}}
     gear.jsecapes.drk = { name="Niht Mantle", augments={'Attack+13','Dark magic skill +10','"Drain" and "Aspir" potency +25','Weapon skill damage +4%'}}
+    gear.jsecapes.sch = { name="Bookworm's Cape" }
 
     gear.jsecapes.amb = {}
     gear.jsecapes.amb.blu = { name="Rosmerta's Cape"}
@@ -139,9 +141,7 @@ function init_gear()
     gear.yorium.feet = { name="Yorium Sabatons" }
 
     gear.acro = {}
-    gear.acro.head = { name="Acro Helm" }
-    gear.acro.head.tp = { name="Acro Helm", augments={'STR+3 VIT+3', 'Accuracy+15 Attack+15', '"Store TP"+2'}}
-    gear.acro.body = {}
+    gear.acro.body = { name="Acro Surcoat" }
     gear.acro.body.tp = { name="Acro Surcoat", augments={'Accuracy+20 Attack+20','"Store TP"+6','STR+6 AGI+6'}}
     gear.acro.hands = {}
     gear.acro.hands.tp = { name="Acro Gauntlets", augments={'HP+19', 'Accuracy+15 Attack+15', '"Store TP"+3'}}
@@ -166,21 +166,6 @@ function init_gear()
     gear.taeon.feet = { name="Taeon Boots"}
     gear.taeon.feet.tp = { name="Taeon Boots", augments={'Accuracy+19 Attack+19', '"Dual Wield"+5'}}
     gear.taeon.feet.ws = { name="Taeon Boots", augments={'Accuracy+19 Attack+19', '"Dual Wield"+5'}}
-
-    gear.helios = {}
-    gear.helios.head = {}
-    gear.helios.head.macc = { name="Helios Band", augments={'Mag. Acc.+25','Magic crit. hit rate +4'}}
-    gear.helios.head.MAB = { name="Helios Band", augments={'"Mag.Atk.Bns."+17'}}
-    gear.helios.body = { name="Helios Jacket"}
-    gear.helios.body.macc = { name="Helios Jacket", augments={'Mag. Acc.+11 "Mag.Atk.Bns."+11','Magic crit. hit rate +3'}}
-    gear.helios.body.MAB = { name="Helios Jacket", augments={'Mag. Acc.+11 "Mag.Atk.Bns."+11','Magic crit. hit rate +3'}}
-    gear.helios.hands = {}
-    gear.helios.hands.MAB = { name="Helios Gloves", augments={'"Mag.Atk.Bns."+24','"Drain" and "Aspir" potency +10'}}
-    gear.helios.legs = {}
-    gear.helios.legs.MAB = { name="Helios Spats", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','Magic crit. hit rate +5','Magic burst mdg.+6%',}}
-    gear.helios.legs.macc = { name="Helios Spats", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','Magic crit. hit rate +5','Magic burst mdg.+6%',}}
-    gear.helios.feet = {}
-    gear.helios.feet.MAB = { name="Helios Boots", augments={'"Mag.Atk.Bns."+24','Magic crit. hit rate +7'}}
 
     gear.telchine = {}
     gear.telchine.head = { name="Telchine Cap" }

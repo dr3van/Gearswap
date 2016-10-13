@@ -54,13 +54,13 @@ function get_sets()
 
 
     sets.combat = {
-        ammo="Honed Tathlum",
+        ammo=gear.ammo.haste,
         head=gear.herculean.head.tp,
         neck=gear.neck.tp,
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,
-        body=gear.taeon.body.tp,
-        hands=gear.taeon.hands.tp,
+        body=gear.ambuscade.skadi.body,
+        hands=gear.ambuscade.skadi.hands,
         ring1="Rajas Ring",
         ring2="Epona's Ring",
         back="Atheling Mantle",
@@ -80,13 +80,13 @@ function get_sets()
     -- WS sets
 
     sets.WS = {
-        ammo="Honed Tathlum",
+        ammo=gear.ammo.haste,
         head=gear.herculean.head.ws,
         neck=gear.neck.ws,
         ear1="Brutal Earring",
         ear2=gear.ears.ws,
-        body=gear.taeon.body.ws,
-        hands=gear.taeon.hands.ws,
+        body=gear.ambuscade.skadi.body,
+        hands=gear.ambuscade.skadi.hands,
         ring1="Rajas Ring",
         ring2="K'ayres Ring",
         back="Atheling Mantle",

@@ -78,7 +78,7 @@ function get_sets()
         back="Atheling Mantle",
         waist=gear.waist.ws,
         legs=gear.herculean.legs.ws,
-        feet=gear.lustratio.feet.A
+        feet=gear.herculean.feet.ws
     }
 
     send_command('input /macro book 1;wait .1;input /macro set 1')

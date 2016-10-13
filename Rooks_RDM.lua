@@ -18,7 +18,7 @@ function get_sets()
         back=gear.back.mage_idle,
         waist=gear.waist.pdt,
         legs=gear.carmine.legs.D,
-        feet=gear.taeon.feet.tp
+        feet="Medium's Sabots"
     }
 
     sets.idle.base = set_combine(sets.idle, {})
@@ -56,18 +56,18 @@ function get_sets()
     }
 
     sets.combat = {
-        ammo="Jukukik Feather",
-        head=gear.taeon.head.tp,
+        ammo=gear.ammo.haste,
+        head=gear.ambuscade.morrigan.head,
         neck=gear.neck.sword,
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,
-        body=gear.taeon.body.tp,
+        body=gear.ambuscade.morrigan.body,
         hands=gear.taeon.hands.tp,
         ring1="Rajas ring",
         ring2="K'ayres Ring",
         back="Atheling Mantle",
-        waist="Cetl Belt",
-        legs=gear.taeon.legs.tp,
+        waist=gear.waist.highhaste,
+        legs=gear.ambuscade.morrigan.legs,
         feet=gear.taeon.feet.tp
     }
 
@@ -87,19 +87,19 @@ function get_sets()
     -- WS sets
 
     sets.WS = {
-        ammo="Jukukik Feather",
-        head=gear.taeon.head.tp,
-        neck="Fotia Gorget",
-        ear1="Brutal Earring",
-        ear2="Moonshade Earring",
-        body=gear.taeon.body.tp,
-        hands=gear.taeon.hands.tp,
+        ammo=gear.ammo.haste,
+        head=gear.ambuscade.morrigan.head,
+        neck=gear.neck.ws,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        body=gear.ambuscade.morrigan.body,
+        hands=gear.ambuscade.morrigan.hands,
         ring1="Rajas ring",
-        ring2="K'ayres Ring",
+        ring2="Ifrit Ring",
         back="Atheling Mantle",
-        waist="Fotia Belt",
-        legs=gear.taeon.legs.tp,
-        feet=gear.taeon.feet.tp
+        waist=gear.waist.ws,
+        legs=gear.ambuscade.morrigan.legs,
+        feet=gear.ambuscade.morrigan.feet
     }
 
 -- START HERE
