@@ -71,8 +71,8 @@ function get_sets()
     })
 
     sets.combat = {
-        ammo="Jukukik Feather",
-        neck="Asperity Necklace",
+        ammo=gear.ammo.haste,
+        neck=gear.neck.acc,
         ear1="Bladeborn Earring",
         ear2="Steelflash Earring",
         ring1="Rajas ring",

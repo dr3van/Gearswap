@@ -101,6 +101,7 @@ function init_gear()
     gear.jsecapes.pld = { name="Weard Mantle", augments={'DEX+1', 'VIT+2', 'Enmity+4', '"Phalanx"+5'}}
     gear.jsecapes.drk = { name="Niht Mantle", augments={'Attack+13','Dark magic skill +10','"Drain" and "Aspir" potency +25','Weapon skill damage +4%'}}
     gear.jsecapes.sch = { name="Bookworm's Cape" }
+    gear.jsecapes.war = { name="Mauler's Mantle" }
 
     gear.jsecapes.amb = {}
     gear.jsecapes.amb.blu = { name="Rosmerta's Cape"}
@@ -235,9 +236,9 @@ function init_gear()
     gear.odyssean.head.tp = { name="Odyssean Helm", augments={'Accuracy+20 Attack+20','Weapon Skill Acc.+15','Accuracy+10'} }
     gear.odyssean.head.ws = { name="Odyssean Helm", augments={'Accuracy+30','Weapon skill damage +4%','MND+10','Attack+14'} }
     gear.odyssean.hands = { name="Odyssean Gauntlets" }
-    gear.odyssean.hands.idle = { name="Odyssean Gauntlets", augments={'Accuracy+13 Attack+13','Phys. dmg. taken -4%','DEX+10','Attack+3'} }
-    gear.odyssean.hands.tp = { name="Odyssean Gauntlets", augments={'Accuracy+13 Attack+13','Phys. dmg. taken -4%','DEX+10','Attack+3'} }
-    gear.odyssean.hands.ws = { name="Odyssean Gauntlets", augments={'Accuracy+13 Attack+13','Phys. dmg. taken -4%','DEX+10','Attack+3'} }
+    gear.odyssean.hands.idle = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
+    gear.odyssean.hands.tp = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
+    gear.odyssean.hands.ws = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
     gear.odyssean.legs = { name="Odyssean Cuisses" }
     gear.odyssean.legs.highacc = { name="Odyssean Cuisses", augments={'Weapon skill damage +4%','Pet: STR+3','Chance of successful block +2','Accuracy+19 Attack+19',}}
     gear.odyssean.legs.tp = { name="Odyssean Cuisses", augments={'Weapon skill damage +4%','Pet: STR+3','Chance of successful block +2','Accuracy+19 Attack+19',}}
@@ -280,8 +281,10 @@ function init_gear()
     -- SR
 
     gear.founder = {}
+    gear.founder.head = { name="Founder's Corona" }
     gear.founder.body = { name="Founder's Breastplate" }
     gear.founder.hands = { name="Founder's Gauntlets" }
+    gear.founder.feet = { name="Founder's Greaves" }
 
     -- Weapons
     gear.weapons = {}
@@ -320,7 +323,7 @@ function init_gear()
         feet="Ftr. Calligae +1"
     }
     gear.jse.relic.war = {
-        head="War. Mask +2",
+        head="Agoge Mask +1",
         body="Warrior's Lorica",
         hands="War. Mufflers +2",
         legs="Warrior's Cuisses",
@@ -376,7 +379,7 @@ function init_gear()
         head="Chevalier's Armet",
         body="Chev. Cuirass +1",
         hands="Chev. Guantlets",
-        legs="Chev. Cuisses",
+        legs="Chevalier's Cuisses",
         feet="Chev. Sabatons +1"
     }
 

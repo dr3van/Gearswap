@@ -77,7 +77,7 @@ function get_sets()
     sets.JumpBase = {
         ammo="Thew Bomblet",
         head="Yaoyotl Helm",
-        neck="Asperity Necklace",
+        neck=gear.neck.acc,
         ear1="Bladeborn Earring",
         ear2="Steelflash Earring",
         body=gear.acro.body.tp,

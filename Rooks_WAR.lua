@@ -57,7 +57,7 @@ function get_sets()
     sets.JA["Warrior's Charge"] = { legs=gear.jse.relic.war.legs }
 
     sets.combat = {
-        ammo="Hasty Pinion +1",
+        ammo=gear.ammo.haste,
         head=gear.odyssean.head.tp,
         neck=gear.neck.acc,
         ear1=gear.ears.da_left,
@@ -66,19 +66,15 @@ function get_sets()
         hands=gear.ambuscade.ares.hands,
         ring1="Rajas Ring",
         ring2="K'ayres Ring",
-        back="Atheling Mantle",
+        back=gear.jsecapes.war,
         waist=gear.waist.highhaste,
         legs=gear.ambuscade.ares.legs,
         feet=gear.ambuscade.ares.feet
     }
 
     sets.combat.DPS = set_combine(sets.combat, {})
-    sets.combat.midacc = set_combine(sets.combat, {
-        back="Letalis Mantle",
-    })
-    sets.combat.highacc = set_combine(sets.combat.midacc, {
-        back="Letalis Mantle"
-    })
+    sets.combat.midacc = set_combine(sets.combat, {})
+    sets.combat.highacc = set_combine(sets.combat.midacc, {})
     sets.combat.defensive = set_combine(sets.combat, {})
 
     -- WS sets
@@ -93,7 +89,7 @@ function get_sets()
         hands=gear.argosy.hands.A,
         ring1="Rajas Ring",
         ring2="Ifrit Ring",
-        back="Atheling Mantle",
+        back=gear.jsecapes.war,
         waist=gear.waist.ws,
         legs=gear.odyssean.legs.ws,
         feet=gear.argosy.feet.A
@@ -109,7 +105,7 @@ function get_sets()
         hands=gear.ambuscade.ares.hands,
         ring1="Rajas Ring",
         ring2="Ifrit Ring",
-        back="Atheling Mantle",
+        back=gear.jsecapes.war,
         waist=gear.waist.ws,
         legs=gear.odyssean.legs.ws,
         feet=gear.ambuscade.ares.feet

@@ -112,7 +112,7 @@ function get_sets()
         hands="Ad. Mnchtte. +2",
         ring1=gear.ring.MDTRing,
         ring2=gear.ring.BDTRing,
-        back="Mollusca Mantle",
+        back="Umbra Cape",
         waist="Pya'ekue Belt +1",
         legs="Aoidos' Rhing. +2",
         feet="Aoidos' Cothrn. +2"

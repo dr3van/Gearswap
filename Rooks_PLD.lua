@@ -91,7 +91,7 @@ function get_sets()
     -- WS sets
 
     sets.WS = {
-        ammo="Jukukik Feather",
+        ammo=gear.ammo.haste,
         head=gear.odyssean.head.ws,
         neck=gear.neck.ws,
         ear1="Brutal Earring",
@@ -139,7 +139,7 @@ function get_sets()
 
     sets.enmity = {
         ammo=gear.ammo.enmity,
-        head=gear.jse.relic.pld.head,
+        head="Loess Barbuta",
         neck=gear.neck.enmity,
         ear2=gear.ears.enmity_right,
         body=gear.jse.empyrean.pld.body,
@@ -149,6 +149,22 @@ function get_sets()
         waist="Creed Baudrier",
         legs=gear.jse.relic.pld.legs,
         feet=gear.jse.empyrean.pld.feet
+    }
+
+    sets.maxHP = {
+        ammo="Egoist's Tathlum",
+        head=gear.jse.empyrean.pld.head,
+        neck=gear.neck.dt,
+        ear1="Calamitous Earring",
+        ear2="Ethereal Earring",
+        body=gear.jse.empyrean.pld.body,
+        hands=gear.jse.relic.pld.hands,
+        ring1="Meridian Ring",
+        ring2="K'ayres Ring",
+        back="Fierabras's Mantle",
+        waist="Oneiros Belt",
+        legs=gear.jse.empyrean.pld.legs,
+        feet="Loyalist sabatons"
     }
 
     sets.JA = set_combine(sets.enmity, {})
@@ -181,14 +197,21 @@ function get_sets()
         legs=gear.carmine.legs.D,
     })
 
+    sets.precast.CureSpell = {
+        body="Jumalik Mail"
+    }
+
     sets.midcast.CureSpell = set_combine(sets.midcast['Healing Magic'], {
         head=gear.eschite.head.D,
         neck=gear.neck.cure_potency,
-        body=gear.souveran.body.A,
-        ring1="K'ayres Ring",
-        ring2="Meridian Ring",
+        ear1="Nourishing Earring +1",
+        ear2="Nourishing Earring",
+        body="Jumalik Mail",
+        hands="Macabre Gauntlets +1",
+        ring1="Meridian Ring",
+        ring2="Vocane Ring",
         back="Fierabras's Mantle",
-        feet=gear.jse.relic.pld.feet
+        feet=gear.jse.empyrean.pld.feet
     })
 
     sets.midcast['Enhancing Magic'] = {
@@ -221,6 +244,8 @@ function get_sets()
         back=gear.jsecapes.pld,
         feet=gear.souveran.feet.D
     })
+
+    sets.midcast['Reprisal'] = set_combine(sets.maxHP, {})
 
     send_command('input /macro book 1;wait .1;input /macro set 1')
 end

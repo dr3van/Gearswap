@@ -121,7 +121,7 @@ function get_sets()
         ring2="Shiva Ring",
         back="Toro Cape",
         legs=gear.eschite.legs.D,
-        feet=gear.yorium.feet
+        feet="Igno. Sollerets +1"
     }
 
     sets.midcast['Enfeebling Magic'] = set_combine(sets.magic_accuracy, {})

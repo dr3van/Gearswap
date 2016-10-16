@@ -42,9 +42,9 @@ function get_sets()
     sets.JA["Sengikori"] = { feet="Unkai Sune-Ate +2"}
 
     sets.combat = {
-        ammo="Hagneia Stone",
+        ammo=gear.ammo.haste,
         head="Yaoyotl Helm",
-        neck="Asperity Necklace",
+        neck=gear.neck.acc,
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,
         body=gear.acro.body.tp,
@@ -54,7 +54,7 @@ function get_sets()
         back="Atheling Mantle",
         waist="Cetl Belt",
         legs=gear.acro.legs.tp,
-        feet="Whirlpool Greaves"
+        feet=gear.founder.feet
     }
 
 	sets.combat.DPS = set_combine(sets.combat, {})

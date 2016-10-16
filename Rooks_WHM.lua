@@ -70,8 +70,8 @@ function get_sets()
     })
 
     sets.combat = {
-        ammo="Jukukik Feather",
-        neck="Asperity Necklace",
+        ammo=gear.ammo.haste,
+        neck=gear.neck.acc,
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,
         ring1="Rajas ring",
@@ -88,7 +88,7 @@ function get_sets()
     -- WS sets
 
     sets.WS = set_combine(sets.combat, {
-        ammo="Jukukik Feather",
+        ammo=gear.ammo.haste,
         neck=gear.neck.ws,
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,
