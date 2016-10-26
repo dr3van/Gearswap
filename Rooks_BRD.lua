@@ -108,9 +108,9 @@ function get_sets()
         ear2=gear.ears.idle_right,
         body="Aoidos' Hngrln. +2",
         hands="Ad. Mnchtte. +2",
-        ring1=gear.ring.MDTRing,
-        ring2=gear.ring.BDTRing,
-        back="Umbra Cape",
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
+        back=gear.waist.mage_idle,
         waist="Pya'ekue Belt +1",
         legs="Aoidos' Rhing. +2",
         feet="Aoidos' Cothrn. +2"

@@ -7,7 +7,7 @@ function get_sets()
 
     sets.idle = {
         main=gear.weapons.mage.refresh,
-        sub=gear.weapons.mage.nuke_grip,
+        sub=gear.grip.dt,
         ammo=gear.ammo.dt,
         head=gear.head.mage_refresh,
         neck=gear.neck.dt,
@@ -101,7 +101,7 @@ function get_sets()
 
     sets.magic_accuracy = {
         main=gear.weapons.mage.macc,
-        sub="Bugard strap +1",
+        sub=gear.grip.macc,
         ammo="Aqua Sachet",
         head=gear.merlinic.head.MAcc,
         neck=gear.neck.macc,
@@ -126,8 +126,8 @@ function get_sets()
 
     sets.midcast['Elemental Magic'] = set_combine(sets.magic_accuracy, {
         main=gear.weapons.BLM.Nuke,
-        sub="Zuuxowu Grip",
-        ammo="Dosis Tathlum",
+        sub=gear.grip.nuke,
+        ammo=gear.ammo.mdmg,
         head=gear.merlinic.head.MAB,
         neck=gear.neck.macc,
         ear1=gear.ears.mab_left,

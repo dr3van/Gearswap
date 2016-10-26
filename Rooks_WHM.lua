@@ -7,7 +7,7 @@ function get_sets()
 
     sets.idle = {
         main=gear.weapons.mage.refresh,
-        sub=gear.weapons.mage.dt_grip,
+        sub=gear.grip.dt,
         ammo=gear.ammo.dt,
         head=gear.head.mage_refresh,
         neck=gear.neck.dt,
@@ -30,13 +30,13 @@ function get_sets()
     sets.idle.DT = set_combine(sets.idle, {
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
-        feet=gear.telchine.feet
+        feet=gear.gear.vanya.feet.D
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = set_combine(sets.idle, {
         main=gear.weapons.mage.refresh,
-        sub=gear.weapons.mage.dt_grip,
+        sub=gear.grip.dt,
         head=gear.head.mage_refresh,
         neck="Eidolon Pendant",
         ear1="Relaxing Earring",
@@ -52,11 +52,11 @@ function get_sets()
 
     sets.precast = {}
     sets.precast.FC = {
-        ammo="Incantor Stone",
+        ammo=gear.ammo.fc,
         head="Nahtirah Hat",
         ear2=gear.ears.fc_right,
         body=gear.body.mage_fc,
-        hands=gear.hands.mage_fc,
+        hands="Fanatic's Gloves",
         ring1=gear.ring.fc_left,
         ring2=gear.ring.fc_right,
         back=gear.back.fc,
@@ -102,7 +102,6 @@ function get_sets()
 
     sets.precast.CureSpell = set_combine(sets.precast.FC, {
         main="Ababinili +1",
-        sub="Bugard strap +1",
         feet=gear.vanya.feet.D
     })
     sets.precast.CuragaSpell = set_combine(sets.precast.CureSpell, {})
@@ -110,7 +109,6 @@ function get_sets()
     sets.midcast = {}
     sets.midcast.CureSpell = {
         main="Ababinili +1",
-        sub="Bugard strap +1",
         ammo="Aqua Sachet",
         head="Telchine Cap",
         neck="Colossus's torque",
@@ -134,7 +132,7 @@ function get_sets()
 
     sets.midcast['Enhancing Magic'] = {
         main="Ababinili +1",
-        sub="Bugard strap +1",
+        sub=gear.grip.enhancing,
         neck="Colossus's torque",
         body=gear.telchine.body,
         back=gear.back.conserve_mp,
@@ -161,7 +159,7 @@ function get_sets()
 
     sets.macc = {
         main=gear.weapons.mage.macc,
-        sub="Bugard strap +1",
+        sub=gear.grip.macc,
         ammo="Aqua Sachet",
         head="Befouled Crown",
         neck=gear.neck.macc,
@@ -181,7 +179,6 @@ function get_sets()
 
     sets.midcast['Healing Magic'] = {
         main="Ababinili +1",
-        sub="Bugard strap +1",
         ammo="Aqua Sachet",
         head="Ebers Cap",
         neck="Colossus's torque",
@@ -207,13 +204,12 @@ function get_sets()
 
     sets.midcast['Cursna'] = {
         main="Ababinili +1",
-        sub="Bugard strap +1",
         ammo="Aqua Sachet",
         head="Telchine Cap",
         neck="Colossus's torque",
         ear2="Lifestorm Earring",
         body="Ebers Bliaud",
-        hands="Theophany Mitts +1",
+        hands="Fanatic's Gloves",
         ring1="Sirona's Ring",
         ring2="Ephedra Ring",
         back="Oretania's Cape +1",

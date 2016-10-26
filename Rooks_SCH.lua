@@ -8,7 +8,7 @@ function get_sets()
 
     sets.idle = {
         main=gear.weapons.mage.refresh,
-        sub=gear.weapons.mage.nuke_grip,
+        sub=gear.grip.dt,
         ammo=gear.ammo.dt,
         head=gear.head.mage_refresh,
         neck=gear.neck.dt,
@@ -55,7 +55,7 @@ function get_sets()
 
     sets.precast = {}
     sets.precast.FC = {
-        ammo="Incantor Stone",
+        ammo=gear.ammo.fc,
         head=gear.merlinic.head.fc,
         ear2=gear.ears.fc_right,
         body=gear.body.mage_fc,
@@ -141,7 +141,7 @@ function get_sets()
 
     sets.macc = {
         main=gear.weapons.mage.macc,
-        sub="Bugard strap +1",
+        sub=gear.grip.macc,
         head=gear.merlinic.head.MAcc,
         neck=gear.neck.macc,
         ear1=gear.ears.macc_mnd,
@@ -179,8 +179,8 @@ function get_sets()
 
     sets.midcast['Elemental Magic'] = {
         main=gear.weapons.SCH.Nuke,
-        sub="Zuuxowu Grip",
-        ammo="Dosis Tathlum",
+        sub=gear.grip.nuke,
+        ammo=gear.ammo.mdmg,
         head=gear.merlinic.head.MAB,
         neck=gear.neck.macc,
         ear1=gear.ears.mab_left,

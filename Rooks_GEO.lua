@@ -6,7 +6,7 @@ function get_sets()
 
     sets.idle = {
         main=gear.weapons.mage.refresh,
-        sub=gear.weapons.mage.dt_grip,
+        sub=gear.grip.dt,
         range="Dunna",
         head=gear.head.mage_refresh,
         neck=gear.neck.dt,

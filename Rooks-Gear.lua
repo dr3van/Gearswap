@@ -10,6 +10,7 @@ function init_gear()
     gear.ammo.enmity = { name="Iron Gobbet" }
     gear.ammo.haste = { name="Hasty Pinion +1" }
     gear.ammo.fc = { name = "Impatiens" }
+    gear.ammo.mdmg = { name = "Dosis Tathlum" }
 
     gear.neck = {}
     gear.neck.cure_potency = { name="Phalaina Locket" }
@@ -81,6 +82,11 @@ function init_gear()
     gear.back.macc = { name="Refraction Cape" }
     gear.back.fc = { name="Swith Cape" }
 
+    gear.grip = {}
+    gear.grip.macc = { name="Mephitis Grip" }
+    gear.grip.enhancing = { name="Fulcio Grip" }
+    gear.grip.dt = { name="Umbra Strap" }
+    gear.grip.nuke = { name="Zuuxowu Grip" }
 
     -- Random all jobs visible pieces
     gear.head = {}
@@ -304,8 +310,6 @@ function init_gear()
     gear.weapons.SCH.Nuke = { name="Keraunos", augments={'"Mag.Atk.Bns."+17','"Fast Cast"+3','INT+9 MND+9'}}
     gear.weapons.mage.macc = { name="Lehbrailg +2" }
     gear.weapons.mage.refresh = { name="Contemplator" }
-    gear.weapons.mage.dt_grip = { name="Umbra Strap" }
-    gear.weapons.mage.nuke_grip = { name="Zuuxowu Grip" }
 
     gear.weapons.BLU = {
         sword_right= { name="Claidheamh Soluis", augments={'Accuracy+9','"Dbl.Atk."+2','STR+15 DEX+15'} },

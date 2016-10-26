@@ -6,7 +6,7 @@ function get_sets()
 
     sets.idle = {
         main=gear.weapons.mage.refresh,
-        sub=gear.weapons.mage.dt_grip,
+        sub=gear.grip.dt,
         ammo=gear.ammo.dt,
         head=gear.head.mage_refresh,
         neck=gear.neck.dt,
@@ -29,13 +29,13 @@ function get_sets()
     sets.idle.DT = set_combine(sets.idle, {
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
-        feet=gear.telchine.feet
+        feet=gear.vanya.feet.D
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = set_combine(sets.idle, {
         main=gear.weapons.mage.refresh,
-        sub=gear.weapons.mage.dt_grip,
+        sub=gear.grip.dt,
         head=gear.head.mage_refresh,
         neck="Eidolon Pendant",
         ear1="Relaxing Earring",
