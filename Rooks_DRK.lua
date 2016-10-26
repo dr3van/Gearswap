@@ -47,26 +47,50 @@ function get_sets()
         ammo="Hasty Pinion +1",
         head=gear.odyssean.head.tp,
         neck=gear.neck.acc,
-        ear1=gear.ears.da_left,
-        ear2=gear.ears.da_right,
+        ear1=gear.ears.melee_left,
+        ear2=gear.ears.melee_right,
         body=gear.ambuscade.ares.body,
-        hands=gear.ambuscade.ares.hands,
+        hands=gear.ambuscade.phorcys.hands,
         ring1="Rajas Ring",
-        ring2="K'ayres Ring",
-        back=gear.jsecapes.drk,
+        ring2="Chirich Ring",
+        back=gear.jsecapes.amb.drk.tp,
         waist=gear.waist.highhaste,
         legs=gear.ambuscade.ares.legs,
-        feet=gear.ambuscade.ares.feet
+        feet=gear.ambuscade.phorcys.feet
     }
 
     sets.combat.DPS = set_combine(sets.combat, {})
-    sets.combat.midacc = set_combine(sets.combat, {
-        back="Letalis Mantle",
-    })
+    sets.combat.midacc = set_combine(sets.combat, {})
     sets.combat.highacc = set_combine(sets.combat.midacc, {
-        back="Letalis Mantle"
+        ammo="Hasty Pinion +1",
+        head=gear.odyssean.head.tp,
+        neck=gear.neck.acc,
+        ear1=gear.ears.melee_left,
+        ear2=gear.ears.melee_right,
+        body=gear.ambuscade.phorcys.body,
+        hands=gear.ambuscade.phorcys.hands,
+        ring1="Chirich Ring",
+        ring2="Ramuh Ring +1",
+        back=gear.jsecapes.amb.drk.tp,
+        waist="Dynamic Belt +1",
+        legs=gear.ambuscade.phorcys.legs,
+        feet=gear.ambuscade.phorcys.feet
     })
-    sets.combat.defensive = set_combine(sets.combat, {})
+    sets.combat.defensive = set_combine(sets.combat, {
+        ammo="Hasty Pinion +1",
+        head=gear.odyssean.head.tp,
+        neck=gear.neck.acc,
+        ear1=gear.ears.melee_left,
+        ear2=gear.ears.melee_right,
+        body=gear.ambuscade.ares.body,
+        hands=gear.ambuscade.ares.hands,
+        ring1="Rajas Ring",
+        ring2="Chirich Ring",
+        back=gear.jsecapes.amb.drk.tp,
+        waist=gear.waist.highhaste,
+        legs=gear.ambuscade.ares.legs,
+        feet=gear.ambuscade.ares.feet
+    })
 
     sets.precast.FC = {
         ear1="Loquac. Earring",
@@ -82,13 +106,13 @@ function get_sets()
         ammo="Seething Bomblet +1",
         head=gear.argosy.head.A,
         neck=gear.neck.ws,
-        ear1=gear.ears.da_left,
-        ear2=gear.ears.da_right,
+        ear1=gear.ears.melee_left,
+        ear2=gear.ears.melee_right,
         body=gear.argosy.body.A,
         hands=gear.argosy.hands.A,
         ring1="Rajas Ring",
         ring2="Ifrit Ring",
-        back=gear.jsecapes.drk,
+        back=gear.jsecapes.amb.drk.ws,
         waist=gear.waist.ws,
         legs=gear.odyssean.legs.ws,
         feet=gear.argosy.feet.A
@@ -104,7 +128,7 @@ function get_sets()
         hands=gear.ambuscade.ares.hands,
         ring1="Rajas Ring",
         ring2="Ifrit Ring",
-        back=gear.jsecapes.drk,
+        back=gear.jsecapes.amb.drk.ws,
         waist=gear.waist.ws,
         legs=gear.odyssean.legs.ws,
         feet=gear.ambuscade.ares.feet
@@ -138,6 +162,8 @@ function get_sets()
     sets.midcast['Drain III'] = set_combine(sets.midcast.DrainAspir, {})
     sets.midcast['Aspir'] = set_combine(sets.midcast.DrainAspir, {})
     sets.midcast['Aspir II'] = set_combine(sets.midcast.DrainAspir, {})
+
+    sets.JA['Last Resort'] = { back=gear.jsecapes.amb.drk }
 
     send_command('input /macro book 10;wait .1;input /macro set 1')
 end

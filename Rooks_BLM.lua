@@ -89,7 +89,7 @@ function get_sets()
     -- WS sets
 
     sets.WS = {
-        ammo="Jukukik Feather",
+        ammo=gear.ammo.haste,
         neck="Fotia Gorget",
         ear1="Bladeborn Earring",
         ear2="Steelflash Earring",

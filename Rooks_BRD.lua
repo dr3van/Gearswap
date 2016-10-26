@@ -6,8 +6,6 @@ function get_sets()
     init_get_sets(0, 1)
 
 	sets.idle = {
-        main=gear.weapons.mage.macc,
-        sub="Bugard Strap +1",
         range="Gjallarhorn",
 		head=gear.telchine.head,
 		neck=gear.neck.dt,

@@ -50,10 +50,13 @@ function get_sets()
     sets.resting = set_combine(sets.idle, {})
 
     sets.precast.FC = {
-        ammo="Incantor Stone",
+        ammo=gear.ammo.fc,
         head=gear.jse.empyrean.pld.head,
         ear1="Loquac. Earring",
         hands=gear.hands.melee_fc,
+        ring1=gear.ring.fc_left,
+        ring2=gear.ring.fc_right,
+        waist=gear.waist.highhaste,
         legs=gear.eschite.legs.D
     }
 

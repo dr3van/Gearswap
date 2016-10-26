@@ -64,7 +64,7 @@ function get_sets()
         body=gear.ambuscade.morrigan.body,
         hands=gear.taeon.hands.tp,
         ring1="Rajas ring",
-        ring2="K'ayres Ring",
+        ring2="Chirich Ring",
         back="Atheling Mantle",
         waist=gear.waist.highhaste,
         legs=gear.ambuscade.morrigan.legs,
@@ -74,9 +74,13 @@ function get_sets()
     sets.combat.DPS = set_combine(sets.combat, {})
     sets.combat.midacc = set_combine(sets.combat, {
         neck=gear.neck.sword,
+        ear1=gear.ears.melee_acc_left,
+        ear2=gear.ears.melee_acc_right,
+        ring2="Chirich Ring",
         back="Letalis Mantle"
     })
-    sets.combat.highacc = set_combine(sets.combat.midacc, {})
+    sets.combat.highacc = set_combine(sets.combat.midacc, {
+    })
     sets.combat.defensive = set_combine(sets.combat, {})
 
 
@@ -117,12 +121,11 @@ function get_sets()
         ring2="Shiva Ring",
         back=gear.back.macc,
         waist=gear.waist.macc,
-        legs=gear.merlinic.legs.MAcc,
-        feet=gear.merlinic.feet.MAcc
+        legs=gear.ambuscade.morrigan.legs,
+        feet="Medium's Sabots"
     }
 
     sets.midcast['Enfeebling Magic'] = set_combine(sets.magic_accuracy, {
-        body="Estq. Sayon +2"
     })
 
     sets.midcast['Enfeebling Magic']['White Magic'] = set_combine(sets.midcast['Enfeebling Magic'], {
@@ -170,7 +173,7 @@ function get_sets()
         head=gear.merlinic.head.MAB,
         ear1=gear.ears.mab_left,
         ear2=gear.ears.mab_right,
-        body="Helios Jacket",
+        body=gear.ambuscade.morrigan.body,
         hands=gear.merlinic.hands.MAB,
         ring1="Shiva Ring",
         ring2="Shiva Ring",

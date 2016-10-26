@@ -44,16 +44,16 @@ function get_sets()
     sets.midcast = {}
 
     sets.combat = {
-        ammo="Honed Tathlum",
+        ammo="Seething Bomblet +1",
         head=gear.herculean.head.tp,
         neck=gear.neck.tp,
-        ear1=gear.ears.dw_left,
-        ear2=gear.ears.dw_right,
-        body=gear.taeon.body.tp,
-        hands=gear.taeon.hands.tp,
-        ring1="Rajas Ring",
+        ear1=gear.ears.melee_acc_left,
+        ear2=gear.ears.melee_acc_right,
+        body=gear.ambuscade.skadi.body,
+        hands="Floral Gauntlets",
+        ring1="Chirich Ring",
         ring2="Epona's Ring",
-        back="Atheling Mantle",
+        back="Letalis Mantle",
         waist="Windbuffet Belt +1",
         legs=gear.herculean.legs.tp,
         feet=gear.herculean.feet.tp
@@ -65,7 +65,7 @@ function get_sets()
     sets.combat.defensive = set_combine(sets.combat, {})
 
     sets.combat.TH = set_combine(sets.highacc, {
-        hands="Asn. Armlets +2",
+        hands="Plun. Armlets +1",
         feet="Raid. Poulaines +2"
     })
 
@@ -76,15 +76,15 @@ function get_sets()
     -- WS sets
 
     sets.WS = {
-        ammo="Honed Tathlum",
+        ammo="Seething Bomblet +1",
         head=gear.lustratio.head.A,
         neck=gear.neck.ws,
         ear1="Brutal Earring",
         ear2=gear.ears.ws,
-        body=gear.taeon.body.ws,
+        body=gear.ambuscade.skadi.body,
         hands=gear.lustratio.hands.A,
         ring1="Rajas Ring",
-        ring2="K'ayres Ring",
+        ring2="Ramuh Ring +1",
         back="Atheling Mantle",
         waist=gear.waist.ws,
         legs=gear.herculean.legs.ws,

@@ -9,6 +9,7 @@ function init_gear()
     gear.ammo.dt = { name="Staunch Tathlum" }
     gear.ammo.enmity = { name="Iron Gobbet" }
     gear.ammo.haste = { name="Hasty Pinion +1" }
+    gear.ammo.fc = { name = "Impatiens" }
 
     gear.neck = {}
     gear.neck.cure_potency = { name="Phalaina Locket" }
@@ -40,6 +41,10 @@ function init_gear()
     gear.ears.mab_right = { name="Hecate's Earring" }
     gear.ears.enmity_right = { name="Friomisi Earring" }
     gear.ears.conserve_mp = { mame="Calamitous Earring" }
+    gear.ears.melee_left = { name="Mache Earring" }
+    gear.ears.melee_acc_left = { name="Mache Earring" }
+    gear.ears.melee_right = { name="Mache Earring" }
+    gear.ears.melee_acc_right = { name="Mache Earring" }
 
     gear.ring = {}
     gear.ring.cure_potency = { name="Lebeche Ring" }
@@ -98,7 +103,7 @@ function init_gear()
     -- JSE Capes
     gear.jsecapes = {}
     gear.jsecapes.blu = { name="Cornflower Cape", augments={'MP+27', 'DEX+1', 'Accuracy+5', 'Blue magic skill +10'}}
-    gear.jsecapes.pld = { name="Weard Mantle", augments={'DEX+1', 'VIT+2', 'Enmity+4', '"Phalanx"+5'}}
+    gear.jsecapes.pld = { name="Weard Mantle" }
     gear.jsecapes.drk = { name="Niht Mantle", augments={'Attack+13','Dark magic skill +10','"Drain" and "Aspir" potency +25','Weapon skill damage +4%'}}
     gear.jsecapes.sch = { name="Bookworm's Cape" }
     gear.jsecapes.war = { name="Mauler's Mantle" }
@@ -108,6 +113,9 @@ function init_gear()
     gear.jsecapes.amb.blu.idle = { name="Rosmerta's Cape"}
     gear.jsecapes.amb.blu.tp = { name="Rosmerta's Cape"}
     gear.jsecapes.amb.blu.ws = { name="Rosmerta's Cape"}
+    gear.jsecapes.amb.blm = { name="Taranus's Cape"}
+    gear.jsecapes.amb.blm.mab = { name="Taranus's Cape"}
+    gear.jsecapes.amb.blm.macc = { name="Taranus's Cape"}
     gear.jsecapes.amb.pld = { name="Rudianos's Mantle"}
     gear.jsecapes.amb.pld.idle = { name="Rudianos's Mantle"}
     gear.jsecapes.amb.pld.tp = { name="Rudianos's Mantle"}
@@ -117,9 +125,9 @@ function init_gear()
     gear.jsecapes.amb.war.tp = { name="Cichol's Mantle"}
     gear.jsecapes.amb.war.ws = { name="Cichol's Mantle"}
     gear.jsecapes.amb.drk = { name="Ankou's Mantle"}
-    gear.jsecapes.amb.drk.idle = { name="Ankou's Mantle"}
-    gear.jsecapes.amb.drk.tp = { name="Ankou's Mantle"}
-    gear.jsecapes.amb.drk.ws = { name="Ankou's Mantle"}
+    gear.jsecapes.amb.drk.idle = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
+    gear.jsecapes.amb.drk.tp = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
+    gear.jsecapes.amb.drk.ws = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
 
 
     -- Skirmish pieces
@@ -182,7 +190,7 @@ function init_gear()
 
     gear.vanya = {}
     gear.vanya.body = { name="Vanya Robe" }
-    gear.vanya.body.C = { name="Vanya Robe", augments={ 'MND+10', 'Spell interruption rate down 15%', '"Conserve MP"+6' }}
+    gear.vanya.body.C = { name="Vanya Robe", augments={ 'MND+10', 'Spell interruption rate down +15%', '"Conserve MP"+6' }}
     gear.vanya.feet = {}
     gear.vanya.feet.D = { name="Vanya Clogs", augments={'"Cure" potency +5%', '"Cure" spellcasting time -15%', '"Conserve MP"+6'}}
 
@@ -240,9 +248,9 @@ function init_gear()
     gear.odyssean.hands.tp = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
     gear.odyssean.hands.ws = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
     gear.odyssean.legs = { name="Odyssean Cuisses" }
-    gear.odyssean.legs.highacc = { name="Odyssean Cuisses", augments={'Weapon skill damage +4%','Pet: STR+3','Chance of successful block +2','Accuracy+19 Attack+19',}}
-    gear.odyssean.legs.tp = { name="Odyssean Cuisses", augments={'Weapon skill damage +4%','Pet: STR+3','Chance of successful block +2','Accuracy+19 Attack+19',}}
-    gear.odyssean.legs.ws = { name="Odyssean Cuisses", augments={'Weapon skill damage +4%','Pet: STR+3','Chance of successful block +2','Accuracy+19 Attack+19',}}
+    gear.odyssean.legs.highacc = { name="Odyssean Cuisses", augments={'Accuracy+21 Attack+21','"Cure" potency +2%','VIT+13','Accuracy+15','Attack+11'}}
+    gear.odyssean.legs.tp = { name="Odyssean Cuisses", augments={'Accuracy+21 Attack+21','"Cure" potency +2%','VIT+13','Accuracy+15','Attack+11'}}
+    gear.odyssean.legs.ws = { name="Odyssean Cuisses", augments={'Accuracy+21 Attack+21','"Cure" potency +2%','VIT+13','Accuracy+15','Attack+11'}}
     gear.odyssean.legs.dt = { name="Odyssean Cuisses", augments={'Accuracy+1','"Resist Silence"+7','Damage taken-5%','Accuracy+10 Attack+10','Mag. Acc.+16 "Mag.Atk.Bns."+16',}}
 
     gear.herculean = {}
@@ -276,6 +284,7 @@ function init_gear()
     gear.merlinic.feet = { name="Merlinic Crackows" }
     gear.merlinic.feet.MAB = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+29','INT+8','Mag. Acc.+15'}}
     gear.merlinic.feet.MAcc = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+29','INT+8','Mag. Acc.+15'}}
+    gear.merlinic.feet.fc = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+29','INT+8','Mag. Acc.+15'}}
     gear.merlinic.feet.dt = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+29','INT+8','Mag. Acc.+15'}}
 
     -- SR
@@ -430,10 +439,18 @@ function init_gear()
 
     gear.ambuscade.morrigan = {
         head="Jhakri Coronal",
-        body="Jhakri Robe",
+        body="Jhakri Robe +1",
         hands="Jhakri Cuffs",
         legs="Jhakri Slops +1",
         feet="Jhakri Pigaches",
+    }
+
+    gear.ambuscade.phorcys = {
+        head="Flam. Zucchetto +1",
+        body="Flamma Korazin +1",
+        hands="Flam. Manopolas +1",
+        legs="Flamma Dirs +1",
+        feet="Flam. Gambieras +1",
     }
 
     -- Things I always have on me, no matter what

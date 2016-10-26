@@ -3,100 +3,62 @@
 function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(1, 1)
-end
 
-function job_precast(spell)
-   windower.add_to_chat(123, "job_precast")
-    if(spell.type) then
-        windower.add_to_chat(123, "--- "..spell.type)
-	else
-        windower.add_to_chat(123, "--- No type")
-    end
-    if(spell.skill) then
-        windower.add_to_chat(123, "--- "..spell.skill)
-	else
-        windower.add_to_chat(123, "--- No skill")
-    end
-    if(spell.name) then
-        windower.add_to_chat(123, "--- "..spell.name)
-	else
-        windower.add_to_chat(123, "--- No name")
-    end
-   windower.add_to_chat(123, "job_precast")
-end
-function job_midcast(spell)
-   windower.add_to_chat(123, "job_midcast")
-    if(spell.type) then
-        windower.add_to_chat(123, "--- "..spell.type)
-	else
-        windower.add_to_chat(123, "--- No type")
-    end
-    if(spell.skill) then
-        windower.add_to_chat(123, "--- "..spell.skill)
-	else
-        windower.add_to_chat(123, "--- No skill")
-    end
-    if(spell.name) then
-        windower.add_to_chat(123, "--- "..spell.name)
-	else
-        windower.add_to_chat(123, "--- No name")
-    end
-   windower.add_to_chat(123, "job_midcast")
-end
-function job_aftercast(spell)
-    windower.add_to_chat(123, "job_aftercast")
-    if(spell.type) then
-        windower.add_to_chat(123, "--- "..spell.type)
-	else
-        windower.add_to_chat(123, "--- No type")
-    end
-    if(spell.skill) then
-        windower.add_to_chat(123, "--- "..spell.skill)
-	else
-        windower.add_to_chat(123, "--- No skill")
-    end
-    if(spell.name) then
-        windower.add_to_chat(123, "--- "..spell.name)
-	else
-        windower.add_to_chat(123, "--- No name")
-    end
-   windower.add_to_chat(123, "job_aftercast")
-end
-function job_pet_midcast(spell)
-   windower.add_to_chat(123, "job_pet_midcast")
-    if(spell.type) then
-        windower.add_to_chat(123, "--- "..spell.type)
-	else
-        windower.add_to_chat(123, "--- No type")
-    end
-    if(spell.skill) then
-        windower.add_to_chat(123, "--- "..spell.skill)
-	else
-        windower.add_to_chat(123, "--- No skill")
-    end
-    if(spell.name) then
-        windower.add_to_chat(123, "--- "..spell.name)
-	else
-        windower.add_to_chat(123, "--- No name")
-    end
-   windower.add_to_chat(123, "job_pet_midcast")
-end
-function job_pet_aftercast(spell)
-   windower.add_to_chat(123, "job_pet_aftercast")
-    if(spell.type) then
-        windower.add_to_chat(123, "--- "..spell.type)
-	else
-        windower.add_to_chat(123, "--- No type")
-    end
-    if(spell.skill) then
-        windower.add_to_chat(123, "--- "..spell.skill)
-	else
-        windower.add_to_chat(123, "--- No skill")
-    end
-    if(spell.name) then
-        windower.add_to_chat(123, "--- "..spell.name)
-	else
-        windower.add_to_chat(123, "--- No name")
-    end
-   windower.add_to_chat(123, "job_pet_aftercast")
+    sets.idle = {
+        main=gear.weapons.mage.refresh,
+        sub=gear.weapons.mage.dt_grip,
+        ammo=gear.ammo.dt,
+        head=gear.head.mage_refresh,
+        neck=gear.neck.dt,
+        ear1=gear.ears.idle_left,
+        ear2=gear.ears.idle_right,
+        body=gear.body.mage_idle,
+        hands=gear.telchine.hands,
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
+        back=gear.back.mage_idle,
+        waist=gear.waist.mage_idle,
+        legs=gear.legs.mage_pdt,
+        feet="Herald's Gaiters"
+    }
+    sets.idle.base = set_combine(sets.idle, {})
+    sets.idle.regen = set_combine(sets.idle, {
+        ring1=gear.ring.regen_left,
+        ring2=gear.ring.regen_right
+    })
+    sets.idle.DT = set_combine(sets.idle, {
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
+        feet=gear.telchine.feet
+    })
+    sets.idle.PDT = set_combine(sets.idle.DT, {})
+    sets.idle.MDT = set_combine(sets.idle.DT, {})
+    sets.resting = set_combine(sets.idle, {
+        main=gear.weapons.mage.refresh,
+        sub=gear.weapons.mage.dt_grip,
+        head=gear.head.mage_refresh,
+        neck="Eidolon Pendant",
+        ear1="Relaxing Earring",
+        body="Chelona Blazer",
+        back="Vita Cape",
+        legs="Nisse Slacks",
+        feet="Chelona Boots +1"
+    })
+
+    sets.precast = {}
+    sets.precast.FC = {
+        ammo=gear.ammo.fc,
+        head=gear.merlinic.head.fc,
+        ear2=gear.ears.fc_right,
+        body=gear.body.mage_fc,
+        hands=gear.hands.mage_fc,
+        ring1=gear.ring.fc_left,
+        ring2=gear.ring.fc_right,
+        back=gear.back.fc,
+        waist=gear.waist.fc,
+        legs="Orvail Pants +1",
+        feet=gear.merlinic.feet.fc
+    }
+
+
 end

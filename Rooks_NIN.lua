@@ -31,7 +31,7 @@ function get_sets()
     sets.idle.MDT = set_combine(sets.idle.DT, {})
 
     sets.combat = {
-        ammo="Jukukik Feather",
+        ammo="Seething Bomblet +1",
         head=gear.taeon.head.tp,
         neck=gear.neck.ws,
         ear1="Brutal Earring",
@@ -61,7 +61,7 @@ function get_sets()
     -- WS sets
 
     sets.WS = {
-        ammo="Jukukik Feather",
+        ammo="Seething Bomblet +1",
         head=gear.taeon.head.tp,
         neck=gear.neck.ws,
         ear1="Brutal Earring",
