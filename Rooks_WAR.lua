@@ -60,22 +60,51 @@ function get_sets()
         ammo=gear.ammo.haste,
         head=gear.odyssean.head.tp,
         neck=gear.neck.acc,
-        ear1=gear.ears.da_left,
-        ear2=gear.ears.da_right,
+        ear1=gear.ears.melee_left,
+        ear2=gear.ears.melee_right,
         body=gear.ambuscade.ares.body,
-        hands=gear.ambuscade.ares.hands,
+        hands=gear.ambuscade.phorcys.hands,
         ring1="Rajas Ring",
-        ring2="K'ayres Ring",
-        back=gear.jsecapes.war,
+        ring2="Chirich Ring",
+        back=gear.jsecapes.amb.war.tp,
         waist=gear.waist.highhaste,
-        legs=gear.ambuscade.ares.legs,
-        feet=gear.ambuscade.ares.feet
+        legs=gear.odyssean.legs.tp,
+        feet=gear.ambuscade.phorcys.feet
     }
 
     sets.combat.DPS = set_combine(sets.combat, {})
     sets.combat.midacc = set_combine(sets.combat, {})
-    sets.combat.highacc = set_combine(sets.combat.midacc, {})
-    sets.combat.defensive = set_combine(sets.combat, {})
+    sets.combat.highacc = set_combine(sets.combat.midacc, {
+        ammo=gear.ammo.haste,
+        head=gear.odyssean.head.tp,
+        neck=gear.neck.acc,
+        ear1=gear.ears.melee_left,
+        ear2=gear.ears.melee_right,
+        body=gear.ambuscade.phorcys.body,
+        hands=gear.ambuscade.phorcys.hands,
+        ring1="Chirich Ring",
+        ring2="Ramuh Ring +1",
+        back=gear.jsecapes.amb.war.tp,
+        waist="Dynamic Belt +1",
+        legs=gear.odyssean.legs.tp,
+        feet=gear.ambuscade.phorcys.feet
+    })
+    sets.combat.defensive = set_combine(sets.combat, {
+        ammo=gear.ammo.haste,
+        head=gear.odyssean.head.tp,
+        neck=gear.neck.acc,
+        ear1=gear.ears.melee_left,
+        ear2=gear.ears.melee_right,
+        body=gear.ambuscade.ares.body,
+        hands=gear.ambuscade.ares.hands,
+        ring1="Rajas Ring",
+        ring2="Chirich Ring",
+        back=gear.jsecapes.amb.war.tp,
+        waist=gear.waist.highhaste,
+        legs=gear.odyssean.legs.tp,
+        feet=gear.ambuscade.ares.feet
+    })
+
 
     -- WS sets
 

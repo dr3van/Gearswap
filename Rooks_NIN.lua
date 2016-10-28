@@ -32,17 +32,17 @@ function get_sets()
 
     sets.combat = {
         ammo="Seething Bomblet +1",
-        head=gear.taeon.head.tp,
-        neck=gear.neck.ws,
-        ear1="Brutal Earring",
-        ear2="Suppanomimi",
-        body=gear.taeon.body.tp,
-        hands=gear.taeon.hands.tp,
-        ring1="Rajas Ring",
-        ring2="K'ayres Ring",
-        back="Atheling Mantle",
-        waist=gear.waist.nohaste,
-        legs=gear.taeon.legs.tp,
+        head=gear.herculean.head.tp,
+        neck=gear.neck.tp,
+        ear1=gear.ears.melee_acc_left,
+        ear2=gear.ears.melee_acc_right,
+        body="Samnuha Coat",
+        hands="Floral Gauntlets",
+        ring1="Chirich Ring",
+        ring2="Epona's Ring",
+        back="Letalis Mantle",
+        waist="Windbuffet Belt +1",
+        legs=gear.herculean.legs.tp,
         feet=gear.herculean.feet.tp
     }
 
@@ -62,18 +62,18 @@ function get_sets()
 
     sets.WS = {
         ammo="Seething Bomblet +1",
-        head=gear.taeon.head.tp,
+        head=gear.herculean.head.ws,
         neck=gear.neck.ws,
         ear1="Brutal Earring",
         ear2=gear.ears.ws,
-        body=gear.taeon.body.tp,
-        hands=gear.taeon.hands.tp,
-        ring1="Rajas Ring",
-        ring2="Ifrit Ring",
-        back="Atheling Mantle",
+        body="Samnuha Coat",
+        hands="Floral Gauntlets",
+        ring1="Ramuh Ring +1",
+        ring2="Epona's Ring",
+        back="Letalis Mantle",
         waist=gear.waist.ws,
-        legs=gear.taeon.legs.tp,
-        feet=gear.herculean.feet.tp
+        legs=gear.herculean.legs.ws,
+        feet=gear.herculean.feet.ws
     }
 
     send_command('input /macro book 7;wait .1;input /macro set 1')

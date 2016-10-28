@@ -62,12 +62,17 @@ function get_sets()
     sets.combat.DPS = set_combine(sets.combat, {})
     sets.combat.midacc = set_combine(sets.combat, {})
     sets.combat.highacc = set_combine(sets.combat.midacc, {})
-    sets.combat.defensive = set_combine(sets.combat, {})
 
-    sets.combat.TH = set_combine(sets.highacc, {
+    sets.combat.TH = set_combine(sets.combat.highacc, {
         hands="Plun. Armlets +1",
-        feet="Raid. Poulaines +2"
+        feet="Skulk. Poulaines +1"
     })
+
+    -- Hijack this because I don't need defensive mode for what I do as thief
+    sets.combat.defensive = set_combine(sets.combat.TH, {
+        body=gear.taeon.body.tp
+    })
+
 
     sets.JA = {}
     sets.JA['Box Step'] = set_combine(sets.combat.TH, {})
@@ -83,8 +88,8 @@ function get_sets()
         ear2=gear.ears.ws,
         body=gear.ambuscade.skadi.body,
         hands=gear.lustratio.hands.A,
-        ring1="Rajas Ring",
-        ring2="Ramuh Ring +1",
+        ring1="Ramuh Ring +1",
+        ring2="Epona's Ring",
         back="Atheling Mantle",
         waist=gear.waist.ws,
         legs=gear.herculean.legs.ws,

@@ -147,6 +147,7 @@ function get_sets()
         ear2=gear.ears.enmity_right,
         body=gear.jse.empyrean.pld.body,
         hands=gear.jse.relic.pld.hands,
+        ring1=gear.ring.enmity_left,
         ring2=gear.ring.enmity_right,
         back="Fierabras's Mantle",
         waist="Creed Baudrier",
@@ -163,7 +164,7 @@ function get_sets()
         body=gear.jse.empyrean.pld.body,
         hands=gear.jse.relic.pld.hands,
         ring1="Meridian Ring",
-        ring2="K'ayres Ring",
+        ring2="Eihwaz Ring",
         back="Fierabras's Mantle",
         waist="Oneiros Belt",
         legs=gear.jse.empyrean.pld.legs,
@@ -212,7 +213,7 @@ function get_sets()
         body="Jumalik Mail",
         hands="Macabre Gauntlets +1",
         ring1="Meridian Ring",
-        ring2="Vocane Ring",
+        ring2="Eihwaz Ring",
         back="Fierabras's Mantle",
         feet=gear.jse.empyrean.pld.feet
     })

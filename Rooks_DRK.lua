@@ -44,7 +44,7 @@ function get_sets()
 
 
     sets.combat = {
-        ammo="Hasty Pinion +1",
+        ammo=gear.ammo.haste,
         head=gear.odyssean.head.tp,
         neck=gear.neck.acc,
         ear1=gear.ears.melee_left,
@@ -55,14 +55,14 @@ function get_sets()
         ring2="Chirich Ring",
         back=gear.jsecapes.amb.drk.tp,
         waist=gear.waist.highhaste,
-        legs=gear.ambuscade.ares.legs,
+        legs=gear.odyssean.legs.tp,
         feet=gear.ambuscade.phorcys.feet
     }
 
     sets.combat.DPS = set_combine(sets.combat, {})
     sets.combat.midacc = set_combine(sets.combat, {})
     sets.combat.highacc = set_combine(sets.combat.midacc, {
-        ammo="Hasty Pinion +1",
+        ammo=gear.ammo.haste,
         head=gear.odyssean.head.tp,
         neck=gear.neck.acc,
         ear1=gear.ears.melee_left,
@@ -73,11 +73,11 @@ function get_sets()
         ring2="Ramuh Ring +1",
         back=gear.jsecapes.amb.drk.tp,
         waist="Dynamic Belt +1",
-        legs=gear.ambuscade.phorcys.legs,
+        legs=gear.odyssean.legs.tp,
         feet=gear.ambuscade.phorcys.feet
     })
     sets.combat.defensive = set_combine(sets.combat, {
-        ammo="Hasty Pinion +1",
+        ammo=gear.ammo.haste,
         head=gear.odyssean.head.tp,
         neck=gear.neck.acc,
         ear1=gear.ears.melee_left,
@@ -88,7 +88,7 @@ function get_sets()
         ring2="Chirich Ring",
         back=gear.jsecapes.amb.drk.tp,
         waist=gear.waist.highhaste,
-        legs=gear.ambuscade.ares.legs,
+        legs=gear.odyssean.legs.tp,
         feet=gear.ambuscade.ares.feet
     })
 

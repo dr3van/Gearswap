@@ -58,6 +58,7 @@ function init_gear()
     gear.ring.macc = { name="Sangoma Ring" }
     gear.ring.healing_left = { name="Sirona's Ring" }
     gear.ring.healing_right = { name="Ephedra Ring" }
+    gear.ring.enmity_left = { name="Eihwaz Ring" }
     gear.ring.enmity_right = { name="Provocare Ring" }
 
     gear.waist = {}
@@ -112,7 +113,6 @@ function init_gear()
     gear.jsecapes.pld = { name="Weard Mantle" }
     gear.jsecapes.drk = { name="Niht Mantle", augments={'Attack+13','Dark magic skill +10','"Drain" and "Aspir" potency +25','Weapon skill damage +4%'}}
     gear.jsecapes.sch = { name="Bookworm's Cape" }
-    gear.jsecapes.war = { name="Mauler's Mantle" }
 
     gear.jsecapes.amb = {}
     gear.jsecapes.amb.blu = { name="Rosmerta's Cape"}
