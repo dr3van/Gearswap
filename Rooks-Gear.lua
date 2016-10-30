@@ -293,6 +293,12 @@ function init_gear()
     gear.merlinic.feet.fc = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+29','INT+8','Mag. Acc.+15'}}
     gear.merlinic.feet.dt = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+29','INT+8','Mag. Acc.+15'}}
 
+    gear.valorous = {}
+    gear.valorous.feet = { name="Valorous Greaves" }
+    gear.valorous.feet.dt = { name="Valorous Greaves", augments={'Accuracy+23','Phys. dmg. taken -1%','DEX+9','Attack+6'}}
+    gear.valorous.feet.tp = { name="Valorous Greaves", augments={'Accuracy+23','Phys. dmg. taken -1%','DEX+9','Attack+6'}}
+    gear.valorous.feet.ws = { name="Valorous Greaves", augments={'Accuracy+23','Phys. dmg. taken -1%','DEX+9','Attack+6'}}
+
     -- SR
 
     gear.founder = {}

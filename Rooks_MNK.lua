@@ -70,16 +70,16 @@ function get_sets()
     sets.JA["Inner Strength"] = {}
 
     sets.combat = {
-        ammo="Hagneia Stone",
+        ammo="Honed Tathlum",
         head=gear.herculean.head.tp,
         neck=gear.neck.acc,
-        ear1=gear.ears.da_left,
-        ear2=gear.ears.da_right,
+        ear1=gear.ears.melee_acc_left,
+        ear2=gear.ears.melee_acc_right,
         body=gear.taeon.body.tp,
         hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
         ring2="Epona's Ring",
-        back="Atheling Mantle",
+        back="Letalis Mantle",
         waist="Windbuffet Belt +1",
         legs=gear.herculean.legs.tp,
         feet=gear.herculean.feet.tp
@@ -92,7 +92,7 @@ function get_sets()
     -- WS sets
 
     sets.WS = {
-        ammo="Thew Bomblet",
+        ammo="Honed Tathlum",
         head=gear.herculean.head.ws,
         neck=gear.neck.ws,
         ear1="Brutal Earring",

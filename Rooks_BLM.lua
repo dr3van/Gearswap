@@ -142,7 +142,7 @@ function get_sets()
         feet=gear.merlinic.feet.MAB
     })
 
-    sets.MPReturn = { body="Spaekona's Coat" }
+    sets.MPReturn = { body="Spaekona's Coat +1" }
 
     sets.midcast['Dark Magic'] = set_combine(sets.magic_accuracy, {
     })

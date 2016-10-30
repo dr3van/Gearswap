@@ -99,7 +99,7 @@ function get_sets()
         neck=gear.neck.ws,
         ear1="Brutal Earring",
         ear2="Moonshade Earring",
-        body=gear.acro.body.tp,
+        body=gear.ambuscade.ares.body,
         hands=gear.odyssean.hands.ws,
         ring1="Rajas Ring",
         ring2="Ifrit Ring",
@@ -126,7 +126,7 @@ function get_sets()
     })
 
     sets.WS.Requiescat = set_combine(sets.WS, {
-        body=gear.acro.body.tp,
+        body=gear.ambuscade.ares.body,
         hands=gear.souveran.hands.A,
         ring1="Aquasoul Ring",
         ring2="Aquasoul Ring"
@@ -137,7 +137,8 @@ function get_sets()
         ear2=gear.ears.mab_right,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
-        back="Toro Cape"
+        back="Toro Cape",
+        legs=gear.eschite.legs.D
     })
 
     sets.enmity = {
@@ -158,7 +159,7 @@ function get_sets()
     sets.maxHP = {
         ammo="Egoist's Tathlum",
         head=gear.jse.empyrean.pld.head,
-        neck=gear.neck.dt,
+        neck="Sanctity Necklace",
         ear1="Calamitous Earring",
         ear2="Ethereal Earring",
         body=gear.jse.empyrean.pld.body,

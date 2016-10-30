@@ -35,19 +35,19 @@ function get_sets()
     sets.midcast = {}
 
     sets.combat = {
-        ammo="Hagneia Stone",
-        head="Yaoyotl Helm",
-        neck=gear.neck.acc,
-        ear1="Bladeborn Earring",
-        ear2="Steelflash Earring",
-        body=gear.acro.body.tp,
-        hands=gear.acro.hands.tp,
+        ammo=gear.ammo.haste,
+        head=gear.taeon.head.tp,
+        neck=gear.neck.tp,
+        ear1=gear.ears.melee_acc_left,
+        ear2=gear.ears.melee_acc_right,
+        body=gear.ambuscade.skadi.body,
+        hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
         ring2="K'ayres Ring",
-        back="Atheling Mantle",
-        waist="Cetl Belt",
-        legs=gear.acro.legs.tp,
-        feet="Whirlpool Greaves"
+        back="Letalis Mantle",
+        waist=gear.waist.nohaste,
+        legs=gear.ambuscade.skadi.legs,
+        feet=gear.valorous.feet.tp
     }
 
     sets.combat.DPS = set_combine(sets.combat, {})
@@ -59,19 +59,19 @@ function get_sets()
     -- WS sets
 
     sets.WS = {
-        ammo="Thew Bomblet",
-        head="Yaoyotl Helm",
-        neck="Fotia Gorget",
-        ear1="Brutal Earring",
-        ear2="Moonshade Earring",
-        body=gear.acro.body.tp,
-        hands=gear.acro.hands.tp,
+        ammo=gear.ammo.haste,
+        head=gear.argosy.head.A,
+        neck=gear.neck.ws,
+        ear1=gear.ears.melee_left,
+        ear2=gear.ears.melee_right,
+        body=gear.argosy.body.A,
+        hands=gear.argosy.hands.A,
         ring1="Rajas Ring",
         ring2="Ifrit Ring",
-        back="Atheling Mantle",
-        waist="Fotia Belt",
-        legs=gear.acro.legs.tp,
-        feet="Whirlpool Greaves"
+        back="Letalis Mantle",
+        waist=gear.waist.ws,
+        legs=gear.ambuscade.skadi.legs,
+        feet=gear.argosy.feet.A
     }
 
     send_command('input /macro book 1;wait .1;input /macro set 1')
