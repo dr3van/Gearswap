@@ -6,6 +6,8 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(0, 1)
 
+    use_obi = 1
+
     sets.idle = {
         main=gear.weapons.mage.refresh,
         sub=gear.grip.dt,
@@ -39,15 +41,9 @@ function get_sets()
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
-    sets.resting = set_combine(sets.idle, {
-        main="Rsv.Cpt. Mace",
-        sub="Legion Scutum",
+    sets.resting = set_combine(sets.idle.regen, {
         head="Wivre Hairpin",
-        neck="Eidolon Pendant",
         ear1="Relaxing Earring",
-        body="Chelona Blazer",
-        back="Vita Cape",
-        legs="Nisse Slacks",
         feet="Chelona Boots +1"
     })
 

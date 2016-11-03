@@ -81,14 +81,19 @@ function get_sets()
     })
     sets.combat.highacc = set_combine(sets.combat.midacc, {})
     sets.combat.defensive = set_combine(sets.combat, {
-        ear1="Brutal Earring",
-        ear2="Ethereal Earring",
-        body=gear.souveran.body.A,
-        hands=gear.souveran.hands.A,
+        ammo="Hasty Pinion +1",
+        head=gear.odyssean.head.tp,
+        neck=gear.neck.sword,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        body=gear.ambuscade.ares.body,
+        hands=gear.ambuscade.ares.hands,
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
-        legs=gear.odyssean.legs.dt,
-        feet=gear.souveran.feet.D
+        back=gear.jsecapes.amb.pld.tp,
+        waist=gear.waist.highhaste,
+        legs=gear.ambuscade.ares.legs,
+        feet=gear.ambuscade.ares.feet
     })
 
     -- WS sets

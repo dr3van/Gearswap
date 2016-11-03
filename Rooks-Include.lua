@@ -3,7 +3,7 @@ res = require('resources')
 function init_get_sets(weapon_lock, gear_file)
 
     include('organizer-lib')
-    if gear_file then
+    if gear_file == 1 then
         include('Rooks-Gear.lua')
     end
 
@@ -28,10 +28,15 @@ function init_get_sets(weapon_lock, gear_file)
 
     weapon_locked = weapon_lock
 
+    use_obi = 0
+
     spells = {}
     spells.cures = S{ "Cure", "Cure II", "Cure III", "Cure IV", "Cure V", "Cure VI" }
     spells.curagas = S{ "Curaga", "Curaga II", "Curaga III", "Curaga IV", "Curaga V", "Cura", "Cura II", "Cura III" }
     spells.regens = S{ "Regen", "Regen II", "Regen III", "Regen IV", "Regen V" }
+    spells.helices = S{ "Geohelix", "Hydrohelix", "Anemohelix", "Pyrohelix", "Cryohelix", "Ionohelix", "Luminohelix",
+        "Noctohelix", "Geohelix II", "Hydrohelix II", "Anemohelix II", "Pyrohelix II", "Cryohelix II", "Ionohelix II",
+        "Luminohelix II", "Noctohelix II" }
 
     -- Grab the gear
     if gear_file then
@@ -200,6 +205,12 @@ function base_midcast(spell)
                 equip(sets.midcast[spell.skill][magic_sets[magic_index]])
             else
                 equip(sets.midcast[spell.skill])
+            end
+        end
+
+        if element_check(spell.element) then
+            if use_obi == 1 then
+                equip({ waist="Hachirin-no-Obi" })
             end
         end
     end
@@ -389,4 +400,11 @@ function buff_change(new, bool)
         enable('neck')
         aftercast()
     end
+end
+
+function element_check(element)
+    if element == world.weather_element or element == world.day_element then
+        return true
+    end
+    return false
 end

@@ -5,6 +5,8 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(1, 1)
 
+    use_obi = 1
+
     sets.idle = {
         ammo=gear.ammo.dt,
         head=gear.ambuscade.ares.head,
@@ -156,6 +158,7 @@ function get_sets()
     })
 
     sets.midcast.DrainAspir = set_combine(sets.midcast['Dark Magic'], {
+        body="Lugra Cloak",
     })
     sets.midcast['Drain'] = set_combine(sets.midcast.DrainAspir, {})
     sets.midcast['Drain II'] = set_combine(sets.midcast.DrainAspir, {})

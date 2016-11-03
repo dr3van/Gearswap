@@ -67,7 +67,7 @@ function init_gear()
     gear.waist.obi = { name="Hachirin-no-obi" }
     gear.waist.fc = { name="Witful Belt" }
     gear.waist.macc = { name="Porous Rope" }
-    gear.waist.mage_idle = { name="Porous Rope" }
+    gear.waist.mage_idle = { name="Fucho-no-obi" }
     gear.waist.pdt = { name="Flume Belt +1" }
     gear.waist.conserve_mp = { name="Austerity Belt" }
     gear.waist.highacc = { name="Anguinus Belt" }
@@ -450,9 +450,9 @@ function init_gear()
     gear.ambuscade.morrigan = {
         head="Jhakri Coronal",
         body="Jhakri Robe +1",
-        hands="Jhakri Cuffs",
+        hands="Jhakri Cuffs +1",
         legs="Jhakri Slops +1",
-        feet="Jhakri Pigaches",
+        feet="Jhakri Pigaches +1",
     }
 
     gear.ambuscade.phorcys = {

@@ -5,6 +5,8 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(0, 1)
 
+    use_obi = 1
+
     sets.idle = {
         ammo=gear.ammo.dt,
         head=gear.jse.relic.rdm.head,
@@ -23,22 +25,20 @@ function get_sets()
 
     sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {
+        head=gear.jse.relic.rdm.head,
+        neck=gear.neck.regen,
         ring1=gear.ring.regen_left,
-        ring2=gear.ring.regen_right
+        ring2=gear.ring.regen_right,
+        waist=gear.waist.mage_idle,
+        legs="Nares Trews"
     })
     sets.idle.DT = set_combine(sets.idle, {
         head=gear.gendewitha.head.pdt
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
-    sets.resting = set_combine(sets.idle, {
-        head=gear.jse.relic.rdm.head,
-        neck="Eidolon Pendant",
+    sets.resting = set_combine(sets.idle.regen, {
         ear1="Relaxing Earring",
-        body=gear.body.mage_idle,
-        back="Vita Cape",
-        waist="Austerity Belt",
-        legs="Nisse Slacks",
         feet="Chelona Boots +1"
     })
 
