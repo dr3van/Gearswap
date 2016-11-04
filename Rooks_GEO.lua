@@ -36,7 +36,7 @@ function get_sets()
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
-    sets.resting = set_combine(sets.idle, {})
+    sets.resting = set_combine(sets.idle.regen, {})
 
     sets.JA = {}
     sets.JA['Life Cycle'] = {
@@ -97,18 +97,6 @@ function get_sets()
         ear2=gear.ears.macc_int,
         back=gear.back.macc,
         waist=gear.waist.macc
-    })
-
-
-    sets.resting = set_combine(sets.idle, {
-        head="Wivre Hairpin",
-        neck="Eidolon Pendant",
-        ear1="Relaxing Earring",
-        body="Chelona Blazer",
-        back="Vita Cape",
-        waist="Austerity Belt",
-        legs="Nisse Slacks",
-        feet="Chelona Boots +1"
     })
 
     sets.combat = {

@@ -37,7 +37,6 @@ function get_sets()
         main=gear.weapons.mage.refresh,
         sub=gear.grip.dt,
         head=gear.head.mage_refresh,
-        neck="Eidolon Pendant",
         ear1="Relaxing Earring",
         body="Chelona Blazer",
         back="Vita Cape",

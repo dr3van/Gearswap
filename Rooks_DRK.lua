@@ -90,7 +90,7 @@ function get_sets()
         ring2="Chirich Ring",
         back=gear.jsecapes.amb.drk.tp,
         waist=gear.waist.highhaste,
-        legs=gear.odyssean.legs.tp,
+        legs=gear.odyssean.legs.dt,
         feet=gear.ambuscade.ares.feet
     })
 

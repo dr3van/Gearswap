@@ -27,6 +27,7 @@ function get_sets()
     }
     sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {
+        head=gear.head.mage_refresh,
         neck=gear.neck.regen,
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
@@ -42,7 +43,6 @@ function get_sets()
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = set_combine(sets.idle.regen, {
-        head="Wivre Hairpin",
         ear1="Relaxing Earring",
         feet="Chelona Boots +1"
     })
