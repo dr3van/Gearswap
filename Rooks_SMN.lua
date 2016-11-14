@@ -24,7 +24,8 @@ function get_sets()
     sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {
         ring1=gear.ring.regen_left,
-        ring2=gear.ring.regen_right
+        ring2=gear.ring.regen_right,
+        legs="Nares Trews"
     })
     sets.idle.DT = set_combine(sets.idle, {
         ring1=gear.ring.dt_left,
@@ -39,8 +40,6 @@ function get_sets()
         head=gear.head.mage_refresh,
         ear1="Relaxing Earring",
         body="Chelona Blazer",
-        back="Vita Cape",
-        legs="Nisse Slacks",
         feet="Chelona Boots +1"
     })
 
@@ -58,6 +57,21 @@ function get_sets()
         legs="Orvail Pants +1",
         feet=gear.merlinic.feet.fc
     }
+
+    sets.precast.BloodPact = {
+        head="Summoner's Horn",
+        ear2="Caller's Earring",
+        body="Shomonjijoe",
+        hands="Summoner's Bracers",
+        legs="Summoner's Spats"
+    }
+    sets.precast.BloodPactRage = set_combine(sets.precast.BloodPact, {})
+    sets.precast.BloodPactWard = set_combine(sets.precast.BloodPact, {})
+
+    sets.pet.midcast.BloodPact = {
+    }
+    sets.pet.midcast.BloodPactRage = set_combine(sets.pet.midcast.BloodPact, {})
+    sets.pet.midcast.BloodPactWard = set_combine(sets.pet.midcast.BloodPact, {})
 
 
 end

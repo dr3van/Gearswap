@@ -125,6 +125,14 @@ function init_get_sets(weapon_lock, gear_file)
         feet=""
     }
 
+    -- Pet sets. I use magical accuracy for pet sets because I had to pick one
+    -- and that was the one I picked.
+
+    sets.pet = {}
+    sets.pet.midcast = {}
+    sets.pet.aftercast = {}
+
+
     if gear_file then
         organizer_items = gear.universal
     end
@@ -145,10 +153,17 @@ function init_get_sets(weapon_lock, gear_file)
 end
 
 function base_precast(spell)
-    if player.equipment.head == 'Twilight Helm' and player.equipment.body == 'Twilight Mail' then disable('head','body') end
+--    if player.equipment.head == 'Twilight Helm' and player.equipment.body == 'Twilight Mail' then disable('head','body') end
+
+    windower.add_to_chat(123, spell.action_type)
+    windower.add_to_chat(123, spell.type)
 
     if sets.JA[spell.name] then
         equip(sets.JA[spell.name])
+    elseif spell.action_type == 'Ability' then
+        if sets.precast[spell.type] then
+            equip(sets.precast[spell.type])
+        end
     elseif spell.type == 'WeaponSkill' then
         if sets.WS[spell.name] then
             if sets.WS[spell.name][combat_sets[combat_index]] then
@@ -217,6 +232,16 @@ function base_midcast(spell)
 end
 
 function base_aftercast(spell)
+    -- Don't swap to aftercast if the player or a pet in the middle of doing something
+    -- pet_aftercast() calls aftercast() to handle it
+    skip_aftercast = S{ "BloodPactWard", "BloodPactRage" }
+    if midaction() or pet_midaction() then
+        return
+    end
+    if spell and spell.type and skip_aftercast:contains(spell.type) then
+        return
+    end
+
     if is_pdt == 1 then
         equip(sets.idle.PDT)
     elseif is_mdt == 1 then
@@ -239,9 +264,24 @@ function base_aftercast(spell)
 end
 
 function base_pet_midcast(spell)
+    if sets.pet.midcast[spell.name] then
+        if sets.pet.midcast[spell.name][magic_sets[magic_index]] then
+            equip(sets.pet.midcast[spell.name][magic_sets[magic_index]])
+        else
+            equip(sets.pet.midcast[spell.name])
+        end
+    elseif sets.pet.midcast[spell.type] then
+        if sets.pet.midcast[spell.type][magic_sets[magic_index]] then
+            equip(sets.pet.midcast[spell.type][magic_sets[magic_index]])
+        else
+            equip(sets.pet.midcast[spell.type])
+        end
+    end
 end
 
 function base_pet_aftercast(spell)
+    -- Just call aftercast(). We didn't do it before so the pet could do its thing.
+    aftercast()
 end
 
 
