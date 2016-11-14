@@ -32,9 +32,11 @@ function get_sets()
     }
     sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {
+        head="Wivre Hairpin",
         neck=gear.neck.regen,
         ring1=gear.ring.regen_left,
-        ring2=gear.ring.regen_right
+        ring2=gear.ring.regen_right,
+        waist=gear.waist.mage_idle
     })
     sets.idle.DT = set_combine(sets.idle, {
         neck=gear.neck.dt,
@@ -46,16 +48,11 @@ function get_sets()
         back=gear.back.mage_idle,
     })
     sets.idle.MDT = set_combine(sets.idle.DT, {})
-    sets.resting = {
-        head="Wivre Hairpin",
-        neck="Eidolon Pendant",
+    sets.resting = set_combine(sets.idle.regen, {
         ear1="Relaxing Earring",
-        body="Chelona Blazer",
-        back="Vita Cape",
-        waist="Austerity Belt",
         legs="Nisse Slacks",
         feet="Chelona Boots +1"
-    }
+    })
 
     sets.precast.FC = {
         head=gear.herculean.head.fc,

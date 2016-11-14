@@ -25,6 +25,7 @@ function get_sets()
     sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {
         neck=gear.neck.regen,
+        body="Lugra Cloak",
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
     })
@@ -35,28 +36,34 @@ function get_sets()
         back=gear.back.dt,
         waist="Nierenschutz",
         legs=gear.odyssean.legs.dt,
-        feet=gear.souveran.feet.D
+        feet=gear.ambuscade.ares.feet
 
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {
         waist=gear.waist.pdt
     })
     sets.idle.MDT = set_combine(sets.idle.DT, {})
-    sets.resting = set_combine(sets.idle, {})
+    sets.resting = set_combine(sets.idle.regen, {})
 
+    -- Ragnarok STP values needed, /SAM (+15)
+    -- 8-hit: 12.5%, 0
+    -- 7-hit: 14.3%, 30
+    -- 6-hit: 16.7%, 52
+    -- 5-hit: 20.0%, 82
+    -- 4-hit: 25.0%, 128
 
     sets.combat = {
-        ammo=gear.ammo.haste,
+        ammo="Seething Bomblet +1",
         head=gear.odyssean.head.tp,
-        neck=gear.neck.acc,
-        ear1=gear.ears.melee_left,
-        ear2=gear.ears.melee_right,
+        neck="Lissome Necklace",
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
         body=gear.ambuscade.ares.body,
         hands=gear.ambuscade.phorcys.hands,
         ring1="Rajas Ring",
         ring2="Chirich Ring",
         back=gear.jsecapes.amb.drk.tp,
-        waist=gear.waist.highhaste,
+        waist="Sailfi Belt",
         legs=gear.odyssean.legs.tp,
         feet=gear.ambuscade.phorcys.feet
     }
@@ -116,9 +123,25 @@ function get_sets()
         ring2="Ifrit Ring",
         back=gear.jsecapes.amb.drk.ws,
         waist=gear.waist.ws,
-        legs=gear.odyssean.legs.ws,
+        legs=gear.ambuscade.ares.legs,
         feet=gear.argosy.feet.A
 	}
+
+    sets.WS['Scourge'] = {
+        ammo="Seething Bomblet +1",
+        head=gear.odyssean.head.ws,
+        neck=gear.neck.ws,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        body=gear.ambuscade.ares.body,
+        hands=gear.odyssean.hands.ws,
+        ring1="Rajas Ring",
+        ring2="Ifrit Ring",
+        back=gear.jsecapes.amb.drk.wsd,
+        waist=gear.waist.ws,
+        legs=gear.ambuscade.ares.legs,
+        feet=gear.ambuscade.ares.feet
+    }
 
     sets.WS['Torcleaver'] = {
         ammo="Seething Bomblet +1",
@@ -127,14 +150,19 @@ function get_sets()
         ear1="Brutal Earring",
         ear2=gear.ears.ws,
         body=gear.ambuscade.ares.body,
-        hands=gear.ambuscade.ares.hands,
+        hands=gear.odyssean.hands.ws,
         ring1="Rajas Ring",
         ring2="Ifrit Ring",
-        back=gear.jsecapes.amb.drk.ws,
+        back=gear.jsecapes.amb.drk.wsd,
         waist=gear.waist.ws,
-        legs=gear.odyssean.legs.ws,
+        legs=gear.ambuscade.ares.legs,
         feet=gear.ambuscade.ares.feet
     }
+
+    sets.WS['Resolution'] = set_combine(sets.WS, {
+        ear1="Brutal Earring",
+        ear2=gear.ears.ws,
+    })
 
     sets.magic_accuracy = {
         head="Befouled Crown",

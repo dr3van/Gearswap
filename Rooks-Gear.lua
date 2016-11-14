@@ -134,6 +134,7 @@ function init_gear()
     gear.jsecapes.amb.drk.idle = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
     gear.jsecapes.amb.drk.tp = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
     gear.jsecapes.amb.drk.ws = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
+    gear.jsecapes.amb.drk.wsd = { name="Ankou's Mantle", augments={'STR+6','VIT+20', 'Accuracy+20 Attack+20', 'Weapon skill damage +10%'}}
 
 
     -- Skirmish pieces
@@ -205,6 +206,8 @@ function init_gear()
     gear.eschite.head.D = { name="Eschite Helm", augments={'STR+10','VIT+7','"Cure" potency +7%'} }
     gear.eschite.legs = { name="Eschite Cuisses" }
     gear.eschite.legs.D = { name="Eschite Cuisses", augments={'"Mag.Atk.Bns."+25','"Conserve MP"+6','"Fast Cast"+5'} }
+    gear.eschite.feet = { name="Eschite Greaves" }
+    gear.eschite.feet.A = { name="Eschite Greaves", augments={'HP+75', 'Enmity+6', 'Phys. dmg. taken -3%'} }
 
     -- 119 Abjuration pieces
 
@@ -246,9 +249,8 @@ function init_gear()
 
     gear.odyssean = {}
     gear.odyssean.head = { name="Odyssean Helm" }
-    gear.odyssean.head.acc = { name="Odyssean Helm", augments={'Accuracy+20 Attack+20','Weapon Skill Acc.+15','Accuracy+10'} }
-    gear.odyssean.head.tp = { name="Odyssean Helm", augments={'Accuracy+20 Attack+20','Weapon Skill Acc.+15','Accuracy+10'} }
-    gear.odyssean.head.ws = { name="Odyssean Helm", augments={'Accuracy+30','Weapon skill damage +4%','MND+10','Attack+14'} }
+    gear.odyssean.head.tp = { name="Odyssean Helm", augments={'Attack+24','"Store TP"+5','DEX+5','Accuracy+13'} }
+    gear.odyssean.head.ws = { name="Odyssean Helm", augments={'Accuracy+16','Weapon skill damage +5%','VIT+7','Attack+10'} }
     gear.odyssean.hands = { name="Odyssean Gauntlets" }
     gear.odyssean.hands.idle = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
     gear.odyssean.hands.tp = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
@@ -395,7 +397,7 @@ function init_gear()
         feet="Cab. Leggings"
     }
     gear.jse.empyrean.pld = {
-        head="Chevalier's Armet",
+        head="Chev. Armet +1",
         body="Chev. Cuirass +1",
         hands="Chev. Guantlets",
         legs="Chevalier's Cuisses",
@@ -448,7 +450,7 @@ function init_gear()
     }
 
     gear.ambuscade.morrigan = {
-        head="Jhakri Coronal",
+        head="Jhakri Coronal +1",
         body="Jhakri Robe +1",
         hands="Jhakri Cuffs +1",
         legs="Jhakri Slops +1",

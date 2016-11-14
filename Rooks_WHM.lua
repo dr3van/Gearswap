@@ -25,22 +25,22 @@ function get_sets()
     sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {
         ring1=gear.ring.regen_left,
-        ring2=gear.ring.regen_right
+        ring2=gear.ring.regen_right,
+        legs="Nares Trews"
     })
     sets.idle.DT = set_combine(sets.idle, {
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
-        feet=gear.gear.vanya.feet.D
+        feet=gear.vanya.feet.D
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
-    sets.resting = set_combine(sets.idle, {
+    sets.resting = set_combine(sets.idle.regen, {
         main=gear.weapons.mage.refresh,
         sub=gear.grip.dt,
         head=gear.head.mage_refresh,
         ear1="Relaxing Earring",
         body="Chelona Blazer",
-        legs="Nisse Slacks",
         feet="Chelona Boots +1"
     })
 

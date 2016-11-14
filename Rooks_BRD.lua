@@ -26,6 +26,7 @@ function get_sets()
         neck=gear.neck.regen,
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
+        legs="Nares Trews"
     })
     sets.idle.DT = set_combine(sets.idle, {})
     sets.idle.PDT = set_combine(sets.idle.DT, {})
@@ -34,7 +35,6 @@ function get_sets()
         ear1="Relaxing Earring",
         body="Chelona Blazer",
         hands="Nares Cuffs",
-        legs="Nisse Slacks",
         feet="Chelona Boots +1"
     })
 

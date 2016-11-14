@@ -158,7 +158,7 @@ function get_sets()
         back="Fierabras's Mantle",
         waist="Creed Baudrier",
         legs=gear.jse.relic.pld.legs,
-        feet=gear.jse.empyrean.pld.feet
+        feet=gear.eschite.feet.A
     }
 
     sets.maxHP = {
@@ -174,7 +174,7 @@ function get_sets()
         back="Fierabras's Mantle",
         waist="Oneiros Belt",
         legs=gear.jse.empyrean.pld.legs,
-        feet="Loyalist sabatons"
+        feet=gear.eschite.feet.A
     }
 
     sets.JA = set_combine(sets.enmity, {})
@@ -221,7 +221,7 @@ function get_sets()
         ring1="Meridian Ring",
         ring2="Eihwaz Ring",
         back="Fierabras's Mantle",
-        feet=gear.jse.empyrean.pld.feet
+        feet=gear.eschite.feet.A
     })
 
     sets.midcast['Enhancing Magic'] = {
