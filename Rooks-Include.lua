@@ -15,13 +15,19 @@ function init_get_sets(weapon_lock, gear_file)
     send_command('bind ^f11 gs c toggle idle set')
 
     combat_sets = {'DPS', 'midacc', 'highacc', 'defensive' }
+    combat_sets_description = { 'Physical DPS', 'Moderate physical accuracy', 'High physical accuracy', 'Defensive' }
     combat_index = 1
+    combat_index_max = 4
 
     magic_sets = {'DPS', 'midacc', 'highacc', 'burst' }
+    magic_sets_description = { 'Magical DPS', 'Moderate magical accuracy', 'High magical accuracy', 'Magic Burst'}
     magic_index = 1
+    magic_index_max = 4
 
     idle_sets = { 'base', 'regen', 'DT' }
+    idle_sets_description = { 'Idle base', 'Idle regen', 'Idle DT' }
     idle_index = 1
+    idle_index_max = 3
 
     is_pdt = 0
     is_mdt = 0
@@ -313,44 +319,23 @@ end
 
 function base_self_command(command)
     if command == 'toggle combat set' then
-        if combat_index == 1 then
-            combat_index = 2
-            send_command('@input /echo Moderate physical accuracy')
-        elseif combat_index == 2 then
-            combat_index = 3
-            send_command('@input /echo High physical accuracy')
-        elseif combat_index == 3 then
-            combat_index = 4
-            send_command('@input /echo Defensive')
-        elseif combat_index == 4 then
+        combat_index = combat_index + 1
+        if combat_index > combat_index_max then
             combat_index = 1
-            send_command('@input /echo Physical DPS')
         end
+        send_command('@input /echo '..combat_sets_description[combat_index])
     elseif command == 'toggle magic set' then
-        if magic_index == 1 then
-            magic_index = 2
-            send_command('@input /echo Moderate magical accuracy')
-        elseif magic_index == 2 then
-            magic_index = 3
-            send_command('@input /echo High magical accuracy')
-        elseif magic_index == 3 then
-            magic_index = 4
-            send_command('@input /echo Magic Burst')
-        elseif magic_index == 4 then
+        magic_index = magic_index + 1
+        if magic_index > magic_index_max then
             magic_index = 1
-            send_command('@input /echo Magical DPS')
         end
+        send_command('@input /echo '..magic_sets_description[magic_index])
     elseif command == 'toggle idle set' then
-        if idle_index == 1 then
-            idle_index = 2
-            send_command('@input /echo Idle regen')
-        elseif idle_index == 2 then
-            idle_index = 3
-            send_command('@input /echo Idle DT')
-        elseif idle_index == 3 then
+        idle_index = idle_index + 1
+        if idle_index > idle_index_max then
             idle_index = 1
-            send_command('@input /echo Idle base')
         end
+        send_command('@input /echo '..idle_sets_description[idle_index])
     elseif command == 'toggle pdt' then
         if is_pdt == 1 then
             is_pdt = 0
