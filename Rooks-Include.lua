@@ -1,3 +1,4 @@
+-- v.20161115.1
 res = require('resources')
 
 function init_get_sets(weapon_lock, gear_file)
@@ -35,6 +36,8 @@ function init_get_sets(weapon_lock, gear_file)
     weapon_locked = weapon_lock
 
     use_obi = 0
+
+    time_class = {}
 
     spells = {}
     spells.cures = S{ "Cure", "Cure II", "Cure III", "Cure IV", "Cure V", "Cure VI" }
@@ -159,17 +162,8 @@ function init_get_sets(weapon_lock, gear_file)
 end
 
 function base_precast(spell)
---    if player.equipment.head == 'Twilight Helm' and player.equipment.body == 'Twilight Mail' then disable('head','body') end
-
-    windower.add_to_chat(123, spell.action_type)
-    windower.add_to_chat(123, spell.type)
-
     if sets.JA[spell.name] then
         equip(sets.JA[spell.name])
-    elseif spell.action_type == 'Ability' then
-        if sets.precast[spell.type] then
-            equip(sets.precast[spell.type])
-        end
     elseif spell.type == 'WeaponSkill' then
         if sets.WS[spell.name] then
             if sets.WS[spell.name][combat_sets[combat_index]] then
@@ -181,6 +175,10 @@ function base_precast(spell)
             if sets.WS then
                 equip(sets.WS)
             end
+        end
+    elseif spell.action_type == 'Ability' then
+        if sets.precast[spell.type] then
+            equip(sets.precast[spell.type])
         end
     elseif spell.action_type == 'Magic' then
         if sets.precast[spell.name] then
@@ -432,4 +430,26 @@ function element_check(element)
         return true
     end
     return false
+end
+
+-- Put this line in for any job you want to handle time changes in
+--     windower.register_event('time change', time_change)
+function time_change(new_time, old_time)
+    if new_time >= 6*60 and new_time < 18*60 then
+        time_class.daytime = true
+        time_class.nighttime = false
+    else
+        time_class.daytime = false
+        time_class.nighttime = true
+    end
+
+    if new_time >= 17*60 and new_time < 7*60 then
+        time_class.dusk_to_dawn = true
+    else
+        time_class.dusk_to_dawn = false
+    end
+
+    if job_time_change then
+        job_time_change(time_class)
+    end
 end
