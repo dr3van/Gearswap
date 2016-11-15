@@ -256,9 +256,8 @@ function init_gear()
     gear.odyssean.hands.tp = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
     gear.odyssean.hands.ws = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
     gear.odyssean.legs = { name="Odyssean Cuisses" }
-    gear.odyssean.legs.highacc = { name="Odyssean Cuisses", augments={'Accuracy+21 Attack+21','"Cure" potency +2%','VIT+13','Accuracy+15','Attack+11'}}
-    gear.odyssean.legs.tp = { name="Odyssean Cuisses", augments={'Accuracy+21 Attack+21','"Cure" potency +2%','VIT+13','Accuracy+15','Attack+11'}}
-    gear.odyssean.legs.ws = { name="Odyssean Cuisses", augments={'Accuracy+21 Attack+21','"Cure" potency +2%','VIT+13','Accuracy+15','Attack+11'}}
+    gear.odyssean.legs.tp = { name="Odyssean Cuisses", augments={'Accuracy+27','"Store TP"+5','DEX+10','Attack+3'}}
+    gear.odyssean.legs.ws = { name="Odyssean Cuisses", augments={'Accuracy+27','"Store TP"+5','DEX+10','Attack+3'}}
     gear.odyssean.legs.dt = { name="Odyssean Cuisses", augments={'Accuracy+1','"Resist Silence"+7','Damage taken-5%','Accuracy+10 Attack+10','Mag. Acc.+16 "Mag.Atk.Bns."+16',}}
 
     gear.herculean = {}

@@ -5,6 +5,10 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(1, 1)
 
+    gear.idle_feet = "Hachi. Kyahan +1"
+    gear.idle_feet_day = "Danzo Sune-Ate"
+    gear.idle_feet_night = "Hachi. Kyahan +1"
+
     sets.idle = {
         ammo="Iron Gobbet",
         head=gear.taeon.head.tp,
@@ -18,7 +22,7 @@ function get_sets()
         back="Shadow Mantle",
         waist=gear.waist.pdt,
         legs=gear.taeon.legs.tp,
-        feet="Hachi. Kyahan +1"
+        feet=gear.idle_feet
     }
 
     sets.idle.DT = set_combine(sets.idle, {
@@ -78,4 +82,16 @@ function get_sets()
 
     send_command('input /macro book 7;wait .1;input /macro set 1')
 
+--    windower.register_event('time change', time_change)
+end
+
+function job_time_change(job_time_class)
+    windower.add_to_chat(123, 'tick?')
+    if job_time_class.dusk_to_dawn then
+        windower.add_to_chat(123, 'foo')
+        gear.idle_feet = gear.idle_feet_night
+    else
+        windower.add_to_chat(123, 'bar')
+        gear.idle_feet = gear.idle_feet_day
+    end
 end

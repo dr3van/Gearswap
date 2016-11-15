@@ -4,6 +4,10 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(1, 1)
 
+    combat_sets = {'DPS', 'midacc', 'highacc', 'defensive', 'pet' }
+    combat_sets_description = { 'Physical DPS', 'Moderate physical accuracy', 'High physical accuracy', 'Defensive', 'pet' }
+    combat_index_max = 5
+
     sets.idle = {
         main=gear.weapons.mage.refresh,
         sub=gear.grip.dt,
@@ -72,6 +76,5 @@ function get_sets()
     }
     sets.pet.midcast.BloodPactRage = set_combine(sets.pet.midcast.BloodPact, {})
     sets.pet.midcast.BloodPactWard = set_combine(sets.pet.midcast.BloodPact, {})
-
-
 end
+
