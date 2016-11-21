@@ -57,7 +57,8 @@ function get_sets()
         ring1=gear.ring.fc_left,
         ring2=gear.ring.fc_right,
         waist=gear.waist.highhaste,
-        legs=gear.eschite.legs.D
+        legs=gear.eschite.legs.D,
+        feet=gear.odyssean.feet.fc
     }
 
     sets.combat = {
@@ -146,6 +147,22 @@ function get_sets()
         legs=gear.eschite.legs.D
     })
 
+    sets.WS['Torcleaver'] = {
+        ammo="Seething Bomblet +1",
+        head=gear.odyssean.head.ws,
+        neck=gear.neck.ws,
+        ear1="Brutal Earring",
+        ear2=gear.ears.ws,
+        body=gear.ambuscade.ares.body,
+        hands=gear.odyssean.hands.ws,
+        ring1="Titan Ring",
+        ring2="Titan Ring",
+        back=gear.jsecapes.amb.drk.wsd,
+        waist=gear.waist.ws,
+        legs=gear.ambuscade.ares.legs,
+        feet=gear.ambuscade.ares.feet
+    }
+
     sets.enmity = {
         ammo=gear.ammo.enmity,
         head="Loess Barbuta",
@@ -164,7 +181,7 @@ function get_sets()
     sets.maxHP = {
         ammo="Egoist's Tathlum",
         head=gear.jse.empyrean.pld.head,
-        neck="Sanctity Necklace",
+        neck=gear.neck.hp,
         ear1="Calamitous Earring",
         ear2="Ethereal Earring",
         body=gear.jse.empyrean.pld.body,

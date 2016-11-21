@@ -24,6 +24,7 @@ function get_sets()
     }
     sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {
+        head="",
         neck=gear.neck.regen,
         body="Lugra Cloak",
         ring1=gear.ring.regen_left,
@@ -102,11 +103,29 @@ function get_sets()
     })
 
     sets.precast.FC = {
+        ammo=gear.ammo.fc,
         ear1="Loquac. Earring",
         hands=gear.hands.melee_fc,
         ring1=gear.ring.fc_left,
         ring2=gear.ring.fc_right,
-        legs=gear.eschite.legs.D
+        waist=gear.waist.highhaste,
+        legs=gear.eschite.legs.D,
+        feet=gear.odyssean.feet.fc
+    }
+
+    sets.maxHP = {
+        ammo="Egoist's Tathlum",
+        head=gear.ambuscade.phorcys.head,
+        neck=gear.neck.hp,
+        ear1="Calamitous Earring",
+        ear2="Ethereal Earring",
+        body=gear.ambuscade.phorcys.body,
+        hands=gear.ambuscade.phorcys.hands,
+        ring1="Meridian Ring",
+        ring2="Eihwaz Ring",
+        waist="Oneiros Belt",
+        legs=gear.ambuscade.phorcys.legs,
+        feet=gear.eschite.feet.A
     }
 
     -- WS sets
@@ -147,11 +166,11 @@ function get_sets()
         ammo="Seething Bomblet +1",
         head=gear.odyssean.head.ws,
         neck=gear.neck.ws,
-        ear1="Brutal Earring",
+        ear1=gear.ears.wsd,
         ear2=gear.ears.ws,
         body=gear.ambuscade.ares.body,
         hands=gear.odyssean.hands.ws,
-        ring1="Ifrit Ring",
+        ring1="Titan Ring",
         ring2="Titan Ring",
         back=gear.jsecapes.amb.drk.wsd,
         waist=gear.waist.ws,
@@ -165,6 +184,7 @@ function get_sets()
     })
 
     sets.magic_accuracy = {
+        ammo=gear.ammo.mdmg,
         head="Befouled Crown",
         neck=gear.neck.macc,
         ear1=gear.ears.macc_mnd,
@@ -181,11 +201,15 @@ function get_sets()
     sets.midcast['Enfeebling Magic'] = set_combine(sets.magic_accuracy, {})
     sets.midcast['Elemental Magic'] = set_combine(sets.magic_accuracy, {})
     sets.midcast['Dark Magic'] = set_combine(sets.magic_accuracy, {
+        hands="Fall. Fin. Gaunt. +1",
+        ring1=gear.ring.drain_aspir,
         back=gear.jsecapes.drk,
+        waist="Casso Sash",
         legs=gear.eschite.legs.D
     })
 
     sets.midcast.DrainAspir = set_combine(sets.midcast['Dark Magic'], {
+        head="",
         body="Lugra Cloak",
     })
     sets.midcast['Drain'] = set_combine(sets.midcast.DrainAspir, {})
@@ -195,6 +219,8 @@ function get_sets()
     sets.midcast['Aspir II'] = set_combine(sets.midcast.DrainAspir, {})
 
     sets.JA['Last Resort'] = { back=gear.jsecapes.amb.drk }
+
+    sets.midcast['Dread Spikes'] = set_combine(sets.maxHP, {})
 
     send_command('input /macro book 10;wait .1;input /macro set 1')
 end

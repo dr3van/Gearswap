@@ -5,9 +5,11 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(0, 1)
 
+    use_obi = 1
+
     sets.idle = {
-        main=gear.weapons.mage.refresh,
-        sub=gear.grip.dt,
+        main="Lathi",
+        sub=gear.grip.nuke,
         ammo=gear.ammo.dt,
         head=gear.head.mage_refresh,
         neck=gear.neck.dt,
@@ -19,22 +21,24 @@ function get_sets()
         ring2=gear.ring.dt_right,
         back=gear.back.mage_idle,
         waist=gear.waist.mage_idle,
-        legs=gear.merlinic.legs.dt,
+        legs=gear.legs.mage_pdt,
         feet="Herald's Gaiters"
     }
     sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {
         head=gear.head.mage_refresh,
         neck=gear.neck.regen,
+        body=gear.ambuscade.morrigan.body,
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
+        waist=gear.waist.mage_idle,
         legs="Nares Trews"
     })
     sets.idle.DT = set_combine(sets.idle, {
         head="Nahtirah Hat",
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
-        legs=gear.merlinic.legs.MAB,
+        legs=gear.legs.mage_pdt,
         feet=gear.merlinic.feet.MAB
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
@@ -47,6 +51,7 @@ function get_sets()
     sets.JA = {}
 
     sets.precast.FC = {
+        ammo=gear.ammo.fc,
         head=gear.merlinic.head.fc,
         ear2=gear.ears.fc_right,
         body=gear.body.mage_fc,
@@ -55,24 +60,28 @@ function get_sets()
         ring2=gear.ring.fc_right,
         back=gear.back.fc,
         waist=gear.waist.fc,
-        legs="Orvail Pants +1",
+        legs=gear.psycloth.legs.D,
         feet="Chelona Boots +1"
     }
 
     sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {
-        head="Wicce Petasos",
-        neck="Stoicheion Medal"
+--        head="Wicce Petasos +1",
     })
 
     sets.combat = {
         ammo=gear.ammo.haste,
+        head=gear.ambuscade.morrigan.head,
         neck=gear.neck.acc,
         ear1="Bladeborn Earring",
         ear2="Steelflash Earring",
-        ring1="Rajas ring",
-        ring2="K'ayres Ring",
+        body=gear.ambuscade.morrigan.body,
+        hands=gear.ambuscade.morrigan.hands,
+        ring1="Ramuh ring +1",
+        ring2="Chirich Ring",
         back="Rancorous Mantle",
-        waist="Cetl Belt"
+        waist="Cetl Belt",
+        legs=gear.ambuscade.morrigan.legs,
+        feet=gear.ambuscade.morrigan.feet
     }
 
     sets.combat.DPS = set_combine(sets.combat, {})
@@ -94,17 +103,14 @@ function get_sets()
     }
 
     sets.magic_accuracy = {
-        main=gear.weapons.mage.macc,
-        sub=gear.grip.macc,
-        ammo="Aqua Sachet",
         head=gear.merlinic.head.MAcc,
         neck=gear.neck.macc,
         ear1=gear.ears.macc_mnd,
         ear2=gear.ears.macc_int,
         body=gear.ambuscade.morrigan.body,
         hands=gear.merlinic.hands.MAcc,
-        ring1=gear.ring.macc,
-        ring2="Aquasoul Ring",
+        ring1="Shiva Ring",
+        ring2="Shiva Ring",
         back=gear.back.macc,
         waist=gear.waist.macc,
         legs=gear.merlinic.legs.MAcc,
@@ -119,8 +125,6 @@ function get_sets()
 
 
     sets.midcast['Elemental Magic'] = set_combine(sets.magic_accuracy, {
-        main=gear.weapons.BLM.Nuke,
-        sub=gear.grip.nuke,
         ammo=gear.ammo.mdmg,
         head=gear.merlinic.head.MAB,
         neck=gear.neck.macc,
@@ -130,18 +134,36 @@ function get_sets()
         hands=gear.ambuscade.morrigan.hands,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
-        back="Toro Cape",
+        back=gear.jsecapes.amb.blm.mab,
         waist=gear.waist.macc,
         legs=gear.merlinic.legs.MAB,
         feet=gear.merlinic.feet.MAB
+    })
+    sets.midcast['Elemental Magic']['burst'] = set_combine(sets.midcast['Elemental Magic'], {
+        hands = gear.merlinic.hands.burst
+    })
+
+    sets.midcast['Comet'] = set_combine(sets.midcast['Elemental Magic'], {
+        head = gear.head.dark_magic
+    })
+    sets.midcast['Comet']['burst'] = set_combine(sets.midcast['Elemental Magic']['burst'], {
+        head = gear.head.dark_magic
     })
 
     sets.MPReturn = { body="Spaekona's Coat +1" }
 
     sets.midcast['Dark Magic'] = set_combine(sets.magic_accuracy, {
+        ring1=gear.ring.drain_aspir
     })
 
-    -- Specific spells
+    sets.midcast.DrainAspir = set_combine(sets.midcast['Dark Magic'], {
+        waist="Casso Sash"
+    })
+    sets.midcast['Drain'] = set_combine(sets.midcast.DrainAspir, {})
+    sets.midcast['Aspir'] = set_combine(sets.midcast.DrainAspir, {})
+    sets.midcast['Aspir II'] = set_combine(sets.midcast.DrainAspir, {})
+    sets.midcast['Aspir III'] = set_combine(sets.midcast.DrainAspir, {})
+
     sets.midcast['Sneak'] = set_combine(sets.midcast['Enhancing Magic'], {
         back="Skulker's Cape"
     })

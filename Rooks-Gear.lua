@@ -13,6 +13,7 @@ function init_gear()
     gear.ammo.mdmg = { name = "Dosis Tathlum" }
 
     gear.neck = {}
+    gear.neck.hp = { name="Dualism Collar +1" }
     gear.neck.cure_potency = { name="Phalaina Locket" }
     gear.neck.dt = { name="Twilight Torque" }
     gear.neck.idle = { name="Twilight Torque" }
@@ -38,6 +39,7 @@ function init_gear()
     gear.ears.macc_mnd = { name="Lifestorm Earring" }
     gear.ears.macc_int = { name="Psystorm Earring" }
     gear.ears.ws = { name="Moonshade Earring" }
+    gear.ears.wsd = { name="Ishvara Earring" }
     gear.ears.mab_left = { name="Friomisi Earring" }
     gear.ears.mab_right = { name="Hecate's Earring" }
     gear.ears.enmity_right = { name="Friomisi Earring" }
@@ -60,6 +62,7 @@ function init_gear()
     gear.ring.healing_right = { name="Ephedra Ring" }
     gear.ring.enmity_left = { name="Eihwaz Ring" }
     gear.ring.enmity_right = { name="Provocare Ring" }
+    gear.ring.drain_aspir = { name="Evanescence Ring" }
 
     gear.waist = {}
     gear.waist.hp = { name="Ocean Sash" }
@@ -91,6 +94,7 @@ function init_gear()
 
     -- Random all jobs visible pieces
     gear.head = {}
+    gear.head.dark_magic = { name="Pixie Hairpin +1" }
     gear.head.mage_refresh = { name="Befouled Crown" }
     gear.body = {}
     gear.body.mage_cure_potency = { name="Vrikodara Jupon" }
@@ -134,7 +138,7 @@ function init_gear()
     gear.jsecapes.amb.drk.idle = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
     gear.jsecapes.amb.drk.tp = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
     gear.jsecapes.amb.drk.ws = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
-    gear.jsecapes.amb.drk.wsd = { name="Ankou's Mantle", augments={'STR+6','VIT+20', 'Accuracy+20 Attack+20', 'Weapon skill damage +10%'}}
+    gear.jsecapes.amb.drk.wsd = { name="Ankou's Mantle", augments={'STR+7','VIT+20', 'Accuracy+20 Attack+20', 'Weapon skill damage +10%'}}
 
 
     -- Skirmish pieces
@@ -209,6 +213,12 @@ function init_gear()
     gear.eschite.feet = { name="Eschite Greaves" }
     gear.eschite.feet.A = { name="Eschite Greaves", augments={'HP+75', 'Enmity+6', 'Phys. dmg. taken -3%'} }
 
+    gear.psycloth = {}
+    gear.psycloth.legs = { name="Psycloth Lappas" }
+    gear.psycloth.legs.D = { name="Psycloth Lappas" }
+
+
+
     -- 119 Abjuration pieces
 
     gear.souveran = {}
@@ -259,6 +269,9 @@ function init_gear()
     gear.odyssean.legs.tp = { name="Odyssean Cuisses", augments={'Accuracy+27','"Store TP"+5','DEX+10','Attack+3'}}
     gear.odyssean.legs.ws = { name="Odyssean Cuisses", augments={'Accuracy+27','"Store TP"+5','DEX+10','Attack+3'}}
     gear.odyssean.legs.dt = { name="Odyssean Cuisses", augments={'Accuracy+1','"Resist Silence"+7','Damage taken-5%','Accuracy+10 Attack+10','Mag. Acc.+16 "Mag.Atk.Bns."+16',}}
+    gear.odyssean.feet = { name="Odyssean Greaves" }
+    gear.odyssean.feet.tp = { name="Odyssean Greaves", augments={'Accuracy+23 Attack+23','DEX+7','Accuracy+15',}}
+    gear.odyssean.feet.fc = { name="Odyssean Greaves", augments={'Accuracy+23 Attack+23','DEX+7','Accuracy+15',}}
 
     gear.herculean = {}
     gear.herculean.head = { name="Herculean Helm" }
@@ -279,6 +292,7 @@ function init_gear()
     gear.merlinic.head.dt = { name="Merlinic Hood", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','"Fast Cast"+4','CHR+1','Mag. Acc.+11','"Mag.Atk.Bns."+12'}}
     gear.merlinic.head.fc = { name="Merlinic Hood", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','"Fast Cast"+4','CHR+1','Mag. Acc.+11','"Mag.Atk.Bns."+12'}}
     gear.merlinic.hands = { name="Merlinic Dastanas" }
+    gear.merlinic.hands.burst = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst mdg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
     gear.merlinic.hands.MAB = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst mdg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
     gear.merlinic.hands.MAcc = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst mdg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
     gear.merlinic.hands.dt = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst mdg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
