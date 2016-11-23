@@ -34,6 +34,7 @@ function get_sets()
     sets.idle.regen = set_combine(sets.idle, {
         head="Wivre Hairpin",
         neck=gear.neck.regen,
+        body=gear.ambuscade.morrigan.body,
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
         waist=gear.waist.mage_idle
@@ -137,6 +138,11 @@ function get_sets()
         legs="Nahtirah Trousers"
     })
 
+    sets.WS['Sanguine Blade'] = set_combine(sets.WS, {
+        head=gear.head.dark_magic,
+        ear1="Brutal Earring",
+        ear2="Moonshade Earring"
+    })
 
     -- Magic sets. Lots of them!
 

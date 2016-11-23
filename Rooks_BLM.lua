@@ -140,7 +140,9 @@ function get_sets()
         feet=gear.merlinic.feet.MAB
     })
     sets.midcast['Elemental Magic']['burst'] = set_combine(sets.midcast['Elemental Magic'], {
-        hands = gear.merlinic.hands.burst
+        hands = gear.merlinic.hands.burst,
+        ring1 = gear.ring.mb_left,
+        ring2 = gear.ring.mb_right
     })
 
     sets.midcast['Comet'] = set_combine(sets.midcast['Elemental Magic'], {
@@ -183,7 +185,7 @@ function job_midcast(spell)
 
     if spell.skill == 'Elemental Magic' then
         if mp_efficiency == 1 then
-            equip(set_combine(sets.midcast['Elemental Magic'], sets.MPReturn))
+            equip(sets.MPReturn)
         end
     end
 end

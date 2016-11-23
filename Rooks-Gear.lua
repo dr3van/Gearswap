@@ -63,6 +63,8 @@ function init_gear()
     gear.ring.enmity_left = { name="Eihwaz Ring" }
     gear.ring.enmity_right = { name="Provocare Ring" }
     gear.ring.drain_aspir = { name="Evanescence Ring" }
+    gear.ring.mb_left = { name="Mujin Band" }
+    gear.ring.mb_right = { name="Locus Ring" }
 
     gear.waist = {}
     gear.waist.hp = { name="Ocean Sash" }
@@ -297,16 +299,16 @@ function init_gear()
     gear.merlinic.hands.MAcc = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst mdg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
     gear.merlinic.hands.dt = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst mdg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
     gear.merlinic.legs = { name="Merlinic Shalwar"}
-    gear.merlinic.legs.MAB = { name="Merlinic Shalwar", augments={'Mag. Acc.+10','Magic Damage +15','INT+9','"Mag.Atk.Bns."+13',}}
-    gear.merlinic.legs.MAcc = { name="Merlinic Shalwar", augments={'Mag. Acc.+10','Magic Damage +15','INT+9','"Mag.Atk.Bns."+13',}}
-    gear.merlinic.legs.MB = { name="Merlinic Shalwar", augments={'Mag. Acc.+10','Magic Damage +15','INT+9','"Mag.Atk.Bns."+13',}}
-    gear.merlinic.legs.MDmg = { name="Merlinic Shalwar", augments={'Mag. Acc.+10','Magic Damage +15','INT+9','"Mag.Atk.Bns."+13',}}
-    gear.merlinic.legs.dt = { name="Merlinic Shalwar", augments={'Mag. Acc.+10','Magic Damage +15','INT+9','"Mag.Atk.Bns."+13',}}
+    gear.merlinic.legs.MAB = { name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+29','Magic burst mdg.+7%','CHR+6'}}
+    gear.merlinic.legs.MAcc = { name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+29','Magic burst mdg.+7%','CHR+6'}}
+    gear.merlinic.legs.MB = { name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+29','Magic burst mdg.+7%','CHR+6'}}
+    gear.merlinic.legs.MDmg = { name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+29','Magic burst mdg.+7%','CHR+6'}}
+    gear.merlinic.legs.dt = { name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+29','Magic burst mdg.+7%','CHR+6'}}
     gear.merlinic.feet = { name="Merlinic Crackows" }
-    gear.merlinic.feet.MAB = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+29','INT+8','Mag. Acc.+15'}}
-    gear.merlinic.feet.MAcc = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+29','INT+8','Mag. Acc.+15'}}
-    gear.merlinic.feet.fc = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+29','INT+8','Mag. Acc.+15'}}
-    gear.merlinic.feet.dt = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+29','INT+8','Mag. Acc.+15'}}
+    gear.merlinic.feet.MAB = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','Magic burst mdg.+10%','CHR+1'}}
+    gear.merlinic.feet.MAcc = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','Magic burst mdg.+10%','CHR+1'}}
+    gear.merlinic.feet.fc = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','Magic burst mdg.+10%','CHR+1'}}
+    gear.merlinic.feet.dt = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','Magic burst mdg.+10%','CHR+1'}}
 
     gear.valorous = {}
     gear.valorous.feet = { name="Valorous Greaves" }

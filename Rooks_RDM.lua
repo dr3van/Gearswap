@@ -117,7 +117,7 @@ function get_sets()
         ear2=gear.ears.macc_int,
         body=gear.vanya.body.C,
         hands="Leyline Gloves",
-        ring1=gear.ring.macc,
+        ring1="Shiva Ring",
         ring2="Shiva Ring",
         back=gear.back.macc,
         waist=gear.waist.macc,
@@ -129,7 +129,8 @@ function get_sets()
     })
 
     sets.midcast['Enfeebling Magic']['White Magic'] = set_combine(sets.midcast['Enfeebling Magic'], {
-        ring2="Aquasoul Ring",
+        ring1="Levia. Ring",
+        ring2="Levia. Ring",
     })
 
     sets.midcast['Enfeebling Magic']['Black Magic'] = set_combine(sets.midcast['Enfeebling Magic'], {
