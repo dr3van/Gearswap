@@ -134,7 +134,7 @@ function get_sets()
         neck="Colossus's torque",
         body=gear.telchine.body,
         back=gear.back.conserve_mp,
-        waist="Austerity Belt",
+        waist=gear.waist.conserve_mp,
         legs="Ebers Pantaloons",
         feet="Ebers Duckbills"
     }
@@ -187,7 +187,7 @@ function get_sets()
         ring1="Sirona's Ring",
         ring2="Ephedra Ring",
         back="Oretania's Cape +1",
-        waist="Austerity Belt",
+        waist=gear.waist.conserve_mp,
         legs="Ebers Pantaloons",
         feet="Vanya Clogs"
     }
@@ -211,7 +211,7 @@ function get_sets()
         ring1="Sirona's Ring",
         ring2="Ephedra Ring",
         back="Oretania's Cape +1",
-        waist="Austerity Belt",
+        waist=gear.waist.conserve_mp,
         legs="Theophany Pantaloons +1",
         feet="Vanya Clogs"
     }

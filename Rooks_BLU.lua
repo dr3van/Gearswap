@@ -151,7 +151,7 @@ function get_sets()
         head="Luh. Keffiyeh +1",
         body="Assim. Jubbah +1",
         back=gear.jsecapes.blu,
-        legs="Mavi Tayt +2",
+        legs="Hashishin Tayt +1",
         feet="Mirage Charuqs +2"
     }
 
@@ -184,8 +184,8 @@ function get_sets()
         ear1=gear.ears.macc_mnd,
         ear2=gear.ears.macc_int,
         hands=gear.taeon.hands.tp,
-        ring1="Rajas Ring",
-        ring2="Ifrit Ring",
+        ring1="Ifrit Ring",
+        ring2="Ifrit Ring +1",
         back="Buquwik Cape",
         waist="Dynamic Belt +1",
         feet=gear.herculean.feet.tp
@@ -392,6 +392,7 @@ function get_sets()
         ["Vertical Cleave"] = "sets.blue.physical.STR",
         
         ["Acrid Stream"] = "sets.blue.magical.MND",
+        ["Anvil Lightning"] = "sets.blue.magical.DEX",
         ["Blastbomb"] = "sets.blue.magical.INT",
         ["Blazing Bound"] = "sets.blue.magical.STR",
         ["Blitztrahl"] = "sets.blue.magical.INTMND",
@@ -414,6 +415,7 @@ function get_sets()
         ["Regurgitation"] = "sets.blue.magical.MND",
         ["Sandspin"] = "sets.blue.magical.INT",
         ["Subduction"] = "sets.blue.magical.INT",
+        ["Tenebral Crush"] = "sets.blue.magical.INTMND",
         ["Thermal Pulse"] = "sets.blue.magical.VIT",
         ["Water Bomb"] = "sets.blue.magical.INTMND",
         

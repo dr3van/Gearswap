@@ -156,7 +156,7 @@ function get_sets()
         body=gear.ambuscade.ares.body,
         hands=gear.odyssean.hands.ws,
         ring1="Titan Ring",
-        ring2="Titan Ring",
+        ring2="Titan Ring +1",
         back=gear.jsecapes.amb.drk.wsd,
         waist=gear.waist.ws,
         legs=gear.ambuscade.ares.legs,
@@ -180,7 +180,7 @@ function get_sets()
 
     sets.maxHP = {
         ammo="Egoist's Tathlum",
-        head=gear.jse.empyrean.pld.head,
+        head=gear.souveran.head.C,
         neck=gear.neck.hp,
         ear1="Calamitous Earring",
         ear2="Ethereal Earring",
@@ -229,7 +229,7 @@ function get_sets()
     }
 
     sets.midcast.CureSpell = set_combine(sets.midcast['Healing Magic'], {
-        head=gear.eschite.head.D,
+        head=gear.souveran.head.C,
         neck=gear.neck.cure_potency,
         ear1="Nourishing Earring +1",
         ear2="Nourishing Earring",

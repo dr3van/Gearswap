@@ -139,6 +139,22 @@ function get_sets()
         legs=gear.merlinic.legs.MAB,
         feet=gear.merlinic.feet.MAB
     })
+    sets.midcast['Elemental Magic']['highacc'] = set_combine(sets.midcast['Elemental Magic'], {
+        ammo=gear.ammo.mdmg,
+        head=gear.ambuscade.morrigan.head,
+        neck=gear.neck.macc,
+        ear1=gear.ears.mab_left,
+        ear2=gear.ears.mab_right,
+        body=gear.ambuscade.morrigan.body,
+        hands=gear.ambuscade.morrigan.hands,
+        ring1="Shiva Ring",
+        ring2="Shiva Ring",
+        back=gear.jsecapes.amb.blm.mab,
+        waist=gear.waist.macc,
+        legs=gear.ambuscade.morrigan.legs,
+        feet=gear.ambuscade.morrigan.feet
+    })
+
     sets.midcast['Elemental Magic']['burst'] = set_combine(sets.midcast['Elemental Magic'], {
         hands = gear.merlinic.hands.burst,
         ring1 = gear.ring.mb_left,

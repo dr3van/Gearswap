@@ -84,7 +84,7 @@ function get_sets()
         ammo="Seething Bomblet +1",
         head=gear.lustratio.head.A,
         neck=gear.neck.ws,
-        ear1="Brutal Earring",
+        ear1=gear.ears.wsd,
         ear2=gear.ears.ws,
         body=gear.ambuscade.skadi.body,
         hands=gear.lustratio.hands.A,
@@ -94,6 +94,22 @@ function get_sets()
         waist=gear.waist.ws,
         legs=gear.herculean.legs.ws,
         feet=gear.lustratio.feet.A
+    }
+
+    sets.WS['Aeolian Edge'] = {
+        ammo="Seething Bomblet +1",
+        head=gear.herculean.head.tp,
+        neck=gear.neck.mab,
+        ear1=gear.ears.wsd,
+        ear2=gear.ears.ws,
+        body="Samnuha Coat",
+        hands=gear.ambuscade.skadi.hands,
+        ring1="Ramuh Ring +1",
+        ring2="Shiva Ring",
+        back="Toro Cape",
+        waist="Eschan Stone",
+        legs=gear.herculean.legs.ws,
+        feet=gear.herculean.feet.ws
     }
 
     send_command('input /macro book 6;wait .1;input /macro set 3')

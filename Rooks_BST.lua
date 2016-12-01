@@ -67,7 +67,7 @@ function get_sets()
         body=gear.argosy.body.A,
         hands=gear.argosy.hands.A,
         ring1="Rajas Ring",
-        ring2="Ifrit Ring",
+        ring2="Ifrit Ring +1",
         back="Letalis Mantle",
         waist=gear.waist.ws,
         legs=gear.ambuscade.skadi.legs,

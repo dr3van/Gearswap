@@ -83,7 +83,7 @@ function get_sets()
         body="Bagua Tunic",
         hands="Geomancy Mitaines",
         back="Lifestream Cape",
-        waist="Austerity Belt"
+        waist=gear.waist.conserve_mp
     }
 
     sets.midcast['Dark Magic'] = set_combine(sets.midcast['Elemental Magic'], {

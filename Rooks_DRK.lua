@@ -139,10 +139,10 @@ function get_sets()
         body=gear.argosy.body.A,
         hands=gear.argosy.hands.A,
         ring1="Rajas Ring",
-        ring2="Ifrit Ring",
+        ring2="Ifrit Ring +1",
         back=gear.jsecapes.amb.drk.ws,
         waist=gear.waist.ws,
-        legs=gear.ambuscade.ares.legs,
+        legs=gear.argosy.legs.D,
         feet=gear.argosy.feet.A
 	}
 
@@ -154,8 +154,8 @@ function get_sets()
         ear2=gear.ears.da_right,
         body=gear.ambuscade.ares.body,
         hands=gear.odyssean.hands.ws,
-        ring1="Ifrit Ring",
-        ring2="Titan Ring",
+        ring1="Ifrit Ring +1",
+        ring2="Titan Ring +1",
         back=gear.jsecapes.amb.drk.wsd,
         waist=gear.waist.ws,
         legs=gear.ambuscade.ares.legs,
@@ -171,7 +171,7 @@ function get_sets()
         body=gear.ambuscade.ares.body,
         hands=gear.odyssean.hands.ws,
         ring1="Titan Ring",
-        ring2="Titan Ring",
+        ring2="Titan Ring +1",
         back=gear.jsecapes.amb.drk.wsd,
         waist=gear.waist.ws,
         legs=gear.ambuscade.ares.legs,
@@ -181,6 +181,7 @@ function get_sets()
     sets.WS['Resolution'] = set_combine(sets.WS, {
         ear1="Brutal Earring",
         ear2=gear.ears.ws,
+        ring1="Ifrit Ring"
     })
 
     sets.magic_accuracy = {
@@ -211,6 +212,7 @@ function get_sets()
     sets.midcast.DrainAspir = set_combine(sets.midcast['Dark Magic'], {
         head="",
         body="Lugra Cloak",
+        waist=gear.waist.drain_aspir
     })
     sets.midcast['Drain'] = set_combine(sets.midcast.DrainAspir, {})
     sets.midcast['Drain II'] = set_combine(sets.midcast.DrainAspir, {})

@@ -165,7 +165,7 @@ function get_sets()
         body=gear.jse.relic.rdm.head,
         hands=gear.jse.relic.rdm.hands,
         back="Estoqueur's Cape",
-        waist="Austerity Belt",
+        waist=gear.waist.conserve_mp,
         legs=gear.jse.artifact.rdm.legs,
         feet=gear.jse.empyrean.rdm.feet
     })

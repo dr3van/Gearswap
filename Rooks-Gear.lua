@@ -19,7 +19,7 @@ function init_gear()
     gear.neck.idle = { name="Twilight Torque" }
     gear.neck.enmity = { name="Invidia Torque" }
     gear.neck.regen = { name="Wiglen Gorget" }
-    gear.neck.mab = { name="Eddy Necklace" }
+    gear.neck.mab = { name="Sanctity Necklace" }
     gear.neck.macc = { name="Sanctity Necklace" }
     gear.neck.acc = { name="Sanctity Necklace" }
     gear.neck.regen = { name="Wiglen Gorget" }
@@ -74,10 +74,12 @@ function init_gear()
     gear.waist.macc = { name="Porous Rope" }
     gear.waist.mage_idle = { name="Fucho-no-obi" }
     gear.waist.pdt = { name="Flume Belt +1" }
-    gear.waist.conserve_mp = { name="Austerity Belt" }
-    gear.waist.highacc = { name="Anguinus Belt" }
+    gear.waist.conserve_mp = { name="Austerity Belt +1" }
+    gear.waist.hmp = { name="Austerity Belt +1" }
+    gear.waist.highacc = { name="Eschan Stone" }
     gear.waist.nohaste = { name="Windbuffet Belt +1" }
     gear.waist.highhaste = { name="Pya'ekue Belt +1" }
+    gear.waist.drain_aspir = { name="Austerity Belt +1" }
 
     gear.back = {}
     gear.back.conserve_mp = { name="Solemnity Cape" }
@@ -140,7 +142,7 @@ function init_gear()
     gear.jsecapes.amb.drk.idle = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
     gear.jsecapes.amb.drk.tp = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
     gear.jsecapes.amb.drk.ws = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
-    gear.jsecapes.amb.drk.wsd = { name="Ankou's Mantle", augments={'STR+7','VIT+20', 'Accuracy+20 Attack+20', 'Weapon skill damage +10%'}}
+    gear.jsecapes.amb.drk.wsd = { name="Ankou's Mantle", augments={'STR+8','VIT+20', 'Accuracy+20 Attack+20', 'Weapon skill damage +10%'}}
 
 
     -- Skirmish pieces
@@ -213,7 +215,7 @@ function init_gear()
     gear.eschite.legs = { name="Eschite Cuisses" }
     gear.eschite.legs.D = { name="Eschite Cuisses", augments={'"Mag.Atk.Bns."+25','"Conserve MP"+6','"Fast Cast"+5'} }
     gear.eschite.feet = { name="Eschite Greaves" }
-    gear.eschite.feet.A = { name="Eschite Greaves", augments={'HP+75', 'Enmity+6', 'Phys. dmg. taken -3%'} }
+    gear.eschite.feet.A = { name="Eschite Greaves", augments={'HP+80', 'Enmity+7', 'Phys. dmg. taken -4%'} }
 
     gear.psycloth = {}
     gear.psycloth.legs = { name="Psycloth Lappas" }
@@ -224,6 +226,8 @@ function init_gear()
     -- 119 Abjuration pieces
 
     gear.souveran = {}
+    gear.souveran.head = { name="Souveran Schaller" }
+    gear.souveran.head.C = { name="Souveran Schaller" }
     gear.souveran.body = { name="Souveran Cuirass" }
     gear.souveran.body.A = { name="Souveran Cuirass", augments={"Accuracy+10", "Attack+10", "Enmity+4"}}
     gear.souveran.hands = { name="Souveran Handschuhs" }
@@ -254,6 +258,7 @@ function init_gear()
     gear.argosy.hands.A = { name="Argosy Mufflers", augments={'STR+10', 'DEX+10', 'Attack+15'} }
     gear.argosy.legs = { name="Argosy Breeches" }
     gear.argosy.legs.A = { name="Argosy Breeches", augments={'STR+10', 'DEX+10', 'Attack+15'} }
+    gear.argosy.legs.D = { name="Argosy Breeches", augments={'STR+10', 'Attack+20', '"Store TP"+5'} }
     gear.argosy.feet = { name="Argosy Sollerets" }
     gear.argosy.feet.A = { name="Argosy Sollerets", augments={'STR+10', 'DEX+10', 'Attack+15'} }
 
@@ -299,16 +304,16 @@ function init_gear()
     gear.merlinic.hands.MAcc = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst mdg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
     gear.merlinic.hands.dt = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst mdg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
     gear.merlinic.legs = { name="Merlinic Shalwar"}
-    gear.merlinic.legs.MAB = { name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+29','Magic burst mdg.+7%','CHR+6'}}
-    gear.merlinic.legs.MAcc = { name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+29','Magic burst mdg.+7%','CHR+6'}}
-    gear.merlinic.legs.MB = { name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+29','Magic burst mdg.+7%','CHR+6'}}
-    gear.merlinic.legs.MDmg = { name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+29','Magic burst mdg.+7%','CHR+6'}}
-    gear.merlinic.legs.dt = { name="Merlinic Shalwar", augments={'"Mag.Atk.Bns."+29','Magic burst mdg.+7%','CHR+6'}}
+    gear.merlinic.legs.MAB = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst mdg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
+    gear.merlinic.legs.MAcc = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst mdg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
+    gear.merlinic.legs.MB = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst mdg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
+    gear.merlinic.legs.MDmg = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst mdg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
+    gear.merlinic.legs.dt = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst mdg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
     gear.merlinic.feet = { name="Merlinic Crackows" }
-    gear.merlinic.feet.MAB = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','Magic burst mdg.+10%','CHR+1'}}
-    gear.merlinic.feet.MAcc = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','Magic burst mdg.+10%','CHR+1'}}
-    gear.merlinic.feet.fc = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','Magic burst mdg.+10%','CHR+1'}}
-    gear.merlinic.feet.dt = { name="Merlinic Crackows", augments={'"Mag.Atk.Bns."+24','Magic burst mdg.+10%','CHR+1'}}
+    gear.merlinic.feet.MAB = { name="Merlinic Crackows", augments={'Magic burst mdg.+11%','Mag. Acc.+12','"Mag.Atk.Bns."+15'}}
+    gear.merlinic.feet.MAcc = { name="Merlinic Crackows", augments={'Magic burst mdg.+11%','Mag. Acc.+12','"Mag.Atk.Bns."+15'}}
+    gear.merlinic.feet.fc = { name="Merlinic Crackows", augments={'Magic burst mdg.+11%','Mag. Acc.+12','"Mag.Atk.Bns."+15'}}
+    gear.merlinic.feet.dt = { name="Merlinic Crackows", augments={'Magic burst mdg.+11%','Mag. Acc.+12','"Mag.Atk.Bns."+15'}}
 
     gear.valorous = {}
     gear.valorous.feet = { name="Valorous Greaves" }
