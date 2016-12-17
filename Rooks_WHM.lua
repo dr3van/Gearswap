@@ -14,7 +14,7 @@ function get_sets()
         ear1=gear.ears.idle_left,
         ear2=gear.ears.idle_right,
         body=gear.body.mage_idle,
-        hands=gear.telchine.hands,
+        hands="Fanatic Gloves",
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
         back=gear.back.mage_idle,
@@ -68,14 +68,19 @@ function get_sets()
     })
 
     sets.combat = {
-        ammo=gear.ammo.haste,
-        neck=gear.neck.acc,
-        ear1=gear.ears.da_left,
-        ear2=gear.ears.da_right,
-        ring1="Rajas ring",
-        ring2="K'ayres Ring",
+        ammo="Hasty Pinion +1",
+        head="Telchine Cap",
+        neck="Sanctity Necklace",
+        ear1="Mache Earring",
+        ear2="Mache Earring",
+        body="Onca Suit",
+        hands="",
+        ring1="Ramuh Ring +1",
+        ring2="Ramuh Ring +1",
         back="Rancorous Mantle",
-        waist="Cetl Belt"
+        waist="Windbuffet Belt +1",
+        legs="",
+        feet=""
     }
     sets.combat.DPS = set_combine(sets.combat, {})
     sets.combat.midacc = set_combine(sets.combat, {})
@@ -90,10 +95,18 @@ function get_sets()
         neck=gear.neck.ws,
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,
-        ring1="Rajas ring",
-        ring2="K'ayres Ring",
+        ring1="Ifrit Ring",
+        ring2="Ifrit Ring +1",
         back="Rancorous Mantle",
         waist=gear.waist.ws
+    })
+
+    sets.WS['Mystic Boon'] = set_combine(sets.WS, {
+        ear1=gear.ears.wsd,
+        ear2=gear.ears.ws,
+        ring1="Levia. Ring",
+        ring2="Levia. Ring",
+
     })
 
     -- Magic sets

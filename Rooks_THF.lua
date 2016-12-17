@@ -84,7 +84,7 @@ function get_sets()
         ammo="Seething Bomblet +1",
         head=gear.lustratio.head.A,
         neck=gear.neck.ws,
-        ear1=gear.ears.wsd,
+        ear1="Mache Earring",
         ear2=gear.ears.ws,
         body=gear.ambuscade.skadi.body,
         hands=gear.lustratio.hands.A,
@@ -93,15 +93,31 @@ function get_sets()
         back="Atheling Mantle",
         waist=gear.waist.ws,
         legs=gear.herculean.legs.ws,
-        feet=gear.lustratio.feet.A
+        feet=gear.lustratio.feet.D
+    }
+
+    sets.WS['Mandalic Stab'] = {
+        ammo="Seething Bomblet +1",
+        head=gear.lustratio.head.A,
+        neck=gear.neck.ws,
+        ear1="Mache Earring",
+        ear2=gear.ears.ws,
+        body=gear.ambuscade.skadi.body,
+        hands=gear.lustratio.hands.A,
+        ring1="Ramuh Ring +1",
+        ring2="Epona's Ring",
+        back="Atheling Mantle",
+        waist=gear.waist.ws,
+        legs=gear.herculean.legs.ws,
+        feet=gear.lustratio.feet.D
     }
 
     sets.WS['Aeolian Edge'] = {
         ammo="Seething Bomblet +1",
         head=gear.herculean.head.tp,
         neck=gear.neck.mab,
-        ear1=gear.ears.wsd,
-        ear2=gear.ears.ws,
+        ear1="Mache Earring",
+        ear2="Mache Earring",
         body="Samnuha Coat",
         hands=gear.ambuscade.skadi.hands,
         ring1="Ramuh Ring +1",

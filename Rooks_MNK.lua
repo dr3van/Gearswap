@@ -85,8 +85,12 @@ function get_sets()
         feet=gear.herculean.feet.tp
     }
     sets.combat.DPS = set_combine(sets.combat, {})
-    sets.combat.midacc = set_combine(sets.combat, {})
-    sets.combat.highacc = set_combine(sets.combat, {})
+    sets.combat.midacc = set_combine(sets.combat, {
+        waist="Eschan Stone",
+        ring1="Ramuh Ring +1",
+        ring2="Ramuh Ring +1",
+    })
+    sets.combat.highacc = set_combine(sets.combat.midacc, {})
     sets.combat.defensive = set_combine(sets.combat, {})
 
     -- WS sets

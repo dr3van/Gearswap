@@ -135,7 +135,7 @@ function get_sets()
         waist=gear.waist.conserve_mp
     }
 
-    sets.macc = {
+    sets.magic_accuracy = {
         main=gear.weapons.mage.macc,
         sub=gear.grip.macc,
         head=gear.merlinic.head.MAcc,
@@ -151,8 +151,8 @@ function get_sets()
         legs=gear.merlinic.legs.MAcc,
         feet=gear.merlinic.feet.MAcc
     }
-    sets.midcast['Divine Magic'] = set_combine(sets.macc, {})
-    sets.midcast['Enfeebling Magic'] = set_combine(sets.macc, {})
+    sets.midcast['Divine Magic'] = set_combine(sets.magic_accuracy, {})
+    sets.midcast['Enfeebling Magic'] = set_combine(sets.magic_accuracy, {})
 
     -- Specific spells
     sets.midcast['Sneak'] = set_combine(sets.midcast['Enhancing Magic'], {
@@ -190,6 +190,19 @@ function get_sets()
         legs=gear.merlinic.legs.MAB,
         feet=gear.merlinic.feet.MAB
     }
+    sets.midcast['Enfeebling Magic'] = set_combine(sets.magic_accuracy, {})
+    sets.midcast['Dark Magic'] = set_combine(sets.magic_accuracy, {
+        ring1=gear.ring.drain_aspir,
+        waist="Casso Sash",
+    })
+
+    sets.midcast.DrainAspir = set_combine(sets.midcast['Dark Magic'], {
+        waist=gear.waist.drain_aspir
+    })
+    sets.midcast['Drain'] = set_combine(sets.midcast.DrainAspir, {})
+    sets.midcast['Aspir'] = set_combine(sets.midcast.DrainAspir, {})
+    sets.midcast['Aspir II'] = set_combine(sets.midcast.DrainAspir, {})
+
 
     send_command('input /macro book 20;wait .1;input /macro set 1')
 end

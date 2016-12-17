@@ -5,7 +5,6 @@ function get_sets()
     init_get_sets(1, 1)
 
     sets.idle = {
-        ammo=gear.ammo.dt,
         head=gear.ambuscade.skadi.head,
         neck=gear.neck.dt,
         ear1=gear.ears.idle_left,

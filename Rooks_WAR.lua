@@ -23,6 +23,7 @@ function get_sets()
 
     sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {
+        neck=gear.neck.regen,
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right
     })
@@ -57,17 +58,17 @@ function get_sets()
     sets.JA["Warrior's Charge"] = { legs=gear.jse.relic.war.legs }
 
     sets.combat = {
-        ammo=gear.ammo.haste,
+        ammo="Seething Bomblet +1",
         head=gear.odyssean.head.tp,
-        neck=gear.neck.acc,
+        neck=gear.neck.tp,
         ear1=gear.ears.melee_left,
         ear2=gear.ears.melee_right,
-        body=gear.ambuscade.ares.body,
+        body=gear.ambuscade.phorcys.body,
         hands=gear.ambuscade.phorcys.hands,
         ring1="Rajas Ring",
         ring2="Chirich Ring",
         back=gear.jsecapes.amb.war.tp,
-        waist=gear.waist.highhaste,
+        waist="Dynamic Belt +1",
         legs=gear.odyssean.legs.tp,
         feet=gear.ambuscade.phorcys.feet
     }
@@ -118,9 +119,9 @@ function get_sets()
         hands=gear.argosy.hands.A,
         ring1="Ifrit Ring",
         ring2="Ifrit Ring +1",
-        back=gear.jsecapes.war,
+        back=gear.jsecapes.amb.war.ws,
         waist=gear.waist.ws,
-        legs=gear.odyssean.legs.ws,
+        legs=gear.argosy.legs.D,
         feet=gear.argosy.feet.A
     }
 
@@ -128,26 +129,74 @@ function get_sets()
         ammo="Seething Bomblet +1",
         head=gear.odyssean.head.ws,
         neck=gear.neck.ws,
-        ear1="Brutal Earring",
+        ear1=gear.ears.wsd,
         ear2=gear.ears.ws,
         body=gear.ambuscade.ares.body,
         hands=gear.ambuscade.ares.hands,
         ring1="Ifrit Ring",
         ring2="Ifrit Ring +1",
-        back=gear.jsecapes.war,
+        back=gear.jsecapes.amb.war.ws,
         waist=gear.waist.ws,
         legs=gear.odyssean.legs.ws,
         feet=gear.ambuscade.ares.feet
     })
+
+    sets.WS['Power Slash'] = {
+        ammo="Seething Bomblet +1",
+        head=gear.odyssean.head.ws,
+        neck=gear.neck.ws,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        body=gear.ambuscade.ares.body,
+        hands=gear.odyssean.hands.ws,
+        ring1="Ifrit Ring +1",
+        ring2="Titan Ring +1",
+        back=gear.jsecapes.amb.war.ws,
+        waist=gear.waist.ws,
+        legs=gear.ambuscade.ares.legs,
+        feet=gear.ambuscade.ares.feet
+    }
+
+    sets.WS['Scourge'] = {
+        ammo="Seething Bomblet +1",
+        head=gear.odyssean.head.ws,
+        neck=gear.neck.ws,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        body=gear.ambuscade.ares.body,
+        hands=gear.odyssean.hands.ws,
+        ring1="Ifrit Ring +1",
+        ring2="Titan Ring +1",
+        back=gear.jsecapes.amb.war.ws,
+        waist=gear.waist.ws,
+        legs=gear.ambuscade.ares.legs,
+        feet=gear.ambuscade.ares.feet
+    }
+
+    sets.WS['Ground Strike'] = {
+        ammo="Seething Bomblet +1",
+        head=gear.odyssean.head.ws,
+        neck=gear.neck.ws,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        body=gear.ambuscade.ares.body,
+        hands=gear.odyssean.hands.ws,
+        ring1="Ifrit Ring +1",
+        ring2="Ifrit Ring",
+        back=gear.jsecapes.amb.war.ws,
+        waist=gear.waist.ws,
+        legs=gear.ambuscade.ares.legs,
+        feet=gear.ambuscade.ares.feet
+    }
 
     sets.WS['Resolution'] = set_combine(sets.WS, {
         ear1="Brutal Earring",
         ear2="Moonshade Earring"
     })
 
---    sets.WS.Resolution.MightyStrikes = set_combine(sets.WS.Resolution, {
---        feet="Rvg. Calligae +2"
---    })
+    sets.WS.Resolution.MightyStrikes = set_combine(sets.WS.Resolution, {
+        feet=gear.jse.empyrean.war.feet
+    })
 
     send_command('input /macro book 5;wait .1;input /macro set 1')
 end

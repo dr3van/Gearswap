@@ -10,6 +10,7 @@ function init_gear()
     gear.ammo.enmity = { name="Iron Gobbet" }
     gear.ammo.haste = { name="Hasty Pinion +1" }
     gear.ammo.fc = { name = "Impatiens" }
+    gear.ammo.macc = { name = "Plumose Sachet" }
     gear.ammo.mdmg = { name = "Dosis Tathlum" }
 
     gear.neck = {}
@@ -131,9 +132,10 @@ function init_gear()
     gear.jsecapes.amb.blm.mab = { name="Taranus's Cape"}
     gear.jsecapes.amb.blm.macc = { name="Taranus's Cape"}
     gear.jsecapes.amb.pld = { name="Rudianos's Mantle"}
-    gear.jsecapes.amb.pld.idle = { name="Rudianos's Mantle"}
-    gear.jsecapes.amb.pld.tp = { name="Rudianos's Mantle"}
-    gear.jsecapes.amb.pld.ws = { name="Rudianos's Mantle"}
+    gear.jsecapes.amb.pld.tp = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
+    gear.jsecapes.amb.pld.ws = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
+    gear.jsecapes.amb.pld.idle = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
+    gear.jsecapes.amb.pld.wsd = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20', 'STR+1', 'Weapon skill damage +10%',}}
     gear.jsecapes.amb.war = { name="Cichol's Mantle"}
     gear.jsecapes.amb.war.idle = { name="Cichol's Mantle"}
     gear.jsecapes.amb.war.tp = { name="Cichol's Mantle"}
@@ -143,6 +145,9 @@ function init_gear()
     gear.jsecapes.amb.drk.tp = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
     gear.jsecapes.amb.drk.ws = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
     gear.jsecapes.amb.drk.wsd = { name="Ankou's Mantle", augments={'STR+8','VIT+20', 'Accuracy+20 Attack+20', 'Weapon skill damage +10%'}}
+    gear.jsecapes.amb.sam = { name="Smertrios's Mantle" }
+    gear.jsecapes.amb.sam.tp = { name="Smertrios's Mantle" }
+    gear.jsecapes.amb.sam.ws = { name="Smertrios's Mantle" }
 
 
     -- Skirmish pieces
@@ -316,6 +321,12 @@ function init_gear()
     gear.merlinic.feet.dt = { name="Merlinic Crackows", augments={'Magic burst mdg.+11%','Mag. Acc.+12','"Mag.Atk.Bns."+15'}}
 
     gear.valorous = {}
+    gear.valorous.head = { name="Valorous Mask" }
+    gear.valorous.head.tp = { name="Valorous Mask", augments={'Accuracy+18 Attack+18','Weapon skill damage +4%','Accuracy+7','Attack+5',}}
+    gear.valorous.head.ws = { name="Valorous Mask", augments={'Accuracy+18 Attack+18','Weapon skill damage +4%','Accuracy+7','Attack+5',}}
+    gear.valorous.hands = { name="Valorous Mitts" }
+    gear.valorous.legs = { name="Valorous Hose" }
+    gear.valorous.legs.wsd = { name="Valorous Hose", augments={'STR+4', 'Accuracy+6', 'Attack+15', 'Weapon skill damage +2%'}}
     gear.valorous.feet = { name="Valorous Greaves" }
     gear.valorous.feet.dt = { name="Valorous Greaves", augments={'Accuracy+23','Phys. dmg. taken -1%','DEX+9','Attack+6'}}
     gear.valorous.feet.tp = { name="Valorous Greaves", augments={'Accuracy+23','Phys. dmg. taken -1%','DEX+9','Attack+6'}}
@@ -327,6 +338,7 @@ function init_gear()
     gear.founder.head = { name="Founder's Corona" }
     gear.founder.body = { name="Founder's Breastplate" }
     gear.founder.hands = { name="Founder's Gauntlets" }
+    gear.founder.legs = { name="Founder's Hose" }
     gear.founder.feet = { name="Founder's Greaves" }
 
     -- Weapons
@@ -357,25 +369,25 @@ function init_gear()
 
     -- WAR
     gear.jse.artifact.war = {
-        head="Fighter's Mask",
-        body="Fighter's Lorica",
-        hands="Fighter's Mufflers",
-        legs="Fighter's Cuisses",
-        feet="Ftr. Calligae +1"
+        head="Pumm. Mask +1",
+        body="Pumm. Lorica +1",
+        hands="Fighter's Mufflers +1",
+        legs="Pumm. Cuisses",
+        feet="Pumm. Calligae"
     }
     gear.jse.relic.war = {
         head="Agoge Mask +1",
-        body="Warrior's Lorica",
-        hands="War. Mufflers +2",
-        legs="Warrior's Cuisses",
-        feet="Warrior's Calligae"
+        body="Agoge Lorica +1",
+        hands="Agoge Mufflers +1",
+        legs="Warrior's Cuisses +2",
+        feet="Agoge Calligae +1"
     }
     gear.jse.empyrean.war = {
         head="Ravager's Mask +2",
         body="Rvg. Lorica +2",
         hands="Rvg. Mufflers +2",
         legs="Rvg. Cuisses +2",
-        feet="Rvg. Calligae +2"
+        feet="Boii Calligae +1"
     }
 
     -- RDM

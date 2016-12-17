@@ -7,9 +7,11 @@ function get_sets()
 
     sets.weapons = {}
     sets.weapons['Excalibur'] = { main="Excalibur" }
+    sets.weapons['Burtgang'] = { main="Burtgang" }
+    sets.weapons['Ragnarok'] = { main="Ragnarok" }
     sets.weapons['Aegis'] = { sub="Aegis" }
     sets.weapons['Ochain'] = { sub="Ochain" }
-    sets.weapons['Dagger'] = { main="Kustawi" }
+    sets.weapons['Dagger'] = { main="Malevolence" }
 
     sets.idle = {
         ammo=gear.ammo.dt,
@@ -65,12 +67,12 @@ function get_sets()
         ammo="Hasty Pinion +1",
         head=gear.odyssean.head.tp,
         neck=gear.neck.sword,
-        ear1=gear.ears.da_left,
-        ear2=gear.ears.da_right,
+        ear1=gear.ears.melee_left,
+        ear2=gear.ears.melee_right,
         body=gear.ambuscade.ares.body,
         hands=gear.ambuscade.ares.hands,
         ring1="Rajas Ring",
-        ring2="K'ayres Ring",
+        ring2="Chirich Ring",
         back=gear.jsecapes.amb.pld.tp,
         waist=gear.waist.highhaste,
         legs=gear.ambuscade.ares.legs,
@@ -85,8 +87,8 @@ function get_sets()
         ammo="Hasty Pinion +1",
         head=gear.odyssean.head.tp,
         neck=gear.neck.sword,
-        ear1=gear.ears.da_left,
-        ear2=gear.ears.da_right,
+        ear1=gear.ears.melee_left,
+        ear2=gear.ears.melee_right,
         body=gear.ambuscade.ares.body,
         hands=gear.ambuscade.ares.hands,
         ring1=gear.ring.dt_left,
@@ -116,13 +118,52 @@ function get_sets()
     }
 
     sets.WS.single_hit = set_combine(sets.WS, {
+        head=gear.odyssean.head.ws,
+        neck=gear.neck.ws,
+        ear1=gear.ears.wsd,
+        ear2="Moonshade Earring",
+        body=gear.ambuscade.ares.body,
         hands=gear.odyssean.hands.ws,
+        ring1="Rajas Ring",
+        ring2="Ifrit Ring",
+        back=gear.jsecapes.amb.pld.wsd,
+        waist=gear.waist.ws,
         legs=gear.odyssean.legs.ws,
         feet=gear.ambuscade.ares.feet
     })
 
+    sets.WS['Savage Blade'] = set_combine(sets.single_hit, {
+        legs=gear.valorous.legs.wsd
+    })
+    sets.WS['Circle Blade'] = set_combine(sets.single_hit, {
+        legs=gear.valorous.legs.wsd
+    })
 
-    sets.WS['Atonement'] = set_combine(sets.single_hit, {})
+
+    -- replace: ammo, neck, ring2, back, waist, legs
+    -- improve: hands, legs
+    -- head: 5%
+    -- ear1: 2%
+    -- body: 7%
+    -- hands: 2%
+    -- legs: 2%
+    -- feet: 5%
+    -- total: 23%
+    sets.WS['Atonement'] = set_combine(sets.single_hit, {
+        ammo=gear.ammo.haste,
+        head=gear.odyssean.head.ws,
+        neck=gear.neck.ws,
+        ear1=gear.ears.wsd,
+        ear2="Moonshade Earring",
+        body="Phorcys Korazin",
+        hands=gear.odyssean.hands.ws,
+        ring1="Mujin Band",
+        ring2="Chirich Ring",
+        back=gear.jsecapes.amb.pld.wsd,
+        waist=gear.waist.ws,
+        legs=gear.valorous.legs.wsd,
+        feet=gear.ambuscade.ares.feet
+    })
 
     sets.WS['Knights of Round'] = set_combine(sets.single_hit, {
         head=gear.ambuscade.ares.head,
@@ -134,8 +175,16 @@ function get_sets()
     sets.WS.Requiescat = set_combine(sets.WS, {
         body=gear.ambuscade.ares.body,
         hands=gear.souveran.hands.A,
-        ring1="Aquasoul Ring",
-        ring2="Aquasoul Ring"
+        ring1="Levia. Ring",
+        ring2="Levia. Ring"
+    })
+
+
+    sets.WS.Realmrazer = set_combine(sets.WS, {
+        body=gear.ambuscade.ares.body,
+        hands=gear.souveran.hands.A,
+        ring1="Levia. Ring",
+        ring2="Levia. Ring"
     })
 
     sets.WS['Aeolian Edge'] = set_combine(sets.WS, {
@@ -266,6 +315,19 @@ function get_sets()
         body=gear.jse.relic.pld.body
     })
 
+    -- skill is 350 base: 334 + 16 merits
+    -- progression is: 28.5, 57, 85.5, 114
+    -- skill needed is: 329, 357, 386, 414
+    -- current skill: 375
+    -- 28 + floor((enh - 300.5) / 28.5)
+    -- 28 + floor(74.5 / 28.5)
+    -- 28 + floor(2.6...)
+    -- 28 + 2
+    -- 30
+    -- hands: +4
+    -- cape: +5
+    -- feet: +4
+    -- total: 44 
     sets.midcast['Phalanx'] = set_combine(sets.midcast['Enhancing Magic'], {
         hands=gear.souveran.hands.A,
         back=gear.jsecapes.pld,

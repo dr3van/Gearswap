@@ -27,6 +27,7 @@ function get_sets()
     sets.idle.regen = set_combine(sets.idle, {
         head=gear.jse.relic.rdm.head,
         neck=gear.neck.regen,
+        body=gear.ambuscade.morrigan.body,
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
         waist=gear.waist.mage_idle,
@@ -111,18 +112,19 @@ function get_sets()
     -- Magic sets
     sets.magic_recast = {}
     sets.magic_accuracy = {
+        ammo=gear.ammo.macc,
         head=gear.merlinic.head.MAcc,
         neck=gear.neck.macc,
         ear1=gear.ears.macc_mnd,
         ear2=gear.ears.macc_int,
         body=gear.vanya.body.C,
-        hands="Leyline Gloves",
+        hands=gear.ambuscade.morrigan.hands,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
         back=gear.back.macc,
         waist=gear.waist.macc,
         legs=gear.ambuscade.morrigan.legs,
-        feet="Medium's Sabots"
+        feet=gear.ambuscade.morrigan.feet
     }
 
     sets.midcast['Enfeebling Magic'] = set_combine(sets.magic_accuracy, {
@@ -134,6 +136,7 @@ function get_sets()
     })
 
     sets.midcast['Enfeebling Magic']['Black Magic'] = set_combine(sets.midcast['Enfeebling Magic'], {
+        body=gear.ambuscade.morrigan.body
     })
 
     sets.precast.CureSpell = set_combine(sets.precast.FC, {

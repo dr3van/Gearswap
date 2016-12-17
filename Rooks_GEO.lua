@@ -24,6 +24,7 @@ function get_sets()
 
     sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {
+        neck=gear.neck.regen,
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right
     })
@@ -80,7 +81,7 @@ function get_sets()
 
     sets.midcast['Geomancy'] = {
         head="Hike Khat",
-        body="Bagua Tunic",
+        body="Bagua Tunic +1",
         hands="Geomancy Mitaines",
         back="Lifestream Cape",
         waist=gear.waist.conserve_mp
