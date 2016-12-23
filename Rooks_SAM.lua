@@ -6,7 +6,6 @@ function get_sets()
     init_get_sets(1, 1)
 
 	sets.idle = {
-        ammo=gear.ammo.dt,
 		head="Loess Barbuta",
         neck=gear.neck.dt,
         ear1=gear.ears.idle_left,
@@ -37,11 +36,11 @@ function get_sets()
     sets.JA = {}
     sets.JA["Meikyo Shisui"] = {}
     sets.JA["Meditate"] = {
-        head="Myn. Kabuto +1",
-        hands="Sao. Kote +2"
+        head="Wakido Kabuto +1",
+        hands="Sao. Kote +2",
         back=gear.jsecapes.amb.sam
     }
-    sets.JA["Warding Circle"] = { head="Myn. Kabuto +1" }
+    sets.JA["Warding Circle"] = { head="Wakido Kabuto +1" }
     sets.JA["Third Eye"] = { legs="Saotome Haidate" }
     sets.JA["Sekkanoki"] = { hands="Unkai Kote +2" }
     sets.JA["Shikikoyo"] = {}
@@ -49,7 +48,6 @@ function get_sets()
     sets.JA["Sengikori"] = { feet="Unkai Sune-Ate +2"}
 
     sets.combat = {
-        ammo="Jukukik Feather",
         head=gear.valorous.head.tp,
         neck=gear.neck.acc,
         ear1=gear.ears.da_left,
@@ -58,7 +56,7 @@ function get_sets()
         hands=gear.ambuscade.phorcys.hands,
         ring1="Rajas Ring",
         ring2="Chirich Ring",
-        back="Letalis Mantle",
+        back=gear.jsecapes.amb.sam,
         waist="Dynamic Belt +1",
         legs=gear.ambuscade.phorcys.legs,
         feet=gear.ambuscade.phorcys.feet
@@ -70,7 +68,6 @@ function get_sets()
         ear2=gear.ears.melee_acc_right
     })
     sets.combat.highacc = set_combine(sets.combat.midacc, {
-        ammo=gear.ammo.haste,
         head=gear.ambuscade.phorcys.head,
         ring1="Ramuh ring +1",
         ring2="Ramuh ring +1"
@@ -80,7 +77,6 @@ function get_sets()
     -- WS sets
 
     sets.WS = {
-        ammo="Thew Bomblet",
         head=gear.valorous.head.ws,
         neck=gear.neck.ws,
         ear1=gear.ears.wsd,
@@ -89,11 +85,17 @@ function get_sets()
         hands=gear.valorous.hands,
         ring1="Ifrit Ring",
         ring2="Ifrit Ring +1",
-        back="Atheling Mantle",
+        back=gear.jsecapes.amb.sam,
         waist=gear.waist.ws,
         legs=gear.valorous.legs.wsd,
         feet=gear.ambuscade.phorcys.feet
 	}
+
+    sets.WS.highacc = set_combine(sets.combat.midacc, {
+        head=gear.ambuscade.phorcys.head,
+        ring1="Ramuh ring +1",
+        ring2="Ramuh ring +1"
+    })
 
     sets.WS["Tachi: Fudo"] = set_combine(sets.WS, {})
     sets.WS["Tachi: Rana"] = set_combine(sets.WS, {})

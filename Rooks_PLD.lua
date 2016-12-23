@@ -5,6 +5,11 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(1, 1)
 
+    combat_sets = {'DPS', 'midacc', 'highacc', 'defensive', 'stp', 'turtle' }
+    combat_sets_description = { 'Physical DPS', 'Moderate physical accuracy', 'High physical accuracy', 'Defensive', 'Store TP', 'Turtle' }
+    combat_index_max = 5
+
+
     sets.weapons = {}
     sets.weapons['Excalibur'] = { main="Excalibur" }
     sets.weapons['Burtgang'] = { main="Burtgang" }
@@ -19,7 +24,7 @@ function get_sets()
         neck="Creed Collar",
         ear1=gear.ears.idle_left,
         ear2=gear.ears.idle_right,
-        body=gear.jse.relic.pld.body,
+        body=gear.jse.artifact.pld.body,
         hands=gear.ambuscade.ares.hands,
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
@@ -55,6 +60,7 @@ function get_sets()
         ammo=gear.ammo.fc,
         head=gear.jse.empyrean.pld.head,
         ear1="Loquac. Earring",
+        body=gear.jse.artifact.pld.body,
         hands=gear.hands.melee_fc,
         ring1=gear.ring.fc_left,
         ring2=gear.ring.fc_right,
@@ -82,7 +88,12 @@ function get_sets()
     })
     sets.combat.midacc = set_combine(sets.combat, {
     })
-    sets.combat.highacc = set_combine(sets.combat.midacc, {})
+    sets.combat.highacc = set_combine(sets.combat.midacc, {
+        ear1="Mache Earring",
+        ear2="Mache Earring",
+        ring1="Ramuh Ring +1",
+        ring2="Ramuh Ring +1"
+    })
     sets.combat.defensive = set_combine(sets.combat, {
         ammo="Hasty Pinion +1",
         head=gear.odyssean.head.tp,
@@ -98,6 +109,22 @@ function get_sets()
         legs=gear.ambuscade.ares.legs,
         feet=gear.ambuscade.ares.feet
     })
+
+    sets.combat.stp = {
+        ammo="Jukukik Feather",
+        head=gear.ambuscade.phorcys.head,
+        neck="Lissome Necklace",
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        body=gear.ambuscade.phorcys.body,
+        hands=gear.ambuscade.phorcys.hands,
+        ring1="Rajas Ring",
+        ring2="Chirich Ring",
+        back=gear.jsecapes.amb.pld.tp,
+        waist=gear.waist.highhaste,
+        legs=gear.odyssean.legs.tp,
+        feet=gear.ambuscade.phorcys.feet
+    }
 
     -- WS sets
 
@@ -233,7 +260,7 @@ function get_sets()
         neck=gear.neck.hp,
         ear1="Calamitous Earring",
         ear2="Ethereal Earring",
-        body=gear.jse.empyrean.pld.body,
+        body=gear.jse.artifact.pld.body,
         hands=gear.jse.relic.pld.hands,
         ring1="Meridian Ring",
         ring2="Eihwaz Ring",

@@ -66,6 +66,7 @@ function init_gear()
     gear.ring.drain_aspir = { name="Evanescence Ring" }
     gear.ring.mb_left = { name="Mujin Band" }
     gear.ring.mb_right = { name="Locus Ring" }
+    gear.ring.racc = { name="Hadjuk Ring" }
 
     gear.waist = {}
     gear.waist.hp = { name="Ocean Sash" }
@@ -78,6 +79,7 @@ function init_gear()
     gear.waist.conserve_mp = { name="Austerity Belt +1" }
     gear.waist.hmp = { name="Austerity Belt +1" }
     gear.waist.highacc = { name="Eschan Stone" }
+    gear.waist.racc = { name="Eschan Stone" }
     gear.waist.nohaste = { name="Windbuffet Belt +1" }
     gear.waist.highhaste = { name="Pya'ekue Belt +1" }
     gear.waist.drain_aspir = { name="Austerity Belt +1" }
@@ -290,6 +292,9 @@ function init_gear()
     gear.herculean.head.tp = { name="Herculean Helm", augments={'Accuracy+28','"Triple Atk."+2','AGI+2','Attack+5',}}
     gear.herculean.head.ws = { name="Herculean Helm", augments={'Accuracy+28','"Triple Atk."+2','AGI+2','Attack+5',}}
     gear.herculean.head.fc = { name="Herculean Helm", augments={'Accuracy+28','"Triple Atk."+2','AGI+2','Attack+5',}}
+    gear.herculean.hands = { name="Herculean Gloves" }
+    gear.herculean.hands.tp = { name="Herculean Gloves", augments={'Accuracy+25 Attack+25','"Triple Atk."+2','DEX+6','Accuracy+13','Attack+2'} }
+    gear.herculean.hands.ws = { name="Herculean Gloves", augments={'Accuracy+25 Attack+25','"Triple Atk."+2','DEX+6','Accuracy+13','Attack+2'} }
     gear.herculean.legs = { name="Herculean Trousers" }
     gear.herculean.legs.tp = { name="Herculean Trousers", augments={'Accuracy+20','"Triple Atk."+3','Attack+4',}}
     gear.herculean.legs.ws = { name="Herculean Trousers", augments={'Accuracy+20','"Triple Atk."+3','Attack+4',}}
@@ -416,7 +421,7 @@ function init_gear()
     -- PLD
     gear.jse.artifact.pld = {
         head="Rev. Coronet +1",
-        body="Rev. Surcoat +1",
+        body="Rev. Surcoat +2",
         hands="Rev. Gauntlets +1",
         legs="Rev. Breeches +1",
         feet="Rev. Leggings +1"

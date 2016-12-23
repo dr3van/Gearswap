@@ -49,18 +49,18 @@ function get_sets()
     sets.combat.defensive = set_combine(sets.combat, {})
 
     sets.ranged = {
-        head="Sylvan Gapette +2",
-        neck="Ocachi Gorget",
-        ear1="Auster's Pearl",
-        ear2="Clearview Earring",
-        body="Amini Caban",
-        hands="Manibozho Gloves",
-        ring1="Rajas Ring",
-        ring2="Pyrosoul Ring",
-        back="Sylvan Chlamys",
-        waist="Elanid Belt",
-        legs="Nahtirah Trousers",
-        feet="Shned. Boots +1"
+        head=gear.ambuscade.skadi.head,
+        neck="Marked Gorget",
+        ear1="Clearview Earring",
+        ear2=,
+        body=gear.ambuscade.skadi.body,
+        hands=gear.ambuscade.skadi.hands,
+        ring1=gear.ring.racc,
+        ring2=gear.ring.racc,
+        back="",
+        waist=gear.waist.racc,
+        legs=gear.ambuscade.skadi.feet,
+        feet=gear.ambuscade.skadi.feet
     }
 
     sets.ranged.lowacc = set_combine(sets.ranged, {})

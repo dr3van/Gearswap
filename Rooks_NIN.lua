@@ -10,7 +10,6 @@ function get_sets()
     gear.idle_feet_night = "Hachi. Kyahan +1"
 
     sets.idle = {
-        ammo="Iron Gobbet",
         head=gear.taeon.head.tp,
         neck=gear.neck.regen,
         ear1=gear.ears.idle_left,
@@ -35,7 +34,6 @@ function get_sets()
     sets.idle.MDT = set_combine(sets.idle.DT, {})
 
     sets.combat = {
-        ammo="Seething Bomblet +1",
         head=gear.herculean.head.tp,
         neck=gear.neck.tp,
         ear1=gear.ears.melee_acc_left,
@@ -65,7 +63,6 @@ function get_sets()
     -- WS sets
 
     sets.WS = {
-        ammo="Seething Bomblet +1",
         head=gear.herculean.head.ws,
         neck=gear.neck.ws,
         ear1="Brutal Earring",

@@ -103,7 +103,7 @@ function get_sets()
         ear2="Moonshade Earring",
         body=gear.taeon.body.ws,
         hands=gear.taeon.hands.ws,
-        ring1="Rajas Ring",
+        ring1="Ifrit Ring +1",
         ring2="Epona's Ring",
         back="Atheling Mantle",
         waist=gear.waist.ws,
@@ -112,6 +112,11 @@ function get_sets()
     }
     sets.WS['Victory Smite'] = set_combine(sets.WS, {
         back="Rancorous Mantle"
+    })
+
+    sets.WS['Final Heaven'] = set_combine(sets.WS, {
+        ring1="Titan Ring",
+        ring2="Titan Ring +1",
     })
 
     send_command('input /macro book 4;wait .1;input /macro set 3')
