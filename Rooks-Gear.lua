@@ -66,7 +66,7 @@ function init_gear()
     gear.ring.drain_aspir = { name="Evanescence Ring" }
     gear.ring.mb_left = { name="Mujin Band" }
     gear.ring.mb_right = { name="Locus Ring" }
-    gear.ring.racc = { name="Hadjuk Ring" }
+    gear.ring.racc = { name="Hajduk Ring" }
 
     gear.waist = {}
     gear.waist.hp = { name="Ocean Sash" }
@@ -137,7 +137,7 @@ function init_gear()
     gear.jsecapes.amb.pld.tp = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
     gear.jsecapes.amb.pld.ws = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
     gear.jsecapes.amb.pld.idle = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
-    gear.jsecapes.amb.pld.wsd = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20', 'STR+1', 'Weapon skill damage +10%',}}
+    gear.jsecapes.amb.pld.wsd = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20', 'STR+9', 'Weapon skill damage +10%',}}
     gear.jsecapes.amb.war = { name="Cichol's Mantle"}
     gear.jsecapes.amb.war.idle = { name="Cichol's Mantle"}
     gear.jsecapes.amb.war.tp = { name="Cichol's Mantle"}
@@ -150,6 +150,9 @@ function init_gear()
     gear.jsecapes.amb.sam = { name="Smertrios's Mantle" }
     gear.jsecapes.amb.sam.tp = { name="Smertrios's Mantle" }
     gear.jsecapes.amb.sam.ws = { name="Smertrios's Mantle" }
+    gear.jsecapes.amb.rng = { name="Belenus's Cape" }
+    gear.jsecapes.amb.rng.tp = { name="Belenus's Cape" }
+    gear.jsecapes.amb.rng.ws = { name="Belenus's Cape" }
 
 
     -- Skirmish pieces
@@ -232,6 +235,9 @@ function init_gear()
 
     -- 119 Abjuration pieces
 
+    gear.adhemar = {}
+    gear.adhemar.body = { name="Adhemar Jacket" }
+
     gear.souveran = {}
     gear.souveran.head = { name="Souveran Schaller" }
     gear.souveran.head.C = { name="Souveran Schaller" }
@@ -296,9 +302,11 @@ function init_gear()
     gear.herculean.hands.tp = { name="Herculean Gloves", augments={'Accuracy+25 Attack+25','"Triple Atk."+2','DEX+6','Accuracy+13','Attack+2'} }
     gear.herculean.hands.ws = { name="Herculean Gloves", augments={'Accuracy+25 Attack+25','"Triple Atk."+2','DEX+6','Accuracy+13','Attack+2'} }
     gear.herculean.legs = { name="Herculean Trousers" }
+    gear.herculean.legs.ranged = { name="Herculean Trousers", augments={'Rng.Acc.+16 Rng.Atk.+16','"Subtle Blow"+8','AGI+11','Rng.Acc.+14','Rng.Atk.+8'}}
     gear.herculean.legs.tp = { name="Herculean Trousers", augments={'Accuracy+20','"Triple Atk."+3','Attack+4',}}
     gear.herculean.legs.ws = { name="Herculean Trousers", augments={'Accuracy+20','"Triple Atk."+3','Attack+4',}}
     gear.herculean.feet = { name="Herculean Boots" }
+    gear.herculean.feet.ranged = { name="Herculean Boots", augments={'Rng.Acc.+30','Phys. dmg. taken -2%','STR+14','Rng.Atk.+14'}}
     gear.herculean.feet.tp = { name="Herculean Boots", augments={'Accuracy+16 Attack+16','"Triple Atk."+3','Accuracy+14',}}
     gear.herculean.feet.ws = { name="Herculean Boots", augments={'Accuracy+16 Attack+16','"Triple Atk."+3','Accuracy+14',}}
 

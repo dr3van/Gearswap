@@ -34,11 +34,11 @@ function get_sets()
         neck=gear.neck.tp,
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,
-        body=gear.taeon.body.tp,
-        hands=gear.taeon.hands.tp,
+        body=gear.adhemar.body,
+        hands=gear.herculean.hands.tp,
         ring1="Rajas Ring",
-        ring2="K'ayres Ring",
-        back="Atheling Mantle",
+        ring2="Chirich Ring",
+        back="Letalis Mantle",
         waist=gear.waist.nohaste,
         legs=gear.herculean.legs.tp,
         feet=gear.herculean.feet.tp
@@ -48,71 +48,70 @@ function get_sets()
     sets.combat.highacc = set_combine(sets.combat, {})
     sets.combat.defensive = set_combine(sets.combat, {})
 
+    -- 44% from VS, caban, base jse cape, gifts
+    -- 10% from pants
+    -- 4% from mani gloves
+    sets.snapshot = {
+        body="Amini Caban +1",
+        hands="Manibozho Gloves",
+        back=gear.jsecapes.amb.rng.tp,
+        legs="Nahtirah Trousers"
+    }
+
     sets.ranged = {
         head=gear.ambuscade.skadi.head,
         neck="Marked Gorget",
         ear1="Clearview Earring",
-        ear2=,
-        body=gear.ambuscade.skadi.body,
+        ear2="Enervating Earring",
+        body=gear.adhemar.body,
         hands=gear.ambuscade.skadi.hands,
-        ring1=gear.ring.racc,
-        ring2=gear.ring.racc,
-        back="",
+        ring1="Apate Ring",
+        ring2="Bellona's Ring",
+        back=gear.jsecapes.amb.rng.tp,
         waist=gear.waist.racc,
-        legs=gear.ambuscade.skadi.feet,
-        feet=gear.ambuscade.skadi.feet
+        legs=gear.herculean.legs.ranged,
+        feet=gear.herculean.feet.ranged
     }
 
     sets.ranged.lowacc = set_combine(sets.ranged, {})
     sets.ranged.midacc = set_combine(sets.ranged, {})
     sets.ranged.highacc = set_combine(sets.ranged, {
-        head="Whirlpool Mask",
-        ring1="Hajduk Ring",
-        ring2="Hajduk Ring",
-        back="Jaeger Mantle"
+        ring1=gear.ring.racc,
+        ring2=gear.ring.racc
     })
 
 
     -- WS sets
 
     sets.WS = {
-        head="Whirlpool Mask",
-        neck="Fotia Gorget",
-        ear1="Bladeborn Earring",
-        ear2="Steelflash Earring",
-        body="Shned. Tabard +1",
-        hands="Shned. Gloves +1",
-        ring1="Rajas Ring",
-        ring2="Epona's Ring",
-        back="Atheling Mantle",
-        waist="Fotia Belt",
-        legs="Shned. Tights +1",
-        feet="Shned. Boots +1"
+        head=gear.ambuscade.skadi.head,
+        neck=gear.neck.ws,
+        ear1=gear.ears.wsd,
+        ear2="Enervating Earring",
+        body=gear.adhemar.body,
+        hands=gear.ambuscade.skadi.hands,
+        ring1="Apate Ring",
+        ring2="Garuda Ring",
+        back=gear.jsecapes.amb.rng.tp,
+        waist=gear.waist.ws,
+        legs=gear.herculean.legs.ranged,
+        feet=gear.herculean.feet.ranged
 	}
 
     sets.WS['Coronach'] = {
-        head="Whirlpool Mask",
-        neck="Fotia Gorget",
-        ear1="Jupiter's Pearl",
-        ear2="Clearview Earring",
-        body="Shned. Tabard +1",
-        hands="Shned. Gloves +1",
-        ring1="Ifrit Ring",
-        ring2="Ifrit Ring +1",
-        back="Sylvan Chlamys",
-        waist="Fotia Belt",
-        legs="Nahtirah Trousers",
-        feet="Shned. Boots +1"
+        head=gear.ambuscade.skadi.head,
+        neck="Marked Gorget",
+        ear1=gear.ears.wsd,
+        ear2="Enervating Earring",
+        body=gear.adhemar.body,
+        hands=gear.ambuscade.skadi.hands,
+        ring1="Ramuh's Ring +1",
+        ring2="Ramuh's Ring +1",
+        back=gear.jsecapes.amb.rng.tp,
+        waist="Elanid Belt",
+        legs=gear.herculean.legs.ranged,
+        feet=gear.herculean.feet.ranged
     }
-    sets.WS['Coronach']['lowacc'] = set_combine(sets.WS['Coronach'], {})
-    sets.WS['Coronach']['midacc'] = set_combine(sets.WS['Coronach'], {})
-    sets.WS['Coronach']['highacc'] = set_combine(sets.WS['Coronach'], {
-        ear1="Auster's Pearl",
-        body="Amini Caban",
-        hands="Manibozho Gloves",
-        ring1="Hajduk Ring",
-        ring2="Hajduk Ring"
-    })
 
     send_command('input /macro book 17;wait .1;input /macro set 1')
 end
