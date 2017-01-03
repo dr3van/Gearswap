@@ -5,9 +5,9 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(1, 1)
 
-    combat_sets = {'DPS', 'midacc', 'highacc', 'defensive', 'stp', 'turtle' }
-    combat_sets_description = { 'Physical DPS', 'Moderate physical accuracy', 'High physical accuracy', 'Defensive', 'Store TP', 'Turtle' }
-    combat_index_max = 5
+    combat_sets = {'DPS', 'midacc', 'highacc', 'defensive', 'stp', 'turtle', 'hp' }
+    combat_sets_description = { 'Physical DPS', 'Moderate physical accuracy', 'High physical accuracy', 'Defensive', 'Store TP', 'Turtle', 'maxHP' }
+    combat_index_max = 7
 
 
     sets.weapons = {}
@@ -73,8 +73,8 @@ function get_sets()
         ammo="Hasty Pinion +1",
         head=gear.odyssean.head.tp,
         neck=gear.neck.sword,
-        ear1=gear.ears.melee_left,
-        ear2=gear.ears.melee_right,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
         body=gear.ambuscade.ares.body,
         hands=gear.ambuscade.ares.hands,
         ring1="Rajas Ring",
@@ -98,8 +98,8 @@ function get_sets()
         ammo="Hasty Pinion +1",
         head=gear.odyssean.head.tp,
         neck=gear.neck.sword,
-        ear1=gear.ears.melee_left,
-        ear2=gear.ears.melee_right,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
         body=gear.ambuscade.ares.body,
         hands=gear.ambuscade.ares.hands,
         ring1=gear.ring.dt_left,
@@ -122,6 +122,22 @@ function get_sets()
         ring2="Chirich Ring",
         back=gear.jsecapes.amb.pld.tp,
         waist=gear.waist.highhaste,
+        legs=gear.odyssean.legs.tp,
+        feet=gear.ambuscade.phorcys.feet
+    }
+
+    sets.combat.hp = {
+        ammo="Egoist's Tathlum",
+        head=gear.odyssean.head.tp,
+        neck="Sanctity Necklace",
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
+        body=gear.jse.artifact.pld.body,
+        hands=gear.souveran.hands.A,
+        ring1="Ramuh Ring +1",
+        ring2="K'ayres Ring",
+        back=gear.jsecapes.amb.pld.tp,
+        waist="Dynamic Belt +1",
         legs=gear.odyssean.legs.tp,
         feet=gear.ambuscade.phorcys.feet
     }
@@ -243,6 +259,7 @@ function get_sets()
         ammo=gear.ammo.enmity,
         head="Loess Barbuta",
         neck=gear.neck.enmity,
+        ear1="Hearty Earring",
         ear2=gear.ears.enmity_right,
         body=gear.jse.empyrean.pld.body,
         hands=gear.jse.relic.pld.hands,
@@ -314,6 +331,7 @@ function get_sets()
         ring1="Meridian Ring",
         ring2="Eihwaz Ring",
         back="Fierabras's Mantle",
+        legs=gear.souveran.legs.C,
         feet=gear.eschite.feet.A
     })
 

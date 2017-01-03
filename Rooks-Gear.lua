@@ -246,6 +246,7 @@ function init_gear()
     gear.souveran.hands = { name="Souveran Handschuhs" }
     gear.souveran.hands.A = { name="Souveran Handschuhs", augments={"Accuracy+10", "Attack+10", "Enmity+4"}}
     gear.souveran.legs = { name="Souveran Diechlings" }
+    gear.souveran.legs.C = { name="Souveran Diechlings", augments={'HP+80','Enmity+7','Potency of "Cure" effect received+10%'}}
     gear.souveran.legs.D = { name="Souveran Diechlings", augments={'STR+10','VIT+10','Accuracy+15'}}
     gear.souveran.feet = { name="Souveran Schuhs" }
     gear.souveran.feet.D = { name="Souveran Schuhs", augments={"HP+50", "Attack+20", "magic dmg. taken -3%"}}

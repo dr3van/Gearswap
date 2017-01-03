@@ -73,7 +73,7 @@ function get_sets()
         head=gear.herculean.head.tp,
         neck=gear.neck.sword,
         ear1="Brutal Earring",
-        ear2="Suppanomimi",
+        ear2="Mache Earring",
         body=gear.taeon.body.tp,
         hands=gear.herculean.hands.tp,
         ring1="Chirich Ring",
