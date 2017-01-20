@@ -11,18 +11,19 @@ function get_sets()
         neck=gear.neck.dt,
         ear1="Hearty Earring",
         ear2="Ethereal Earring",
-        body=gear.souveran.body.A,
+        body=gear.souveran.body.C,
         hands=gear.ambuscade.ares.hands,
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
         back="Shadow Mantle",
         waist=gear.waist.pdt,
-        legs=gear.odyssean.legs.dt,
+        legs=gear.ambuscade.ares.legs,
         feet="Hermes' Sandals"
     }
 
     sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {
+        head=gear.valorous.head,
         neck=gear.neck.regen,
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right
@@ -33,6 +34,21 @@ function get_sets()
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = set_combine(sets.idle, {})
+
+    sets.maxHP = {
+        head=gear.souveran.head.C,
+        neck=gear.neck.hp,
+        ear1="Calamitous Earring",
+        ear2="Ethereal Earring",
+        body=gear.souveran.body.C,
+        hands=gear.souveran.hands.C,
+        ring1="Meridian Ring",
+        ring2="Eihwaz Ring",
+        back="Fierabras's Mantle",
+        waist="Oneiros Belt",
+        legs=gear.souveran.legs.C,
+        feet=gear.souveran.feet.C
+    }
 
     sets.JA = {}
     sets.JA["Mighty Strikes"] = { hands=gear.jse.relic.war.hands }
@@ -61,8 +77,8 @@ function get_sets()
         ammo="Seething Bomblet +1",
         head=gear.odyssean.head.tp,
         neck=gear.neck.tp,
-        ear1=gear.ears.melee_left,
-        ear2=gear.ears.melee_right,
+        ear1=gear.ears.da_left,
+        ear2=gear.ears.da_right,
         body=gear.ambuscade.phorcys.body,
         hands=gear.ambuscade.phorcys.hands,
         ring1="Rajas Ring",
@@ -190,7 +206,7 @@ function get_sets()
     }
 
     sets.WS['Resolution'] = set_combine(sets.WS, {
-        ear1="Brutal Earring",
+        ear1="Mache Earring",
         ear2="Moonshade Earring"
     })
 
@@ -206,6 +222,7 @@ function job_precast(spell)
         if spell.type == 'WeaponSkill' then
             if sets.WS[spell.name] then
                 if sets.WS[spell.name]["MightyStrikes"] then
+                    windower.add_to_chat(123, "Using MS Reso build")
                     equip(sets.WS[spell.name]["MightyStrikes"])
                 else
                     equip(sets.WS[spell.name])

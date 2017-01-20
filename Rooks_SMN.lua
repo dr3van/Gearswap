@@ -17,7 +17,7 @@ function get_sets()
         ear1=gear.ears.idle_left,
         ear2=gear.ears.idle_right,
         body=gear.body.mage_idle,
-        hands=gear.telchine.hands,
+        hands=gear.merlinic.hands.dt,
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
         back=gear.back.mage_idle,

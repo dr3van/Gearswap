@@ -61,7 +61,7 @@ function get_sets()
     sets.ranged = {
         head=gear.ambuscade.skadi.head,
         neck="Marked Gorget",
-        ear1="Clearview Earring",
+        ear1="Sherida Earring",
         ear2="Enervating Earring",
         body=gear.adhemar.body,
         hands=gear.ambuscade.skadi.hands,
@@ -69,7 +69,7 @@ function get_sets()
         ring2="Bellona's Ring",
         back=gear.jsecapes.amb.rng.tp,
         waist=gear.waist.racc,
-        legs=gear.herculean.legs.ranged,
+        legs=gear.ambuscade.skadi.legs,
         feet=gear.herculean.feet.ranged
     }
 
@@ -87,14 +87,14 @@ function get_sets()
         head=gear.ambuscade.skadi.head,
         neck=gear.neck.ws,
         ear1=gear.ears.wsd,
-        ear2="Enervating Earring",
+        ear2="Sherida Earring",
         body=gear.adhemar.body,
         hands=gear.ambuscade.skadi.hands,
         ring1="Apate Ring",
         ring2="Garuda Ring",
         back=gear.jsecapes.amb.rng.tp,
         waist=gear.waist.ws,
-        legs=gear.herculean.legs.ranged,
+        legs=gear.ambuscade.skadi.legs,
         feet=gear.herculean.feet.ranged
 	}
 
@@ -102,16 +102,32 @@ function get_sets()
         head=gear.ambuscade.skadi.head,
         neck="Marked Gorget",
         ear1=gear.ears.wsd,
-        ear2="Enervating Earring",
+        ear2="Sherida Earring",
         body=gear.adhemar.body,
         hands=gear.ambuscade.skadi.hands,
-        ring1="Ramuh's Ring +1",
-        ring2="Ramuh's Ring +1",
+        ring1="Ramuh Ring +1",
+        ring2="Ramuh Ring +1",
         back=gear.jsecapes.amb.rng.tp,
         waist="Elanid Belt",
-        legs=gear.herculean.legs.ranged,
+        legs=gear.ambuscade.skadi.legs,
         feet=gear.herculean.feet.ranged
     }
+
+    sets.WS['Wildfire'] = {
+        head=gear.ambuscade.skadi.head,
+        neck="Sanctity Necklace",
+        ear1=gear.ears.wsd,
+        ear2="Friomisi Earring",
+        body="Samnuha Coat",
+        hands="Leyline Gloves",
+        ring1="Garuda Ring",
+        ring2="Apate Ring",
+        back=gear.jsecapes.amb.rng.tp,
+        waist="Elanid Belt",
+        legs=gear.ambuscade.skadi.legs,
+        feet=gear.herculean.feet.ranged
+    }
+
 
     send_command('input /macro book 17;wait .1;input /macro set 1')
 end

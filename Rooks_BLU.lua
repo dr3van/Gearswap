@@ -186,7 +186,6 @@ function get_sets()
         hands=gear.taeon.hands.tp,
         ring1="Ifrit Ring",
         ring2="Ifrit Ring +1",
-        back="Buquwik Cape",
         waist="Dynamic Belt +1",
         feet=gear.herculean.feet.tp
     })

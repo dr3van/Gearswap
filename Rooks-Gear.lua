@@ -25,11 +25,13 @@ function init_gear()
     gear.neck.acc = { name="Sanctity Necklace" }
     gear.neck.regen = { name="Wiglen Gorget" }
     gear.neck.tp = { name="Sanctity Necklace" }
+    gear.neck.stp = { name="Lissome Necklace" }
     gear.neck.ws = { name="Fotia Gorget" }
     gear.neck.sword = { name="Decimus Torque" }
     gear.neck.greataxe = { name="Decimus Torque" }
 
     gear.ears = {}
+    gear.ears.da = { name="Brutal Earring" }
     gear.ears.da_left = { name="Bladeborn Earring" }
     gear.ears.da_right = { name="Steelflash Earring" }
     gear.ears.dw_left = { name="Dudgeon Earring" }
@@ -74,6 +76,7 @@ function init_gear()
     gear.waist.obi = { name="Hachirin-no-obi" }
     gear.waist.fc = { name="Witful Belt" }
     gear.waist.macc = { name="Porous Rope" }
+    gear.waist.mab = { name="Eschan Stone" }
     gear.waist.mage_idle = { name="Fucho-no-obi" }
     gear.waist.pdt = { name="Flume Belt +1" }
     gear.waist.conserve_mp = { name="Austerity Belt +1" }
@@ -137,7 +140,7 @@ function init_gear()
     gear.jsecapes.amb.pld.tp = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
     gear.jsecapes.amb.pld.ws = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
     gear.jsecapes.amb.pld.idle = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
-    gear.jsecapes.amb.pld.wsd = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20', 'STR+9', 'Weapon skill damage +10%',}}
+    gear.jsecapes.amb.pld.wsd = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20', 'STR+10', 'Weapon skill damage +10%',}}
     gear.jsecapes.amb.war = { name="Cichol's Mantle"}
     gear.jsecapes.amb.war.idle = { name="Cichol's Mantle"}
     gear.jsecapes.amb.war.tp = { name="Cichol's Mantle"}
@@ -243,12 +246,15 @@ function init_gear()
     gear.souveran.head.C = { name="Souveran Schaller" }
     gear.souveran.body = { name="Souveran Cuirass" }
     gear.souveran.body.A = { name="Souveran Cuirass", augments={"Accuracy+10", "Attack+10", "Enmity+4"}}
+    gear.souveran.body.C = { name="Souveran Cuirass", augments={'HP+80','Enmity+7','Potency of "Cure" effect received+10%'}}
     gear.souveran.hands = { name="Souveran Handschuhs" }
     gear.souveran.hands.A = { name="Souveran Handschuhs", augments={"Accuracy+10", "Attack+10", "Enmity+4"}}
+    gear.souveran.hands.C = { name="Souveran Handschuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received+10%'}}
     gear.souveran.legs = { name="Souveran Diechlings" }
     gear.souveran.legs.C = { name="Souveran Diechlings", augments={'HP+80','Enmity+7','Potency of "Cure" effect received+10%'}}
     gear.souveran.legs.D = { name="Souveran Diechlings", augments={'STR+10','VIT+10','Accuracy+15'}}
     gear.souveran.feet = { name="Souveran Schuhs" }
+    gear.souveran.feet.C = { name="Souveran Schuhs", augments={'HP+80','Enmity+7','Potency of "Cure" effect received+10%'}}
     gear.souveran.feet.D = { name="Souveran Schuhs", augments={"HP+50", "Attack+20", "magic dmg. taken -3%"}}
 
     gear.carmine = {}
@@ -299,17 +305,20 @@ function init_gear()
     gear.herculean.head.tp = { name="Herculean Helm", augments={'Accuracy+28','"Triple Atk."+2','AGI+2','Attack+5',}}
     gear.herculean.head.ws = { name="Herculean Helm", augments={'Accuracy+28','"Triple Atk."+2','AGI+2','Attack+5',}}
     gear.herculean.head.fc = { name="Herculean Helm", augments={'Accuracy+28','"Triple Atk."+2','AGI+2','Attack+5',}}
+    gear.herculean.head.mab = { name="Herculean Helm", augments={'Accuracy+28','"Triple Atk."+2','AGI+2','Attack+5',}}
     gear.herculean.hands = { name="Herculean Gloves" }
     gear.herculean.hands.tp = { name="Herculean Gloves", augments={'Accuracy+25 Attack+25','"Triple Atk."+2','DEX+6','Accuracy+13','Attack+2'} }
     gear.herculean.hands.ws = { name="Herculean Gloves", augments={'Accuracy+25 Attack+25','"Triple Atk."+2','DEX+6','Accuracy+13','Attack+2'} }
     gear.herculean.legs = { name="Herculean Trousers" }
     gear.herculean.legs.ranged = { name="Herculean Trousers", augments={'Rng.Acc.+16 Rng.Atk.+16','"Subtle Blow"+8','AGI+11','Rng.Acc.+14','Rng.Atk.+8'}}
-    gear.herculean.legs.tp = { name="Herculean Trousers", augments={'Accuracy+20','"Triple Atk."+3','Attack+4',}}
-    gear.herculean.legs.ws = { name="Herculean Trousers", augments={'Accuracy+20','"Triple Atk."+3','Attack+4',}}
+    gear.herculean.legs.mab = { name="Herculean Trousers", augments={'Mag. Acc.+6 "Mag.Atk.Bns."+6','DEX+5','Quadruple Attack +3','Accuracy+13 Attack+13'} }
+    gear.herculean.legs.tp = { name="Herculean Trousers", augments={'Mag. Acc.+6 "Mag.Atk.Bns."+6','DEX+5','Quadruple Attack +3','Accuracy+13 Attack+13'} }
+    gear.herculean.legs.ws = { name="Herculean Trousers", augments={'Mag. Acc.+6 "Mag.Atk.Bns."+6','DEX+5','Quadruple Attack +3','Accuracy+13 Attack+13'} }
     gear.herculean.feet = { name="Herculean Boots" }
     gear.herculean.feet.ranged = { name="Herculean Boots", augments={'Rng.Acc.+30','Phys. dmg. taken -2%','STR+14','Rng.Atk.+14'}}
     gear.herculean.feet.tp = { name="Herculean Boots", augments={'Accuracy+16 Attack+16','"Triple Atk."+3','Accuracy+14',}}
     gear.herculean.feet.ws = { name="Herculean Boots", augments={'Accuracy+16 Attack+16','"Triple Atk."+3','Accuracy+14',}}
+    gear.herculean.feet.mab = { name="Herculean Boots", augments={'Accuracy+16 Attack+16','"Triple Atk."+3','Accuracy+14',}}
 
     gear.merlinic = {}
     gear.merlinic.head = { name="Merlinic Hood"}
@@ -454,7 +463,7 @@ function init_gear()
     gear.jse.artifact.geo = {
         head="Geomancy Galero",
         body="Geo. Tunic +1",
-        hands="Geomancy Mitaines",
+        hands="Geo. Mitaines +1",
         legs="Geomancy Pants",
         feet="Geomancy Sandals +1",
     }

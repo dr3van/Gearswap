@@ -5,9 +5,9 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(1, 1)
 
-    combat_sets = {'DPS', 'midacc', 'highacc', 'defensive', 'stp', 'turtle', 'hp' }
-    combat_sets_description = { 'Physical DPS', 'Moderate physical accuracy', 'High physical accuracy', 'Defensive', 'Store TP', 'Turtle', 'maxHP' }
-    combat_index_max = 7
+    combat_sets = {'DPS', 'midacc', 'highacc', 'defensive', 'stp', 'turtle', 'hp', 'purehp' }
+    combat_sets_description = { 'Physical DPS', 'Moderate physical accuracy', 'High physical accuracy', 'Defensive', 'Store TP', 'Turtle', 'maxHP', 'pure max HP' }
+    combat_index_max = 8
 
 
     sets.weapons = {}
@@ -31,7 +31,7 @@ function get_sets()
         back="Shadow Mantle",
         waist=gear.waist.pdt,
         legs=gear.carmine.legs.D,
-        feet=gear.souveran.feet.D
+        feet=gear.souveran.feet.C
     }
     sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {
@@ -46,7 +46,7 @@ function get_sets()
         back=gear.back.dt,
         waist="Nierenschutz",
         legs=gear.odyssean.legs.dt,
-        feet=gear.souveran.feet.D
+        feet=gear.souveran.feet.C
 
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {
@@ -55,6 +55,22 @@ function get_sets()
     sets.idle.MDT = set_combine(sets.idle.DT, {
     })
     sets.resting = set_combine(sets.idle, {})
+
+    sets.maxHP = {
+        ammo="Egoist's Tathlum",
+        head=gear.souveran.head.C,
+        neck=gear.neck.hp,
+        ear1="Calamitous Earring",
+        ear2="Ethereal Earring",
+        body=gear.jse.artifact.pld.body,
+        hands=gear.souveran.hands.C,
+        ring1="Meridian Ring",
+        ring2="Eihwaz Ring",
+        back="Fierabras's Mantle",
+        waist="Oneiros Belt",
+        legs=gear.souveran.legs.C,
+        feet=gear.souveran.feet.C
+    }
 
     sets.precast.FC = {
         ammo=gear.ammo.fc,
@@ -133,7 +149,7 @@ function get_sets()
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,
         body=gear.jse.artifact.pld.body,
-        hands=gear.souveran.hands.A,
+        hands=gear.souveran.hands.C,
         ring1="Ramuh Ring +1",
         ring2="K'ayres Ring",
         back=gear.jsecapes.amb.pld.tp,
@@ -141,6 +157,8 @@ function get_sets()
         legs=gear.odyssean.legs.tp,
         feet=gear.ambuscade.phorcys.feet
     }
+
+    sets.combat.purehp = set_combine(sets.maxHP, {})
 
     -- WS sets
 
@@ -217,7 +235,6 @@ function get_sets()
 
     sets.WS.Requiescat = set_combine(sets.WS, {
         body=gear.ambuscade.ares.body,
-        hands=gear.souveran.hands.A,
         ring1="Levia. Ring",
         ring2="Levia. Ring"
     })
@@ -225,7 +242,6 @@ function get_sets()
 
     sets.WS.Realmrazer = set_combine(sets.WS, {
         body=gear.ambuscade.ares.body,
-        hands=gear.souveran.hands.A,
         ring1="Levia. Ring",
         ring2="Levia. Ring"
     })
@@ -256,36 +272,23 @@ function get_sets()
     }
 
     sets.enmity = {
-        ammo=gear.ammo.enmity,
-        head="Loess Barbuta",
-        neck=gear.neck.enmity,
-        ear1="Hearty Earring",
-        ear2=gear.ears.enmity_right,
-        body=gear.jse.empyrean.pld.body,
-        hands=gear.jse.relic.pld.hands,
-        ring1=gear.ring.enmity_left,
-        ring2=gear.ring.enmity_right,
-        back="Fierabras's Mantle",
-        waist="Creed Baudrier",
-        legs=gear.jse.relic.pld.legs,
-        feet=gear.eschite.feet.A
+        ammo=gear.ammo.enmity,          -- 2
+        head="Loess Barbuta",           -- 9~14
+        neck=gear.neck.enmity,          -- 5
+        ear1="Hearty Earring",          -- 0
+        ear2=gear.ears.enmity_right,    -- 2
+        body=gear.souveran.body.C,      -- 17
+        hands=gear.souveran.hands.C,    -- 7
+        ring1=gear.ring.enmity_left,    -- 5
+        ring2=gear.ring.enmity_right,   -- 5
+        back="Fierabras's Mantle",      -- 5
+        waist="Creed Baudrier",         -- 5
+        legs=gear.souveran.legs.C,      -- 7
+        feet=gear.eschite.feet.A        -- 15
     }
+                                        -- 84~89 total
 
-    sets.maxHP = {
-        ammo="Egoist's Tathlum",
-        head=gear.souveran.head.C,
-        neck=gear.neck.hp,
-        ear1="Calamitous Earring",
-        ear2="Ethereal Earring",
-        body=gear.jse.artifact.pld.body,
-        hands=gear.jse.relic.pld.hands,
-        ring1="Meridian Ring",
-        ring2="Eihwaz Ring",
-        back="Fierabras's Mantle",
-        waist="Oneiros Belt",
-        legs=gear.jse.empyrean.pld.legs,
-        feet=gear.eschite.feet.A
-    }
+
 
     sets.JA = set_combine(sets.enmity, {})
     sets.JA['Invincible'] = set_combine(sets.enmity, { legs=gear.jse.relic.pld.legs })
@@ -321,19 +324,21 @@ function get_sets()
         body="Jumalik Mail"
     }
 
-    sets.midcast.CureSpell = set_combine(sets.midcast['Healing Magic'], {
+    sets.midcast.CureSpell = {
         head=gear.souveran.head.C,
         neck=gear.neck.cure_potency,
         ear1="Nourishing Earring +1",
         ear2="Nourishing Earring",
-        body="Jumalik Mail",
-        hands="Macabre Gauntlets +1",
+        body=gear.souveran.body.C,
+        hands=gear.souveran.hands.C,
         ring1="Meridian Ring",
         ring2="Eihwaz Ring",
         back="Fierabras's Mantle",
+        waist="Creed Baudrier",
         legs=gear.souveran.legs.C,
-        feet=gear.eschite.feet.A
-    })
+        feet=gear.souveran.feet.C
+    }
+
 
     sets.midcast['Enhancing Magic'] = {
         neck="Colossus's Torque",
@@ -341,17 +346,18 @@ function get_sets()
     }
 
     -- Enlight: 2×floor( (Divine Magic Skill+85)÷13 ) + floor( (Divine Magic Skill+85)÷26 ) + Enlight Job Points
-    -- 404 A- + 16 merits + 5 gifts = 425
-    -- Current gear: +58 = 483
-    -- 2 × floor( (483+85)÷13 ) + floor((483+85)÷26 )
-    -- 2 × floor( (568)÷13 ) + floor((568)÷26 )
-    -- 2 × floor(43) + floor(21)
-    -- 86 + 21 + JP(8)
-    -- 115
+    -- 404 A- + 16 merits + 13 gifts = 433
+    -- Current gear: +80 = 513
+    -- 2 × floor( (513+85)÷13 ) + floor((513+85)÷26 )
+    -- 2 × floor( (598)÷13 ) + floor((598)÷26 )
+    -- 2 × floor(46) + floor(23)
+    -- 92 + 23 + JP(20)
+    -- 135
     sets.midcast['Divine Magic'] = {
         head="Jumalik helm",
         neck="Henic Torque",
         body=gear.jse.artifact.pld.body,
+        hands="Eschite Gauntlets",
         back=gear.back.divine,
         waist="Asklepian Belt"
     }
@@ -374,9 +380,9 @@ function get_sets()
     -- feet: +4
     -- total: 44 
     sets.midcast['Phalanx'] = set_combine(sets.midcast['Enhancing Magic'], {
-        hands=gear.souveran.hands.A,
+        hands=gear.souveran.hands,
         back=gear.jsecapes.pld,
-        feet=gear.souveran.feet.D
+        feet=gear.souveran.feet
     })
 
     sets.midcast['Reprisal'] = set_combine(sets.maxHP, {})

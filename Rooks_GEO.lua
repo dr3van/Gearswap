@@ -5,9 +5,6 @@ function get_sets()
     init_get_sets(0, 1)
 
     sets.idle = {
-        main=gear.weapons.mage.refresh,
-        sub=gear.grip.dt,
-        range="Dunna",
         head=gear.head.mage_refresh,
         neck=gear.neck.dt,
         ear1=gear.ears.idle_left,
@@ -82,7 +79,7 @@ function get_sets()
     sets.midcast['Geomancy'] = {
         head="Hike Khat",
         body="Bagua Tunic +1",
-        hands="Geomancy Mitaines",
+        hands="Geomancy Mitaines +1",
         back="Lifestream Cape",
         waist=gear.waist.conserve_mp
     }
@@ -110,7 +107,7 @@ function get_sets()
         ring1="Rajas Ring",
         ring2="K'ayres Ring",
         back="Rancorous Mantle",
-        waist="Cetl Belt",
+        waist="Goading Belt",
         legs=gear.ambuscade.morrigan.legs,
         feet=gear.ambuscade.morrigan.feet
     }
