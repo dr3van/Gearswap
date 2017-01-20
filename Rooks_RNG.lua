@@ -54,7 +54,7 @@ function get_sets()
     sets.snapshot = {
         body="Amini Caban +1",
         hands="Manibozho Gloves",
-        back=gear.jsecapes.amb.rng.tp,
+        back=gear.jse.capes.ambuscade.rng.tp,
         legs="Nahtirah Trousers"
     }
 
@@ -67,7 +67,7 @@ function get_sets()
         hands=gear.ambuscade.skadi.hands,
         ring1="Apate Ring",
         ring2="Bellona's Ring",
-        back=gear.jsecapes.amb.rng.tp,
+        back=gear.jse.capes.ambuscade.rng.tp,
         waist=gear.waist.racc,
         legs=gear.ambuscade.skadi.legs,
         feet=gear.herculean.feet.ranged
@@ -92,7 +92,7 @@ function get_sets()
         hands=gear.ambuscade.skadi.hands,
         ring1="Apate Ring",
         ring2="Garuda Ring",
-        back=gear.jsecapes.amb.rng.tp,
+        back=gear.jse.capes.ambuscade.rng.tp,
         waist=gear.waist.ws,
         legs=gear.ambuscade.skadi.legs,
         feet=gear.herculean.feet.ranged
@@ -107,7 +107,7 @@ function get_sets()
         hands=gear.ambuscade.skadi.hands,
         ring1="Ramuh Ring +1",
         ring2="Ramuh Ring +1",
-        back=gear.jsecapes.amb.rng.tp,
+        back=gear.jse.capes.ambuscade.rng.tp,
         waist="Elanid Belt",
         legs=gear.ambuscade.skadi.legs,
         feet=gear.herculean.feet.ranged
@@ -122,7 +122,7 @@ function get_sets()
         hands="Leyline Gloves",
         ring1="Garuda Ring",
         ring2="Apate Ring",
-        back=gear.jsecapes.amb.rng.tp,
+        back=gear.jse.capes.ambuscade.rng.tp,
         waist="Elanid Belt",
         legs=gear.ambuscade.skadi.legs,
         feet=gear.herculean.feet.ranged

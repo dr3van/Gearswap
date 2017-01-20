@@ -95,7 +95,7 @@ function get_sets()
         hands=gear.ambuscade.ares.hands,
         ring1="Rajas Ring",
         ring2="Chirich Ring",
-        back=gear.jsecapes.amb.pld.tp,
+        back=gear.jse.capes.ambuscade.pld.tp,
         waist=gear.waist.highhaste,
         legs=gear.ambuscade.ares.legs,
         feet=gear.ambuscade.ares.feet
@@ -120,7 +120,7 @@ function get_sets()
         hands=gear.ambuscade.ares.hands,
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
-        back=gear.jsecapes.amb.pld.tp,
+        back=gear.jse.capes.ambuscade.pld.tp,
         waist=gear.waist.highhaste,
         legs=gear.ambuscade.ares.legs,
         feet=gear.ambuscade.ares.feet
@@ -136,7 +136,7 @@ function get_sets()
         hands=gear.ambuscade.phorcys.hands,
         ring1="Rajas Ring",
         ring2="Chirich Ring",
-        back=gear.jsecapes.amb.pld.tp,
+        back=gear.jse.capes.ambuscade.pld.tp,
         waist=gear.waist.highhaste,
         legs=gear.odyssean.legs.tp,
         feet=gear.ambuscade.phorcys.feet
@@ -152,7 +152,7 @@ function get_sets()
         hands=gear.souveran.hands.C,
         ring1="Ramuh Ring +1",
         ring2="K'ayres Ring",
-        back=gear.jsecapes.amb.pld.tp,
+        back=gear.jse.capes.ambuscade.pld.tp,
         waist="Dynamic Belt +1",
         legs=gear.odyssean.legs.tp,
         feet=gear.ambuscade.phorcys.feet
@@ -172,7 +172,7 @@ function get_sets()
         hands=gear.odyssean.hands.ws,
         ring1="Rajas Ring",
         ring2="Ifrit Ring",
-        back=gear.jsecapes.amb.pld.ws,
+        back=gear.jse.capes.ambuscade.pld.ws,
         waist=gear.waist.ws,
         legs=gear.odyssean.legs.ws,
         feet=gear.ambuscade.ares.feet
@@ -187,7 +187,7 @@ function get_sets()
         hands=gear.odyssean.hands.ws,
         ring1="Rajas Ring",
         ring2="Ifrit Ring",
-        back=gear.jsecapes.amb.pld.wsd,
+        back=gear.jse.capes.ambuscade.pld.wsd,
         waist=gear.waist.ws,
         legs=gear.odyssean.legs.ws,
         feet=gear.ambuscade.ares.feet
@@ -220,7 +220,7 @@ function get_sets()
         hands=gear.odyssean.hands.ws,
         ring1="Mujin Band",
         ring2="Chirich Ring",
-        back=gear.jsecapes.amb.pld.wsd,
+        back=gear.jse.capes.ambuscade.pld.wsd,
         waist=gear.waist.ws,
         legs=gear.valorous.legs.wsd,
         feet=gear.ambuscade.ares.feet
@@ -265,7 +265,7 @@ function get_sets()
         hands=gear.odyssean.hands.ws,
         ring1="Titan Ring",
         ring2="Titan Ring +1",
-        back=gear.jsecapes.amb.drk.wsd,
+        back=gear.jse.capes.ambuscade.pld.wsd,
         waist=gear.waist.ws,
         legs=gear.ambuscade.ares.legs,
         feet=gear.ambuscade.ares.feet
@@ -381,7 +381,7 @@ function get_sets()
     -- total: 44 
     sets.midcast['Phalanx'] = set_combine(sets.midcast['Enhancing Magic'], {
         hands=gear.souveran.hands,
-        back=gear.jsecapes.pld,
+        back=gear.jse.capes.reive.pld,
         feet=gear.souveran.feet
     })
 

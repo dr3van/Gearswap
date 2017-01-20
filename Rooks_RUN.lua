@@ -78,7 +78,12 @@ function get_sets()
     sets.JA['Gambit'] = set_combine(sets.enmity, {})
     sets.JA['Liement'] = set_combine(sets.enmity, {})
     sets.JA['One For All'] = set_combine(sets.enmity, {})
-    sets.JA['Elemental Sforzo'] = set_combine(sets.enmity, {})
+    sets.JA['Elemental Sforzo'] = set_combine(sets.enmity, {
+        body=gear.jse.relic.run.body
+    })
+    sets.JA['Vivacious Pulse'] = set_combine(sets.enmity, {
+        head=gear.jse.empyrean.run.head
+    })
 
     sets.precast.FC = {
         ammo=gear.ammo.fc,
@@ -94,11 +99,18 @@ function get_sets()
     }
 
     sets.midcast['Enhancing Magic'] = set_combine(sets.enmity, {
+        head=gear.jse.empyrean.run.head,
         neck="Colossus's Torque",
         legs=gear.carmine.legs.D
     })
 
     sets.midcast['Flash'] = set_combine(sets.enmity, {})
+    sets.midcast['Refresh'] = set_combine(sets.enmity, {
+        head=gear.jse.empyrean.run.head
+    })
+    sets.midcast['Phalanx'] = set_combine(sets.midcast['Enhancing Magic'], {
+        head=gear.jse.relic.run.head
+    })
 
 
     sets.combat = {

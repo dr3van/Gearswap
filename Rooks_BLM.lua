@@ -134,7 +134,7 @@ function get_sets()
         hands=gear.ambuscade.morrigan.hands,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
-        back=gear.jsecapes.amb.blm.mab,
+        back=gear.jse.capes.ambuscade.blm.mab,
         waist=gear.waist.macc,
         legs=gear.merlinic.legs.MAB,
         feet=gear.merlinic.feet.MAB
@@ -149,7 +149,7 @@ function get_sets()
         hands=gear.ambuscade.morrigan.hands,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
-        back=gear.jsecapes.amb.blm.mab,
+        back=gear.jse.capes.ambuscade.blm.mab,
         waist=gear.waist.macc,
         legs=gear.ambuscade.morrigan.legs,
         feet=gear.ambuscade.morrigan.feet

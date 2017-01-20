@@ -38,7 +38,7 @@ function get_sets()
     sets.JA["Meditate"] = {
         head="Wakido Kabuto +1",
         hands="Sao. Kote +2",
-        back=gear.jsecapes.amb.sam
+        back=gear.jse.capes.ambuscade.sam
     }
     sets.JA["Warding Circle"] = { head="Wakido Kabuto +1" }
     sets.JA["Third Eye"] = { legs="Saotome Haidate" }
@@ -56,7 +56,7 @@ function get_sets()
         hands=gear.ambuscade.phorcys.hands,
         ring1="Rajas Ring",
         ring2="Chirich Ring",
-        back=gear.jsecapes.amb.sam,
+        back=gear.jse.capes.ambuscade.sam,
         waist="Dynamic Belt +1",
         legs=gear.ambuscade.phorcys.legs,
         feet=gear.ambuscade.phorcys.feet
@@ -85,7 +85,7 @@ function get_sets()
         hands=gear.valorous.hands,
         ring1="Ifrit Ring",
         ring2="Ifrit Ring +1",
-        back=gear.jsecapes.amb.sam,
+        back=gear.jse.capes.ambuscade.sam,
         waist=gear.waist.ws,
         legs=gear.valorous.legs.wsd,
         feet=gear.ambuscade.phorcys.feet

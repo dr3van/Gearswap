@@ -11,7 +11,6 @@ function init_jse()
     gear.jse.empyrean = {}
 
     -- JSE Capes
-    gear.jse.capes = {}
     gear.jse.capes.reive.blu = { name="Cornflower Cape", augments={'MP+27', 'DEX+1', 'Accuracy+5', 'Blue magic skill +10'}}
     gear.jse.capes.reive.pld = { name="Weard Mantle" }
     gear.jse.capes.reive.drk = { name="Niht Mantle", augments={'Attack+13','Dark magic skill +10','"Drain" and "Aspir" potency +25','Weapon skill damage +4%'}}

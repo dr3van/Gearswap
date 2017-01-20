@@ -4,6 +4,10 @@ function init_gear()
     -- You don't have to use this, but I find it super useful for
     -- augmented gear that I use across multiple jobs.
 
+    -- JSE stuff got unwieldy so it's in a separate file
+    include('Rooks-Gear-JSE.lua')
+    init_jse()
+
     -- All jobs pieces
     gear.ammo = {}
     gear.ammo.dt = { name="Staunch Tathlum" }
@@ -121,48 +125,6 @@ function init_gear()
 
 
 
-    -- JSE Capes
-    gear.jsecapes = {}
-    gear.jsecapes.blu = { name="Cornflower Cape", augments={'MP+27', 'DEX+1', 'Accuracy+5', 'Blue magic skill +10'}}
-    gear.jsecapes.pld = { name="Weard Mantle" }
-    gear.jsecapes.drk = { name="Niht Mantle", augments={'Attack+13','Dark magic skill +10','"Drain" and "Aspir" potency +25','Weapon skill damage +4%'}}
-    gear.jsecapes.sch = { name="Bookworm's Cape" }
-
-    gear.jsecapes.amb = {}
-    gear.jsecapes.amb.blu = { name="Rosmerta's Cape"}
-    gear.jsecapes.amb.blu.idle = { name="Rosmerta's Cape"}
-    gear.jsecapes.amb.blu.tp = { name="Rosmerta's Cape"}
-    gear.jsecapes.amb.blu.ws = { name="Rosmerta's Cape"}
-    gear.jsecapes.amb.blm = { name="Taranus's Cape"}
-    gear.jsecapes.amb.blm.mab = { name="Taranus's Cape"}
-    gear.jsecapes.amb.blm.macc = { name="Taranus's Cape"}
-    gear.jsecapes.amb.pld = { name="Rudianos's Mantle"}
-    gear.jsecapes.amb.pld.tp = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
-    gear.jsecapes.amb.pld.ws = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
-    gear.jsecapes.amb.pld.idle = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
-    gear.jsecapes.amb.pld.wsd = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20', 'STR+10', 'Weapon skill damage +10%',}}
-    gear.jsecapes.amb.war = { name="Cichol's Mantle"}
-    gear.jsecapes.amb.war.idle = { name="Cichol's Mantle"}
-    gear.jsecapes.amb.war.tp = { name="Cichol's Mantle"}
-    gear.jsecapes.amb.war.ws = { name="Cichol's Mantle"}
-    gear.jsecapes.amb.drk = { name="Ankou's Mantle"}
-    gear.jsecapes.amb.drk.idle = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
-    gear.jsecapes.amb.drk.tp = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
-    gear.jsecapes.amb.drk.ws = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
-    gear.jsecapes.amb.drk.wsd = { name="Ankou's Mantle", augments={'STR+8','VIT+20', 'Accuracy+20 Attack+20', 'Weapon skill damage +10%'}}
-    gear.jsecapes.amb.sam = { name="Smertrios's Mantle" }
-    gear.jsecapes.amb.sam.tp = { name="Smertrios's Mantle" }
-    gear.jsecapes.amb.sam.ws = { name="Smertrios's Mantle" }
-    gear.jsecapes.amb.rng = { name="Belenus's Cape" }
-    gear.jsecapes.amb.rng.tp = { name="Belenus's Cape" }
-    gear.jsecapes.amb.rng.ws = { name="Belenus's Cape" }
-
-
-    -- Skirmish pieces
-    gear.hagondes = {}
-    gear.hagondes.body = { name="Hagondes Coat +1" }
-    gear.hagondes.body.pdt = { name="Hagondes Coat +1", augments={'Phys. dmg. taken -3%'}}
-
     gear.gendewitha = {}
     gear.gendewitha.head = { name="Gende. Caubeen +1" }
     gear.gendewitha.head.pdt = { name="Gende. Caubeen +1", augments={'Phys. dmg. taken -4%', '"Cure" spellcasting time -1%'} }
@@ -233,7 +195,6 @@ function init_gear()
     gear.psycloth = {}
     gear.psycloth.legs = { name="Psycloth Lappas" }
     gear.psycloth.legs.D = { name="Psycloth Lappas" }
-
 
 
     -- 119 Abjuration pieces
@@ -379,93 +340,6 @@ function init_gear()
         sword_left = { name="Claidheamh Soluis", augments={'Accuracy+10','"Store TP"+5','STR+14 DEX+14'} },
         club_right = { name="Gabaxorea", augments={'MP+26','"Mag.Atk.Bns."+9','INT+6'} },
         club_left = { name="Gabaxorea", augments={'MP+22','"Mag.Atk.Bns."+8','INT+5'} }
-    }
-
-    -- JSE pieces (AF/Relic/Emp)
-    -- Feels like duplication, but this is mostly just so I have one place to update
-    -- all of the reforged gear (which usually ends up filling the same roles for things
-    -- like JA augmentation, etc)
-    gear.jse = {}
-    gear.jse.artifact = {}
-    gear.jse.relic = {}
-    gear.jse.empyrean = {}
-
-    -- WAR
-    gear.jse.artifact.war = {
-        head="Pumm. Mask +1",
-        body="Pumm. Lorica +1",
-        hands="Fighter's Mufflers +1",
-        legs="Pumm. Cuisses",
-        feet="Pumm. Calligae"
-    }
-    gear.jse.relic.war = {
-        head="Agoge Mask +1",
-        body="Agoge Lorica +1",
-        hands="Agoge Mufflers +1",
-        legs="Warrior's Cuisses +2",
-        feet="Agoge Calligae +1"
-    }
-    gear.jse.empyrean.war = {
-        head="Ravager's Mask +2",
-        body="Rvg. Lorica +2",
-        hands="Rvg. Mufflers +2",
-        legs="Rvg. Cuisses +2",
-        feet="Boii Calligae +1"
-    }
-
-    -- RDM
-    gear.jse.artifact.rdm = {
-        head="Atrophy Chapeau +1",
-        body="Wlk. Tabard +1",
-        hands="Wlk. Gloves +1",
-        legs="Atrophy Tights",
-        feet="Wlk. Boots +1"
-    }
-    gear.jse.relic.rdm = {
-        head="Vitivation Chapeau",
-        body="Vitivation Tabard",
-        hands="Vitivation Gloves",
-        legs="Vitivation Tights",
-        feet="Vitivation Boots"
-    }
-    gear.jse.empyrean.rdm = {
-        head="Estq. Chappel +2",
-        body="Estq. Sayon +2",
-        hands="Estq. Ganthrt. +2",
-        legs="Estqr. Fuseau +2",
-        feet="Estq. Houseaux +2"
-    }
-
-    -- PLD
-    gear.jse.artifact.pld = {
-        head="Rev. Coronet +1",
-        body="Rev. Surcoat +2",
-        hands="Rev. Gauntlets +1",
-        legs="Rev. Breeches +1",
-        feet="Rev. Leggings +1"
-    }
-    gear.jse.relic.pld = {
-        head="Cab. Coronet",
-        body="Cab. Surcoat +1",
-        hands="Cab. Gauntlets +1",
-        legs="Cab. Breeches +1",
-        feet="Cab. Leggings"
-    }
-    gear.jse.empyrean.pld = {
-        head="Chev. Armet +1",
-        body="Chev. Cuirass +1",
-        hands="Chev. Guantlets",
-        legs="Chevalier's Cuisses",
-        feet="Chev. Sabatons +1"
-    }
-
-    -- GEO
-    gear.jse.artifact.geo = {
-        head="Geomancy Galero",
-        body="Geo. Tunic +1",
-        hands="Geo. Mitaines +1",
-        legs="Geomancy Pants",
-        feet="Geomancy Sandals +1",
     }
 
     -- Ambuscade gear

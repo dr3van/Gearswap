@@ -78,7 +78,7 @@ function get_sets()
         hands=gear.herculean.hands.tp,
         ring1="Chirich Ring",
         ring2="Epona's Ring",
-        back=gear.jsecapes.amb.blu,
+        back=gear.jse.capes.ambuscade.blu,
         waist=gear.waist.nohaste,
         legs=gear.herculean.legs.tp,
         feet=gear.herculean.feet.tp
@@ -106,7 +106,7 @@ function get_sets()
         hands=gear.taeon.hands.tp,
         ring1="Rajas Ring",
         ring2="Epona's Ring",
-        back=gear.jsecapes.amb.blu,
+        back=gear.jse.capes.ambuscade.blu,
         waist=gear.waist.ws,
         legs=gear.herculean.legs.tp,
         feet=gear.herculean.feet.tp
@@ -150,7 +150,7 @@ function get_sets()
         ammo="Mavi Tathlum",
         head="Luh. Keffiyeh +1",
         body="Assim. Jubbah +1",
-        back=gear.jsecapes.blu,
+        back=gear.jse.capes.reive.blu,
         legs="Hashishin Tayt +1",
         feet="Mirage Charuqs +2"
     }

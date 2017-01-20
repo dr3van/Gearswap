@@ -63,7 +63,7 @@ function get_sets()
         hands=gear.ambuscade.phorcys.hands,
         ring1="Rajas Ring",
         ring2="Chirich Ring",
-        back=gear.jsecapes.amb.drk.tp,
+        back=gear.jse.capes.ambuscade.drk.tp,
         waist=gear.waist.highhaste,
         legs=gear.odyssean.legs.tp,
         feet=gear.ambuscade.phorcys.feet
@@ -81,7 +81,7 @@ function get_sets()
         hands=gear.ambuscade.phorcys.hands,
         ring1="Chirich Ring",
         ring2="Ramuh Ring +1",
-        back=gear.jsecapes.amb.drk.tp,
+        back=gear.jse.capes.ambuscade.drk.tp,
         waist="Dynamic Belt +1",
         legs=gear.odyssean.legs.tp,
         feet=gear.ambuscade.phorcys.feet
@@ -96,7 +96,7 @@ function get_sets()
         hands=gear.ambuscade.ares.hands,
         ring1="Rajas Ring",
         ring2="Chirich Ring",
-        back=gear.jsecapes.amb.drk.tp,
+        back=gear.jse.capes.ambuscade.drk.tp,
         waist=gear.waist.highhaste,
         legs=gear.odyssean.legs.dt,
         feet=gear.ambuscade.ares.feet
@@ -140,7 +140,7 @@ function get_sets()
         hands=gear.argosy.hands.A,
         ring1="Rajas Ring",
         ring2="Ifrit Ring +1",
-        back=gear.jsecapes.amb.drk.ws,
+        back=gear.jse.capes.ambuscade.drk.ws,
         waist=gear.waist.ws,
         legs=gear.argosy.legs.D,
         feet=gear.argosy.feet.A
@@ -156,7 +156,7 @@ function get_sets()
         hands=gear.odyssean.hands.ws,
         ring1="Ifrit Ring +1",
         ring2="Titan Ring +1",
-        back=gear.jsecapes.amb.drk.wsd,
+        back=gear.jse.capes.ambuscade.drk.wsd,
         waist=gear.waist.ws,
         legs=gear.ambuscade.ares.legs,
         feet=gear.ambuscade.ares.feet
@@ -172,7 +172,7 @@ function get_sets()
         hands=gear.odyssean.hands.ws,
         ring1="Titan Ring",
         ring2="Titan Ring +1",
-        back=gear.jsecapes.amb.drk.wsd,
+        back=gear.jse.capes.ambuscade.drk.wsd,
         waist=gear.waist.ws,
         legs=gear.ambuscade.ares.legs,
         feet=gear.ambuscade.ares.feet
@@ -204,7 +204,7 @@ function get_sets()
     sets.midcast['Dark Magic'] = set_combine(sets.magic_accuracy, {
         hands="Fall. Fin. Gaunt. +1",
         ring1=gear.ring.drain_aspir,
-        back=gear.jsecapes.drk,
+        back=gear.jse.capes.reive.drk,
         waist="Casso Sash",
         legs=gear.eschite.legs.D
     })
@@ -220,7 +220,7 @@ function get_sets()
     sets.midcast['Aspir'] = set_combine(sets.midcast.DrainAspir, {})
     sets.midcast['Aspir II'] = set_combine(sets.midcast.DrainAspir, {})
 
-    sets.JA['Last Resort'] = { back=gear.jsecapes.amb.drk }
+    sets.JA['Last Resort'] = { back=gear.jse.capes.ambuscade.drk }
 
     sets.midcast['Dread Spikes'] = set_combine(sets.maxHP, {})
 

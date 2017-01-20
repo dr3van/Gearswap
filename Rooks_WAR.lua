@@ -83,7 +83,7 @@ function get_sets()
         hands=gear.ambuscade.phorcys.hands,
         ring1="Rajas Ring",
         ring2="Chirich Ring",
-        back=gear.jsecapes.amb.war.tp,
+        back=gear.jse.capes.ambuscade.war.tp,
         waist="Dynamic Belt +1",
         legs=gear.odyssean.legs.tp,
         feet=gear.ambuscade.phorcys.feet
@@ -101,7 +101,7 @@ function get_sets()
         hands=gear.ambuscade.phorcys.hands,
         ring1="Chirich Ring",
         ring2="Ramuh Ring +1",
-        back=gear.jsecapes.amb.war.tp,
+        back=gear.jse.capes.ambuscade.war.tp,
         waist="Dynamic Belt +1",
         legs=gear.odyssean.legs.tp,
         feet=gear.ambuscade.phorcys.feet
@@ -116,7 +116,7 @@ function get_sets()
         hands=gear.ambuscade.ares.hands,
         ring1="Rajas Ring",
         ring2="Chirich Ring",
-        back=gear.jsecapes.amb.war.tp,
+        back=gear.jse.capes.ambuscade.war.tp,
         waist=gear.waist.highhaste,
         legs=gear.odyssean.legs.tp,
         feet=gear.ambuscade.ares.feet
@@ -135,7 +135,7 @@ function get_sets()
         hands=gear.argosy.hands.A,
         ring1="Ifrit Ring",
         ring2="Ifrit Ring +1",
-        back=gear.jsecapes.amb.war.ws,
+        back=gear.jse.capes.ambuscade.war.ws,
         waist=gear.waist.ws,
         legs=gear.argosy.legs.D,
         feet=gear.argosy.feet.A
@@ -151,7 +151,7 @@ function get_sets()
         hands=gear.ambuscade.ares.hands,
         ring1="Ifrit Ring",
         ring2="Ifrit Ring +1",
-        back=gear.jsecapes.amb.war.ws,
+        back=gear.jse.capes.ambuscade.war.ws,
         waist=gear.waist.ws,
         legs=gear.odyssean.legs.ws,
         feet=gear.ambuscade.ares.feet
@@ -167,7 +167,7 @@ function get_sets()
         hands=gear.odyssean.hands.ws,
         ring1="Ifrit Ring +1",
         ring2="Titan Ring +1",
-        back=gear.jsecapes.amb.war.ws,
+        back=gear.jse.capes.ambuscade.war.ws,
         waist=gear.waist.ws,
         legs=gear.ambuscade.ares.legs,
         feet=gear.ambuscade.ares.feet
@@ -183,7 +183,7 @@ function get_sets()
         hands=gear.odyssean.hands.ws,
         ring1="Ifrit Ring +1",
         ring2="Titan Ring +1",
-        back=gear.jsecapes.amb.war.ws,
+        back=gear.jse.capes.ambuscade.war.ws,
         waist=gear.waist.ws,
         legs=gear.ambuscade.ares.legs,
         feet=gear.ambuscade.ares.feet
@@ -199,7 +199,7 @@ function get_sets()
         hands=gear.odyssean.hands.ws,
         ring1="Ifrit Ring +1",
         ring2="Ifrit Ring",
-        back=gear.jsecapes.amb.war.ws,
+        back=gear.jse.capes.ambuscade.war.ws,
         waist=gear.waist.ws,
         legs=gear.ambuscade.ares.legs,
         feet=gear.ambuscade.ares.feet
