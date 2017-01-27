@@ -10,20 +10,25 @@ function get_sets()
     gear.idle_feet_night = "Hachi. Kyahan +1"
 
     sets.idle = {
-        head=gear.taeon.head.tp,
-        neck=gear.neck.regen,
+        head=gear.herculean.head.dt,
+        neck=gear.neck.dt,
         ear1=gear.ears.idle_left,
         ear2=gear.ears.idle_right,
-        body=gear.taeon.body.tp,
-        hands=gear.taeon.hands.tp,
-        ring1=gear.ring.regen_left,
-        ring2=gear.ring.regen_right,
+        body="Emet Harness",
+        hands="macabre Gauntlets +1",
+        ring1=gear.ring.dt_left,
+        ring2=gear.ring.dt_right,
         back="Shadow Mantle",
         waist=gear.waist.pdt,
-        legs=gear.taeon.legs.tp,
+        legs=gear.herculean.legs,
         feet=gear.idle_feet
     }
-
+    sets.idle.base = set_combine(sets.idle, {})
+    sets.idle.regen = set_combine(sets.idle, {
+        neck=gear.neck.regen,
+        ring1=gear.ring.regen_left,
+        ring2=gear.ring.regen_right,
+    })
     sets.idle.DT = set_combine(sets.idle, {
         neck=gear.neck.dt,
         ring1=gear.ring.dt_left,
@@ -35,7 +40,7 @@ function get_sets()
 
     sets.combat = {
         head=gear.herculean.head.tp,
-        neck=gear.neck.tp,
+        neck="Yarak Torque",
         ear1=gear.ears.melee_acc_left,
         ear2=gear.ears.melee_acc_right,
         body="Samnuha Coat",

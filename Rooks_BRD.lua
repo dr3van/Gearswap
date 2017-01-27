@@ -6,7 +6,6 @@ function get_sets()
     init_get_sets(0, 1)
 
 	sets.idle = {
-        range="Gjallarhorn",
 		head=gear.telchine.head,
 		neck=gear.neck.dt,
         ear1=gear.ears.idle_left,
@@ -15,9 +14,9 @@ function get_sets()
         hands=gear.lustratio.hands.A,
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
-        back=gear.waist.mage_idle,
+        back=gear.back.mage_idle,
         waist=gear.waist.pdt,
-        legs=gear.telchine.legs,
+        legs=gear.legs.mage_pdt,
         feet="Aoidos' Cothrn. +2"
 	}
     sets.idle.base = set_combine(sets.idle, {})
@@ -32,26 +31,25 @@ function get_sets()
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = set_combine(sets.idle.regen, {
-        ear1="Relaxing Earring",
-        body="Chelona Blazer",
-        hands="Nares Cuffs",
-        feet="Chelona Boots +1"
+        ear1="Relaxing Earring"
     })
 
     sets.JA = {}
 
 	sets.precast = {}
 	sets.precast.FC = {
-        head="Nahtirah Hat",
+        head="Welkin Crown",
         ear2=gear.ears.fc_right,
-        hands="Repartie Gloves",
-        back="Swith Cape",
-        waist="Witful Belt",
+        body=gear.body.mage_fc,
+        hands="Leyline Gloves",
+        ring1=gear.ring.fc_left,
+        ring2=gear.ring.fc_right,
+        back=gear.back.fc,
+        waist=gear.waist.fc,
         legs="Orvail Pants +1",
         feet="Chelona Boots +1"
 	}
     sets.precast.FC['Singing'] = set_combine(sets.precast.FC, {
-        main="Felibre's Dague",
         head="Aoidos' Calot +2",
         neck="Aoidos' Matinee",
         hands="Schellenband",
@@ -60,18 +58,18 @@ function get_sets()
     })
 
     sets.combat = {
-        head=gear.telchine.head,
-        neck=gear.neck.tp,
-        ear1=gear.ears.da_left,
-        ear2=gear.ears.da_right,
-        body=gear.telchine.body,
-        hands=gear.telchine.hands,
-        ring1="Rajas Ring",
-        ring2="K'ayres Ring",
-        back="Atheling Mantle",
-        waist="Cetl Belt",
-        legs=gear.telchine.legs,
-        feet=gear.telchine.feet
+        head="Telchine Cap",
+        neck="Sanctity Necklace",
+        ear1="Mache Earring",
+        ear2="Mache Earring",
+        body="Onca Suit",
+        hands="",
+        ring1="Ramuh Ring +1",
+        ring2="Ramuh Ring +1",
+        back="Letalis Mantle",
+        waist="Windbuffet Belt +1",
+        legs="",
+        feet=""
     }
 
 	sets.combat.DPS = set_combine(sets.combat, {})
@@ -82,16 +80,16 @@ function get_sets()
     -- WS sets
 
     sets.WS = {
-        head="",
-        neck="",
-        ear1="",
-        ear2="",
-        body="",
+        head="Telchine Cap",
+        neck=gear.neck.ws,
+        ear1="Mache Earring",
+        ear2="Mache Earring",
+        body="Onca Suit",
         hands="",
-        ring1="",
-        ring2="",
-        back="",
-        waist="",
+        ring1="Ramuh Ring +1",
+        ring2="Ramuh Ring +1",
+        back="Letalis Mantle",
+        waist=gear.waist.ws,
         legs="",
         feet=""
 	}

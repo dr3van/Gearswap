@@ -9,12 +9,6 @@ function get_sets()
         hands="Assim. Bazu. +1"
     }
 
-    sets.weapons = {}
-    sets.weapons.sword_right = { main=gear.weapons.BLU.sword_right }
-    sets.weapons.sword_left = { main=gear.weapons.BLU.sword_left }
-    sets.weapons.club_right = { main=gear.weapons.BLU.club_right }
-    sets.weapons.club_left = { main=gear.weapons.BLU.club_left }
-
     sets.idle = {
         ammo=gear.ammo.dt,
         head="Wivre Hairpin",

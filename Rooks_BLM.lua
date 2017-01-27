@@ -105,8 +105,8 @@ function get_sets()
     sets.magic_accuracy = {
         head=gear.merlinic.head.MAcc,
         neck=gear.neck.macc,
-        ear1=gear.ears.macc_mnd,
-        ear2=gear.ears.macc_int,
+        ear1=gear.ears.macc_left,
+        ear2=gear.ears.macc_right,
         body=gear.ambuscade.morrigan.body,
         hands=gear.merlinic.hands.MAcc,
         ring1="Shiva Ring",

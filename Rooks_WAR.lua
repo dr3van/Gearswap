@@ -50,6 +50,20 @@ function get_sets()
         feet=gear.souveran.feet.C
     }
 
+    sets.enmity = {
+        ammo=gear.ammo.enmity,          -- 2
+        head=gear.souveran.head.C,      -- 7
+        neck=gear.neck.enmity,          -- 5
+        ear1="Hearty Earring",          -- 0
+        ear2=gear.ears.enmity_right,    -- 2
+        body=gear.souveran.body.C,      -- 17
+        hands=gear.souveran.hands.C,    -- 7
+        ring1=gear.ring.enmity_left,    -- 5
+        ring2=gear.ring.enmity_right,   -- 5
+        legs=gear.souveran.legs.C,      -- 7
+        feet=gear.eschite.feet.A        -- 15
+    }
+
     sets.JA = {}
     sets.JA["Mighty Strikes"] = { hands=gear.jse.relic.war.hands }
     sets.JA["Brazen Rush"] = {}
@@ -63,7 +77,7 @@ function get_sets()
     }
     sets.JA["Blood Rage"] = { body=gear.jse.empyrean.war.body }
     sets.JA["Defender"] = {}
-    sets.JA["Provoke"] = {}
+    sets.JA["Provoke"] = set_combine(sets.enmity, {})
     sets.JA["Restraint"] = { hands=gear.jse.empyrean.war.hands }
     sets.JA["Retaliation"] = {
         hands=gear.jse.artifact.war.hands,
@@ -118,7 +132,7 @@ function get_sets()
         ring2="Chirich Ring",
         back=gear.jse.capes.ambuscade.war.tp,
         waist=gear.waist.highhaste,
-        legs=gear.odyssean.legs.tp,
+        legs=gear.ambuscade.ares.legs,
         feet=gear.ambuscade.ares.feet
     })
 

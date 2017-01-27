@@ -45,6 +45,8 @@ function init_gear()
     gear.ears.idle_right = { name="Ethereal Earring" }
     gear.ears.macc_mnd = { name="Lifestorm Earring" }
     gear.ears.macc_int = { name="Psystorm Earring" }
+    gear.ears.macc_left = { name="Dignitary Earring" }
+    gear.ears.macc_right = { name="Gwati Earring" }
     gear.ears.ws = { name="Moonshade Earring" }
     gear.ears.wsd = { name="Ishvara Earring" }
     gear.ears.mab_left = { name="Friomisi Earring" }
@@ -247,16 +249,16 @@ function init_gear()
 
     gear.odyssean = {}
     gear.odyssean.head = { name="Odyssean Helm" }
-    gear.odyssean.head.tp = { name="Odyssean Helm", augments={'Attack+24','"Store TP"+5','DEX+5','Accuracy+13'} }
-    gear.odyssean.head.ws = { name="Odyssean Helm", augments={'Accuracy+16','Weapon skill damage +5%','VIT+7','Attack+10'} }
+    gear.odyssean.head.tp = { name="Odyssean Helm", augments={'Accuracy+10','"Store TP"+7','VIT+11',} }
+    gear.odyssean.head.ws = { name="Odyssean Helm", augments={'"Subtle Blow"+4','Mag. Acc.+10 "Mag.Atk.Bns."+10','Weapon skill damage +7%'} }
     gear.odyssean.hands = { name="Odyssean Gauntlets" }
     gear.odyssean.hands.idle = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
     gear.odyssean.hands.tp = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
     gear.odyssean.hands.ws = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
     gear.odyssean.legs = { name="Odyssean Cuisses" }
-    gear.odyssean.legs.tp = { name="Odyssean Cuisses", augments={'Accuracy+27','"Store TP"+5','DEX+10','Attack+3'}}
-    gear.odyssean.legs.ws = { name="Odyssean Cuisses", augments={'Accuracy+27','"Store TP"+5','DEX+10','Attack+3'}}
-    gear.odyssean.legs.dt = { name="Odyssean Cuisses", augments={'Accuracy+1','"Resist Silence"+7','Damage taken-5%','Accuracy+10 Attack+10','Mag. Acc.+16 "Mag.Atk.Bns."+16',}}
+    gear.odyssean.legs.tp = { name="Odyssean Cuisses", augments={'DEX+5','Accuracy+8','Quadruple Attack +2','Accuracy+16 Attack+16','Mag. Acc.+19 "Mag.Atk.Bns."+19',}}
+    gear.odyssean.legs.ws = { name="Odyssean Cuisses", augments={'DEX+5','Accuracy+8','Quadruple Attack +2','Accuracy+16 Attack+16','Mag. Acc.+19 "Mag.Atk.Bns."+19',}}
+    gear.odyssean.legs.dt = { name="Odyssean Cuisses", augments={'DEX+5','Accuracy+8','Quadruple Attack +2','Accuracy+16 Attack+16','Mag. Acc.+19 "Mag.Atk.Bns."+19',}}
     gear.odyssean.feet = { name="Odyssean Greaves" }
     gear.odyssean.feet.tp = { name="Odyssean Greaves", augments={'Accuracy+23 Attack+23','DEX+7','Accuracy+15',}}
     gear.odyssean.feet.fc = { name="Odyssean Greaves", augments={'Accuracy+23 Attack+23','DEX+7','Accuracy+15',}}
@@ -267,6 +269,7 @@ function init_gear()
     gear.herculean.head.ws = { name="Herculean Helm", augments={'Accuracy+28','"Triple Atk."+2','AGI+2','Attack+5',}}
     gear.herculean.head.fc = { name="Herculean Helm", augments={'Accuracy+28','"Triple Atk."+2','AGI+2','Attack+5',}}
     gear.herculean.head.mab = { name="Herculean Helm", augments={'Accuracy+28','"Triple Atk."+2','AGI+2','Attack+5',}}
+    gear.herculean.head.dt = { name="Herculean Helm", augments={'Accuracy+28','"Triple Atk."+2','AGI+2','Attack+5',}}
     gear.herculean.hands = { name="Herculean Gloves" }
     gear.herculean.hands.tp = { name="Herculean Gloves", augments={'Accuracy+25 Attack+25','"Triple Atk."+2','DEX+6','Accuracy+13','Attack+2'} }
     gear.herculean.hands.ws = { name="Herculean Gloves", augments={'Accuracy+25 Attack+25','"Triple Atk."+2','DEX+6','Accuracy+13','Attack+2'} }
@@ -334,13 +337,6 @@ function init_gear()
     gear.weapons.SCH.Nuke = { name="Keraunos", augments={'"Mag.Atk.Bns."+17','"Fast Cast"+3','INT+9 MND+9'}}
     gear.weapons.mage.macc = { name="Lehbrailg +2" }
     gear.weapons.mage.refresh = { name="Contemplator" }
-
-    gear.weapons.BLU = {
-        sword_right= { name="Claidheamh Soluis", augments={'Accuracy+9','"Dbl.Atk."+2','STR+15 DEX+15'} },
-        sword_left = { name="Claidheamh Soluis", augments={'Accuracy+10','"Store TP"+5','STR+14 DEX+14'} },
-        club_right = { name="Gabaxorea", augments={'MP+26','"Mag.Atk.Bns."+9','INT+6'} },
-        club_left = { name="Gabaxorea", augments={'MP+22','"Mag.Atk.Bns."+8','INT+5'} }
-    }
 
     -- Ambuscade gear
     -- Slotted this way so after my lazy ass gets the +1 I don't have to change things

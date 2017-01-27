@@ -7,7 +7,7 @@ function get_sets()
 
     sets.idle = {
         ammo=gear.ammo.dt,
-        head=gear.ambuscade.skadi.head,
+        head=gear.jse.relic.run.head,
         neck=gear.neck.dt,
         ear1=gear.ears.idle_left,
         ear2=gear.ears.idle_right,
@@ -32,13 +32,15 @@ function get_sets()
     sets.resting = set_combine(sets.idle, {})
 
     sets.enmity = {
-        ammo=gear.ammo.enmity,          -- 2
-        neck=gear.neck.enmity,          -- 5
-        body="Emet Harness",            -- 9
-        ring1=gear.ring.enmity_left,    -- 5
-        ring2=gear.ring.enmity_right,   -- 5
-        waist="Goading Belt",           -- 3
-        feet="Rager Ledel. +1"          -- 7
+        ammo=gear.ammo.enmity,           -- 2
+        neck=gear.neck.enmity,           -- 5
+        body="Emet Harness",             -- 9
+        hands="Kurys Gloves",            -- 9
+        ring1=gear.ring.enmity_left,     -- 5
+        ring2=gear.ring.enmity_right,    -- 5
+        waist="Goading Belt",            -- 3
+        legs=gear.jse.empyrean.run.legs, -- 10
+        feet="Rager Ledel. +1"           -- 7
     }
 
     sets.JA = {}
@@ -68,15 +70,32 @@ function get_sets()
     })
     sets.JA['Lunge'] = set_combine(sets.JA['Swipe'], {})
 
-    sets.JA['Vallation'] = set_combine(sets.enmity, {})
-    sets.JA['Swordplay'] = set_combine(sets.enmity, {})
-    sets.JA['Pflug'] = set_combine(sets.enmity, {})
+    sets.JA['Vallation'] = set_combine(sets.enmity, {
+        body=gear.jse.artifact.run.body
+    })
+    sets.JA['Battuta'] = set_combine(sets.enmity, {
+        head=gear.jse.relic.run.head
+    })
+    sets.JA['Swordplay'] = set_combine(sets.enmity, {
+        hands=gear.jse.relic.run.hands
+    })
+    sets.JA['Pflug'] = set_combine(sets.enmity, {
+        feet=gear.jse.artifact.run.feet
+    })
+    sets.JA['Rayke'] = set_combine(sets.enmity, {
+        feet=gear.jse.relic.run.feet
+    })
     sets.JA['Valiance'] = set_combine(sets.enmity, {
+        body=gear.jse.artifact.run.body,
         hands="Leyline Gloves"
     })
     sets.JA['Embolden'] = set_combine(sets.enmity, {})
-    sets.JA['Gambit'] = set_combine(sets.enmity, {})
-    sets.JA['Liement'] = set_combine(sets.enmity, {})
+    sets.JA['Gambit'] = set_combine(sets.enmity, {
+        hands=gear.jse.artifact.run.hands
+    })
+    sets.JA['Liement'] = set_combine(sets.enmity, {
+        body=gear.jse.relic.run.body
+    })
     sets.JA['One For All'] = set_combine(sets.enmity, {})
     sets.JA['Elemental Sforzo'] = set_combine(sets.enmity, {
         body=gear.jse.relic.run.body
@@ -98,9 +117,18 @@ function get_sets()
         feet= "Chelona Boots +1"
     }
 
+    sets.midcast['Divine Magic'] = set_combine(sets.enmity, {
+        legs=gear.jse.artifact.run.legs
+    })
+
+
+    sets.precast['Enhancing Magic'] = set_combine(sets.precast.FC, {
+        legs=gear.jse.relic.run.legs
+    })
     sets.midcast['Enhancing Magic'] = set_combine(sets.enmity, {
         head=gear.jse.empyrean.run.head,
         neck="Colossus's Torque",
+        hands=gear.jse.artifact.run.hands,
         legs=gear.carmine.legs.D
     })
 
@@ -111,6 +139,9 @@ function get_sets()
     sets.midcast['Phalanx'] = set_combine(sets.midcast['Enhancing Magic'], {
         head=gear.jse.relic.run.head
     })
+    sets.midcast.RegenSpell = {
+        head=gear.jse.artifact.run.head
+    }
 
 
     sets.combat = {

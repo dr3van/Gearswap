@@ -51,7 +51,7 @@ function get_sets()
     sets.precast = {}
     sets.precast.FC = {
         ammo=gear.ammo.fc,
-        head="Nahtirah Hat",
+        head="Welkin Crown",
         ear2=gear.ears.fc_right,
         body=gear.body.mage_fc,
         hands="Fanatic's Gloves",
@@ -174,8 +174,8 @@ function get_sets()
         ammo="Aqua Sachet",
         head="Befouled Crown",
         neck=gear.neck.macc,
-        ear1=gear.ears.macc_mnd,
-        ear2=gear.ears.macc_int,
+        ear1=gear.ears.macc_left,
+        ear2=gear.ears.macc_right,
         body=gear.vanya.body.C,
         hands=gear.telchine.hands,
         ring1="Levia. Ring",

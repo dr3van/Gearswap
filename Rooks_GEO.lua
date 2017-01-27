@@ -10,7 +10,7 @@ function get_sets()
         ear1=gear.ears.idle_left,
         ear2=gear.ears.idle_right,
         body=gear.body.mage_idle,
-        hands="Bagua Mitaines",
+        hands=gear.jse.relic.geo.hands,
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
         back=gear.back.mage_idle,
@@ -60,39 +60,60 @@ function get_sets()
     sets.precast.FC['Geomancy'] = set_combine(sets.precast.FC, {
     })
 
-    sets.midcast['Elemental Magic'] = {
+    sets.midcast['Elemental Magic'] = set_combine(sets.magic_accuracy, {
         head=gear.merlinic.head.MAB,
-        neck=gear.neck.mab,
+        neck=gear.neck.macc,
         ear1=gear.ears.mab_left,
         ear2=gear.ears.mab_right,
         body=gear.ambuscade.morrigan.body,
-        hands=gear.merlinic.hands.MAB,
+        hands=gear.ambuscade.morrigan.hands,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
         back="Toro Cape",
         waist=gear.waist.macc,
         legs=gear.merlinic.legs.MAB,
         feet=gear.merlinic.feet.MAB
-    }
+    })
+    sets.midcast['Elemental Magic']['highacc'] = set_combine(sets.midcast['Elemental Magic'], {
+        head=gear.ambuscade.morrigan.head,
+        neck=gear.neck.macc,
+        ear1=gear.ears.mab_left,
+        ear2=gear.ears.mab_right,
+        body=gear.ambuscade.morrigan.body,
+        hands=gear.ambuscade.morrigan.hands,
+        ring1="Shiva Ring",
+        ring2="Shiva Ring",
+        back="Toro Cape",
+        waist=gear.waist.macc,
+        legs=gear.ambuscade.morrigan.legs,
+        feet=gear.ambuscade.morrigan.feet
+    })
+
+    sets.midcast['Elemental Magic']['burst'] = set_combine(sets.midcast['Elemental Magic'], {
+        hands = gear.merlinic.hands.burst,
+        ring1 = gear.ring.mb_left,
+        ring2 = gear.ring.mb_right
+    })
+
 
 
     sets.midcast['Geomancy'] = {
-        head="Hike Khat",
-        body="Bagua Tunic +1",
-        hands="Geomancy Mitaines +1",
+        head=gear.jse.empyrean.geo.head,
+        body=gear.jse.relic.geo.body,
+        hands=gear.jse.artifact.geo.hands,
         back="Lifestream Cape",
         waist=gear.waist.conserve_mp
     }
 
     sets.midcast['Dark Magic'] = set_combine(sets.midcast['Elemental Magic'], {
-        body="Geomancy Tunic +1"
+        body=gear.jse.artifact.geo.body
     })
 
     sets.midcast['Stun'] = set_combine(sets.midcast['Dark Magic'], {
         head=gear.merlinic.head.Macc,
         neck=gear.neck.macc,
-        ear1=gear.ears.macc_mnd,
-        ear2=gear.ears.macc_int,
+        ear1=gear.ears.macc_left,
+        ear2=gear.ears.macc_right,
         back=gear.back.macc,
         waist=gear.waist.macc
     })

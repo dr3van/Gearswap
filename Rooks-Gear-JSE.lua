@@ -54,7 +54,7 @@ function init_jse()
     -- WAR
     gear.jse.artifact.war = {
         head="Pumm. Mask +1",
-        body="Pumm. Lorica +1",
+        body="Pumm. Lorica +2",
         hands="Fighter's Mufflers +1",
         legs="Pumm. Cuisses",
         feet="Pumm. Calligae"
@@ -124,9 +124,25 @@ function init_jse()
     gear.jse.artifact.geo = {
         head="Geomancy Galero",
         body="Geo. Tunic +1",
-        hands="Geomancy Mitaines",
+        hands="Geomancy Mitaines +1",
         legs="Geomancy Pants",
         feet="Geomancy Sandals +1",
+    }
+
+    gear.jse.relic.geo = {
+        head="Bagua Galero",
+        body="Bagua Tunic +1",
+        hands="Bagua Mitaines",
+        legs="Bagua Pants",
+        feet="Bagua Sandals",
+    }
+
+    gear.jse.empyrean.geo = {
+        head="Azimuth Hood +1",
+        body="Azimuth Coat +1",
+        hands="Azimuth Gloves",
+        legs="Azimuth Tights",
+        feet="Azimuth Gaiters",
     }
 
     -- RUN
@@ -139,15 +155,15 @@ function init_jse()
     }
 
     gear.jse.relic.run = {
-        head="Futhark Bandeau",
+        head="Futhark Bandeau +1",
         body="Futhark Coat",
         hands="Futhark Mitons",
         legs="Futhark Trousers",
-        feet="Futhark Bottes"
+        feet="Futhark Boots"
     }
 
     gear.jse.empyrean.run = {
-        head="Erliaz Galea",
+        head="Erilaz Galea",
         body="Erilaz Surcoat",
         hands="Erilaz Gauntlets",
         legs="Erilaz Leg Guards",

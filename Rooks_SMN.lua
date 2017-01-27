@@ -9,9 +9,6 @@ function get_sets()
     combat_index_max = 5
 
     sets.idle = {
-        main=gear.weapons.mage.refresh,
-        sub=gear.grip.dt,
-        ammo=gear.ammo.dt,
         head=gear.head.mage_refresh,
         neck=gear.neck.dt,
         ear1=gear.ears.idle_left,
@@ -49,7 +46,6 @@ function get_sets()
 
     sets.precast = {}
     sets.precast.FC = {
-        ammo=gear.ammo.fc,
         head=gear.merlinic.head.fc,
         ear2=gear.ears.fc_right,
         body=gear.body.mage_fc,
@@ -76,5 +72,29 @@ function get_sets()
     }
     sets.pet.midcast.BloodPactRage = set_combine(sets.pet.midcast.BloodPact, {})
     sets.pet.midcast.BloodPactWard = set_combine(sets.pet.midcast.BloodPact, {})
-end
 
+
+    sets.combat = {
+        head="Telchine Cap",
+        neck="Sanctity Necklace",
+        ear1="Mache Earring",
+        ear2="Mache Earring",
+        body="Onca Suit",
+        hands="",
+        ring1="Ramuh Ring +1",
+        ring2="Ramuh Ring +1",
+        back="Rancorous Mantle",
+        waist="Windbuffet Belt +1",
+        legs="",
+        feet=""
+    }
+    sets.combat.DPS = set_combine(sets.combat, {})
+    sets.combat.midacc = set_combine(sets.combat, {})
+    sets.combat.highacc = set_combine(sets.combat, {})
+    sets.combat.defensive = set_combine(sets.combat, {})
+
+
+
+
+
+end
