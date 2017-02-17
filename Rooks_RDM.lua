@@ -119,8 +119,8 @@ function get_sets()
         ear2=gear.ears.macc_right,
         body=gear.vanya.body.C,
         hands=gear.ambuscade.morrigan.hands,
-        ring1="Shiva Ring",
-        ring2="Shiva Ring",
+        ring1=gear.ring.macc_left,
+        ring2=gear.ring.macc_right,
         back=gear.back.macc,
         waist=gear.waist.macc,
         legs=gear.ambuscade.morrigan.legs,
@@ -130,10 +130,7 @@ function get_sets()
     sets.midcast['Enfeebling Magic'] = set_combine(sets.magic_accuracy, {
     })
 
-    sets.midcast['Enfeebling Magic']['White Magic'] = set_combine(sets.midcast['Enfeebling Magic'], {
-        ring1="Levia. Ring",
-        ring2="Levia. Ring",
-    })
+    sets.midcast['Enfeebling Magic']['White Magic'] = set_combine(sets.midcast['Enfeebling Magic'], {})
 
     sets.midcast['Enfeebling Magic']['Black Magic'] = set_combine(sets.midcast['Enfeebling Magic'], {
         body=gear.ambuscade.morrigan.body
@@ -167,6 +164,8 @@ function get_sets()
     sets.midcast['Enhancing Magic'] = set_combine(sets.magic_recast, {
         body=gear.jse.relic.rdm.head,
         hands=gear.jse.relic.rdm.hands,
+        ring1=gear.ring.magic_skill_left,
+        ring2=gear.ring.magic_skill_right,
         back="Estoqueur's Cape",
         waist=gear.waist.conserve_mp,
         legs=gear.jse.artifact.rdm.legs,

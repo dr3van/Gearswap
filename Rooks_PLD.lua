@@ -5,9 +5,9 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(1, 1)
 
-    combat_sets = {'DPS', 'midacc', 'highacc', 'defensive', 'stp', 'turtle', 'hp', 'purehp' }
-    combat_sets_description = { 'Physical DPS', 'Moderate physical accuracy', 'High physical accuracy', 'Defensive', 'Store TP', 'Turtle', 'maxHP', 'pure max HP' }
-    combat_index_max = 8
+    combat_sets = {'DPS', 'midacc', 'highacc', 'defensive', 'stp', 'turtle', 'hp', 'purehp', 'mdb' }
+    combat_sets_description = { 'Physical DPS', 'Moderate physical accuracy', 'High physical accuracy', 'Defensive', 'Store TP', 'Turtle', 'maxHP', 'pure max HP', 'MDB' }
+    combat_index_max = 9
 
 
     sets.weapons = {}
@@ -35,6 +35,8 @@ function get_sets()
     }
     sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {
+        ammo=gear.ammo.refresh,
+        head=gear.valorous.head,
         neck="Creed Collar",
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
@@ -89,8 +91,8 @@ function get_sets()
         ammo="Hasty Pinion +1",
         head=gear.odyssean.head.tp,
         neck=gear.neck.sword,
-        ear1=gear.ears.da_left,
-        ear2=gear.ears.da_right,
+        ear1=gear.ears.acc_left,
+        ear2=gear.ears.da,
         body=gear.ambuscade.ares.body,
         hands=gear.ambuscade.ares.hands,
         ring1="Rajas Ring",
@@ -114,8 +116,8 @@ function get_sets()
         ammo="Hasty Pinion +1",
         head=gear.odyssean.head.tp,
         neck=gear.neck.sword,
-        ear1=gear.ears.da_left,
-        ear2=gear.ears.da_right,
+        ear1=gear.ears.acc_left,
+        ear2=gear.ears.da,
         body=gear.ambuscade.ares.body,
         hands=gear.ambuscade.ares.hands,
         ring1=gear.ring.dt_left,
@@ -130,8 +132,8 @@ function get_sets()
         ammo="Jukukik Feather",
         head=gear.ambuscade.phorcys.head,
         neck="Lissome Necklace",
-        ear1=gear.ears.da_left,
-        ear2=gear.ears.da_right,
+        ear1=gear.ears.acc_left,
+        ear2=gear.ears.da,
         body=gear.ambuscade.phorcys.body,
         hands=gear.ambuscade.phorcys.hands,
         ring1="Rajas Ring",
@@ -159,6 +161,22 @@ function get_sets()
     }
 
     sets.combat.purehp = set_combine(sets.maxHP, {})
+
+    sets.combat.mdb = {
+        ammo=gear.ammo.dt,
+        head=gear.ambuscade.phorcys.head,
+        neck="Dualism Collar +1",
+        ear1=gear.ears.acc_left,
+        ear2=gear.ears.da,
+        body=gear.jse.artifact.pld.body,
+        hands=gear.souveran.hands.C,
+        ring1="Ramuh Ring +1",
+        ring2="Chirich Ring",
+        back=gear.jse.capes.ambuscade.pld.tp,
+        waist="Creed Baudrier",
+        legs=gear.ambuscade.phorcys.legs,
+        feet=gear.ambuscade.phorcys.feet
+    }
 
     -- WS sets
 

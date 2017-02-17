@@ -36,6 +36,16 @@ function init_jse()
     gear.jse.capes.ambuscade.war.tp = { name="Cichol's Mantle"}
     gear.jse.capes.ambuscade.war.ws = { name="Cichol's Mantle"}
 
+    gear.jse.capes.ambuscade.thf = { name="Toutatis's Cape"}
+    gear.jse.capes.ambuscade.thf.tp = { name="Toutatis's Cape"}
+    gear.jse.capes.ambuscade.thf.ws = { name="Toutatis's Cape"}
+
+    gear.jse.capes.ambuscade.brd = { name="Intarabus's Cape"}
+    gear.jse.capes.ambuscade.brd.tp = { name="Intarabus's Cape"}
+    gear.jse.capes.ambuscade.brd.ws = { name="Intarabus's Cape"}
+    gear.jse.capes.ambuscade.brd.macc = { name="Intarabus's Cape"}
+    gear.jse.capes.ambuscade.brd.fc = { name="Intarabus's Cape"}
+
     gear.jse.capes.ambuscade.drk = { name="Ankou's Mantle"}
     gear.jse.capes.ambuscade.drk.idle = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
     gear.jse.capes.ambuscade.drk.tp = { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10'}}
@@ -168,6 +178,32 @@ function init_jse()
         hands="Erilaz Gauntlets",
         legs="Erilaz Leg Guards",
         feet="Erilaz Greaves"
+    }
+
+    -- BRD
+    gear.jse.artifact.brd = {
+        head="Brioso Roundlet +2",
+        body="Brioso Justaucorps",
+        hands="Brioso Cuffs +1",
+        legs="Brioso Cannions +1",
+        feet="Brioso Slippers +2"
+    }
+
+    gear.jse.relic.brd = {
+        head="Bihu Roundlet +1",
+        body="Bihu Justaucorps",
+        hands="Bihu Cuffs +1",
+        legs="Bihu Cannions +1",
+        feet="Bihu Slippers +1"
+    }
+
+    gear.jse.empyrean.brd = {
+        head="Fili Calot +1",
+        body="Fili Hongreline +1",
+        hands="Fili Manchettes +1",
+        legs="Fili Rhingrave +1",
+        feet="Fili Cothurnes +1",
+        neck="Aoidos' Matinee"
     }
 
     -- XXX

@@ -99,8 +99,11 @@ function get_sets()
 
     sets.midcast['Geomancy'] = {
         head=gear.jse.empyrean.geo.head,
+        neck=gear.neck.magic_skill,
         body=gear.jse.relic.geo.body,
         hands=gear.jse.artifact.geo.hands,
+        ring1=gear.ring.magic_skill_left,
+        ring2=gear.ring.magic_skill_right,
         back="Lifestream Cape",
         waist=gear.waist.conserve_mp
     }

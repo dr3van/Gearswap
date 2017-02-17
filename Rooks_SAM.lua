@@ -27,7 +27,6 @@ function get_sets()
         ring2=gear.ring.regen_right
     })
     sets.idle.DT = set_combine(sets.idle, {
-        feet=gear.founder.feet
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
@@ -69,6 +68,8 @@ function get_sets()
     })
     sets.combat.highacc = set_combine(sets.combat.midacc, {
         head=gear.ambuscade.phorcys.head,
+        ear1=gear.ears.da,
+        ear2=gear.ears.melee_acc_right,
         ring1="Ramuh ring +1",
         ring2="Ramuh ring +1"
     })

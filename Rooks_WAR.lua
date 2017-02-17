@@ -60,6 +60,8 @@ function get_sets()
         hands=gear.souveran.hands.C,    -- 7
         ring1=gear.ring.enmity_left,    -- 5
         ring2=gear.ring.enmity_right,   -- 5
+        back="Fierabras's Mantle",
+        waist="Goading Belt",
         legs=gear.souveran.legs.C,      -- 7
         feet=gear.eschite.feet.A        -- 15
     }
@@ -83,7 +85,10 @@ function get_sets()
         hands=gear.jse.artifact.war.hands,
         feet=gear.jse.empyrean.war.feet
     }
-    sets.JA["Tomahawk"] = { feet=gear.jse.relic.war.feet }
+    sets.JA["Tomahawk"] = {
+        ammo="Throwing Tomahawk",
+        feet=gear.jse.relic.war.feet
+    }
     sets.JA["Warcry"] = { head=gear.jse.relic.war.head }
     sets.JA["Warrior's Charge"] = { legs=gear.jse.relic.war.legs }
 
@@ -91,8 +96,8 @@ function get_sets()
         ammo="Seething Bomblet +1",
         head=gear.odyssean.head.tp,
         neck=gear.neck.tp,
-        ear1=gear.ears.da_left,
-        ear2=gear.ears.da_right,
+        ear1=gear.ears.acc_left,
+        ear2=gear.ears.da,
         body=gear.ambuscade.phorcys.body,
         hands=gear.ambuscade.phorcys.hands,
         ring1="Rajas Ring",
@@ -124,8 +129,8 @@ function get_sets()
         ammo=gear.ammo.haste,
         head=gear.odyssean.head.tp,
         neck=gear.neck.acc,
-        ear1=gear.ears.melee_left,
-        ear2=gear.ears.melee_right,
+        ear1=gear.ears.acc_left,
+        ear2=gear.ears.da,
         body=gear.ambuscade.ares.body,
         hands=gear.ambuscade.ares.hands,
         ring1="Rajas Ring",

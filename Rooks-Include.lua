@@ -413,6 +413,12 @@ function self_command(command)
     end
 end
 
+function pretarget(spell)
+    if job_pretarget then
+        job_pretarget(spell)
+    end
+end
+
 function buff_change(new, bool)
     if new == 'Reive Mark' and bool then
         equip(sets.reive)

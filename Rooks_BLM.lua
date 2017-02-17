@@ -35,7 +35,7 @@ function get_sets()
         legs="Nares Trews"
     })
     sets.idle.DT = set_combine(sets.idle, {
-        head="Nahtirah Hat",
+        head="Hike Khat",
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
         legs=gear.legs.mage_pdt,
@@ -79,7 +79,7 @@ function get_sets()
         ring1="Ramuh ring +1",
         ring2="Chirich Ring",
         back="Rancorous Mantle",
-        waist="Cetl Belt",
+        waist="Goading Belt",
         legs=gear.ambuscade.morrigan.legs,
         feet=gear.ambuscade.morrigan.feet
     }
@@ -109,8 +109,8 @@ function get_sets()
         ear2=gear.ears.macc_right,
         body=gear.ambuscade.morrigan.body,
         hands=gear.merlinic.hands.MAcc,
-        ring1="Shiva Ring",
-        ring2="Shiva Ring",
+        ring1=gear.ring.macc_left,
+        ring2=gear.ring.macc_right,
         back=gear.back.macc,
         waist=gear.waist.macc,
         legs=gear.merlinic.legs.MAcc,
@@ -119,6 +119,8 @@ function get_sets()
 
 
     sets.midcast['Enhancing Magic'] = set_combine(sets.magic_recast, {
+        ring1=gear.ring.magic_skill_left,
+        ring2=gear.ring.magic_skill_right
     })
 
     sets.midcast['Enfeebling Magic'] = set_combine(sets.magic_accuracy, {})
@@ -175,7 +177,6 @@ function get_sets()
     })
 
     sets.midcast.DrainAspir = set_combine(sets.midcast['Dark Magic'], {
-        waist="Casso Sash"
     })
     sets.midcast['Drain'] = set_combine(sets.midcast.DrainAspir, {})
     sets.midcast['Aspir'] = set_combine(sets.midcast.DrainAspir, {})

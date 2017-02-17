@@ -161,8 +161,8 @@ function get_sets()
 
     sets.blue.debuffs = set_combine(sets.blue, {
         neck=gear.neck.macc,
-        ear1=gear.ears.macc_mnd,
-        ear2=gear.ears.macc_int,
+        ear1=gear.ears.macc_left,
+        ear2=gear.ears.macc_right,
         hands=gear.ambuscade.morrigan.hands,
         waist=gear.waist.macc,
         legs=gear.ambuscade.morrigan.legs,
@@ -175,8 +175,8 @@ function get_sets()
     sets.blue.physical = set_combine(sets.blue, {
         head=gear.herculean.head.fc,
         neck=gear.neck.macc,
-        ear1=gear.ears.macc_mnd,
-        ear2=gear.ears.macc_int,
+        ear1=gear.ears.macc_left,
+        ear2=gear.ears.macc_right,
         hands=gear.taeon.hands.tp,
         ring1="Ifrit Ring",
         ring2="Ifrit Ring +1",

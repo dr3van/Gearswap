@@ -16,6 +16,7 @@ function init_gear()
     gear.ammo.fc = { name = "Impatiens" }
     gear.ammo.macc = { name = "Plumose Sachet" }
     gear.ammo.mdmg = { name = "Dosis Tathlum" }
+    gear.ammo.refresh = { name = "Homiliary" }
 
     gear.neck = {}
     gear.neck.hp = { name="Dualism Collar +1" }
@@ -26,6 +27,7 @@ function init_gear()
     gear.neck.regen = { name="Wiglen Gorget" }
     gear.neck.mab = { name="Sanctity Necklace" }
     gear.neck.macc = { name="Sanctity Necklace" }
+    gear.neck.magic_skill = { name="Incanter's Torque" }
     gear.neck.acc = { name="Sanctity Necklace" }
     gear.neck.regen = { name="Wiglen Gorget" }
     gear.neck.tp = { name="Sanctity Necklace" }
@@ -35,6 +37,7 @@ function init_gear()
     gear.neck.greataxe = { name="Decimus Torque" }
 
     gear.ears = {}
+    gear.ears.acc_left = { name="Dignitary's Earring" }
     gear.ears.da = { name="Brutal Earring" }
     gear.ears.da_left = { name="Bladeborn Earring" }
     gear.ears.da_right = { name="Steelflash Earring" }
@@ -45,7 +48,7 @@ function init_gear()
     gear.ears.idle_right = { name="Ethereal Earring" }
     gear.ears.macc_mnd = { name="Lifestorm Earring" }
     gear.ears.macc_int = { name="Psystorm Earring" }
-    gear.ears.macc_left = { name="Dignitary Earring" }
+    gear.ears.macc_left = { name="Dignitary's Earring" }
     gear.ears.macc_right = { name="Gwati Earring" }
     gear.ears.ws = { name="Moonshade Earring" }
     gear.ears.wsd = { name="Ishvara Earring" }
@@ -66,7 +69,10 @@ function init_gear()
     gear.ring.regen_right = { name="Paguroidea Ring" }
     gear.ring.fc_left = { name="Lebeche Ring" }
     gear.ring.fc_right = { name="Veneficium Ring" }
-    gear.ring.macc = { name="Sangoma Ring" }
+    gear.ring.macc_left = { name="Stikini Ring" }
+    gear.ring.macc_right = { name="Stikini Ring" }
+    gear.ring.magic_skill_left = { name="Stikini Ring" }
+    gear.ring.magic_skill_right = { name="Stikini Ring" }
     gear.ring.healing_left = { name="Sirona's Ring" }
     gear.ring.healing_right = { name="Ephedra Ring" }
     gear.ring.enmity_left = { name="Eihwaz Ring" }
@@ -352,7 +358,7 @@ function init_gear()
 
     gear.ambuscade.skadi = {
         head="Meghanada Visor",
-        body="Meghanada Cuirie",
+        body="Meghanada Cuirie +1",
         hands="Meghanada Gloves",
         legs="Meghanada Chausses",
         feet="Meghanada Jambeaux",
@@ -388,6 +394,30 @@ function init_gear()
         hands="Flam. Manopolas +1",
         legs="Flamma Dirs +1",
         feet="Flam. Gambieras +1",
+    }
+
+    gear.ambuscade.thaumas = {
+        head="Mummu Bonnet +1",
+        body="Mummu Jacket +1",
+        hands="Mummu Wrists +1",
+        legs="Mummu Kecks +1",
+        feet="Mummu Gamashes +1",
+    }
+
+    gear.ambuscade.nashira = {
+        head="Tali'ah Turban +1",
+        body="Tali'ah Manteel",
+        hands="Tali'ah Gages +1",
+        legs="Tali'ah Seraweels +1",
+        feet="Tali'ah Crackows +1",
+    }
+
+    gear.ambuscade.homam = {
+        head="Ayanmo Zucchetto +1",
+        body="Ayanmo Corazza +1",
+        hands="Ayanmo Manopolas +1",
+        legs="Ayanmo Cosciales +1",
+        feet="Ayanmo Gambieras +1",
     }
 
     -- Things I always have on me, no matter what
