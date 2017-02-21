@@ -115,6 +115,7 @@ function get_sets()
     })
 
     sets.WS['Final Heaven'] = set_combine(sets.WS, {
+        ammo=gear.ammo.wsdmg,
         ring1="Titan Ring",
         ring2="Titan Ring +1",
     })

@@ -37,6 +37,7 @@ function get_sets()
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
+    sets.resting = set_combine(sets.idle.regen, {})
 
     sets.combat = {
         head=gear.herculean.head.tp,

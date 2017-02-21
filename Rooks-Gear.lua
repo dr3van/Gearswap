@@ -17,6 +17,7 @@ function init_gear()
     gear.ammo.macc = { name = "Plumose Sachet" }
     gear.ammo.mdmg = { name = "Dosis Tathlum" }
     gear.ammo.refresh = { name = "Homiliary" }
+    gear.ammo.wsdmg = { name="Knobkierrie" }
 
     gear.neck = {}
     gear.neck.hp = { name="Dualism Collar +1" }
@@ -262,12 +263,15 @@ function init_gear()
     gear.odyssean.hands.tp = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
     gear.odyssean.hands.ws = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
     gear.odyssean.legs = { name="Odyssean Cuisses" }
+    gear.odyssean.legs.qa = { name="Odyssean Cuisses", augments={'DEX+5','Accuracy+8','Quadruple Attack +2','Accuracy+16 Attack+16','Mag. Acc.+19 "Mag.Atk.Bns."+19',}}
     gear.odyssean.legs.tp = { name="Odyssean Cuisses", augments={'DEX+5','Accuracy+8','Quadruple Attack +2','Accuracy+16 Attack+16','Mag. Acc.+19 "Mag.Atk.Bns."+19',}}
     gear.odyssean.legs.ws = { name="Odyssean Cuisses", augments={'DEX+5','Accuracy+8','Quadruple Attack +2','Accuracy+16 Attack+16','Mag. Acc.+19 "Mag.Atk.Bns."+19',}}
     gear.odyssean.legs.dt = { name="Odyssean Cuisses", augments={'DEX+5','Accuracy+8','Quadruple Attack +2','Accuracy+16 Attack+16','Mag. Acc.+19 "Mag.Atk.Bns."+19',}}
+    gear.odyssean.legs.stp = { name="Odyssean Cuisses", augments={'DEX+10','Accuracy+27','"Store TP"+5','Attack+3'}}
     gear.odyssean.feet = { name="Odyssean Greaves" }
     gear.odyssean.feet.tp = { name="Odyssean Greaves", augments={'Accuracy+23 Attack+23','DEX+7','Accuracy+15',}}
     gear.odyssean.feet.fc = { name="Odyssean Greaves", augments={'Accuracy+23 Attack+23','DEX+7','Accuracy+15',}}
+    gear.odyssean.feet.dt = { name="Odyssean Greaves", augments={'Phys. dmg. taken -4%','Weapon skill damage +4%','Chance of successful block +2','Accuracy+19 Attack+19','Mag. Acc.+7 "Mag.Atk.Bns."+7',}}
 
     gear.herculean = {}
     gear.herculean.head = { name="Herculean Helm" }

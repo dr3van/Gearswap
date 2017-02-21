@@ -5,6 +5,10 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(0, 1)
 
+    combat_sets = {'DPS', 'midacc', 'highacc', 'defensive', 'tank' }
+    combat_sets_description = { 'Physical DPS', 'Moderate physical accuracy', 'High physical accuracy', 'Defensive', 'Tank' }
+    combat_index_max = 5
+
     sets.idle = {
         ammo=gear.ammo.dt,
         head=gear.ambuscade.ares.head,
@@ -52,7 +56,7 @@ function get_sets()
 
     sets.enmity = {
         ammo=gear.ammo.enmity,          -- 2
-        head=gear.souveran.head.C,      -- 7
+        head=gear.jse.artifact.war.head, -- 9
         neck=gear.neck.enmity,          -- 5
         ear1="Hearty Earring",          -- 0
         ear2=gear.ears.enmity_right,    -- 2
@@ -60,11 +64,12 @@ function get_sets()
         hands=gear.souveran.hands.C,    -- 7
         ring1=gear.ring.enmity_left,    -- 5
         ring2=gear.ring.enmity_right,   -- 5
-        back="Fierabras's Mantle",
-        waist="Goading Belt",
+        back="Fierabras's Mantle",      -- 5
+        waist="Goading Belt",           -- 3
         legs=gear.souveran.legs.C,      -- 7
         feet=gear.eschite.feet.A        -- 15
     }
+    -- Total: 82
 
     sets.JA = {}
     sets.JA["Mighty Strikes"] = { hands=gear.jse.relic.war.hands }
@@ -103,27 +108,27 @@ function get_sets()
         ring1="Rajas Ring",
         ring2="Chirich Ring",
         back=gear.jse.capes.ambuscade.war.tp,
-        waist="Dynamic Belt +1",
-        legs=gear.odyssean.legs.tp,
+        waist="Ioskeha Belt",
+        legs=gear.odyssean.legs.stp,
         feet=gear.ambuscade.phorcys.feet
     }
 
     sets.combat.DPS = set_combine(sets.combat, {})
     sets.combat.midacc = set_combine(sets.combat, {})
     sets.combat.highacc = set_combine(sets.combat.midacc, {
-        ammo=gear.ammo.haste,
-        head=gear.odyssean.head.tp,
+        ammo="Seething Bomblet +1",
+        head=gear.ambuscade.phorcys.head,
         neck=gear.neck.acc,
-        ear1=gear.ears.melee_left,
-        ear2=gear.ears.melee_right,
+        ear1=gear.ears.melee_acc_left,
+        ear2=gear.ears.melee_acc_right,
         body=gear.ambuscade.phorcys.body,
         hands=gear.ambuscade.phorcys.hands,
-        ring1="Chirich Ring",
+        ring1="Ramuh Ring +1",
         ring2="Ramuh Ring +1",
         back=gear.jse.capes.ambuscade.war.tp,
         waist="Dynamic Belt +1",
-        legs=gear.odyssean.legs.tp,
-        feet=gear.ambuscade.phorcys.feet
+        legs=gear.ambuscade.phorcys.legs,
+        feet=gear.odyssean.feet.tp
     })
     sets.combat.defensive = set_combine(sets.combat, {
         ammo=gear.ammo.haste,
@@ -140,7 +145,21 @@ function get_sets()
         legs=gear.ambuscade.ares.legs,
         feet=gear.ambuscade.ares.feet
     })
-
+    sets.combat.tank = set_combine(sets.combat, {
+        ammo=gear.ammo.haste,
+        head=gear.jse.artifact.war.head,
+        neck=gear.neck.dt,
+        ear1=gear.ears.acc_left,
+        ear2=gear.ears.da,
+        body=gear.ambuscade.ares.body,
+        hands=gear.ambuscade.ares.hands,
+        ring1=gear.ring.dt_left,
+        ring2="Chirich Ring",
+        back=gear.jse.capes.ambuscade.war.tp,
+        waist="Ioskeha Belt",
+        legs=gear.ambuscade.ares.legs,
+        feet=gear.odyssean.feet.dt
+    })
 
     -- WS sets
 
@@ -161,7 +180,7 @@ function get_sets()
     }
 
     sets.WS.singlehit = set_combine(sets.WS, {
-        ammo="Seething Bomblet +1",
+        ammo=gear.ammo.wsdmg,
         head=gear.odyssean.head.ws,
         neck=gear.neck.ws,
         ear1=gear.ears.wsd,
@@ -177,7 +196,7 @@ function get_sets()
     })
 
     sets.WS['Power Slash'] = {
-        ammo="Seething Bomblet +1",
+        ammo=gear.ammo.wsdmg,
         head=gear.odyssean.head.ws,
         neck=gear.neck.ws,
         ear1=gear.ears.da_left,
@@ -193,7 +212,7 @@ function get_sets()
     }
 
     sets.WS['Scourge'] = {
-        ammo="Seething Bomblet +1",
+        ammo=gear.ammo.wsdmg,
         head=gear.odyssean.head.ws,
         neck=gear.neck.ws,
         ear1=gear.ears.da_left,
@@ -209,7 +228,7 @@ function get_sets()
     }
 
     sets.WS['Ground Strike'] = {
-        ammo="Seething Bomblet +1",
+        ammo=gear.ammo.wsdmg,
         head=gear.odyssean.head.ws,
         neck=gear.neck.ws,
         ear1=gear.ears.da_left,

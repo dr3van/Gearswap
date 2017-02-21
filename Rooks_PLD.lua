@@ -38,6 +38,7 @@ function get_sets()
         ammo=gear.ammo.refresh,
         head=gear.valorous.head,
         neck="Creed Collar",
+        body="Jumalik Mail",
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
     })

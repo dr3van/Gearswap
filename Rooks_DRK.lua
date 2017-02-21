@@ -147,7 +147,7 @@ function get_sets()
 	}
 
     sets.WS['Scourge'] = {
-        ammo="Seething Bomblet +1",
+        ammo=gear.ammo.wsdmg,
         head=gear.odyssean.head.ws,
         neck=gear.neck.ws,
         ear1=gear.ears.da_left,
@@ -163,7 +163,7 @@ function get_sets()
     }
 
     sets.WS['Torcleaver'] = {
-        ammo="Seething Bomblet +1",
+        ammo=gear.ammo.wsdmg,
         head=gear.odyssean.head.ws,
         neck=gear.neck.ws,
         ear1=gear.ears.wsd,

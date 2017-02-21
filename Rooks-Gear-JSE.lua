@@ -63,7 +63,7 @@ function init_jse()
 
     -- WAR
     gear.jse.artifact.war = {
-        head="Pumm. Mask +1",
+        head="Pummeler's Mask +2",
         body="Pumm. Lorica +2",
         hands="Fighter's Mufflers +1",
         legs="Pumm. Cuisses",
