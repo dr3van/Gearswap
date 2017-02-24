@@ -175,7 +175,7 @@ function get_sets()
         ring2="Ifrit Ring +1",
         back=gear.jse.capes.ambuscade.war.ws,
         waist=gear.waist.ws,
-        legs=gear.argosy.legs.D,
+        legs=gear.argosy.legs.A,
         feet=gear.argosy.feet.A
     }
 
@@ -244,7 +244,7 @@ function get_sets()
     }
 
     sets.WS['Resolution'] = set_combine(sets.WS, {
-        ear1="Mache Earring",
+        ear1="Brutal Earring",
         ear2="Moonshade Earring"
     })
 
