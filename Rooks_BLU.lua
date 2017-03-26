@@ -109,14 +109,11 @@ function get_sets()
     sets.WS.Requiescat = set_combine(sets.WS, {
         ear1="Brutal Earring",
         ear2="Moonshade Earring",
-        ring1="Aquasoul Ring",
-        legs="Nahtirah Trousers"
     })
 
     sets.WS['Chant du Cygne'] = set_combine(sets.WS, {
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,
-        back="Rancorous Mantle",
         legs=gear.taeon.legs.tp
     })
 
@@ -128,8 +125,6 @@ function get_sets()
     sets.WS['Realmrazer'] = set_combine(sets.WS, {
         ear1="Brutal Earring",
         ear2="Moonshade Earring",
-        ring1="Aquasoul Ring",
-        legs="Nahtirah Trousers"
     })
 
     sets.WS['Sanguine Blade'] = set_combine(sets.WS, {

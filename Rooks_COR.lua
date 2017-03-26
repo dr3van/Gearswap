@@ -13,7 +13,6 @@ function get_sets()
     bullets['Quick Draw'] = "Adlivun Bullet"
 
     sets.idle = {
-        ammo=gear.ammo.dt,
         head=gear.ambuscade.skadi.head,
         neck=gear.neck.dt,
         ear1=gear.ears.idle_left,
@@ -61,11 +60,11 @@ function get_sets()
         neck=gear.neck.tp,
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,
-        body=gear.taeon.body.tp,
-        hands=gear.taeon.hands.tp,
-        ring1="Rajas Ring",
+        body=gear.ambuscade.skadi.body,
+        hands=gear.herculean.hands.tp,
+        ring1="Chirich Ring",
         ring2="Epona's Ring",
-        back="Atheling Mantle",
+        back="Letalis Mantle",
         waist=gear.waist.nohaste,
         legs=gear.herculean.legs.tp,
         feet=gear.herculean.feet.tp
@@ -99,7 +98,7 @@ function get_sets()
         ring1="Stormsoul Ring",
         ring2="Stormsoul Ring",
         back="Toro Cape",
-        waist="Elanid Belt",
+        waist="Eschan Stone",
         legs=gear.ambuscade.skadi.legs,
         feet=gear.ambuscade.skadi.feet
     }
@@ -120,6 +119,22 @@ function get_sets()
         legs=gear.herculean.legs.tp,
         feet=gear.herculean.feet.tp
     }
+
+    sets.WS['Leaden Salute'] = {
+        head="Pixie Hairpin +1",
+        neck="Sanctity Necklace",
+        ear1=gear.ears.mab_left,
+        ear2=gear.ears.mab_right,
+        body="Samnuha Coat",
+        hands="Leyline Gloves",
+        ring1="Garuda Ring",
+        ring2="Dingir Ring",
+        back="Toro Cape",
+        waist=gear.waist.ws,
+        legs=gear.herculean.legs.tp,
+        feet=gear.herculean.feet.tp
+    }
+
 
     -- Roll info
     rolls = {

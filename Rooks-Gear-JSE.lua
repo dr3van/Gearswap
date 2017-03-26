@@ -29,12 +29,13 @@ function init_jse()
     gear.jse.capes.ambuscade.pld.tp = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
     gear.jse.capes.ambuscade.pld.ws = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
     gear.jse.capes.ambuscade.pld.idle = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
-    gear.jse.capes.ambuscade.pld.wsd = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20', 'STR+10', 'Weapon skill damage +10%',}}
+    gear.jse.capes.ambuscade.pld.wsd = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20', 'STR+10', 'Weapon skill damage +10%'}}
 
     gear.jse.capes.ambuscade.war = { name="Cichol's Mantle"}
-    gear.jse.capes.ambuscade.war.idle = { name="Cichol's Mantle"}
-    gear.jse.capes.ambuscade.war.tp = { name="Cichol's Mantle"}
-    gear.jse.capes.ambuscade.war.ws = { name="Cichol's Mantle"}
+    gear.jse.capes.ambuscade.war.idle = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10'}}
+    gear.jse.capes.ambuscade.war.tp = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10'}}
+    gear.jse.capes.ambuscade.war.ws = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10'}}
+    gear.jse.capes.ambuscade.war.wsd = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+5', 'Weapon skill damage +10%'}}
 
     gear.jse.capes.ambuscade.thf = { name="Toutatis's Cape"}
     gear.jse.capes.ambuscade.thf.tp = { name="Toutatis's Cape"}
@@ -65,9 +66,9 @@ function init_jse()
     gear.jse.artifact.war = {
         head="Pummeler's Mask +2",
         body="Pumm. Lorica +2",
-        hands="Fighter's Mufflers +1",
-        legs="Pumm. Cuisses",
-        feet="Pumm. Calligae"
+        hands="Pummeler's Mufflers +2",
+        legs="Pumm. Cuisses +2",
+        feet="Pumm. Calligae +2"
     }
     gear.jse.relic.war = {
         head="Agoge Mask +1",
@@ -109,11 +110,11 @@ function init_jse()
 
     -- PLD
     gear.jse.artifact.pld = {
-        head="Rev. Coronet +1",
+        head="Rev. Coronet +2",
         body="Rev. Surcoat +2",
-        hands="Rev. Gauntlets +1",
-        legs="Rev. Breeches +1",
-        feet="Rev. Leggings +1"
+        hands="Rev. Gauntlets +2",
+        legs="Rev. Breeches +2",
+        feet="Rev. Leggings +2"
     }
     gear.jse.relic.pld = {
         head="Cab. Coronet",

@@ -5,9 +5,9 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(0, 1)
 
-    combat_sets = {'DPS', 'midacc', 'highacc', 'defensive', 'tank' }
-    combat_sets_description = { 'Physical DPS', 'Moderate physical accuracy', 'High physical accuracy', 'Defensive', 'Tank' }
-    combat_index_max = 5
+    combat_sets = {'DPS', 'fivehit', 'maxacc', 'defensive' }
+    combat_sets_description = { 'Physical DPS', 'Five-hit Ragnarok build', 'Maximum physical accuracy', 'Defensive' }
+    combat_index_max = 4
 
     sets.idle = {
         ammo=gear.ammo.dt,
@@ -61,7 +61,7 @@ function get_sets()
         ear1="Hearty Earring",          -- 0
         ear2=gear.ears.enmity_right,    -- 2
         body=gear.souveran.body.C,      -- 17
-        hands=gear.souveran.hands.C,    -- 7
+        hands=gear.jse.artifact.war.hands, -- 10
         ring1=gear.ring.enmity_left,    -- 5
         ring2=gear.ring.enmity_right,   -- 5
         back="Fierabras's Mantle",      -- 5
@@ -99,6 +99,23 @@ function get_sets()
 
     sets.combat = {
         ammo="Seething Bomblet +1",
+        head=gear.ambuscade.phorcys.head,
+        neck=gear.neck.stp,
+        ear1=gear.ears.acc_left,
+        ear2=gear.ears.da,
+        body=gear.ambuscade.phorcys.body,
+        hands=gear.ambuscade.phorcys.hands,
+        ring1="Rajas Ring",
+        ring2="Chirich Ring",
+        back=gear.jse.capes.ambuscade.war.tp,
+        waist="Ioskeha Belt",
+        legs=gear.odyssean.legs.qa,
+        feet=gear.jse.artifact.war.feet
+    }
+
+    sets.combat.DPS = set_combine(sets.combat, {})
+    sets.combat.fivehit = {
+        ammo="Seething Bomblet +1",
         head=gear.odyssean.head.tp,
         neck=gear.neck.tp,
         ear1=gear.ears.acc_left,
@@ -112,54 +129,36 @@ function get_sets()
         legs=gear.odyssean.legs.stp,
         feet=gear.ambuscade.phorcys.feet
     }
-
-    sets.combat.DPS = set_combine(sets.combat, {})
-    sets.combat.midacc = set_combine(sets.combat, {})
-    sets.combat.highacc = set_combine(sets.combat.midacc, {
+    sets.combat.maxacc = {
         ammo="Seething Bomblet +1",
-        head=gear.ambuscade.phorcys.head,
+        head=gear.jse.artifact.war.head,
         neck=gear.neck.acc,
         ear1=gear.ears.melee_acc_left,
         ear2=gear.ears.melee_acc_right,
-        body=gear.ambuscade.phorcys.body,
-        hands=gear.ambuscade.phorcys.hands,
+        body=gear.jse.artifact.war.body,
+        hands=gear.jse.artifact.war.hands,
         ring1="Ramuh Ring +1",
         ring2="Ramuh Ring +1",
         back=gear.jse.capes.ambuscade.war.tp,
-        waist="Dynamic Belt +1",
-        legs=gear.ambuscade.phorcys.legs,
-        feet=gear.odyssean.feet.tp
-    })
-    sets.combat.defensive = set_combine(sets.combat, {
-        ammo=gear.ammo.haste,
-        head=gear.odyssean.head.tp,
-        neck=gear.neck.acc,
-        ear1=gear.ears.acc_left,
-        ear2=gear.ears.da,
-        body=gear.ambuscade.ares.body,
-        hands=gear.ambuscade.ares.hands,
-        ring1="Rajas Ring",
-        ring2="Chirich Ring",
-        back=gear.jse.capes.ambuscade.war.tp,
-        waist=gear.waist.highhaste,
-        legs=gear.ambuscade.ares.legs,
-        feet=gear.ambuscade.ares.feet
-    })
-    sets.combat.tank = set_combine(sets.combat, {
-        ammo=gear.ammo.haste,
+        waist="Ioskeha Belt",
+        legs=gear.jse.artifact.war.legs,
+        feet=gear.jse.artifact.war.tp
+    }
+    sets.combat.defensive = {
+        ammo="Seething Bomblet +1",
         head=gear.jse.artifact.war.head,
         neck=gear.neck.dt,
         ear1=gear.ears.acc_left,
         ear2=gear.ears.da,
         body=gear.ambuscade.ares.body,
-        hands=gear.ambuscade.ares.hands,
+        hands=gear.jse.artifact.war.hands,
         ring1=gear.ring.dt_left,
         ring2="Chirich Ring",
         back=gear.jse.capes.ambuscade.war.tp,
         waist="Ioskeha Belt",
         legs=gear.ambuscade.ares.legs,
         feet=gear.odyssean.feet.dt
-    })
+    }
 
     -- WS sets
 
@@ -215,13 +214,13 @@ function get_sets()
         ammo=gear.ammo.wsdmg,
         head=gear.odyssean.head.ws,
         neck=gear.neck.ws,
-        ear1=gear.ears.da_left,
-        ear2=gear.ears.da_right,
-        body=gear.ambuscade.ares.body,
-        hands=gear.odyssean.hands.ws,
+        ear1=gear.ears.da,
+        ear2=gear.ears.wsd,
+        body=gear.jse.artifact.war.body,
+        hands=gear.odyssean.hands.wsd,
         ring1="Ifrit Ring +1",
         ring2="Titan Ring +1",
-        back=gear.jse.capes.ambuscade.war.ws,
+        back=gear.jse.capes.ambuscade.war.wsd,
         waist=gear.waist.ws,
         legs=gear.ambuscade.ares.legs,
         feet=gear.ambuscade.ares.feet

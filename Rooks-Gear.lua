@@ -44,6 +44,7 @@ function init_gear()
     gear.ears.da_right = { name="Steelflash Earring" }
     gear.ears.dw_left = { name="Dudgeon Earring" }
     gear.ears.dw_right = { name="Heartseeker Earring" }
+    gear.ears.fc_left = { name="Etiolation Earring" }
     gear.ears.fc_right = { name="Loquac. Earring" }
     gear.ears.idle_left = { name="Hearty Earring" }
     gear.ears.idle_right = { name="Ethereal Earring" }
@@ -125,9 +126,9 @@ function init_gear()
     gear.body.mage_idle = { name="Vrikodara Jupon" }
     gear.hands = {}
     gear.hands.mage_fc = { name="Repartie Gloves" }
-    gear.hands.melee_fc = { name="Leyline Gloves", augments={'Accuracy+12', 'Mag. Acc.+14', '"Mag. Atk. Bns."+15', '"Fast Cast"+2'} }
-    gear.hands.melee_MAB = { name="Leyline Gloves", augments={'Accuracy+12', 'Mag. Acc.+14', '"Mag. Atk. Bns."+15', '"Fast Cast"+2'} }
-    gear.hands.melee_macc = { name="Leyline Gloves", augments={'Accuracy+12', 'Mag. Acc.+14', '"Mag. Atk. Bns."+15', '"Fast Cast"+2'} }
+    gear.hands.melee_fc = { name="Leyline Gloves", augments={'Accuracy+15', 'Mag. Acc.+15', '"Mag. Atk. Bns."+15', '"Fast Cast"+3'} }
+    gear.hands.melee_MAB = { name="Leyline Gloves", augments={'Accuracy+15', 'Mag. Acc.+15', '"Mag. Atk. Bns."+15', '"Fast Cast"+3'} }
+    gear.hands.melee_macc = { name="Leyline Gloves", augments={'Accuracy+15', 'Mag. Acc.+15', '"Mag. Atk. Bns."+15', '"Fast Cast"+3'} }
     gear.legs = {}
     gear.legs.mage_pdt = { name="Miasmic Pants" }
     gear.feet = {}
@@ -262,6 +263,7 @@ function init_gear()
     gear.odyssean.hands.idle = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
     gear.odyssean.hands.tp = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
     gear.odyssean.hands.ws = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
+    gear.odyssean.hands.wsd = { name="Odyssean Gauntlets", augments={'Accuracy+24 Attack+24','Weapon skill damage +2%','STR+3','Attack+3'} }
     gear.odyssean.legs = { name="Odyssean Cuisses" }
     gear.odyssean.legs.qa = { name="Odyssean Cuisses", augments={'DEX+5','Accuracy+8','Quadruple Attack +2','Accuracy+16 Attack+16','Mag. Acc.+19 "Mag.Atk.Bns."+19',}}
     gear.odyssean.legs.tp = { name="Odyssean Cuisses", augments={'DEX+5','Accuracy+8','Quadruple Attack +2','Accuracy+16 Attack+16','Mag. Acc.+19 "Mag.Atk.Bns."+19',}}
@@ -270,7 +272,7 @@ function init_gear()
     gear.odyssean.legs.stp = { name="Odyssean Cuisses", augments={'DEX+10','Accuracy+27','"Store TP"+5','Attack+3'}}
     gear.odyssean.feet = { name="Odyssean Greaves" }
     gear.odyssean.feet.tp = { name="Odyssean Greaves", augments={'Accuracy+23 Attack+23','DEX+7','Accuracy+15',}}
-    gear.odyssean.feet.fc = { name="Odyssean Greaves", augments={'Accuracy+23 Attack+23','DEX+7','Accuracy+15',}}
+    gear.odyssean.feet.fc = { name="Odyssean Greaves", augments={'Phys. dmg. taken -4%','Weapon skill damage +4%','Chance of successful block +2','Accuracy+19 Attack+19','Mag. Acc.+7 "Mag.Atk.Bns."+7',}}
     gear.odyssean.feet.dt = { name="Odyssean Greaves", augments={'Phys. dmg. taken -4%','Weapon skill damage +4%','Chance of successful block +2','Accuracy+19 Attack+19','Mag. Acc.+7 "Mag.Atk.Bns."+7',}}
 
     gear.herculean = {}
@@ -301,21 +303,21 @@ function init_gear()
     gear.merlinic.head.dt = { name="Merlinic Hood", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','"Fast Cast"+4','CHR+1','Mag. Acc.+11','"Mag.Atk.Bns."+12'}}
     gear.merlinic.head.fc = { name="Merlinic Hood", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','"Fast Cast"+4','CHR+1','Mag. Acc.+11','"Mag.Atk.Bns."+12'}}
     gear.merlinic.hands = { name="Merlinic Dastanas" }
-    gear.merlinic.hands.burst = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst mdg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
-    gear.merlinic.hands.MAB = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst mdg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
-    gear.merlinic.hands.MAcc = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst mdg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
-    gear.merlinic.hands.dt = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst mdg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
+    gear.merlinic.hands.burst = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst dmg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
+    gear.merlinic.hands.MAB = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst dmg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
+    gear.merlinic.hands.MAcc = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst dmg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
+    gear.merlinic.hands.dt = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst dmg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
     gear.merlinic.legs = { name="Merlinic Shalwar"}
-    gear.merlinic.legs.MAB = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst mdg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
-    gear.merlinic.legs.MAcc = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst mdg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
-    gear.merlinic.legs.MB = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst mdg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
-    gear.merlinic.legs.MDmg = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst mdg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
-    gear.merlinic.legs.dt = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst mdg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
+    gear.merlinic.legs.MAB = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst dmg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
+    gear.merlinic.legs.MAcc = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst dmg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
+    gear.merlinic.legs.MB = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst dmg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
+    gear.merlinic.legs.MDmg = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst dmg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
+    gear.merlinic.legs.dt = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst dmg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
     gear.merlinic.feet = { name="Merlinic Crackows" }
-    gear.merlinic.feet.MAB = { name="Merlinic Crackows", augments={'Magic burst mdg.+11%','Mag. Acc.+12','"Mag.Atk.Bns."+15'}}
-    gear.merlinic.feet.MAcc = { name="Merlinic Crackows", augments={'Magic burst mdg.+11%','Mag. Acc.+12','"Mag.Atk.Bns."+15'}}
-    gear.merlinic.feet.fc = { name="Merlinic Crackows", augments={'Magic burst mdg.+11%','Mag. Acc.+12','"Mag.Atk.Bns."+15'}}
-    gear.merlinic.feet.dt = { name="Merlinic Crackows", augments={'Magic burst mdg.+11%','Mag. Acc.+12','"Mag.Atk.Bns."+15'}}
+    gear.merlinic.feet.MAB = { name="Merlinic Crackows", augments={'Magic burst dmg.+11%','Mag. Acc.+12','"Mag.Atk.Bns."+15'}}
+    gear.merlinic.feet.MAcc = { name="Merlinic Crackows", augments={'Magic burst dmg.+11%','Mag. Acc.+12','"Mag.Atk.Bns."+15'}}
+    gear.merlinic.feet.fc = { name="Merlinic Crackows", augments={'Magic burst dmg.+11%','Mag. Acc.+12','"Mag.Atk.Bns."+15'}}
+    gear.merlinic.feet.dt = { name="Merlinic Crackows", augments={'Magic burst dmg.+11%','Mag. Acc.+12','"Mag.Atk.Bns."+15'}}
 
     gear.valorous = {}
     gear.valorous.head = { name="Valorous Mask" }
@@ -361,11 +363,11 @@ function init_gear()
     }
 
     gear.ambuscade.skadi = {
-        head="Meghanada Visor",
+        head="Meghanada Visor +1",
         body="Meghanada Cuirie +1",
-        hands="Meghanada Gloves",
-        legs="Meghanada Chausses",
-        feet="Meghanada Jambeaux",
+        hands="Meghanada Gloves +1",
+        legs="Meghanada Chausses +1",
+        feet="Meghanada Jambeaux +1",
     }
 
     gear.ambuscade.usukane = {
@@ -422,6 +424,14 @@ function init_gear()
         hands="Ayanmo Manopolas +1",
         legs="Ayanmo Cosciales +1",
         feet="Ayanmo Gambieras +1",
+    }
+
+    gear.ambuscade.nares = {
+        head="Mallquis Chapeau +1",
+        body="Mallquis Saio +1",
+        hands="Mallquis Cuffs +1",
+        legs="Mallquis Trews +1",
+        feet="Mallquis Clogs +1",
     }
 
     -- Things I always have on me, no matter what

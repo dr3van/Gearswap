@@ -5,9 +5,12 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(1, 1)
 
-    combat_sets = {'DPS', 'midacc', 'highacc', 'defensive', 'stp', 'turtle', 'hp', 'purehp', 'mdb' }
-    combat_sets_description = { 'Physical DPS', 'Moderate physical accuracy', 'High physical accuracy', 'Defensive', 'Store TP', 'Turtle', 'maxHP', 'pure max HP', 'MDB' }
-    combat_index_max = 9
+    -- combat_sets = {'DPS', 'midacc', 'highacc', 'defensive', 'stp', 'turtle', 'hp', 'purehp', 'mdb' }
+    -- combat_sets_description = { 'Physical DPS', 'Moderate physical accuracy', 'High physical accuracy', 'Defensive', 'Store TP', 'Turtle', 'maxHP', 'pure max HP', 'MDB' }
+    -- combat_index_max = 9
+    combat_sets = {'DPS', 'highacc', 'defensive', 'stp' }
+    combat_sets_description = { 'Physical DPS', 'High physical accuracy', 'Defensive', 'Store TP' }
+    combat_index_max = 4
 
 
     sets.weapons = {}
@@ -16,7 +19,6 @@ function get_sets()
     sets.weapons['Ragnarok'] = { main="Ragnarok" }
     sets.weapons['Aegis'] = { sub="Aegis" }
     sets.weapons['Ochain'] = { sub="Ochain" }
-    sets.weapons['Dagger'] = { main="Malevolence" }
 
     sets.idle = {
         ammo=gear.ammo.dt,
@@ -47,8 +49,8 @@ function get_sets()
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
         back=gear.back.dt,
-        waist="Nierenschutz",
-        legs=gear.odyssean.legs.dt,
+        waist="Creed Baudrier",
+        legs=gear.souveran.legs.C,
         feet=gear.souveran.feet.C
 
     })
@@ -75,17 +77,20 @@ function get_sets()
         feet=gear.souveran.feet.C
     }
 
+    -- FC: 33%
+    -- QC: 5% 
     sets.precast.FC = {
-        ammo=gear.ammo.fc,
-        head=gear.jse.empyrean.pld.head,
-        ear1="Loquac. Earring",
-        body=gear.jse.artifact.pld.body,
-        hands=gear.hands.melee_fc,
-        ring1=gear.ring.fc_left,
-        ring2=gear.ring.fc_right,
-        waist=gear.waist.highhaste,
-        legs=gear.eschite.legs.D,
-        feet=gear.odyssean.feet.fc
+        ammo=gear.ammo.fc,               -- 0% FC 2% QC
+        head=gear.jse.empyrean.pld.head, -- 7% FC 0% QC
+        ear1=gear.ears.fc_left,          -- 1% FC 0% QC
+        ear2=gear.ears.fc_right,         -- 2% FC 0% QC
+        body=gear.jse.artifact.pld.body, -- 5% FC 0% QC
+        hands=gear.hands.melee_fc,       -- 8% FC 0% QC
+        ring1=gear.ring.fc_left,         -- 0% FC 2% QC
+        ring2=gear.ring.fc_right,        -- 0% FC 1% QC
+        waist=gear.waist.highhaste,      -- 0% FC 0% QC
+        legs=gear.eschite.legs.D,        -- 5% FC 0% QC
+        feet=gear.odyssean.feet.fc       -- 5% FC 0% QC
     }
 
     sets.combat = {
@@ -222,28 +227,29 @@ function get_sets()
 
     -- replace: ammo, neck, ring2, back, waist, legs
     -- improve: hands, legs
-    -- head: 5%
+    -- head: 7%
     -- ear1: 2%
     -- body: 7%
-    -- hands: 2%
+    -- hands: 4%
+    -- back: 10%
     -- legs: 2%
-    -- feet: 5%
-    -- total: 23%
-    sets.WS['Atonement'] = set_combine(sets.single_hit, {
+    -- feet: 6%
+    -- total: 38%
+    sets.WS['Atonement'] = {
         ammo=gear.ammo.haste,
         head=gear.odyssean.head.ws,
         neck=gear.neck.ws,
         ear1=gear.ears.wsd,
         ear2="Moonshade Earring",
         body="Phorcys Korazin",
-        hands=gear.odyssean.hands.ws,
+        hands=gear.odyssean.hands.wsd,
         ring1="Mujin Band",
         ring2="Chirich Ring",
         back=gear.jse.capes.ambuscade.pld.wsd,
         waist=gear.waist.ws,
         legs=gear.valorous.legs.wsd,
         feet=gear.ambuscade.ares.feet
-    })
+    }
 
     sets.WS['Knights of Round'] = set_combine(sets.single_hit, {
         head=gear.ambuscade.ares.head,
@@ -374,7 +380,7 @@ function get_sets()
     -- 135
     sets.midcast['Divine Magic'] = {
         head="Jumalik helm",
-        neck="Henic Torque",
+        neck=gear.neck.magic_skill,
         body=gear.jse.artifact.pld.body,
         hands="Eschite Gauntlets",
         back=gear.back.divine,
