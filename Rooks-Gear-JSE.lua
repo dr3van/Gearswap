@@ -207,6 +207,31 @@ function init_jse()
         neck="Aoidos' Matinee"
     }
 
+    -- SMN
+    gear.jse.artifact.smn = {
+        head="Evoker's Horn +1",
+        body="Evoker's Doublet +1",
+        hands="Evoker's Bracers +1",
+        legs="Evoker's Spats +1",
+        feet="Evoker's Pigaches +1"
+    }
+
+    gear.jse.relic.smn = {
+        head="Summoner's Horn",
+        body="Summoner's Doublet",
+        hands="Summoner's Bracers",
+        legs="Summoner's Spats",
+        feet="Summoner's Pigaches"
+    }
+
+    gear.jse.empyrean.smn = {
+        head="Caller's Horn +2",
+        body="Caller's Doublet +2",
+        hands="Caller's Bracers +2",
+        legs="Caller's Spats +2",
+        feet="Caller's Pigaches +2"
+    }
+
     -- XXX
     gear.jse.artifact.xxx = {
         head="",

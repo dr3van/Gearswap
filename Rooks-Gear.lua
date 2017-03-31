@@ -325,7 +325,7 @@ function init_gear()
     gear.valorous.head.ws = { name="Valorous Mask", augments={'Accuracy+18 Attack+18','Weapon skill damage +4%','Accuracy+7','Attack+5',}}
     gear.valorous.hands = { name="Valorous Mitts" }
     gear.valorous.legs = { name="Valorous Hose" }
-    gear.valorous.legs.wsd = { name="Valorous Hose", augments={'STR+4', 'Accuracy+6', 'Attack+15', 'Weapon skill damage +2%'}}
+    gear.valorous.legs.wsd = { name="Valorous Hose", augments={'Accuracy+15 Attack+15', 'Weapon skill damage +4%'}}
     gear.valorous.feet = { name="Valorous Greaves" }
     gear.valorous.feet.dt = { name="Valorous Greaves", augments={'Accuracy+23','Phys. dmg. taken -1%','DEX+9','Attack+6'}}
     gear.valorous.feet.tp = { name="Valorous Greaves", augments={'Accuracy+23','Phys. dmg. taken -1%','DEX+9','Attack+6'}}

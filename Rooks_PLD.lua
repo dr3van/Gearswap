@@ -194,8 +194,8 @@ function get_sets()
         ear2="Moonshade Earring",
         body=gear.ambuscade.ares.body,
         hands=gear.odyssean.hands.ws,
-        ring1="Rajas Ring",
-        ring2="Ifrit Ring",
+        ring1="Ifrit Ring",
+        ring2="Ifrit Ring +1",
         back=gear.jse.capes.ambuscade.pld.ws,
         waist=gear.waist.ws,
         legs=gear.odyssean.legs.ws,
@@ -208,19 +208,19 @@ function get_sets()
         ear1=gear.ears.wsd,
         ear2="Moonshade Earring",
         body=gear.ambuscade.ares.body,
-        hands=gear.odyssean.hands.ws,
-        ring1="Rajas Ring",
-        ring2="Ifrit Ring",
+        hands=gear.odyssean.hands.wsd,
+        ring1="Ifrit Ring",
+        ring2="Ifrit Ring +1",
         back=gear.jse.capes.ambuscade.pld.wsd,
         waist=gear.waist.ws,
         legs=gear.odyssean.legs.ws,
         feet=gear.ambuscade.ares.feet
     })
 
-    sets.WS['Savage Blade'] = set_combine(sets.single_hit, {
+    sets.WS['Savage Blade'] = set_combine(sets.WS.single_hit, {
         legs=gear.valorous.legs.wsd
     })
-    sets.WS['Circle Blade'] = set_combine(sets.single_hit, {
+    sets.WS['Circle Blade'] = set_combine(sets.WS.single_hit, {
         legs=gear.valorous.legs.wsd
     })
 
@@ -251,7 +251,7 @@ function get_sets()
         feet=gear.ambuscade.ares.feet
     }
 
-    sets.WS['Knights of Round'] = set_combine(sets.single_hit, {
+    sets.WS['Knights of Round'] = set_combine(sets.WS.single_hit, {
         head=gear.ambuscade.ares.head,
         ear1=gear.ears.da_left,
         ear2=gear.ears.da_right,

@@ -11,7 +11,7 @@ function get_sets()
         neck=gear.neck.dt,
         ear1=gear.ears.idle_left,
         ear2=gear.ears.idle_right,
-        body=gear.taeon.body.tp,
+        body="Emet Harness",
         hands=gear.taeon.hands.tp,
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
