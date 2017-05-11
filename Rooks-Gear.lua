@@ -24,7 +24,7 @@ function init_gear()
     gear.neck.cure_potency = { name="Phalaina Locket" }
     gear.neck.dt = { name="Twilight Torque" }
     gear.neck.idle = { name="Twilight Torque" }
-    gear.neck.enmity = { name="Invidia Torque" }
+    gear.neck.enmity = { name="Moonbeam Necklace" }
     gear.neck.regen = { name="Wiglen Gorget" }
     gear.neck.mab = { name="Sanctity Necklace" }
     gear.neck.macc = { name="Sanctity Necklace" }
@@ -36,6 +36,7 @@ function init_gear()
     gear.neck.ws = { name="Fotia Gorget" }
     gear.neck.sword = { name="Decimus Torque" }
     gear.neck.greataxe = { name="Decimus Torque" }
+    gear.neck.fc = { name = "Orunmila's Torque" }
 
     gear.ears = {}
     gear.ears.acc_left = { name="Dignitary's Earring" }
@@ -98,15 +99,17 @@ function init_gear()
     gear.waist.highacc = { name="Eschan Stone" }
     gear.waist.racc = { name="Eschan Stone" }
     gear.waist.nohaste = { name="Windbuffet Belt +1" }
-    gear.waist.highhaste = { name="Pya'ekue Belt +1" }
+    gear.waist.highhaste = { name="Sailfi Belt +1" }
+    gear.waist.maxhaste = { name="Pya'ekue Belt +1" }
     gear.waist.drain_aspir = { name="Austerity Belt +1" }
 
     gear.back = {}
     gear.back.conserve_mp = { name="Solemnity Cape" }
     gear.back.cure_potency = { name="Solemnity Cape" }
     gear.back.divine = { name="Altruistic Cape" }
-    gear.back.dt = { name="Solemnity Cape" }
-    gear.back.mage_idle = { name="Umbra Cape" }
+    gear.back.dt = { name="Moonbeam Cape" }
+    gear.back.hp = { name="Moonbeam Cape" }
+    gear.back.mage_idle = { name="Moonbeam Cape" }
     gear.back.macc = { name="Refraction Cape" }
     gear.back.fc = { name="Swith Cape" }
 
@@ -229,6 +232,9 @@ function init_gear()
     gear.souveran.feet.D = { name="Souveran Schuhs", augments={"HP+50", "Attack+20", "magic dmg. taken -3%"}}
 
     gear.carmine = {}
+
+    gear.carmine.head = { name="Carmine Mask +1"}
+    gear.carmine.head.D = { name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4'}}
     gear.carmine.legs = { name="Carmine Cuisses +1"}
     gear.carmine.legs.D = { name="Carmine Cuisses +1", augments={ 'Accuracy+20', 'Attack+12', '"Dual Wield"+6'}}
 
@@ -251,19 +257,21 @@ function init_gear()
     gear.argosy.legs.A = { name="Argosy Breeches", augments={'STR+10', 'DEX+10', 'Attack+15'} }
     gear.argosy.legs.D = { name="Argosy Breeches", augments={'STR+10', 'Attack+20', '"Store TP"+5'} }
     gear.argosy.feet = { name="Argosy Sollerets" }
-    gear.argosy.feet.A = { name="Argosy Sollerets", augments={'STR+10', 'DEX+10', 'Attack+15'} }
+    gear.argosy.feet.A = { name="Argosy Sollerets +1", augments={'STR+12', 'DEX+12', 'Attack+20'} }
 
     -- Reisenjima pieces
 
     gear.odyssean = {}
     gear.odyssean.head = { name="Odyssean Helm" }
-    gear.odyssean.head.tp = { name="Odyssean Helm", augments={'Accuracy+10','"Store TP"+7','VIT+11',} }
+    gear.odyssean.head.tp = { name="Odyssean Helm", augments={'Accuracy+18','"Store TP"+7','STR+2','Attack+14'} }
     gear.odyssean.head.ws = { name="Odyssean Helm", augments={'"Subtle Blow"+4','Mag. Acc.+10 "Mag.Atk.Bns."+10','Weapon skill damage +7%'} }
+    gear.odyssean.body = { name="Odyss. Chestplate" }
+    gear.odyssean.body.th = { name="Odyss. Chestplate", augments={'"Subtle Blow"+2','Pet: MND+7','"Treasure Hunter"+2','Mag. Acc.+20 "Mag.Atk.Bns."+20',}}
+    gear.odyssean.body.nuke = { name="Odyss. Chestplate", augments={'"Subtle Blow"+2','Pet: MND+7','"Treasure Hunter"+2','Mag. Acc.+20 "Mag.Atk.Bns."+20',}}
     gear.odyssean.hands = { name="Odyssean Gauntlets" }
-    gear.odyssean.hands.idle = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
-    gear.odyssean.hands.tp = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
-    gear.odyssean.hands.ws = { name="Odyssean Gauntlets", augments={'Accuracy+15 Attack+15','STR+4','Accuracy+13','Attack+14'} }
-    gear.odyssean.hands.wsd = { name="Odyssean Gauntlets", augments={'Accuracy+24 Attack+24','Weapon skill damage +2%','STR+3','Attack+3'} }
+    gear.odyssean.hands.refresh = { name="Odyssean Gauntlets", augments={'STR+2','"Refresh"+2','Accuracy+16 Attack+16','Mag. Acc.+9 "Mag.Atk.Bns."+9'} }
+    gear.odyssean.hands.ws = { name="Odyssean Gauntlets", augments={'STR+12','Pet: "Store TP"+2','Haste+2','Accuracy+20 Attack+20','Mag. Acc.+19 "Mag.Atk.Bns."+19'} }
+    gear.odyssean.hands.wsd = { name="Odyssean Gauntlets", augments={'Accuracy+19','Weapon skill damage +2%','DEX+7','Attack+7'} }
     gear.odyssean.legs = { name="Odyssean Cuisses" }
     gear.odyssean.legs.qa = { name="Odyssean Cuisses", augments={'DEX+5','Accuracy+8','Quadruple Attack +2','Accuracy+16 Attack+16','Mag. Acc.+19 "Mag.Atk.Bns."+19',}}
     gear.odyssean.legs.tp = { name="Odyssean Cuisses", augments={'DEX+5','Accuracy+8','Quadruple Attack +2','Accuracy+16 Attack+16','Mag. Acc.+19 "Mag.Atk.Bns."+19',}}
@@ -272,8 +280,9 @@ function init_gear()
     gear.odyssean.legs.stp = { name="Odyssean Cuisses", augments={'DEX+10','Accuracy+27','"Store TP"+5','Attack+3'}}
     gear.odyssean.feet = { name="Odyssean Greaves" }
     gear.odyssean.feet.tp = { name="Odyssean Greaves", augments={'Accuracy+23 Attack+23','DEX+7','Accuracy+15',}}
-    gear.odyssean.feet.fc = { name="Odyssean Greaves", augments={'Phys. dmg. taken -4%','Weapon skill damage +4%','Chance of successful block +2','Accuracy+19 Attack+19','Mag. Acc.+7 "Mag.Atk.Bns."+7',}}
+    gear.odyssean.feet.fc = { name="Odyssean Greaves", augments={'Weapon Skill Acc.+14','Weapon skill damage +2%','"Fast Cast"+3','Accuracy+12 Attack+12'}}
     gear.odyssean.feet.dt = { name="Odyssean Greaves", augments={'Phys. dmg. taken -4%','Weapon skill damage +4%','Chance of successful block +2','Accuracy+19 Attack+19','Mag. Acc.+7 "Mag.Atk.Bns."+7',}}
+    gear.odyssean.feet.nuke = { name="Odyssean Greaves", augments={'Phys. dmg. taken -4%','Weapon skill damage +4%','Chance of successful block +2','Accuracy+19 Attack+19','Mag. Acc.+7 "Mag.Atk.Bns."+7',}}
 
     gear.herculean = {}
     gear.herculean.head = { name="Herculean Helm" }
@@ -359,7 +368,7 @@ function init_gear()
         body="Sulevia's Platemail +1",
         hands="Sulevia's Gauntlets +1",
         legs="Sulevia's Cuisses +1",
-        feet="Sulevia's Leggings +1",
+        feet="Sulevia's Leggings +2",
     }
 
     gear.ambuscade.skadi = {
@@ -371,19 +380,19 @@ function init_gear()
     }
 
     gear.ambuscade.usukane = {
-        head="",
-        body="",
-        hands="",
-        legs="",
-        feet="",
+        head="Hizamaru Somen +1",
+        body="Hizamaru Haramaki",
+        hands="Hizamaru Kote +1",
+        legs="Hizamaru Hizayoroi +1",
+        feet="Hizamaru Sune-Ate +1",
     }
 
     gear.ambuscade.marduk = {
-        head="",
-        body="",
-        hands="",
-        legs="",
-        feet="",
+        head="Inyanga Tiara",
+        body="Inyanga Jubbah",
+        hands="Inyanga Dastanas +1",
+        legs="Inyanga Shalwar +1",
+        feet="Inyanga Crackows",
     }
 
     gear.ambuscade.morrigan = {
@@ -412,7 +421,7 @@ function init_gear()
 
     gear.ambuscade.nashira = {
         head="Tali'ah Turban +1",
-        body="Tali'ah Manteel",
+        body="Tali'ah Manteel +1",
         hands="Tali'ah Gages +1",
         legs="Tali'ah Seraweels +1",
         feet="Tali'ah Crackows +1",

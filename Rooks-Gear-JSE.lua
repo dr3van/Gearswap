@@ -15,6 +15,7 @@ function init_jse()
     gear.jse.capes.reive.pld = { name="Weard Mantle" }
     gear.jse.capes.reive.drk = { name="Niht Mantle", augments={'Attack+13','Dark magic skill +10','"Drain" and "Aspir" potency +25','Weapon skill damage +4%'}}
     gear.jse.capes.reive.sch = { name="Bookworm's Cape" }
+    gear.jse.capes.reive.smn = { name="Conveyance Cape" }
 
     gear.jse.capes.ambuscade.blu = { name="Rosmerta's Cape"}
     gear.jse.capes.ambuscade.blu.idle = { name="Rosmerta's Cape"}
@@ -26,6 +27,7 @@ function init_jse()
     gear.jse.capes.ambuscade.blm.macc = { name="Taranus's Cape"}
 
     gear.jse.capes.ambuscade.pld = { name="Rudianos's Mantle"}
+    gear.jse.capes.ambuscade.pld.fc = { name="Rudianos's Mantle", augments={'"Fast Cast"+10'}}
     gear.jse.capes.ambuscade.pld.tp = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
     gear.jse.capes.ambuscade.pld.ws = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
     gear.jse.capes.ambuscade.pld.idle = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
@@ -35,7 +37,7 @@ function init_jse()
     gear.jse.capes.ambuscade.war.idle = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10'}}
     gear.jse.capes.ambuscade.war.tp = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10'}}
     gear.jse.capes.ambuscade.war.ws = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10'}}
-    gear.jse.capes.ambuscade.war.wsd = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+5', 'Weapon skill damage +10%'}}
+    gear.jse.capes.ambuscade.war.wsd = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10', 'Weapon skill damage +10%'}}
 
     gear.jse.capes.ambuscade.thf = { name="Toutatis's Cape"}
     gear.jse.capes.ambuscade.thf.tp = { name="Toutatis's Cape"}
@@ -60,6 +62,8 @@ function init_jse()
     gear.jse.capes.ambuscade.rng = { name="Belenus's Cape" }
     gear.jse.capes.ambuscade.rng.tp = { name="Belenus's Cape" }
     gear.jse.capes.ambuscade.rng.ws = { name="Belenus's Cape" }
+
+    gear.jse.capes.ambuscade.smn = { name="Campestres's Cape" }
 
 
     -- WAR
@@ -217,11 +221,11 @@ function init_jse()
     }
 
     gear.jse.relic.smn = {
-        head="Summoner's Horn",
+        head="Summoner's Horn +2",
         body="Summoner's Doublet",
         hands="Summoner's Bracers",
-        legs="Summoner's Spats",
-        feet="Summoner's Pigaches"
+        legs="Summoner's Spats +2",
+        feet="Summoner's Pigaches +2"
     }
 
     gear.jse.empyrean.smn = {

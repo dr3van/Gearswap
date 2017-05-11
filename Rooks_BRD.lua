@@ -87,6 +87,7 @@ function get_sets()
 	sets.precast = {}
 	sets.precast.FC = {
         head="Welkin Crown",
+        neck=gear.neck.fc,
         ear2=gear.ears.fc_right,
         body=gear.body.mage_fc,
         hands="Leyline Gloves",

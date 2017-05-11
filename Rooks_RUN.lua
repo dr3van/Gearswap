@@ -106,13 +106,14 @@ function get_sets()
 
     sets.precast.FC = {
         ammo=gear.ammo.fc,
-        head=gear.jse.artifact.run.head,
+        head=gear.carmine.head.D,
+        neck=gear.neck.fc,
         ear2=gear.ears.fc_right,
         body="Samnuha Coat",
         hands=gear.hands.melee_fc,
         ring1=gear.ring.fc_left,
         ring2=gear.ring.fc_right,
-        waist=gear.waist.highhaste,
+        waist=gear.waist.maxhaste,
         legs="Orvail Pants +1",
         feet= "Chelona Boots +1"
     }

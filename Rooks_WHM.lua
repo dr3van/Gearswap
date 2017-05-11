@@ -52,6 +52,8 @@ function get_sets()
     sets.precast.FC = {
         ammo=gear.ammo.fc,
         head="Welkin Crown",
+        neck=gear.neck.fc,
+        ear1=gear.ears.fc_left,
         ear2=gear.ears.fc_right,
         body=gear.body.mage_fc,
         hands="Fanatic's Gloves",

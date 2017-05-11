@@ -53,6 +53,8 @@ function get_sets()
     sets.precast.FC = {
         ammo=gear.ammo.fc,
         head=gear.merlinic.head.fc,
+        neck=gear.neck.fc,
+        ear1=gear.ears.fc_left,
         ear2=gear.ears.fc_right,
         body=gear.body.mage_fc,
         hands=gear.hands.mage_fc,
@@ -60,7 +62,7 @@ function get_sets()
         ring2=gear.ring.fc_right,
         back=gear.back.fc,
         waist=gear.waist.fc,
-        legs="Orvail Pants +1",
+        legs=gear.psycloth.legs.D,
         feet="Chelona Boots +1"
     }
 

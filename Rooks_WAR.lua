@@ -11,15 +11,15 @@ function get_sets()
 
     sets.idle = {
         ammo=gear.ammo.dt,
-        head=gear.ambuscade.ares.head,
+        head=gear.souveran.head.C,
         neck=gear.neck.dt,
         ear1="Hearty Earring",
         ear2="Ethereal Earring",
         body=gear.souveran.body.C,
-        hands=gear.ambuscade.ares.hands,
+        hands=gear.jse.artifact.war.hands,
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
-        back="Shadow Mantle",
+        back=gear.back.dt,
         waist=gear.waist.pdt,
         legs=gear.ambuscade.ares.legs,
         feet="Hermes' Sandals"
@@ -42,13 +42,13 @@ function get_sets()
     sets.maxHP = {
         head=gear.souveran.head.C,
         neck=gear.neck.hp,
-        ear1="Calamitous Earring",
+        ear1="Etiolation Earring",
         ear2="Ethereal Earring",
         body=gear.souveran.body.C,
         hands=gear.souveran.hands.C,
         ring1="Meridian Ring",
         ring2="Eihwaz Ring",
-        back="Fierabras's Mantle",
+        back="Moonbeam Cape",
         waist="Oneiros Belt",
         legs=gear.souveran.legs.C,
         feet=gear.souveran.feet.C

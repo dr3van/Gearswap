@@ -44,7 +44,8 @@ function get_sets()
     })
 
     sets.precast.FC = {
-        head=gear.jse.artifact.rdm.head,
+        head=gear.carmine.head.D,
+        neck=gear.neck.fc,
         ear1="Loquac. Earring",
         ear2="Estq. Earring",
         body=gear.jse.relic.rdm.body,
@@ -52,7 +53,7 @@ function get_sets()
         ring1=gear.ring.FC_left,
         back=gear.back.fc,
         waist=gear.back.fc,
-        legs="Orvail Pants +1",
+        legs=gear.psycloth.legs.D,
         feet="Chelona Boots +1"
     }
 

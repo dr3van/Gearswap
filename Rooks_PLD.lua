@@ -5,11 +5,8 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(1, 1)
 
-    -- combat_sets = {'DPS', 'midacc', 'highacc', 'defensive', 'stp', 'turtle', 'hp', 'purehp', 'mdb' }
-    -- combat_sets_description = { 'Physical DPS', 'Moderate physical accuracy', 'High physical accuracy', 'Defensive', 'Store TP', 'Turtle', 'maxHP', 'pure max HP', 'MDB' }
-    -- combat_index_max = 9
-    combat_sets = {'DPS', 'highacc', 'defensive', 'stp' }
-    combat_sets_description = { 'Physical DPS', 'High physical accuracy', 'Defensive', 'Store TP' }
+    combat_sets = {'DPS', 'highacc', 'defensive', 'hp' }
+    combat_sets_description = { 'Physical DPS', 'High physical accuracy', 'Defensive', 'HP' }
     combat_index_max = 4
 
 
@@ -30,7 +27,7 @@ function get_sets()
         hands=gear.ambuscade.ares.hands,
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
-        back="Shadow Mantle",
+        back=gear.back.dt,
         waist=gear.waist.pdt,
         legs=gear.carmine.legs.D,
         feet=gear.souveran.feet.C
@@ -41,6 +38,7 @@ function get_sets()
         head=gear.valorous.head,
         neck="Creed Collar",
         body="Jumalik Mail",
+        hands=gear.odyssean.hands.refresh,
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
     })
@@ -51,90 +49,53 @@ function get_sets()
         back=gear.back.dt,
         waist="Creed Baudrier",
         legs=gear.souveran.legs.C,
-        feet=gear.souveran.feet.C
+        feet=gear.jse.artifact.pld.feet
 
     })
-    sets.idle.PDT = set_combine(sets.idle.DT, {
-        waist=gear.waist.pdt
-    })
-    sets.idle.MDT = set_combine(sets.idle.DT, {
-    })
-    sets.resting = set_combine(sets.idle, {})
 
     sets.maxHP = {
         ammo="Egoist's Tathlum",
         head=gear.souveran.head.C,
         neck=gear.neck.hp,
-        ear1="Calamitous Earring",
+        ear1="Etiolation Earring",
         ear2="Ethereal Earring",
         body=gear.jse.artifact.pld.body,
         hands=gear.souveran.hands.C,
-        ring1="Meridian Ring",
-        ring2="Eihwaz Ring",
-        back="Fierabras's Mantle",
-        waist="Oneiros Belt",
-        legs=gear.souveran.legs.C,
+        ring1="Moonbeam Ring",
+        ring2="Moonbeam Ring",
+        back=gear.back.hp,
+        waist="Gold Moogle Belt",
+        legs=gear.jse.artifact.pld.legs,
         feet=gear.souveran.feet.C
     }
 
-    -- FC: 33%
+    sets.idle.PDT = set_combine(sets.idle.DT, {
+        waist=gear.waist.pdt
+    })
+    sets.idle.MDT = set_combine(sets.maxHP, {
+    })
+    sets.resting = set_combine(sets.idle, {})
+
+
+    -- FC: 58%
     -- QC: 5% 
     sets.precast.FC = {
         ammo=gear.ammo.fc,               -- 0% FC 2% QC
-        head=gear.jse.empyrean.pld.head, -- 7% FC 0% QC
+        head=gear.carmine.head.D,        -- 14% FC 0% QC
+        neck=gear.neck.fc,               -- 5% FC 0% QC
         ear1=gear.ears.fc_left,          -- 1% FC 0% QC
         ear2=gear.ears.fc_right,         -- 2% FC 0% QC
         body=gear.jse.artifact.pld.body, -- 5% FC 0% QC
         hands=gear.hands.melee_fc,       -- 8% FC 0% QC
         ring1=gear.ring.fc_left,         -- 0% FC 2% QC
         ring2=gear.ring.fc_right,        -- 0% FC 1% QC
-        waist=gear.waist.highhaste,      -- 0% FC 0% QC
+        back=gear.jse.capes.ambuscade.pld.fc, -- 10% FC 0% QC
+        waist=gear.waist.maxhaste,      -- 0% FC 0% QC
         legs=gear.eschite.legs.D,        -- 5% FC 0% QC
-        feet=gear.odyssean.feet.fc       -- 5% FC 0% QC
+        feet=gear.odyssean.feet.fc       -- 8% FC 0% QC
     }
 
     sets.combat = {
-        ammo="Hasty Pinion +1",
-        head=gear.odyssean.head.tp,
-        neck=gear.neck.sword,
-        ear1=gear.ears.acc_left,
-        ear2=gear.ears.da,
-        body=gear.ambuscade.ares.body,
-        hands=gear.ambuscade.ares.hands,
-        ring1="Rajas Ring",
-        ring2="Chirich Ring",
-        back=gear.jse.capes.ambuscade.pld.tp,
-        waist=gear.waist.highhaste,
-        legs=gear.ambuscade.ares.legs,
-        feet=gear.ambuscade.ares.feet
-    }
-    sets.combat.DPS = set_combine(sets.combat, {
-    })
-    sets.combat.midacc = set_combine(sets.combat, {
-    })
-    sets.combat.highacc = set_combine(sets.combat.midacc, {
-        ear1="Mache Earring",
-        ear2="Mache Earring",
-        ring1="Ramuh Ring +1",
-        ring2="Ramuh Ring +1"
-    })
-    sets.combat.defensive = set_combine(sets.combat, {
-        ammo="Hasty Pinion +1",
-        head=gear.odyssean.head.tp,
-        neck=gear.neck.sword,
-        ear1=gear.ears.acc_left,
-        ear2=gear.ears.da,
-        body=gear.ambuscade.ares.body,
-        hands=gear.ambuscade.ares.hands,
-        ring1=gear.ring.dt_left,
-        ring2=gear.ring.dt_right,
-        back=gear.jse.capes.ambuscade.pld.tp,
-        waist=gear.waist.highhaste,
-        legs=gear.ambuscade.ares.legs,
-        feet=gear.ambuscade.ares.feet
-    })
-
-    sets.combat.stp = {
         ammo="Jukukik Feather",
         head=gear.ambuscade.phorcys.head,
         neck="Lissome Necklace",
@@ -149,6 +110,31 @@ function get_sets()
         legs=gear.odyssean.legs.tp,
         feet=gear.ambuscade.phorcys.feet
     }
+    sets.combat.DPS = set_combine(sets.combat, {
+    })
+    sets.combat.midacc = set_combine(sets.combat, {
+    })
+    sets.combat.highacc = set_combine(sets.combat.midacc, {
+        ear1="Mache Earring",
+        ear2="Mache Earring",
+        ring1="Ramuh Ring +1",
+        ring2="Ramuh Ring +1"
+    })
+    sets.combat.defensive = set_combine(sets.combat, {
+        ammo="Hasty Pinion +1",
+        head=gear.jse.artifact.pld.head,
+        neck=gear.neck.dt,
+        ear1=gear.ears.acc_left,
+        ear2=gear.ears.da,
+        body=gear.ambuscade.ares.body,
+        hands=gear.jse.artifact.pld.hands,
+        ring1="Moonbeam Ring",
+        ring2="Moonbeam Ring",
+        back=gear.jse.capes.ambuscade.pld.tp,
+        waist="Dynamic Belt +1",
+        legs=gear.jse.artifact.pld.legs,
+        feet=gear.ambuscade.ares.feet
+    })
 
     sets.combat.hp = {
         ammo="Egoist's Tathlum",
@@ -158,8 +144,8 @@ function get_sets()
         ear2=gear.ears.da_right,
         body=gear.jse.artifact.pld.body,
         hands=gear.souveran.hands.C,
-        ring1="Ramuh Ring +1",
-        ring2="K'ayres Ring",
+        ring1="Moonbeam Ring",
+        ring2="Moonbeam Ring",
         back=gear.jse.capes.ambuscade.pld.tp,
         waist="Dynamic Belt +1",
         legs=gear.odyssean.legs.tp,
@@ -208,7 +194,7 @@ function get_sets()
         ear1=gear.ears.wsd,
         ear2="Moonshade Earring",
         body=gear.ambuscade.ares.body,
-        hands=gear.odyssean.hands.wsd,
+        hands=gear.odyssean.hands.ws,
         ring1="Ifrit Ring",
         ring2="Ifrit Ring +1",
         back=gear.jse.capes.ambuscade.pld.wsd,
@@ -345,9 +331,9 @@ function get_sets()
         legs=gear.carmine.legs.D,
     })
 
-    sets.precast.CureSpell = {
+    sets.precast.CureSpell = set_combine(sets.precast.FC, {
         body="Jumalik Mail"
-    }
+    })
 
     sets.midcast.CureSpell = {
         head=gear.souveran.head.C,
@@ -366,7 +352,9 @@ function get_sets()
 
 
     sets.midcast['Enhancing Magic'] = {
-        neck="Colossus's Torque",
+        head=gear.carmine.head.D,
+        neck=gear.neck.magic_skill,
+        waist="Olympus Sash",
         legs=gear.carmine.legs.D
     }
 
@@ -383,12 +371,36 @@ function get_sets()
         neck=gear.neck.magic_skill,
         body=gear.jse.artifact.pld.body,
         hands="Eschite Gauntlets",
+        ring1=gear.ring.magic_skill_left,
+        ring2=gear.ring.magic_skill_right,
         back=gear.back.divine,
         waist="Asklepian Belt"
     }
 
+    sets.midcast.nuking = {
+        ammo="Dosis Tathlum",
+        head="Jumalik helm",
+        neck=gear.neck.magic_skill,
+        ear1=gear.ears.mab_left,
+        ear2=gear.ears.mab_right,
+        body=gear.odyssean.body.nuke,
+        hands="Leyline Gloves",
+        ring1=gear.ring.magic_skill_left,
+        ring2=gear.ring.magic_skill_right,
+        back="Toro Cape",
+        waist="Eschan Stone",
+        legs=gear.eschite.legs.D,
+        feet=gear.odyssean.feet.nuke
+    }
+    sets.midcast['Banish'] = set_combine(sets.midcast.nuking, {})
+    sets.midcast['Banish II'] = set_combine(sets.midcast.nuking, {})
+    sets.midcast['Holy'] = set_combine(sets.midcast.nuking, {})
+    sets.midcast['Holy II'] = set_combine(sets.midcast.nuking, {})
+
+
+
     sets.midcast['Flash'] = set_combine(sets.enmity, {
-        body=gear.jse.relic.pld.body
+        body=gear.jse.artifact.pld.body
     })
 
     -- skill is 350 base: 334 + 16 merits

@@ -50,15 +50,17 @@ function get_sets()
     })
 
     sets.precast.FC = {
-        head=gear.herculean.head.fc,
+        head=gear.carmine.head.D,
+        neck=gear.neck.fc,
+        ear1=gear.ears.fc_left,
         ear2=gear.ears.fc_right,
         body="Hashishin Mintan",
         hands=gear.hands.melee_fc,
-        ring1=gear.ring.FC_left,
-        ring2=gear.ring.FC_right,
+        ring1=gear.ring.fc_left,
+        ring2=gear.ring.fc_right,
         back=gear.back.fc,
         waist=gear.waist.fc,
-        legs="Orvail Pants +1",
+        legs=gear.psycloth.legs.D,
         feet="Chelona Boots +1"
     }
 

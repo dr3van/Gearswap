@@ -64,7 +64,7 @@ function get_sets()
         ring1="Rajas Ring",
         ring2="Chirich Ring",
         back=gear.jse.capes.ambuscade.drk.tp,
-        waist=gear.waist.highhaste,
+        waist="Dynamic Belt +1",
         legs=gear.odyssean.legs.tp,
         feet=gear.ambuscade.phorcys.feet
     }
@@ -72,30 +72,30 @@ function get_sets()
     sets.combat.DPS = set_combine(sets.combat, {})
     sets.combat.midacc = set_combine(sets.combat, {})
     sets.combat.highacc = set_combine(sets.combat.midacc, {
-        ammo=gear.ammo.haste,
-        head=gear.odyssean.head.tp,
+        ammo="Seething Bomblet +1",
+        head=gear.carmine.head.D,
         neck=gear.neck.acc,
         ear1=gear.ears.melee_left,
         ear2=gear.ears.melee_right,
         body=gear.ambuscade.phorcys.body,
         hands=gear.ambuscade.phorcys.hands,
-        ring1="Chirich Ring",
+        ring1="Ramuh Ring +1",
         ring2="Ramuh Ring +1",
         back=gear.jse.capes.ambuscade.drk.tp,
         waist="Dynamic Belt +1",
-        legs=gear.odyssean.legs.tp,
+        legs=gear.ambuscade.phorcys.legs,
         feet=gear.ambuscade.phorcys.feet
     })
     sets.combat.defensive = set_combine(sets.combat, {
-        ammo=gear.ammo.haste,
-        head=gear.odyssean.head.tp,
+        ammo="Seething Bomblet +1",
+        head=gear.carmine.head.D,
         neck=gear.neck.acc,
         ear1=gear.ears.melee_left,
         ear2=gear.ears.melee_right,
         body=gear.ambuscade.ares.body,
         hands=gear.ambuscade.ares.hands,
-        ring1="Rajas Ring",
-        ring2="Chirich Ring",
+        ring1="Moonbeam Ring",
+        ring2="Moonbeam Ring",
         back=gear.jse.capes.ambuscade.drk.tp,
         waist=gear.waist.highhaste,
         legs=gear.odyssean.legs.dt,
@@ -104,11 +104,13 @@ function get_sets()
 
     sets.precast.FC = {
         ammo=gear.ammo.fc,
+        head=gear.carmine.head.D,
+        neck=gear.neck.fc,
         ear1="Loquac. Earring",
         hands=gear.hands.melee_fc,
         ring1=gear.ring.fc_left,
         ring2=gear.ring.fc_right,
-        waist=gear.waist.highhaste,
+        waist=gear.waist.maxhaste,
         legs=gear.eschite.legs.D,
         feet=gear.odyssean.feet.fc
     }
