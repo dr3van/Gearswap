@@ -9,7 +9,7 @@ function get_sets()
     combat_index_max = 5
 
     sets.idle = {
-        head=gear.head.mage_refresh,
+        head=gear.jse.artifact.smn.head,
         neck=gear.neck.dt,
         ear1=gear.ears.idle_left,
         ear2=gear.ears.idle_right,
@@ -24,6 +24,7 @@ function get_sets()
     }
     sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {
+        head=gear.jse.artifact.smn.head,
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
         legs="Nares Trews"
@@ -39,7 +40,6 @@ function get_sets()
 
     sets.precast = {}
     sets.precast.FC = {
-        ammo=gear.ammo.fc,
         head=gear.merlinic.head.fc,
         neck=gear.neck.fc,
         ear1=gear.ears.fc_left,
@@ -57,11 +57,14 @@ function get_sets()
     -- All -BP timer gear goes here
     sets.precast.BloodPact = {
         head=gear.jse.relic.smn.head,
+        neck="Consummation Torque",
         ear1="Evans Earring",
         ear2="Caller's Earring",
-        body="Shomonjijoe",
-        hands=gear.jse.relic.smn.legs,
-        legs=gear.jse.relic.smn.feet
+        body=gear.jse.relic.smn.body,
+        hands=gear.jse.relic.smn.hands,
+        back=gear.jse.capes.reive.smn,
+        legs=gear.jse.relic.smn.legs,
+        feet=gear.jse.relic.smn.feet
     }
     sets.precast.BloodPactRage = set_combine(sets.precast.BloodPact, {})
     sets.precast.BloodPactWard = set_combine(sets.precast.BloodPact, {})
@@ -70,10 +73,22 @@ function get_sets()
     }
 
     sets.pet.midcast.BloodPactRage = set_combine(sets.pet.midcast.BloodPact, {
-        waist="Mujin Obi"
+        head=gear.ambuscade.nashira.head,
+        neck="Consummation Torque",
+        ear2="Esper Earring",
+        body=gear.jse.artifact.smn.body,
+        hands=gear.ambuscade.nashira.hands,
+        back=gear.jse.capes.reive.smn,
+        waist="Mujin Obi",
+        legs=gear.jse.empyrean.smn.legs,
+        feet=gear.jse.artifact.smn.feet
     })
-    sets.pet.midcast.BloodPactRage.physical = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast.BloodPactRage.magical = set_combine(sets.pet.midcast.BloodPactRage, {})
+    sets.pet.midcast.BloodPactRage.physical = set_combine(sets.pet.midcast.BloodPactRage, {
+        back=gear.jse.capes.ambuscade.smn.phys_rage
+    })
+    sets.pet.midcast.BloodPactRage.magical = set_combine(sets.pet.midcast.BloodPactRage, {
+        back=gear.jse.capes.ambuscade.smn.mag_rage
+    })
 
     sets.pet.midcast.BloodPactWard = set_combine(sets.pet.midcast.BloodPact, {
         head="Psycloth Tiara",
@@ -130,6 +145,8 @@ function get_sets()
 
     ---- Titan
     ---- Ramuh
+    sets.pet.midcast['Volt Strike'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+
     ---- Leviathan
     ---- Cait Sith
     ---- Fenrir
@@ -165,6 +182,10 @@ function get_sets()
 
     ---- Titan
     ---- Ramuh
+    sets.pet.midcast['Rolling Thunder'] = set_combine(sets.pet.midcast.BloodPactWard, {})
+    sets.pet.midcast['Lightning Armor'] = set_combine(sets.pet.midcast.BloodPactWard, {})
+    sets.pet.midcast['Shock Squall'] = set_combine(sets.pet.midcast.BloodPactWard, {})
+
     ---- Leviathan
     ---- Cait Sith
     ---- Fenrir
@@ -174,26 +195,38 @@ function get_sets()
 
 
     sets.combat = {
-        head="Telchine Cap",
+        head=gear.ambuscade.nashira.head,
         neck="Sanctity Necklace",
         ear1="Mache Earring",
         ear2="Mache Earring",
-        body="Onca Suit",
-        hands="",
+        body=gear.ambuscade.nashira.body,
+        hands=gear.ambuscade.nashira.hands,
         ring1="Ramuh Ring +1",
         ring2="Ramuh Ring +1",
-        back="Rancorous Mantle",
+        back=gear.jse.capes.ambuscade.smn.ws,
         waist="Windbuffet Belt +1",
-        legs="",
-        feet=""
+        legs=gear.ambuscade.nashira.legs,
+        feet=gear.ambuscade.nashira.feet
     }
     sets.combat.DPS = set_combine(sets.combat, {})
     sets.combat.midacc = set_combine(sets.combat, {})
     sets.combat.highacc = set_combine(sets.combat, {})
     sets.combat.defensive = set_combine(sets.combat, {})
 
-
-
+    sets.WS = {
+        head=gear.ambuscade.nashira.head,
+        neck="Sanctity Necklace",
+        ear1="Mache Earring",
+        ear2="Mache Earring",
+        body=gear.ambuscade.nashira.body,
+        hands=gear.ambuscade.nashira.hands,
+        ring1="Ramuh Ring +1",
+        ring2="Ramuh Ring +1",
+        back=gear.jse.capes.ambuscade.smn.ws,
+        waist="Windbuffet Belt +1",
+        legs=gear.ambuscade.nashira.legs,
+        feet=gear.ambuscade.nashira.feet
+    }
 
     send_command('input /macro book 14;wait .1;input /macro set 1')
 end

@@ -250,6 +250,21 @@ function get_sets()
         ring2="Levia. Ring"
     })
 
+    sets.WS['Chant du Cygne'] = {
+        ammo="Jukukik Feather",
+        head=gear.lustratio.head.A,
+        neck=gear.neck.ws,
+        ear1="Mache Earring",
+        ear2="Mache Earring",
+        body=gear.ambuscade.phorcys.body,
+        hands=gear.odyssean.hands.wsd,
+        ring1="Ramuh Ring +1",
+        ring2="Ramuh Ring +1",
+        back=gear.jse.capes.ambuscade.pld.tp,
+        waist=gear.waist.ws,
+        legs=gear.odyssean.legs.qa,
+        feet=gear.lustratio.feet.D
+    }
 
     sets.WS.Realmrazer = set_combine(sets.WS, {
         body=gear.ambuscade.ares.body,

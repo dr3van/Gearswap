@@ -64,6 +64,10 @@ function init_jse()
     gear.jse.capes.ambuscade.rng.ws = { name="Belenus's Cape" }
 
     gear.jse.capes.ambuscade.smn = { name="Campestres's Cape" }
+    gear.jse.capes.ambuscade.smn.phys_rage = { name="Campestres's Cape" }
+    gear.jse.capes.ambuscade.smn.mag_rage = { name="Campestres's Cape" }
+    gear.jse.capes.ambuscade.smn.tp = { name="Campestres's Cape" }
+    gear.jse.capes.ambuscade.smn.ws = { name="Campestres's Cape" }
 
 
     -- WAR
@@ -213,18 +217,18 @@ function init_jse()
 
     -- SMN
     gear.jse.artifact.smn = {
-        head="Evoker's Horn +1",
-        body="Evoker's Doublet +1",
-        hands="Evoker's Bracers +1",
-        legs="Evoker's Spats +1",
-        feet="Evoker's Pigaches +1"
+        head="Convoker's Horn",
+        body="Convoker's Doublet",
+        hands="Convoker's Bracers",
+        legs="Convoker's Spats",
+        feet="Convoker's Pigaches"
     }
 
     gear.jse.relic.smn = {
-        head="Summoner's Horn +2",
-        body="Summoner's Doublet",
-        hands="Summoner's Bracers",
-        legs="Summoner's Spats +2",
+        head="Glyphic Horn",
+        body="Glyphic Doublet",
+        hands="Glyphic Bracers",
+        legs="Glyphic Spats",
         feet="Summoner's Pigaches +2"
     }
 

@@ -43,18 +43,22 @@ function get_sets()
         feet="Chelona Boots +1"
     })
 
+    -- FC: 61%
+    -- QC: 8%
     sets.precast.FC = {
-        head=gear.carmine.head.D,
-        neck=gear.neck.fc,
-        ear1="Loquac. Earring",
-        ear2="Estq. Earring",
-        body=gear.jse.relic.rdm.body,
-        hands=gear.hands.melee_fc,
-        ring1=gear.ring.FC_left,
-        back=gear.back.fc,
-        waist=gear.back.fc,
-        legs=gear.psycloth.legs.D,
-        feet="Chelona Boots +1"
+        ammo=gear.ammo.fc,              -- 0% FC 2% QC
+        head=gear.carmine.head.D,       -- 14% FC 0% QC
+        neck=gear.neck.fc,              -- 5% FC 0% QC
+        ear1="Loquac. Earring",         -- 2% FC 0% QC
+        ear2="Estq. Earring",           -- 2% FC 0% QC
+        body=gear.jse.relic.rdm.body,   -- 12% FC 0% QC
+        hands=gear.hands.melee_fc,      -- 8% FC 0% QC
+        ring1=gear.ring.fc_left,        -- 0% FC 2% QC
+        ring2=gear.ring.fc_right,       -- 0% FC 1% QC
+        back=gear.back.fc,              -- 3% FC 0% QC
+        waist=gear.waist.fc,            -- 3% FC 3% QC
+        legs=gear.psycloth.legs.D,      -- 7% FC 0% QC
+        feet="Chelona Boots +1"         -- 5% FC 0% QC
     }
 
     sets.combat = {
