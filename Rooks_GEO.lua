@@ -92,7 +92,7 @@ function get_sets()
     })
 
     sets.midcast['Elemental Magic']['burst'] = set_combine(sets.midcast['Elemental Magic'], {
-        hands = gear.merlinic.hands.burst,
+        hands = gear.amalric.hands.D,
         ring1 = gear.ring.mb_left,
         ring2 = gear.ring.mb_right
     })

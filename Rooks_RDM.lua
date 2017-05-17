@@ -182,7 +182,7 @@ function get_sets()
         ear1=gear.ears.mab_left,
         ear2=gear.ears.mab_right,
         body=gear.ambuscade.morrigan.body,
-        hands=gear.merlinic.hands.MAB,
+        hands=gear.amalric.hands.D,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
         legs=gear.merlinic.legs.MAB,

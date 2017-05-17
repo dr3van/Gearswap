@@ -71,7 +71,7 @@ function get_sets()
 
     sets.combat = {
         ammo="Hasty Pinion +1",
-        head="Telchine Cap",
+        head=gear.ambuscade.homam.head,
         neck="Sanctity Necklace",
         ear1="Mache Earring",
         ear2="Mache Earring",
@@ -123,8 +123,7 @@ function get_sets()
     sets.midcast.CureSpell = {
         main="Ababinili +1",
         ammo="Aqua Sachet",
-        head="Telchine Cap",
-        neck="Colossus's torque",
+        neck=gear.neck.magic_skill,
         ear1="Roundel Earring",
         ear2="Lifestorm Earring",
         body="Ebers Bliaud",
@@ -146,7 +145,7 @@ function get_sets()
     sets.midcast['Enhancing Magic'] = {
         main="Ababinili +1",
         sub=gear.grip.enhancing,
-        neck="Colossus's torque",
+        neck=gear.neck.magic_skill,
         body=gear.telchine.body,
         back=gear.back.conserve_mp,
         waist=gear.waist.conserve_mp,
@@ -194,7 +193,7 @@ function get_sets()
         main="Ababinili +1",
         ammo="Aqua Sachet",
         head="Ebers Cap",
-        neck="Colossus's torque",
+        neck=gear.neck.magic_skill,
         ear1="Roundel Earring",
         ear2="Lifestorm Earring",
         body="Ebers Bliaud",
@@ -218,8 +217,7 @@ function get_sets()
     sets.midcast['Cursna'] = {
         main="Ababinili +1",
         ammo="Aqua Sachet",
-        head="Telchine Cap",
-        neck="Colossus's torque",
+        neck=gear.neck.magic_skill,
         ear2="Lifestorm Earring",
         body="Ebers Bliaud",
         hands="Fanatic's Gloves",

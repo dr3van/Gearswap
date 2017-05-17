@@ -16,7 +16,7 @@ function get_sets()
         ear1=gear.ears.idle_left,
         ear2=gear.ears.idle_right,
         body=gear.body.mage_idle,
-        hands=gear.merlinic.hands.dt,
+        hands=gear.amalric.hands.D,
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
         back=gear.back.mage_idle,
@@ -110,7 +110,7 @@ function get_sets()
         ear1=gear.ears.macc_left,
         ear2=gear.ears.macc_right,
         body=gear.ambuscade.morrigan.body,
-        hands=gear.merlinic.hands.MAcc,
+        hands=gear.amalric.hands.D,
         ring1=gear.ring.macc_left,
         ring2=gear.ring.macc_right,
         back=gear.back.macc,
@@ -160,7 +160,7 @@ function get_sets()
     })
 
     sets.midcast['Elemental Magic']['burst'] = set_combine(sets.midcast['Elemental Magic'], {
-        hands = gear.merlinic.hands.burst,
+        hands = gear.amalric.hands.D,
         ring1 = gear.ring.mb_left,
         ring2 = gear.ring.mb_right
     })

@@ -69,9 +69,7 @@ function get_sets()
     })
 
     -- Hijack this because I don't need defensive mode for what I do as thief
-    sets.combat.defensive = set_combine(sets.combat.TH, {
-        body=gear.taeon.body.tp
-    })
+    sets.combat.defensive = set_combine(sets.combat.TH, {})
 
 
     sets.JA = {}

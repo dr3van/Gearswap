@@ -124,11 +124,12 @@ function get_sets()
 
 
     sets.precast['Enhancing Magic'] = set_combine(sets.precast.FC, {
+        neck=gear.neck.magic_skill,
         legs=gear.jse.relic.run.legs
     })
     sets.midcast['Enhancing Magic'] = set_combine(sets.enmity, {
         head=gear.jse.empyrean.run.head,
-        neck="Colossus's Torque",
+        neck=gear.neck.magic_skill,
         hands=gear.jse.artifact.run.hands,
         legs=gear.carmine.legs.D
     })

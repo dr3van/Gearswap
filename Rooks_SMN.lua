@@ -4,6 +4,11 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(1, 1)
 
+    idle_sets = { 'base', 'regen', 'DT', 'perp' }
+    idle_sets_description = { 'Idle base', 'Idle regen', 'Idle DT', 'Perpetuation' }
+    idle_index_max = 4
+
+
     combat_sets = {'DPS', 'midacc', 'highacc', 'defensive', 'pet' }
     combat_sets_description = { 'Physical DPS', 'Moderate physical accuracy', 'High physical accuracy', 'Defensive', 'pet' }
     combat_index_max = 5
@@ -14,7 +19,7 @@ function get_sets()
         ear1=gear.ears.idle_left,
         ear2=gear.ears.idle_right,
         body=gear.body.mage_idle,
-        hands=gear.merlinic.hands.dt,
+        hands=gear.ambuscade.nashira.hands,
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
         back=gear.back.mage_idle,
@@ -31,8 +36,12 @@ function get_sets()
     })
     sets.idle.DT = set_combine(sets.idle, {
         ring1=gear.ring.dt_left,
-        ring2=gear.ring.dt_right,
-        feet=gear.vanya.feet.D
+        ring2=gear.ring.dt_right
+    })
+    sets.idle.perp = set_combine(sets.idle.regen, {
+        head=gear.jse.relic.smn.head,
+        body=gear.jse.relic.smn.body,
+        feet=gear.jse.artifact.smn.feet
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
@@ -73,15 +82,17 @@ function get_sets()
     }
 
     sets.pet.midcast.BloodPactRage = set_combine(sets.pet.midcast.BloodPact, {
-        head=gear.ambuscade.nashira.head,
+        head=gear.apogee.head.C,
         neck="Consummation Torque",
         ear2="Esper Earring",
-        body=gear.jse.artifact.smn.body,
-        hands=gear.ambuscade.nashira.hands,
-        back=gear.jse.capes.reive.smn,
+        body=gear.apogee.body.C,
+        hands=gear.merlinic.hands.bp,
+        ring1="Varar Ring +1",
+        ring2="Varar Ring",
+        back=gear.jse.capes.ambuscade.smn.phys_rage,
         waist="Mujin Obi",
-        legs=gear.jse.empyrean.smn.legs,
-        feet=gear.jse.artifact.smn.feet
+        legs="Enticer's Pants",
+        feet=gear.apogee.feet.C
     })
     sets.pet.midcast.BloodPactRage.physical = set_combine(sets.pet.midcast.BloodPactRage, {
         back=gear.jse.capes.ambuscade.smn.phys_rage

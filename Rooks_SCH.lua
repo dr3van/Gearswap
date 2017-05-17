@@ -116,7 +116,6 @@ function get_sets()
     sets.midcast.CureSpell = {
 --        main="Tamaxchi",
 --        sub="Genbu's Shield",
-        head="Telchine Cap",
         neck=gear.neck.cure_potency,
         ear2="Lifestorm Earring",
         hands=gear.telchine.hands.cure_potency,
@@ -131,7 +130,7 @@ function get_sets()
     }
 
     sets.midcast['Enhancing Magic'] = {
-        neck="Colossus's torque",
+        neck=gear.neck.magic_skill,
         body=gear.telchine.body,
         back=gear.back.conserve_mp,
         waist=gear.waist.conserve_mp
@@ -145,7 +144,7 @@ function get_sets()
         ear1=gear.ears.macc_left,
         ear2=gear.ears.macc_right,
         body=gear.ambuscade.morrigan.body,
-        hands=gear.merlinic.hands.MAcc,
+        hands=gear.amalric.hands.D,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
         back=gear.back.macc,
@@ -165,8 +164,7 @@ function get_sets()
     })
 
     sets.midcast['Cursna'] = {
-        head="Telchine Cap",
-        neck="Colossus's torque",
+        neck=gear.neck.magic_skill,
         ear2="Lifestorm Earring",
         ring1="Sirona's Ring",
         ring2="Ephedra Ring",
@@ -184,7 +182,7 @@ function get_sets()
         ear1=gear.ears.mab_left,
         ear2=gear.ears.mab_right,
         body=gear.ambuscade.morrigan.body,
-        hands=gear.merlinic.hands.MAB,
+        hands=gear.amalric.hands.D,
         ring1="Shiva Ring",
         ring2="Shiva Ring",
         back="Toro Cape",

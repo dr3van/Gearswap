@@ -64,7 +64,7 @@ function init_jse()
     gear.jse.capes.ambuscade.rng.ws = { name="Belenus's Cape" }
 
     gear.jse.capes.ambuscade.smn = { name="Campestres's Cape" }
-    gear.jse.capes.ambuscade.smn.phys_rage = { name="Campestres's Cape" }
+    gear.jse.capes.ambuscade.smn.phys_rage = { name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Pet: Attack+10 Pet: Rng.Atk.+10'}}
     gear.jse.capes.ambuscade.smn.mag_rage = { name="Campestres's Cape" }
     gear.jse.capes.ambuscade.smn.tp = { name="Campestres's Cape" }
     gear.jse.capes.ambuscade.smn.ws = { name="Campestres's Cape" }
@@ -229,15 +229,15 @@ function init_jse()
         body="Glyphic Doublet",
         hands="Glyphic Bracers",
         legs="Glyphic Spats",
-        feet="Summoner's Pigaches +2"
+        feet="Glyphic Pigaches"
     }
 
     gear.jse.empyrean.smn = {
-        head="Caller's Horn +2",
-        body="Caller's Doublet +2",
-        hands="Caller's Bracers +2",
-        legs="Caller's Spats +2",
-        feet="Caller's Pigaches +2"
+        head="Beckoner's Horn",
+        body="Beckoner's Doublet",
+        hands="Beckoner's Bracers",
+        legs="Beckoner's Spats",
+        feet="Beckoner's Pigaches"
     }
 
     -- XXX

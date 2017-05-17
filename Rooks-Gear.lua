@@ -215,6 +215,22 @@ function init_gear()
     gear.adhemar = {}
     gear.adhemar.body = { name="Adhemar Jacket" }
 
+    gear.amalric = {}
+    gear.amalric.hands = { name="Amalric Gages" }
+    gear.amalric.hands.D = { name="Amalric Gages", augments={'INT+10','Mag. Acc.+15','"Mag.Atk.Bns."+15'}}
+
+    gear.apogee = {}
+    gear.apogee.head = { name="Apogee Crown" }
+    gear.apogee.head.C = { name="Apogee Crown", augments={'Pet: Attack+20','Pet: "Mag.Atk.Bns."+20','Blood Pact Dmg.+7'}}
+    gear.apogee.body = { name="Apogee Dalmatica" }
+    gear.apogee.body.C = { name="Apogee Dalmatica", augments={'Pet: Attack+20','Pet: "Mag.Atk.Bns."+20','Blood Pact Dmg.+7'}}
+    gear.apogee.hands = { name="Apogee Mitts" }
+    gear.apogee.hands.C = { name="Apogee Mitts", augments={'Pet: Attack+20','Pet: "Mag.Atk.Bns."+20','Blood Pact Dmg.+7'}}
+    gear.apogee.legs = { name="Apogee Slacks" }
+    gear.apogee.legs.C = { name="Apogee Slacks", augments={'Pet: Attack+20','Pet: "Mag.Atk.Bns."+20','Blood Pact Dmg.+7'}}
+    gear.apogee.feet = { name="Apogee Pumps" }
+    gear.apogee.feet.C = { name="Apogee Pumps", augments={'Pet: Attack+20','Pet: "Mag.Atk.Bns."+20','Blood Pact Dmg.+7'}}
+
     gear.souveran = {}
     gear.souveran.head = { name="Souveran Schaller" }
     gear.souveran.head.C = { name="Souveran Schaller" }
@@ -312,10 +328,7 @@ function init_gear()
     gear.merlinic.head.dt = { name="Merlinic Hood", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','"Fast Cast"+4','CHR+1','Mag. Acc.+11','"Mag.Atk.Bns."+12'}}
     gear.merlinic.head.fc = { name="Merlinic Hood", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','"Fast Cast"+4','CHR+1','Mag. Acc.+11','"Mag.Atk.Bns."+12'}}
     gear.merlinic.hands = { name="Merlinic Dastanas" }
-    gear.merlinic.hands.burst = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst dmg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
-    gear.merlinic.hands.MAB = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst dmg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
-    gear.merlinic.hands.MAcc = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst dmg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
-    gear.merlinic.hands.dt = { name="Merlinic Dastanas", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Magic burst dmg.+10%','Mag. Acc.+5','"Mag.Atk.Bns."+5',}}
+    gear.merlinic.hands.bp = { name="Merlinic Dastanas", augments={'Pet: Accuracy+30 Pet: Rng. Acc.+30','Blood Pact Dmg.+4','Pet: Mag. Acc.+12',} }
     gear.merlinic.legs = { name="Merlinic Shalwar"}
     gear.merlinic.legs.MAB = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst dmg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
     gear.merlinic.legs.MAcc = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst dmg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
