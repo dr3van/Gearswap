@@ -4,14 +4,14 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(1, 1)
 
-    idle_sets = { 'base', 'regen', 'DT', 'perp' }
-    idle_sets_description = { 'Idle base', 'Idle regen', 'Idle DT', 'Perpetuation' }
-    idle_index_max = 4
+    idle_sets = { 'base', 'regen', 'DT', 'perp', 'favor' }
+    idle_sets_description = { 'Idle base', 'Idle regen', 'Idle DT', 'Idle Perpetuation', 'Idle Favor' }
+    idle_index_max = 5
 
 
-    combat_sets = {'DPS', 'midacc', 'highacc', 'defensive', 'pet' }
-    combat_sets_description = { 'Physical DPS', 'Moderate physical accuracy', 'High physical accuracy', 'Defensive', 'pet' }
-    combat_index_max = 5
+    combat_sets = {'DPS', 'highacc', 'defensive', 'pet' }
+    combat_sets_description = { 'Physical DPS', 'High physical accuracy', 'Defensive', 'pet' }
+    combat_index_max = 4
 
     sets.idle = {
         head=gear.jse.artifact.smn.head,
@@ -39,9 +39,17 @@ function get_sets()
         ring2=gear.ring.dt_right
     })
     sets.idle.perp = set_combine(sets.idle.regen, {
-        head=gear.jse.relic.smn.head,
-        body=gear.jse.relic.smn.body,
+        head=gear.jse.empyrean.smn.head,
+        neck="Caller's Pendant",
+        ear1="Andoaa Earring",
+        ear2="Evans Earring",
+        body=gear.jse.empyrean.smn.body,
+        ring1="Varar Ring +1",
+        ring2="Varar Ring",
+        back=gear.jse.capes.ambuscade.smn.phys_rage,
         feet=gear.jse.artifact.smn.feet
+    })
+    sets.idle.favor = set_combine(sets.idle.perp, {
     })
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
@@ -69,7 +77,7 @@ function get_sets()
         neck="Consummation Torque",
         ear1="Evans Earring",
         ear2="Caller's Earring",
-        body=gear.jse.relic.smn.body,
+        body=gear.apogee.body.C,
         hands=gear.jse.relic.smn.hands,
         back=gear.jse.capes.reive.smn,
         legs=gear.jse.relic.smn.legs,
@@ -100,6 +108,9 @@ function get_sets()
     sets.pet.midcast.BloodPactRage.magical = set_combine(sets.pet.midcast.BloodPactRage, {
         back=gear.jse.capes.ambuscade.smn.mag_rage
     })
+    sets.pet.midcast.BloodPactRage.breath = set_combine(sets.pet.midcast.BloodPactRage, {
+        back=gear.jse.capes.ambuscade.smn.mag_rage
+    })
 
     sets.pet.midcast.BloodPactWard = set_combine(sets.pet.midcast.BloodPact, {
         head="Psycloth Tiara",
@@ -121,88 +132,153 @@ function get_sets()
 
     -- Rages
     ---- Carbuncle
-    sets.pet.midcast['Searing Light'] = set_combine(sets.pet.midcast.BloodPactRage, {})
+    sets.pet.midcast['Searing Light'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
     sets.pet.midcast['Poison Nails'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Meteorite'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Holy Mist'] = set_combine(sets.pet.midcast.BloodPactRage, {})
+    sets.pet.midcast['Meteorite'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Holy Mist'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
 
     ---- Ifrit
-    sets.pet.midcast['Inferno'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Punch'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Fire II'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Burning Strike'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Double Punch'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Fire IV'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Flaming Crush'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Meteor Strike'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Conflag Strike'] = set_combine(sets.pet.midcast.BloodPactRage, {})
+    sets.pet.midcast['Inferno'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Punch'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Fire II'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Burning Strike'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Double Punch'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Fire IV'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Flaming Crush'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Meteor Strike'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Conflag Strike'] = set_combine(sets.pet.midcast.BloodPactRage.breath, {})
 
     ---- Shiva
-    sets.pet.midcast['Diamond Dust'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Axe Kick'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Blizzard II'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Double Slap'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Blizzard IV'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Rush'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Heavenly Strike'] = set_combine(sets.pet.midcast.BloodPactRage, {})
+    sets.pet.midcast['Diamond Dust'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Axe Kick'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Blizzard II'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Double Slap'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Blizzard IV'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Rush'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Heavenly Strike'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
 
     ---- Garuda
-    sets.pet.midcast['Aerial Blast'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Claw'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Aero II'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Aero IV'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Predator Claws'] = set_combine(sets.pet.midcast.BloodPactRage, {})
-    sets.pet.midcast['Wind Blade'] = set_combine(sets.pet.midcast.BloodPactRage, {})
+    sets.pet.midcast['Aerial Blast'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Claw'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Aero II'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Aero IV'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Predator Claws'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Wind Blade'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
 
     ---- Titan
+    sets.pet.midcast['Earthen Fury'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Rock Throw'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Stone II'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Rock Buster'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Megalith Throw'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Stone IV'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Mountain Buster'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Geocrush'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Crag Throw'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+
     ---- Ramuh
+    sets.pet.midcast['Judgment Bolt'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Shock Strike'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Thunder II'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Thunderspark'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Thunder IV'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Chaotic Strike'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Thunderstorm'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
     sets.pet.midcast['Volt Strike'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
 
     ---- Leviathan
+    sets.pet.midcast['Tidal Wave'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Barracuda Dive'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Water II'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Tail Whip'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Water IV'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Spinning Dive'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Grand Fall'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+
     ---- Cait Sith
+    sets.pet.midcast['Regal Scratch'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Level ? Holy'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Regal Gash'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+
     ---- Fenrir
+    sets.pet.midcast['Howling Moon'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Moonlit Charge'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Crescent Fang'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Eclipse Bite'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Lunar Bay'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Impact'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+
     ---- Diabolos
+    sets.pet.midcast['Ruinous Omen'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Camisado'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
+    sets.pet.midcast['Nether Blast'] = set_combine(sets.pet.midcast.BloodPactRage.breath, {})
+    sets.pet.midcast['Night Terror'] = set_combine(sets.pet.midcast.BloodPactRage.magical, {})
+    sets.pet.midcast['Blindside'] = set_combine(sets.pet.midcast.BloodPactRage.physical, {})
 
 
     -- Wards
     ---- Carbuncle
-    sets.pet.midcast['Healing Ruby'] = set_combine(sets.pet.midcast.BloodPactWard, {})
-    sets.pet.midcast['Shining Ruby'] = set_combine(sets.pet.midcast.BloodPactWard, {})
-    sets.pet.midcast['Glittering Ruby'] = set_combine(sets.pet.midcast.BloodPactWard, {})
-    sets.pet.midcast['Healing Ruby II'] = set_combine(sets.pet.midcast.BloodPactWard, {})
-    sets.pet.midcast['Soothing Ruby'] = set_combine(sets.pet.midcast.BloodPactWard, {})
-    sets.pet.midcast['Pacifying Ruby'] = set_combine(sets.pet.midcast.BloodPactWard, {})
-    sets.pet.midcast['Healing Ruby'] = set_combine(sets.pet.midcast.BloodPactWard, {})
+    sets.pet.midcast['Healing Ruby'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Shining Ruby'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Glittering Ruby'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Healing Ruby II'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Soothing Ruby'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Pacifying Ruby'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Healing Ruby'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
 
     ---- Ifrit
-    sets.pet.midcast['Crimson Howl'] = set_combine(sets.pet.midcast.BloodPactWard, {})
-    sets.pet.midcast['Inferno Howl'] = set_combine(sets.pet.midcast.BloodPactWard, {})
+    sets.pet.midcast['Crimson Howl'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Inferno Howl'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
 
     ---- Shiva
-    sets.pet.midcast['Frost Armor'] = set_combine(sets.pet.midcast.BloodPactWard, {})
-    sets.pet.midcast['Sleepga'] = set_combine(sets.pet.midcast.BloodPactWard, {})
-    sets.pet.midcast['Diamond Storm'] = set_combine(sets.pet.midcast.BloodPactWard, {})
-    sets.pet.midcast['Crystal Blessing'] = set_combine(sets.pet.midcast.BloodPactWard, {})
+    sets.pet.midcast['Frost Armor'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Sleepga'] = set_combine(sets.pet.midcast.BloodPactWard.debuff, {})
+    sets.pet.midcast['Diamond Storm'] = set_combine(sets.pet.midcast.BloodPactWard.debuff, {})
+    sets.pet.midcast['Crystal Blessing'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
 
     ---- Garuda
-    sets.pet.midcast['Aerial Armor'] = set_combine(sets.pet.midcast.BloodPactWard, {})
-    sets.pet.midcast['Whispering Wind'] = set_combine(sets.pet.midcast.BloodPactWard, {})
-    sets.pet.midcast['Hastega'] = set_combine(sets.pet.midcast.BloodPactWard, {})
-    sets.pet.midcast['Fleet Wind'] = set_combine(sets.pet.midcast.BloodPactWard, {})
-    sets.pet.midcast['Hastega II'] = set_combine(sets.pet.midcast.BloodPactWard, {})
+    sets.pet.midcast['Aerial Armor'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Whispering Wind'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Hastega'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Fleet Wind'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Hastega II'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
 
     ---- Titan
+    sets.pet.midcast['Earthen Ward'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Earthen Armor'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+
     ---- Ramuh
-    sets.pet.midcast['Rolling Thunder'] = set_combine(sets.pet.midcast.BloodPactWard, {})
-    sets.pet.midcast['Lightning Armor'] = set_combine(sets.pet.midcast.BloodPactWard, {})
-    sets.pet.midcast['Shock Squall'] = set_combine(sets.pet.midcast.BloodPactWard, {})
+    sets.pet.midcast['Rolling Thunder'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Lightning Armor'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Shock Squall'] = set_combine(sets.pet.midcast.BloodPactWard.debuff, {})
 
     ---- Leviathan
+    sets.pet.midcast['Slowga'] = set_combine(sets.pet.midcast.BloodPactWard.debuff, {})
+    sets.pet.midcast['Spring Water'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Tidal Roar'] = set_combine(sets.pet.midcast.BloodPactWard.debuff, {})
+    sets.pet.midcast['Soothing Current'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+
     ---- Cait Sith
+    sets.pet.midcast["Altana's Favor"] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Raise II'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Mewing Lullaby'] = set_combine(sets.pet.midcast.BloodPactWard.debuff, {})
+    sets.pet.midcast['Reraise II'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Eerie Eye'] = set_combine(sets.pet.midcast.BloodPactWard.debuff, {})
+
     ---- Fenrir
+    sets.pet.midcast['Lunar Cry'] = set_combine(sets.pet.midcast.BloodPactWard.debuff, {})
+    sets.pet.midcast['Lunar Roar'] = set_combine(sets.pet.midcast.BloodPactWard.debuff, {})
+    sets.pet.midcast['Ecliptic Growl'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Ecliptic Howl'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Heavenward Howl'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+
     ---- Diabolos
-
-
+    sets.pet.midcast['Somnolence'] = set_combine(sets.pet.midcast.BloodPactWard.debuff, {})
+    sets.pet.midcast['Nightmare'] = set_combine(sets.pet.midcast.BloodPactWard.debuff, {})
+    sets.pet.midcast['Ultimate Terror'] = set_combine(sets.pet.midcast.BloodPactWard.debuff, {})
+    sets.pet.midcast['Noctoshield'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Dream Shroud'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
+    sets.pet.midcast['Pavor Nocturnus'] = set_combine(sets.pet.midcast.BloodPactWard.debuff, {})
 
 
     sets.combat = {
