@@ -143,6 +143,11 @@ function init_gear()
     gear.gendewitha.head.pdt = { name="Gende. Caubeen +1", augments={'Phys. dmg. taken -4%', '"Cure" spellcasting time -1%'} }
 
     -- Alluvion Skirmish pieces
+    gear.helios = {}
+    gear.helios.head = { name="Helios Band" }
+    gear.helios.head.phys_bp = { name="Helios Band", augments={'Pet: Accuracy+30 Pet: Rng. Acc.+30','Pet: "Dbl. Atk."+5'} }
+
+
     gear.yorium = {}
     gear.yorium.head = { name="Yorium Barbuta" }
     gear.yorium.body = { name="Yorium Cuirass" }
@@ -365,10 +370,6 @@ function init_gear()
     -- Weapons
     gear.weapons = {}
     gear.weapons.mage = {}
-    gear.weapons.BLM = {}
-    gear.weapons.SCH = {}
-    gear.weapons.BLM.Nuke = { name="Keraunos", augments={'"Mag.Atk.Bns."+17','"Fast Cast"+3','INT+9 MND+9'}}
-    gear.weapons.SCH.Nuke = { name="Keraunos", augments={'"Mag.Atk.Bns."+17','"Fast Cast"+3','INT+9 MND+9'}}
     gear.weapons.mage.macc = { name="Lehbrailg +2" }
     gear.weapons.mage.refresh = { name="Contemplator" }
 
