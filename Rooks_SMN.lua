@@ -44,13 +44,13 @@ function get_sets()
         ear1="Andoaa Earring",
         ear2="Evans Earring",
         body=gear.jse.empyrean.smn.body,
+        hands=gear.jse.relic.smn.hands,
         ring1="Varar Ring +1",
         ring2="Varar Ring",
         back=gear.jse.capes.ambuscade.smn.phys_rage,
         feet=gear.jse.artifact.smn.feet
     })
-    sets.idle.favor = set_combine(sets.idle.perp, {
-    })
+    sets.idle.favor = set_combine(sets.idle.perp, {})
     sets.idle.PDT = set_combine(sets.idle.DT, {})
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = set_combine(sets.idle.regen, {})
@@ -316,4 +316,40 @@ function get_sets()
     }
 
     send_command('input /macro book 14;wait .1;input /macro set 1')
+end
+
+function job_aftercast(spell)
+    if spell and spell.type == "SummonerPact" then
+        idle(1)
+    elseif spell and spell.name == "Release" then
+        base_aftercast(spell)
+    else
+        if pet.isvalid then
+            idle()
+        else
+            base_aftercast(spell)
+        end
+    end
+end
+
+function idle(summoned)
+    if pet.isvalid then
+        if buffactive["Avatar's Favor"] then
+            if sets.idle.favor[pet.name] then
+                equip(sets.idle.favor[pet.name])
+            else
+                equip(sets.idle.favor)
+            end
+        else
+            if sets.idle.perp[pet.name] then
+                equip(sets.idle.perp[pet.name])
+            else
+                equip(sets.idle.perp)
+            end
+        end
+    else
+        if summoned then
+            equip(sets.idle.perp)
+        end
+    end
 end

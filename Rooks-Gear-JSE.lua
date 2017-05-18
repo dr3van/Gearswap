@@ -119,7 +119,7 @@ function init_jse()
     -- PLD
     gear.jse.artifact.pld = {
         head="Rev. Coronet +2",
-        body="Rev. Surcoat +2",
+        body="Rev. Surcoat +3",
         hands="Rev. Gauntlets +2",
         legs="Rev. Breeches +2",
         feet="Rev. Leggings +2"

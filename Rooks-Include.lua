@@ -283,7 +283,7 @@ end
 
 function base_pet_aftercast(spell)
     -- Just call aftercast(). We didn't do it before so the pet could do its thing.
-    aftercast()
+    aftercast(spell)
 end
 
 
