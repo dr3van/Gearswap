@@ -24,7 +24,7 @@ function get_sets()
         ring2=gear.ring.dt_right,
         back=gear.back.mage_idle,
         waist=gear.waist.mage_idle,
-        legs=gear.legs.mage_pdt,
+        legs=gear.ambuscade.nashira.legs,
         feet="Herald's Gaiters"
     }
     sets.idle.base = set_combine(sets.idle, {})
@@ -32,7 +32,7 @@ function get_sets()
         head=gear.jse.artifact.smn.head,
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
-        legs="Nares Trews"
+        legs=gear.legs.mage_refresh
     })
     sets.idle.DT = set_combine(sets.idle, {
         ring1=gear.ring.dt_left,
@@ -48,7 +48,9 @@ function get_sets()
         ring1="Varar Ring +1",
         ring2="Varar Ring",
         back=gear.jse.capes.ambuscade.smn.phys_rage,
-        feet=gear.jse.artifact.smn.feet
+        waist="Kuku Stone",
+        legs=gear.legs.mage_refresh,
+        feet=gear.apogee.feet.C
     })
     sets.idle.favor = set_combine(sets.idle.perp, {})
     sets.idle.PDT = set_combine(sets.idle.DT, {})
@@ -68,18 +70,20 @@ function get_sets()
         back=gear.back.fc,
         waist=gear.waist.fc,
         legs=gear.psycloth.legs.D,
-        feet="Chelona Boots +1"
+        feet=gear.merlinic.feet.fc
     }
 
-    -- All -BP timer gear goes here
+    sets.JA['Mana Cede'] = { hands=gear.jse.empyrean.smn.hands }
+
+    -- All -BP timer and blood boon gear goes here
     sets.precast.BloodPact = {
         head=gear.jse.relic.smn.head,
         neck="Consummation Torque",
         ear1="Evans Earring",
-        ear2="Caller's Earring",
         body=gear.apogee.body.C,
         hands=gear.jse.relic.smn.hands,
         back=gear.jse.capes.reive.smn,
+        waist="Jaq'ij Sash",
         legs=gear.jse.relic.smn.legs,
         feet=gear.jse.relic.smn.feet
     }
@@ -92,6 +96,7 @@ function get_sets()
     sets.pet.midcast.BloodPactRage = set_combine(sets.pet.midcast.BloodPact, {
         head=gear.apogee.head.C,
         neck="Consummation Torque",
+        ear1="Gelos Earring",
         ear2="Esper Earring",
         body=gear.apogee.body.C,
         hands=gear.merlinic.hands.bp,

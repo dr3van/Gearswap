@@ -30,8 +30,7 @@ function get_sets()
         body=gear.ambuscade.morrigan.body,
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
-        waist=gear.waist.mage_idle,
-        legs="Nares Trews"
+        waist=gear.waist.mage_idle
     })
     sets.idle.DT = set_combine(sets.idle, {
         head=gear.gendewitha.head.pdt
@@ -40,7 +39,6 @@ function get_sets()
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = set_combine(sets.idle.regen, {
         ear1="Relaxing Earring",
-        feet="Chelona Boots +1"
     })
 
     -- FC: 61%

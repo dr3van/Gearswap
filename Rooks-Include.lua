@@ -144,6 +144,7 @@ function init_get_sets(weapon_lock, gear_file)
         organizer_items = gear.universal
     end
 
+    send_command('@input /echo Ctrl+F8 toggles the weapon lock on and off')
     send_command('@input /echo F9 toggles PDT on and off')
     send_command('@input /echo Ctrl+F9 toggles MDT on and off')
     send_command('@input /echo F10 toggles physical damage/accuracy/defensive options')

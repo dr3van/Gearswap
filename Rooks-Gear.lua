@@ -134,6 +134,7 @@ function init_gear()
     gear.hands.melee_macc = { name="Leyline Gloves", augments={'Accuracy+15', 'Mag. Acc.+15', '"Mag. Atk. Bns."+15', '"Fast Cast"+3'} }
     gear.legs = {}
     gear.legs.mage_pdt = { name="Miasmic Pants" }
+    gear.legs.mage_refresh = { name="Assiduity Pants +1" }
     gear.feet = {}
 
 
@@ -292,7 +293,7 @@ function init_gear()
     gear.odyssean.hands = { name="Odyssean Gauntlets" }
     gear.odyssean.hands.refresh = { name="Odyssean Gauntlets", augments={'STR+2','"Refresh"+2','Accuracy+16 Attack+16','Mag. Acc.+9 "Mag.Atk.Bns."+9'} }
     gear.odyssean.hands.ws = { name="Odyssean Gauntlets", augments={'STR+12','Pet: "Store TP"+2','Haste+2','Accuracy+20 Attack+20','Mag. Acc.+19 "Mag.Atk.Bns."+19'} }
-    gear.odyssean.hands.wsd = { name="Odyssean Gauntlets", augments={'Accuracy+19','Weapon skill damage +2%','DEX+7','Attack+7'} }
+    gear.odyssean.hands.wsd = { name="Odyssean Gauntlets", augments={'Accuracy+26','Weapon skill damage +3%','VIT+9','Attack+7'} }
     gear.odyssean.legs = { name="Odyssean Cuisses" }
     gear.odyssean.legs.qa = { name="Odyssean Cuisses", augments={'DEX+5','Accuracy+8','Quadruple Attack +2','Accuracy+16 Attack+16','Mag. Acc.+19 "Mag.Atk.Bns."+19',}}
     gear.odyssean.legs.tp = { name="Odyssean Cuisses", augments={'DEX+5','Accuracy+8','Quadruple Attack +2','Accuracy+16 Attack+16','Mag. Acc.+19 "Mag.Atk.Bns."+19',}}

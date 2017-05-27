@@ -26,7 +26,7 @@ function get_sets()
         body=gear.body.mage_idle,
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
-        legs="Nares Trews"
+        legs=gear.legs.mage_refresh
     })
     sets.idle.DT = set_combine(sets.idle, {
         feet=gear.ambuscade.homam.feet

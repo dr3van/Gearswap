@@ -26,7 +26,7 @@ function get_sets()
     sets.idle.regen = set_combine(sets.idle, {
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
-        legs="Nares Trews"
+        legs=gear.legs.mage_refresh
     })
     sets.idle.DT = set_combine(sets.idle, {
         ring1=gear.ring.dt_left,
@@ -75,14 +75,14 @@ function get_sets()
         neck="Sanctity Necklace",
         ear1="Mache Earring",
         ear2="Mache Earring",
-        body="Onca Suit",
-        hands="",
+        body=gear.ambuscade.homam.body,
+        hands=gear.ambuscade.homam.hands,
         ring1="Ramuh Ring +1",
         ring2="Ramuh Ring +1",
-        back="Rancorous Mantle",
+        back="Moonbeam Cape",
         waist="Windbuffet Belt +1",
-        legs="",
-        feet=""
+        legs=gear.ambuscade.homam.legs,
+        feet=gear.ambuscade.homam.feet
     }
     sets.combat.DPS = set_combine(sets.combat, {})
     sets.combat.midacc = set_combine(sets.combat, {})
@@ -99,7 +99,6 @@ function get_sets()
         ear2=gear.ears.da_right,
         ring1="Ifrit Ring",
         ring2="Ifrit Ring +1",
-        back="Rancorous Mantle",
         waist=gear.waist.ws
     })
 

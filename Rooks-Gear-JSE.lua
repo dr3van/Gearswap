@@ -227,13 +227,13 @@ function init_jse()
     gear.jse.relic.smn = {
         head="Glyphic Horn",
         body="Glyphic Doublet",
-        hands="Glyphic Bracers",
+        hands="Glyphic Bracers +1",
         legs="Glyphic Spats",
         feet="Glyphic Pigaches +1"
     }
 
     gear.jse.empyrean.smn = {
-        head="Beckoner's Horn",
+        head="Beckoner's Horn +1",
         body="Beckoner's Doublet",
         hands="Beckoner's Bracers",
         legs="Beckoner's Spats",

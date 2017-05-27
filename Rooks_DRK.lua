@@ -123,8 +123,8 @@ function get_sets()
         ear2="Ethereal Earring",
         body=gear.ambuscade.phorcys.body,
         hands=gear.ambuscade.phorcys.hands,
-        ring1="Meridian Ring",
-        ring2="Eihwaz Ring",
+        ring1="Moonbeam Ring",
+        ring2="Moonbeam Ring",
         waist="Oneiros Belt",
         legs=gear.ambuscade.phorcys.legs,
         feet=gear.eschite.feet.A

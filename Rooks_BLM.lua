@@ -32,7 +32,7 @@ function get_sets()
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
         waist=gear.waist.mage_idle,
-        legs="Nares Trews"
+        legs=gear.legs.mage_refresh
     })
     sets.idle.DT = set_combine(sets.idle, {
         head="Hike Khat",
