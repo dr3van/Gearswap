@@ -2,7 +2,7 @@
 -- Sets
 function get_sets()
     include('Rooks-Include.lua')
-    init_get_sets(1, 1)
+    init_get_sets(0, 1)
 
     idle_sets = { 'base', 'regen', 'DT', 'perp', 'favor' }
     idle_sets_description = { 'Idle base', 'Idle regen', 'Idle DT', 'Idle Perpetuation', 'Idle Favor' }
@@ -13,13 +13,30 @@ function get_sets()
     combat_sets_description = { 'Physical DPS', 'High physical accuracy', 'Defensive', 'pet' }
     combat_index_max = 4
 
-    sets.idle = {
+    sets.summoning_skill = {
+        main=gear.weapons.smn.perp,
+        sub=gear.grip.smn,
         head=gear.jse.artifact.smn.head,
+        neck=gear.neck.magic_skill,
+        ear1="Andoaa Earring",
+        body=gear.jse.empyrean.smn.body,
+        hands=gear.jse.relic.smn.hands,
+        ring1=gear.ring.magic_skill_left,
+        ring2=gear.ring.magic_skill_right,
+        back=gear.jse.capes.reive.smn,
+        waist="Cimmerian Sash",
+        legs=gear.jse.empyrean.smn.legs
+    }
+
+    sets.idle = {
+        main=gear.weapons.mage.refresh,
+        sub=gear.grip.dt,
+        head=gear.jse.empyrean.smn.head,
         neck=gear.neck.dt,
         ear1=gear.ears.idle_left,
         ear2=gear.ears.idle_right,
         body=gear.body.mage_idle,
-        hands=gear.ambuscade.nashira.hands,
+        hands="Asteria Mitts",
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
         back=gear.back.mage_idle,
@@ -29,7 +46,7 @@ function get_sets()
     }
     sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {
-        head=gear.jse.artifact.smn.head,
+        head=gear.jse.empyrean.smn.head,
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
         legs=gear.legs.mage_refresh
@@ -39,6 +56,8 @@ function get_sets()
         ring2=gear.ring.dt_right
     })
     sets.idle.perp = set_combine(sets.idle.regen, {
+        main=gear.weapons.smn.perp,
+        sub=gear.grip.smn,
         head=gear.jse.empyrean.smn.head,
         neck="Caller's Pendant",
         ear1="Andoaa Earring",
@@ -74,6 +93,10 @@ function get_sets()
     }
 
     sets.JA['Mana Cede'] = { hands=gear.jse.empyrean.smn.hands }
+    sets.JA['Elemental Siphon'] = set_combine(sets.summoning_skill, {
+        back=gear.jse.capes.reive.smn,
+        feet=gear.jse.empyrean.smn.feet
+    })
 
     -- All -BP timer and blood boon gear goes here
     sets.precast.BloodPact = {
@@ -84,7 +107,7 @@ function get_sets()
         hands=gear.jse.relic.smn.hands,
         back=gear.jse.capes.reive.smn,
         waist="Jaq'ij Sash",
-        legs=gear.jse.relic.smn.legs,
+        legs=gear.jse.empyrean.smn.legs,
         feet=gear.jse.relic.smn.feet
     }
     sets.precast.BloodPactRage = set_combine(sets.precast.BloodPact, {})
@@ -94,12 +117,14 @@ function get_sets()
     }
 
     sets.pet.midcast.BloodPactRage = set_combine(sets.pet.midcast.BloodPact, {
+        main=gear.weapons.smn.physical_bp,
+        sub=gear.grip.blood_pact,
         head=gear.apogee.head.C,
         neck="Consummation Torque",
         ear1="Gelos Earring",
         ear2="Esper Earring",
         body=gear.apogee.body.C,
-        hands=gear.merlinic.hands.bp,
+        hands=gear.merlinic.hands.magic_bp,
         ring1="Varar Ring +1",
         ring2="Varar Ring",
         back=gear.jse.capes.ambuscade.smn.phys_rage,
@@ -108,29 +133,19 @@ function get_sets()
         feet=gear.apogee.feet.C
     })
     sets.pet.midcast.BloodPactRage.physical = set_combine(sets.pet.midcast.BloodPactRage, {
+        hands=gear.merlinic.hands.physical_bp,
         back=gear.jse.capes.ambuscade.smn.phys_rage
     })
     sets.pet.midcast.BloodPactRage.magical = set_combine(sets.pet.midcast.BloodPactRage, {
+        main=gear.weapons.smn.magical_bp,
+        sub=gear.grip.blood_pact,
+        neck="Adad Amulet",
         back=gear.jse.capes.ambuscade.smn.mag_rage
     })
-    sets.pet.midcast.BloodPactRage.breath = set_combine(sets.pet.midcast.BloodPactRage, {
-        back=gear.jse.capes.ambuscade.smn.mag_rage
+    sets.pet.midcast.BloodPactRage.breath = set_combine(sets.pet.midcast.BloodPactRage.magical, {
     })
 
-    sets.pet.midcast.BloodPactWard = set_combine(sets.pet.midcast.BloodPact, {
-        head="Psycloth Tiara",
-        neck=gear.neck.magic_skill,
-        ear1="Andoaa Earring",
-        ear2="Hearty Earring",  -- REPLACE ME
-        body=gear.jse.empyrean.smn.body,
-        hands=gear.jse.relic.smn.hands,
-        ring1=gear.ring.magic_skill_left,
-        ring2=gear.ring.magic_skill_right,
-        back=gear.jse.capes.reive.smn,
-        waist="Cimmerian Sash",
-        legs=gear.jse.empyrean.smn.legs
-    })
-
+    sets.pet.midcast.BloodPactWard = set_combine(sets.summoning_skill, {})
     sets.pet.midcast.BloodPactWard.buff = set_combine(sets.pet.midcast.BloodPactWard, {})
     sets.pet.midcast.BloodPactWard.debuff = set_combine(sets.pet.midcast.BloodPactWard, {})
 
@@ -229,7 +244,6 @@ function get_sets()
     sets.pet.midcast['Healing Ruby II'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
     sets.pet.midcast['Soothing Ruby'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
     sets.pet.midcast['Pacifying Ruby'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
-    sets.pet.midcast['Healing Ruby'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
 
     ---- Ifrit
     sets.pet.midcast['Crimson Howl'] = set_combine(sets.pet.midcast.BloodPactWard.buff, {})
@@ -320,6 +334,11 @@ function get_sets()
         feet=gear.ambuscade.nashira.feet
     }
 
+    sets.midcast.CureSpell = {
+        neck=gear.neck.cure_potency,
+        back="Oretania's Cape +1",
+    }
+
     send_command('input /macro book 14;wait .1;input /macro set 1')
 end
 
@@ -358,3 +377,11 @@ function idle(summoned)
         end
     end
 end
+
+--function job_precast(spell)
+--windower.add_to_chat(123, "job precast")
+--    if spells.spirits:contains(spell.name) then
+--windower.add_to_chat(123, "got a spirit!")
+--    end
+--    base_precast(spell)
+--end

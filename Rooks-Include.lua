@@ -44,6 +44,8 @@ function init_get_sets(weapon_lock, gear_file)
     spells.helices = S{ "Geohelix", "Hydrohelix", "Anemohelix", "Pyrohelix", "Cryohelix", "Ionohelix", "Luminohelix",
         "Noctohelix", "Geohelix II", "Hydrohelix II", "Anemohelix II", "Pyrohelix II", "Cryohelix II", "Ionohelix II",
         "Luminohelix II", "Noctohelix II" }
+    spells.spirits = S{ "Fire Spirit", "Ice Spirit", "Air Spirit", "Earth Spirit", "Thunder Spirit", "Water Spirit",
+        "Light Spirit", "Dark Spirit" }
 
     -- Grab the gear
     if gear_file then

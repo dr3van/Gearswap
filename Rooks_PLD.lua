@@ -402,7 +402,7 @@ function get_sets()
         hands="Leyline Gloves",
         ring1=gear.ring.magic_skill_left,
         ring2=gear.ring.magic_skill_right,
-        back="Toro Cape",
+        back=gear.jse.capes.ambuscade.pld.nuke,
         waist="Eschan Stone",
         legs=gear.eschite.legs.D,
         feet=gear.odyssean.feet.nuke

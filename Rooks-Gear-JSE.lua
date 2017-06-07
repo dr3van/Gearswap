@@ -32,6 +32,7 @@ function init_jse()
     gear.jse.capes.ambuscade.pld.ws = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
     gear.jse.capes.ambuscade.pld.idle = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10'}}
     gear.jse.capes.ambuscade.pld.wsd = { name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20', 'STR+10', 'Weapon skill damage +10%'}}
+    gear.jse.capes.ambuscade.pld.nuke = { name="Rudianos's Mantle", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Magic Damage +10','"Mag.Atk.Bns."+10'}}
 
     gear.jse.capes.ambuscade.war = { name="Cichol's Mantle"}
     gear.jse.capes.ambuscade.war.idle = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10'}}
@@ -234,10 +235,10 @@ function init_jse()
 
     gear.jse.empyrean.smn = {
         head="Beckoner's Horn +1",
-        body="Beckoner's Doublet",
+        body="Beckoner's Doublet +1",
         hands="Beckoner's Bracers",
-        legs="Beckoner's Spats",
-        feet="Beckoner's Pigaches"
+        legs="Beckoner's Spats +1",
+        feet="Beckoner's Pigaches +1"
     }
 
     -- XXX

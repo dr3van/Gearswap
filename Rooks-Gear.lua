@@ -8,6 +8,16 @@ function init_gear()
     include('Rooks-Gear-JSE.lua')
     init_jse()
 
+    -- Weapons
+    gear.weapons = {}
+    gear.weapons.mage = {}
+    gear.weapons.mage.macc = { name="Lehbrailg +2" }
+    gear.weapons.mage.refresh = { name="Contemplator" }
+    gear.weapons.smn = {}
+    gear.weapons.smn.perp = { name="Gridarvor" }
+    gear.weapons.smn.physical_bp = { name="Gridarvor" }
+    gear.weapons.smn.magical_bp = { name="Nibiru Staff", augments={'Pet: Mag. Acc.+20','Pet: "Mag.Atk.Bns."+20','Pet: "Regen"+2' }}
+
     -- All jobs pieces
     gear.ammo = {}
     gear.ammo.dt = { name="Staunch Tathlum" }
@@ -118,6 +128,8 @@ function init_gear()
     gear.grip.enhancing = { name="Fulcio Grip" }
     gear.grip.dt = { name="Umbra Strap" }
     gear.grip.nuke = { name="Zuuxowu Grip" }
+    gear.grip.smn = { name="Vox Grip" }
+    gear.grip.blood_pact = { name="Elan Strap" }
 
     -- Random all jobs visible pieces
     gear.head = {}
@@ -334,7 +346,8 @@ function init_gear()
     gear.merlinic.head.dt = { name="Merlinic Hood", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','"Fast Cast"+4','CHR+1','Mag. Acc.+11','"Mag.Atk.Bns."+12'}}
     gear.merlinic.head.fc = { name="Merlinic Hood", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','"Fast Cast"+4','CHR+1','Mag. Acc.+11','"Mag.Atk.Bns."+12'}}
     gear.merlinic.hands = { name="Merlinic Dastanas" }
-    gear.merlinic.hands.bp = { name="Merlinic Dastanas", augments={'Pet: Accuracy+30 Pet: Rng. Acc.+30','Blood Pact Dmg.+4','Pet: Mag. Acc.+12',} }
+    gear.merlinic.hands.physical_bp = { name="Merlinic Dastanas", augments={'Pet: Accuracy+24 Pet: Rng. Acc.+24','Blood Pact Dmg.+7','Pet: STR+8'} }
+    gear.merlinic.hands.magic_bp = { name="Merlinic Dastanas", augments={'Blood Pact Dmg.+10', 'Pet: "Mag.Atk.Bns."+29'} }
     gear.merlinic.legs = { name="Merlinic Shalwar"}
     gear.merlinic.legs.MAB = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst dmg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
     gear.merlinic.legs.MAcc = { name="Merlinic Shalwar", augments={'Mag. Acc.+29','Magic burst dmg.+9%','MND+9','"Mag.Atk.Bns."+7' }}
@@ -368,12 +381,6 @@ function init_gear()
     gear.founder.legs = { name="Founder's Hose" }
     gear.founder.feet = { name="Founder's Greaves" }
 
-    -- Weapons
-    gear.weapons = {}
-    gear.weapons.mage = {}
-    gear.weapons.mage.macc = { name="Lehbrailg +2" }
-    gear.weapons.mage.refresh = { name="Contemplator" }
-
     -- Ambuscade gear
     -- Slotted this way so after my lazy ass gets the +1 I don't have to change things
     -- Named after the salvage pieces because it's the only way I can remember it
@@ -403,11 +410,11 @@ function init_gear()
     }
 
     gear.ambuscade.marduk = {
-        head="Inyanga Tiara",
-        body="Inyanga Jubbah",
+        head="Inyanga Tiara +1",
+        body="Inyanga Jubbah +1",
         hands="Inyanga Dastanas +1",
         legs="Inyanga Shalwar +1",
-        feet="Inyanga Crackows",
+        feet="Inyanga Crackows +1",
     }
 
     gear.ambuscade.morrigan = {
