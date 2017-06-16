@@ -47,6 +47,7 @@ function init_gear()
     gear.neck.sword = { name="Decimus Torque" }
     gear.neck.greataxe = { name="Decimus Torque" }
     gear.neck.fc = { name = "Orunmila's Torque" }
+    gear.neck.pet_dps = { name = "Shulmanu Collar" }
 
     gear.ears = {}
     gear.ears.acc_left = { name="Dignitary's Earring" }

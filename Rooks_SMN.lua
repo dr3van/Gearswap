@@ -47,6 +47,7 @@ function get_sets()
     sets.idle.base = set_combine(sets.idle, {})
     sets.idle.regen = set_combine(sets.idle, {
         head=gear.jse.empyrean.smn.head,
+        neck=gear.neck.regen,
         ring1=gear.ring.regen_left,
         ring2=gear.ring.regen_right,
         legs=gear.legs.mage_refresh
@@ -120,7 +121,7 @@ function get_sets()
         main=gear.weapons.smn.physical_bp,
         sub=gear.grip.blood_pact,
         head=gear.apogee.head.C,
-        neck="Consummation Torque",
+        neck=gear.neck.pet_dps,
         ear1="Gelos Earring",
         ear2="Esper Earring",
         body=gear.apogee.body.C,
