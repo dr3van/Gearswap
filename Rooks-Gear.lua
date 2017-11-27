@@ -16,7 +16,7 @@ function init_gear()
     gear.weapons.smn = {}
     gear.weapons.smn.perp = { name="Gridarvor" }
     gear.weapons.smn.physical_bp = { name="Gridarvor" }
-    gear.weapons.smn.magical_bp = { name="Nibiru Staff", augments={'Pet: Mag. Acc.+20','Pet: "Mag.Atk.Bns."+20','Pet: "Regen"+2' }}
+    gear.weapons.smn.magical_bp = { name="Grioavolr" }
 
     -- All jobs pieces
     gear.ammo = {}
@@ -387,10 +387,10 @@ function init_gear()
     -- Named after the salvage pieces because it's the only way I can remember it
     gear.ambuscade = {}
     gear.ambuscade.ares = {
-        head="Sulevia's Mask +1",
-        body="Sulevia's Platemail +1",
-        hands="Sulevia's Gauntlets +1",
-        legs="Sulevia's Cuisses +1",
+        head="Sulevia's Mask +2",
+        body="Sulevia's Platemail +2",
+        hands="Sulevia's Gauntlets +2",
+        legs="Sulevia's Cuisses +2",
         feet="Sulevia's Leggings +2",
     }
 
@@ -427,11 +427,11 @@ function init_gear()
     }
 
     gear.ambuscade.phorcys = {
-        head="Flam. Zucchetto +1",
+        head="Flam. Zucchetto +2",
         body="Flamma Korazin +1",
         hands="Flam. Manopolas +1",
         legs="Flamma Dirs +1",
-        feet="Flam. Gambieras +1",
+        feet="Flam. Gambieras +2",
     }
 
     gear.ambuscade.thaumas = {

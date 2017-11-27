@@ -123,13 +123,13 @@ function get_sets()
         head=gear.apogee.head.C,
         neck=gear.neck.pet_dps,
         ear1="Gelos Earring",
-        ear2="Esper Earring",
-        body=gear.apogee.body.C,
+        ear2="Lugalbanda Earring",
+        body=gear.jse.artifact.smn.body,
         hands=gear.merlinic.hands.magic_bp,
         ring1="Varar Ring +1",
         ring2="Varar Ring",
         back=gear.jse.capes.ambuscade.smn.phys_rage,
-        waist="Mujin Obi",
+        waist="Regal Belt",
         legs="Enticer's Pants",
         feet=gear.apogee.feet.C
     })

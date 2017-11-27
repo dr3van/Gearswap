@@ -130,7 +130,7 @@ function init_jse()
         body="Cab. Surcoat +1",
         hands="Cab. Gauntlets +1",
         legs="Cab. Breeches +1",
-        feet="Cab. Leggings"
+        feet="Cab. Leggings +1"
     }
     gear.jse.empyrean.pld = {
         head="Chev. Armet +1",
@@ -219,7 +219,7 @@ function init_jse()
     -- SMN
     gear.jse.artifact.smn = {
         head="Convoker's Horn",
-        body="Convoker's Doublet",
+        body="Convoker's Doublet +3",
         hands="Convoker's Bracers",
         legs="Convoker's Spats",
         feet="Convoker's Pigaches"

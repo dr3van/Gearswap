@@ -48,7 +48,6 @@ function get_sets()
         ring2=gear.ring.dt_right,
         back=gear.back.dt,
         waist="Creed Baudrier",
-        legs=gear.souveran.legs.C,
         feet=gear.jse.artifact.pld.feet
 
     })
@@ -103,7 +102,7 @@ function get_sets()
         ear2=gear.ears.da,
         body=gear.ambuscade.phorcys.body,
         hands=gear.ambuscade.phorcys.hands,
-        ring1="Rajas Ring",
+        ring1="Regal Ring",
         ring2="Chirich Ring",
         back=gear.jse.capes.ambuscade.pld.tp,
         waist=gear.waist.highhaste,
@@ -128,7 +127,7 @@ function get_sets()
         ear2=gear.ears.da,
         body=gear.ambuscade.ares.body,
         hands=gear.jse.artifact.pld.hands,
-        ring1="Moonbeam Ring",
+        ring1="Regal Ring",
         ring2="Moonbeam Ring",
         back=gear.jse.capes.ambuscade.pld.tp,
         waist="Dynamic Belt +1",
@@ -180,7 +179,7 @@ function get_sets()
         ear2="Moonshade Earring",
         body=gear.ambuscade.ares.body,
         hands=gear.odyssean.hands.ws,
-        ring1="Ifrit Ring",
+        ring1="Regal Ring",
         ring2="Ifrit Ring +1",
         back=gear.jse.capes.ambuscade.pld.ws,
         waist=gear.waist.ws,
@@ -195,7 +194,7 @@ function get_sets()
         ear2="Moonshade Earring",
         body=gear.ambuscade.ares.body,
         hands=gear.odyssean.hands.ws,
-        ring1="Ifrit Ring",
+        ring1="Regal Ring",
         ring2="Ifrit Ring +1",
         back=gear.jse.capes.ambuscade.pld.wsd,
         waist=gear.waist.ws,
@@ -258,7 +257,7 @@ function get_sets()
         ear2="Mache Earring",
         body=gear.ambuscade.phorcys.body,
         hands=gear.odyssean.hands.wsd,
-        ring1="Ramuh Ring +1",
+        ring1="Regal Ring",
         ring2="Ramuh Ring +1",
         back=gear.jse.capes.ambuscade.pld.tp,
         waist=gear.waist.ws,
@@ -275,9 +274,9 @@ function get_sets()
     sets.WS['Aeolian Edge'] = set_combine(sets.WS, {
         ear1=gear.ears.mab_left,
         ear2=gear.ears.mab_right,
-        ring1="Shiva Ring",
+        ring1="Regal Ring",
         ring2="Shiva Ring",
-        back="Toro Cape",
+        back=gear.jse.capes.ambuscade.pld.nuke,
         legs=gear.eschite.legs.D
     })
 
@@ -289,7 +288,7 @@ function get_sets()
         ear2=gear.ears.ws,
         body=gear.ambuscade.ares.body,
         hands=gear.odyssean.hands.ws,
-        ring1="Titan Ring",
+        ring1="Regal Ring",
         ring2="Titan Ring +1",
         back=gear.jse.capes.ambuscade.pld.wsd,
         waist=gear.waist.ws,
