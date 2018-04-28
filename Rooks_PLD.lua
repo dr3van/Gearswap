@@ -303,7 +303,7 @@ function get_sets()
         ear1="Hearty Earring",          -- 0
         ear2=gear.ears.enmity_right,    -- 2
         body=gear.souveran.body.C,      -- 17
-        hands=gear.souveran.hands.C,    -- 7
+        hands=gear.jse.relic.pld.hands, -- 8
         ring1=gear.ring.enmity_left,    -- 5
         ring2=gear.ring.enmity_right,   -- 5
         back="Fierabras's Mantle",      -- 5
@@ -311,9 +311,7 @@ function get_sets()
         legs=gear.souveran.legs.C,      -- 7
         feet=gear.eschite.feet.A        -- 15
     }
-                                        -- 84~89 total
-
-
+                                        -- 85~90 total
 
     sets.JA = set_combine(sets.enmity, {})
     sets.JA['Invincible'] = set_combine(sets.enmity, { legs=gear.jse.relic.pld.legs })

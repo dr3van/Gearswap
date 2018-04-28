@@ -84,7 +84,7 @@ function init_jse()
         body="Agoge Lorica +1",
         hands="Agoge Mufflers +1",
         legs="Warrior's Cuisses +2",
-        feet="Agoge Calligae +1"
+        feet="Agoge Calligae +2"
     }
     gear.jse.empyrean.war = {
         head="Ravager's Mask +2",
@@ -128,7 +128,7 @@ function init_jse()
     gear.jse.relic.pld = {
         head="Cab. Coronet",
         body="Cab. Surcoat +1",
-        hands="Cab. Gauntlets +1",
+        hands="Cab. Gauntlets +2",
         legs="Cab. Breeches +1",
         feet="Cab. Leggings +1"
     }

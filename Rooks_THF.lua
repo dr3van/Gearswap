@@ -5,6 +5,10 @@ function get_sets()
     include('Rooks-Include.lua')
     init_get_sets(1, 1)
 
+    combat_sets = {'DPS', 'highacc', 'th'}
+    combat_sets_description = { 'Physical DPS', 'High physical accuracy', 'Treasure Hunter' }
+    combat_index_max = 3
+
     -- 24% DT
     -- 20% PDT
     sets.idle = {
@@ -17,7 +21,7 @@ function get_sets()
         hands=gear.ambuscade.skadi.hands,
         ring1=gear.ring.dt_left,
         ring2=gear.ring.dt_right,
-        back="Shadow Mantle",
+        back=gear.back.dt,
         waist=gear.waist.pdt,
         legs=gear.ambuscade.skadi.legs,
         feet="Jute Boots +1"
@@ -36,8 +40,6 @@ function get_sets()
     sets.idle.MDT = set_combine(sets.idle.DT, {})
     sets.resting = set_combine(sets.idle, {})
 
-    sets.JA = {}
-
     sets.precast = {}
     sets.precast.FC = {}
 
@@ -51,7 +53,7 @@ function get_sets()
         ear2="Brutal Earring",
         body=gear.ambuscade.skadi.body,
         hands="Floral Gauntlets",
-        ring1="Chirich Ring",
+        ring1="Regal Ring",
         ring2="Epona's Ring",
         back=gear.jse.capes.ambuscade.thf.tp,
         waist="Windbuffet Belt +1",
@@ -60,17 +62,12 @@ function get_sets()
     }
 
     sets.combat.DPS = set_combine(sets.combat, {})
-    sets.combat.midacc = set_combine(sets.combat, {})
-    sets.combat.highacc = set_combine(sets.combat.midacc, {})
+    sets.combat.highacc = set_combine(sets.combat, {})
 
-    sets.combat.TH = set_combine(sets.combat.highacc, {
+    sets.combat.th = set_combine(sets.combat.highacc, {
         hands="Plun. Armlets +1",
         feet="Skulk. Poulaines +1"
     })
-
-    -- Hijack this because I don't need defensive mode for what I do as thief
-    sets.combat.defensive = set_combine(sets.combat.TH, {})
-
 
     sets.JA = {}
     sets.JA['Box Step'] = set_combine(sets.combat.TH, {})
@@ -86,7 +83,7 @@ function get_sets()
         ear2=gear.ears.ws,
         body=gear.ambuscade.skadi.body,
         hands=gear.herculean.hands.ws,
-        ring1="Ramuh Ring +1",
+        ring1="Regal Ring",
         ring2="Epona's Ring",
         back=gear.jse.capes.ambuscade.thf.ws,
         waist=gear.waist.ws,
@@ -102,7 +99,7 @@ function get_sets()
         ear2=gear.ears.ws,
         body=gear.ambuscade.skadi.body,
         hands=gear.herculean.hands.ws,
-        ring1="Ramuh Ring +1",
+        ring1="Regal Ring",
         ring2="Epona's Ring",
         back=gear.jse.capes.ambuscade.thf.ws,
         waist=gear.waist.ws,
@@ -118,9 +115,9 @@ function get_sets()
         ear2="Mache Earring",
         body="Samnuha Coat",
         hands=gear.ambuscade.skadi.hands,
-        ring1="Ramuh Ring +1",
-        ring2="Shiva Ring",
-        back="Toro Cape",
+        ring1="Regal Ring",
+        ring2="Ramuh Ring +1",
+        back=gear.jse.capes.ambuscade.thf.ws,
         waist="Eschan Stone",
         legs=gear.herculean.legs.ws,
         feet=gear.herculean.feet.ws

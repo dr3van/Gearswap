@@ -68,7 +68,7 @@ function get_sets()
         ring1="Varar Ring +1",
         ring2="Varar Ring",
         back=gear.jse.capes.ambuscade.smn.phys_rage,
-        waist="Kuku Stone",
+        waist="Incarnation Sash",
         legs=gear.legs.mage_refresh,
         feet=gear.apogee.feet.C
     })
